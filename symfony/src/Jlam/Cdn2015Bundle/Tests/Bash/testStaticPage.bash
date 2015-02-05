@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-url='cdn2015.localhost/test'
+url='cdn2015.localhost/test.html'
 
 httpCode=`curl -o /dev/null --silent --head --write-out '%{http_code}\n' $url`
 
@@ -12,12 +12,14 @@ fi
 
 
 #content=`curl --silent --head --write-out '%{http_code}\n' $url`
-content=`curl --silent --head $url `
+content=`curl --silent $url `
 
 
-if [[ ! "$content" =~ "This is a symfony page" ]]; then
-then
-  echo "Can't find $needle at $url"
+needle="This is static html test page within the symfony dir!"
+
+if [[ ! "$content" =~ "$needle" ]]; then
+  echo "Can't find \"$needle\" at \"$url\" .  The content was \n\n" $content  "\n\n"
+  exit 1
 fi
 
 

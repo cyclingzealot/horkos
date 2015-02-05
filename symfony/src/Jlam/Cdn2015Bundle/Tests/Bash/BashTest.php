@@ -67,7 +67,7 @@ class BashTest extends WebTestCase
 			
 			$this->assertFileExists($fullPath, "Can't find the script $fullPath");
 
-			$stdOutPath = '/tmp/bashSymfonyTestMessage' . date('YmdHis') .'-'. rand(0, 1000000) . '.txt';	
+			$stdOutPath = '/tmp/bashSymfonyTestMessage-' . date('YmdHis') .'-'. rand(0, 1000000) . '.txt';	
 			
 			$returnCode = 1;
 			passthru($fullPath . " 2>/dev/null > $stdOutPath", $returnCode);
