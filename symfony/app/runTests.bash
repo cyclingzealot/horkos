@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+#../bin/resetPerms.bash `whoami`
+
+echo > logs/test.log ; 
+echo > logs/dev.log ; 
+echo > logs/prod.log ; 
+
+rm -rf cache/* 2> /dev/null
+
+clear 
+
+length=`tput cols`
+yes '#' |  head -n $length | tr -d "\n" | xargs echo
+
+phpunit $1
+
+/usr/bin/notify-send -t 8000 "$0 done"
