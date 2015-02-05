@@ -1,0 +1,805 @@
+﻿/* Inside margins set to 20px */
+/* http://pxtoem.com/ | http://www.colorzilla.com/gradient-editor/ */
+
+/* Generic */
+.clearer {
+    clear: both !important;
+	float:none !important;
+}
+
+.cmd
+{
+    cursor: pointer;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+}
+.hidden_info{position:absolute !important; left:-99999em !important;}
+
+.info{
+    background: #8b2741;
+    background: -moz-linear-gradient(left,  #8b2741 0%, #cccccc 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#8b2741), color-stop(100%,#cccccc));
+    background: -webkit-linear-gradient(left,  #8b2741 0%,#cccccc 100%);
+    background: -o-linear-gradient(left,  #8b2741 0%,#cccccc 100%);
+    background: -ms-linear-gradient(left,  #8b2741 0%,#cccccc 100%);
+    background: linear-gradient(to right,  #8b2741 0%,#cccccc 100%);
+    -moz-border-radius: 0.417em;
+    -webkit-border-radius: 0.417em;
+    -khtml-border-radius: 0.417em;
+    border-radius: 0.417em;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 1.667em;
+    padding: 0.083em;
+    text-align: left;
+}
+.info ul
+{
+    list-style: none;
+    padding-left: 0.833em;
+}
+.info ul li {color:#fff;}
+.td_no_mobile, .desktop
+{
+    color: #000;
+}
+.desktop {color:#fff;}
+.results_bottom .desktop {color:#000;}
+.mobile
+{
+    position:absolute; 
+    left:-999em;
+    color: transparent;
+}
+
+#header, #top, #top_menu, #body, #divBodyHeader, #left_content, #right_content, #summary, #bottom_summary, 
+#section_buttons
+{
+    background: transparent;
+}
+
+#body
+{
+    min-height: 44em;
+}
+
+/* Top */
+#top 
+{
+    /*background-image: url('../img/Logo.png'); 
+    background-repeat: no-repeat;*/
+       height: 6.25em;
+    margin-bottom: 1.667em;
+}
+#top_left
+{
+    float: left;
+}
+#top_right
+{
+    float: right;
+}
+#hlkHomeLogo
+{
+    color: transparent;
+    float: left;
+    height: 6.250em; /* 75px */
+    width: 18.333em; /*220px*/
+}
+#top_menu 
+{ 
+    float: right;
+}
+
+#top_menu span, #top_menu p {padding:0;}
+#top_menu ul {margin:0; padding:0;}
+#top_menu ul li {float:left; margin:0; padding:0 1em; border-right: 0.1em solid #232323; list-style:none; color:#232323; font-size:0.875em;}
+#top_menu ul li.last {padding-right:0; border-right:none;}
+#top_menu ul li a {color:#232323;}
+
+#top_menu a:hover, #top_menu a:hover span
+{ 
+    color: #8B2844;
+	text-decoration:underline; 
+}
+#top_menu #hlkLanguage 
+{ 
+    border-right: none; 
+    padding-right: 0.2em; 
+}
+
+#date 
+{ 
+    clear: right; 
+    float: right; 
+    font-size: 0.8em;  
+    font-weight: bold; 
+    margin-top: 3px; 
+}
+#title 
+{ 
+    clear: right; 
+    float: right; 
+    font-size: 1.1em; 
+    font-weight: bold;
+	margin-top:-5px; 
+}
+
+/* Main containers */
+#left_content
+{
+    float: left;
+    width: 18.333em; /* Size of the image = 220px */
+}
+#right_content
+{
+    /* float: left;*/
+    /* margin-left: 1.667em; */
+    /* width: 58.333em; */ /* 960 - 10 (left padding) - 220 (image size) - 20 (inside margin) - 10 (right padding) = 700px */
+}
+#bottom_content
+{
+    clear: both;
+	/* margin-left: -20em; */
+}
+
+/* Summary */
+#imgSummary 
+{ 
+    margin: 0em 1.667em 1.667em 0em; 
+    width: 18.333em; /* 220px */
+}
+#top_summary 
+{ 
+    clear:both;
+    margin-bottom: 1px; 
+}
+#top_summary #lblRequiredForMajorityData
+{
+    font-weight: bold;
+}
+
+/* National Data Block grid - Summary */
+#grdNationalDataBlock tr:nth-child(odd)    
+{ 
+    background-color:#FFF;  /* Overide general.css */
+}
+#grdNationalDataBlock 
+{
+    background: #FFF;
+    /* border: 0.083em solid transparent;
+    border-collapse: collapse;
+    border-radius: 0.417em;
+    border-spacing: 0.167em; */
+    clear: both; 
+    margin:1em auto;
+	
+    width: 39em;
+}
+#grdNationalDataBlock th, #grdNationalDataBlock td 
+{
+    border: 0em;
+    padding:3px;
+	color:#000;
+}
+#grdNationalDataBlock th {text-align:right; padding-right:23px !important;}
+#grdNationalDataBlock td {text-align:right;}
+#grdNationalDataBlock tr.td_datacolumn td {padding-right:23px !important;}
+#grdNationalDataBlock tr.td_datacolumn td.td_firstcolumn {padding-right:0.417em !important; text-align:right;}
+
+#grdNationalDataBlock .td_firstcolumn, #grdNationalDataBlock .td_emptycell
+{
+    background: #EEE;
+    border-bottom: 0.083em solid #EEE;
+    border-left: 0.083em solid #EEE;
+    text-align: right; 
+    font-weight: bold; 
+    padding-right: 0.417em; 
+}
+#grdNationalDataBlock .td_leading
+{
+    font-weight: bold;
+}
+
+#bottom_summary 
+{ 
+    clear: right;
+    font-size: 0.875em;
+    text-align: right; 
+}
+#bottom_summary p {display:inline;}
+#bottom_summary p, #top_summary p {margin:0 !important;}
+
+
+#bottom_summary #auto_refresh
+{
+	display:inline;
+    font-size: 1em;
+    
+}
+
+/* Section buttons */
+#section_buttons 
+{
+	float:left;
+	height:auto;
+    min-height: 2em /* 50px */;
+    margin-top:1em; /* 20px */
+	margin-bottom:1em; /* 20px */
+    width: 100% /* 700px */; 
+}
+
+
+#section_buttons #nav {margin:0; padding:0;}
+	#section_buttons #nav li {margin:0; padding:0; list-style:none; display:inline-block;}
+
+#section_buttons #left
+{
+    float: left;
+}
+#section_buttons #right
+{
+    float: right;
+}
+#section_buttons a 
+{
+    /* (700px - 5x2px (margin-left)) / 6 buttons = 115px */
+    /* 115px - 2x5px (padding left & right) = 105px */
+    background: #233237;
+    /* Border radius */
+    -moz-border-radius: 0.417em;
+    -webkit-border-radius: 0.417em;
+    -khtml-border-radius: 0.417em;
+    border-radius: 0.417em;
+
+    color: #FFF;
+    display:inline-block;
+    height: 2em; 
+    line-height: 2em;
+    margin-right: 0.166em; 
+    padding: 0.417em 0.8em; /* 5px */
+	text-decoration:none;
+
+    /*behavior: url(css/border-radius.htc);*/
+}
+#section_buttons a:hover, #section_buttons a:focus 
+{ 
+    background: #8B2844; 
+    text-decoration: none; 
+}
+#section_buttons a.section_button_selected
+{
+    background: #8B2844; 
+}
+#section_buttons #lnkJudicialRecount
+{
+    margin-right: 0em;
+}
+
+/* Message board */
+#message_board_title{
+	position:relative;
+   	background-color:#c0c0c0;
+    display: block;
+    overflow:visible;
+    font-weight: bold;
+    margin-top: 1.667em;
+    padding: 0.417em 0.417em 0.417em 30px;
+    text-align: left;
+	clear:both;
+}
+#message_board_title:hover
+{
+    text-decoration: none;
+}
+#message_board_title span {color:#8B2844;}
+#message_board_title span.ic {position:absolute; left:8px; top:10px; width:11px; height:6px; background:url('../img/arrows.png') no-repeat right 0;}
+#message_board_title.closed span.ic {top:7px; width:6px; height:13px; background-position:0 0;}
+
+#message_board
+{
+    overflow:hidden;
+   /* height:0;
+	min-height:0;*/
+    margin: 0;
+    /*overflow-x: hidden;
+    overflow-y: scroll;*/
+    padding-left: 0.417em;
+    text-align: left;
+}
+
+#Messages_updMessages .error {text-align:left;}
+
+/* Control & Settings panels */
+#control_panel_title
+{
+	position:relative;
+   	background-color:#c0c0c0;
+    display: block;
+    font-weight: bold;
+    margin-top: 1.667em;
+    padding: 0.417em 0.417em 0.417em 30px;
+    text-align: left;
+	clear:both;
+}
+#control_panel_title:hover
+{
+    text-decoration: none;
+}
+
+#control_panel_title span {color:#8B2844;}
+
+#control_panel {/*height:0; min-height:0;*/ overflow:hidden;}
+
+#control_panel_title span.ic {position:absolute; left:8px; top:10px; width:11px; height:6px; background:url('../img/arrows.png') no-repeat right 0;}
+#control_panel_title.closed span.ic {top:7px; width:6px; height:13px; background-position:0 0;}
+
+#control_panel, #settings_panel
+{
+    border: 0.083em solid #c0c0c0;
+    border-radius: 0.417em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    background: #dfdfdf;
+    clear: left;
+    display: none;
+    min-height: 7em;
+    margin: 0em 0em 1.667em 0em;
+    padding: 0 0.417em 0 0.417em;
+    text-align: left;
+    
+}
+
+#control_panel .row {clear:both; display:block; width:100%;}
+	#control_panel .row .col {float:left; width:53%;}
+	#control_panel .row .divButton {float:right !important; width:auto !important;}
+		#control_panel .row .col label {float:none; display:block; margin:5px 0 0 5px; height:auto;}
+
+#control_panel #cp_left
+{
+	background:transparent;
+    float: left;
+    width: 42.000em;
+}
+#control_panel #cp_right
+{
+	background:transparent;
+    clear:both;
+	float:right;
+}
+
+#control_panel input, #control_panel select
+{ 
+	background:transparent;
+    background: #FFF;
+    border: 0.083em solid #233237;
+    color: #233237;
+    display: block; 
+    margin:5px 0.167em 0em 0em;
+    width: 20em; 
+}
+#control_panel input {}
+
+#control_panel #divProvinces, #control_panel #divSearchType {float:left; width:300px;}
+#control_panel #divSearchCriteria, #control_panel #divElectoralDistrict {float:left;}
+
+#control_panel .cbo
+{
+	float:left;
+    width: 17.400em;
+}
+#control_panel .txt
+{
+	float:left;
+    width: 16.35em;
+}
+#control_panel .search_by
+{
+	float:left;
+	background:transparent;
+    height: 4.167em /* 50px */;
+}
+#control_panel .cmd, #settings_panel .cmd
+{
+    background: #233237;
+    border: 0.083em solid #233237;
+    border-radius: 0.250em;
+    color: #FFF;
+    float: right;
+    margin-top:20px !important;
+    padding: 0.500em 1em;
+    width: auto;
+}
+#control_panel #updSearchControls
+{
+	float:left;
+	background:transparent;
+    width:100%;
+}
+
+#control_panel p {margin:0;}
+#control_panel #div_or
+{
+    clear: both;
+	float:left;
+    display: none;
+    font-size: 1em;
+    font-weight: bold;
+    margin:0 0 0 0.5em;
+    width: 100%;
+}
+#control_panel #cboProvinces, #control_panel #cboElectoralDistricts
+{
+    clear: left;
+    display: block;
+}
+
+#control_panel #cmdAddTextBoxCritreria.hidden_info
+{
+    /* To overide display: block for all input */
+    display: none;
+}
+#control_panel #lblMaxNumberOfResults {clear:both; display:block; width:75%; margin:0 0 0 0.417em;}
+
+/***********/
+/* Results */
+/***********/
+#divResults {margin-bottom:20px; border:1px solid #c0c0c0;}
+.results_top, .results_bottom
+{
+    background-color:#ddd;
+    padding: 0.417em;
+}
+#divResults .results_top
+{
+    clear: both;
+    min-height: 4.167em;
+	margin-top:0;
+}
+
+/* Results title & type */
+.results_title, .results_type
+{
+    background: transparent;
+    clear: left;
+    float: left;
+    font-weight: bold;
+}
+.results_type
+{
+    clear:both;
+	float:none;
+	display:block;
+	font-size:0.675em;
+    text-align: left;
+}
+.results_title
+{
+    
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+/* Results toolbar */
+.results_top .results_toolbar
+{
+    background: transparent;
+    clear:both;
+    margin: -10px 0 0 0;
+	text-align:right;
+}
+.results_top .results_toolbar a
+{
+    /* Copy from section_buttons a */
+    background: #233237;
+    border-radius: 0.250em;
+    color: #FFF;
+    float: right;
+    height: 1.667em;
+    line-height: 1.667em;
+    margin: 0.167em 0em 0em 0.167em;
+    padding: 0.083em;
+    width: 10.417em;
+}
+.results_top .results_toolbar a:hover
+{
+    background: #8B2844;
+    text-decoration: none;
+}
+.results_toolbar input
+{
+    background: #233237;
+    border: 1px solid #233237;
+    border-radius: 0.250em;
+    color: #FFF;
+    margin-top: -0.083em;
+	margin-left:10px;
+    width: auto;
+    padding:0.5em;
+    display:inline-block;
+}
+.results_top .results_toolbar .lnkJudicialRecount
+{
+    margin-left: 0.167em;
+}
+.results_top .results_toolbar .lnkClose
+{
+    clear: right;
+    margin-top: 0.130em;
+}
+/* Results table */
+.progress_bar
+{
+    background-color: #8B2741;
+    background-repeat: repeat-x;
+    height: 1.333em;
+}
+.tblResults
+{
+    clear: both;
+    background: #FFF;
+    border: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+	width:100%;
+    /* width: 78.334em; */
+}
+.tblResults th, .tblResults tfoot, .tblResults .tr_totals
+{
+    background: #233237;
+    font-weight: bold;
+	color:#fff;
+    height: 2.500em;
+}
+.tblResults th .no_mobile_iphone, .tblResults td .no_mobile_iphone {color:#fff !important;}
+.tblResults .tr_totals td {color:#fff;}
+.tblResults th, .tblResults td
+{
+    /* Necessary for IE */
+    border: 0;
+	text-align:left;
+	color:#000;
+}
+.tblResults th
+{
+    padding-left: 0.250em;
+	color:#fff;
+	background-color:#233237;
+}
+.tblResults td
+{
+    font-size: 1em;
+    padding: 0.417em 1em 0.417em 0.417em;
+	white-space:nowrap;
+}
+#MainContent_grdResults td {white-space:normal;}
+
+.tblResults .center
+{
+    text-align: center;
+}
+table td p, table th p {margin:0;}
+.tblResults .td_firstcolumn
+{
+    font-weight: bold;
+}
+
+.tblResults .tr_leading td {
+	font-weight:bold;
+	background-color:#ebc0cb !important;
+}
+.tblResults .tr_leading td.td_firstcolumn {
+	font-weight:bold;
+}
+
+.tblResults .uneven
+{
+    background: #DFDFDF;
+}
+.tblResults .leader
+{
+    font-weight: bold;
+}
+/* 
+.tblResults .td_numeric
+{
+    text-align: right !important;
+} */
+.tblResults .data, .tblResults .data_leading
+{
+    padding-right: 0.417em;
+    text-align: right;
+}
+.tblResults .data_leading
+{
+    padding-right: 3.750em;
+}
+.tblResults tfoot
+{
+    font-weight: bold;
+}
+
+.tblResultsLarge td, .tblResultsLarge th {font-size:0.75em !important; white-space:normal; padding-right:5px;} 
+/* Results bottom */
+.results_bottom
+{
+    margin-top: -0.083em;
+	margin-bottom:1em;
+    text-align: left;
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #8D8D8D 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #636363 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #636363 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #636363));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #636363 100%);
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #636363 100%);
+	background-color: #ABABAB;
+}
+
+.results_bottom div
+{
+    clear: left;
+    display: block;
+    min-height: 1.250em;
+    margin: 0em 0em 0.250em 0em;
+}
+
+.lblTotal, .lblPolls, .lblVoter, .lblPopulation, .lblValidationDate, .lblLastUpdate, .lblElectorNumber
+{
+    display: block;
+    margin: 0em 0em 0.417em 0em;
+    /*width: 15.833em;*/ /* 190px */
+}
+
+.lblTotal .label, .lblPolls .label, .lblVoter .label, .lblPopulation .label, .lblValidationDate .label, .lblElectorNumber .label
+{
+    display:inline-block;
+	margin-right:15px;
+	width:23%;
+	font-weight: bold;
+}
+
+.lblVoter span, .lblPolls span {display:inline-table; width:66%;}
+	.lblVoter span span, .lblPolls span span {display:inline; width:100%;}
+
+.lblLastUpdate .label
+{
+    display:inline-block;
+	margin-right:5px;
+	font-weight: bold;
+}
+
+
+
+.last_updated
+{
+    margin-bottom: 0 !important;
+    width: 100%;
+	text-align: right;
+}
+
+.last_updated .data
+{
+    font-weight: bold;
+}
+#lblVoterTurnoutValue p, #lblVoterTurnoutValue span
+{
+    float: none;
+}
+
+/* Downloads */
+#downloads
+{
+    clear: both;
+    margin-top: 1.667em;
+    text-align: left;
+}
+#downloads_top
+{
+    font-size: 1em;
+    font-weight: bold;
+}
+#downloads ul
+{
+    margin-top: 0.167em;
+    padding: 0;
+}
+#downloads li
+{
+    list-style-type: none;
+    padding: 0.250em 0em 0.250em 0em;
+}
+
+/* Bottom */
+#bottom 
+{ 
+    /* Body tag has padding of 10px */
+    background: #233237 url(../img/bottom-image.jpg) 0 0 no-repeat; 
+    clear: both; 
+    margin: 1.667em 0em -0.833em -0.833em; 
+    padding: 17.5em 0.833em 0.833em 0.833em; 
+    width: 100%; 
+}
+
+#MainContent_divErrorDetails {text-align:left;}
+	#MainContent_divErrorDetails #MainContent_divLineCode, #MainContent_divLineAddress, #MainContent_divLineError, #MainContent_divLineTrace {margin-bottom:10px;}
+	
+.accessAlt a:focus {outline:dotted;}	
+	
+#lblVersion {display:block; color:#fff; font-size:0.75em; margin:-10px 0 0 0; padding:0; text-align:right;}
+#bottom_menu ul {margin:0; padding:0;}
+	#bottom_menu ul li {display:inline; padding:0; list-style:none; }
+	    #bottom_menu a {padding:0 0.833em;  background: #233237; color:#FFF; border-right:1px solid #FFF;}
+		#bottom_menu ul li.last a {border:none;}
+			#bottom_menu a span, #bottom_menu a p {color:#FFF;}
+		
+/* footnote */
+	#ulFootnote {margin:10px 0; padding-left:10px; background-color:#eee;}
+		#ulFootnote li {margin:0; padding:5px; list-style:none; font-size:1em;}
+			#ulFootnote li ul {padding:0 0 0 10px;}
+
+/* results radio button */
+#MainContent_divResultsChoice {text-align:left;}
+	#MainContent_divResultsChoice table td {text-align:left;}
+		#MainContent_divResultsChoice table td input {position:absolute; left:-999em;}
+		
+input.btnClose, #control_panel input.cmd {
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #9D9D9D 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #9D9D9D 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #9D9D9D 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #9D9D9D));
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #9D9D9D 100%);	
+	background-image: linear-gradient(to bottom, #FFFFFF 0%, #9D9D9D 100%);
+	background-color:#cccccc; /*for IE 8 and below */
+   	 border: 0.083em solid #8D8D8D;
+	 color: black;
+	 font-weight: 600;
+	 margin-bottom: 5px;
+	 margin-top: 5px;
+}
+
+.desktop input.btnClose:focus, .desktop #control_panel input.cmd:focus {
+	outline:1px dotted #8D8D8D;
+	background: #ECFFFF;
+    	border: 0.083em solid #C2C2C2;
+}
+
+input.smaller {
+	padding: 3px 5px;
+	margin-bottom: 10px;
+}
+ #control_panel input.hover.cmd, input.hover.btnClose {
+	background: #ECFFFF;
+    	border: 0.083em solid #C2C2C2;
+}
+
+.floatRightbuttons {
+	float: right;
+	width: 40%;
+	margin-bottom:-15px;
+}
+
+#grdNationalDataBlock caption {font-size:0em; 
+	font-weight:bold;
+	padding:0;
+	background-color:transparent; color:#EEEEEE;}
+
+
+div.accessAlt p.hidden_info a:focus {left:0; position:absolute;}
+
+
+.tblResults th.td_firstcolumn {text-align:left !important;}
+.tblResults th {text-align:center !important;}
+.tblResults td.td_firstcolumn {text-align:left !important;}
+.tblResults td {text-align:left !important; padding-right:31px;}
+.tblResults td.td_numeric {text-align:right !important;}
+.tblResults td.tdLeading {padding-right:71px; text-align:right !important;}
+
+#control_panel input:focus, #control_panel select:focus {background-color:#f2e8eb;}
+
+#FrmSearch {clear:both;}
+#summary {margin-top:-16px;}
+#top_summary p {margin:0 !important; font-size:0.875em;}
+#divSearchCriteria {padding-top:0 !important;}
+
+#imgLogo {margin-bottom:10px;}
