@@ -1,3 +1,7 @@
+jlam_cdn2015:
+    resource: "@JlamCdn2015Bundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation
