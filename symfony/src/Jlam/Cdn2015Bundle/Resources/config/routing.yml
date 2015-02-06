@@ -1,3 +1,8 @@
+jlam_cdn2015_index:
+    path:	/
+    defaults: { _controller: JlamCdn2015Bundle:Cdn2015:index }
+
+
 jlam_cdn2015_homepage:
     path:     /hello/{name}
     defaults: { _controller: JlamCdn2015Bundle:Default:index }
