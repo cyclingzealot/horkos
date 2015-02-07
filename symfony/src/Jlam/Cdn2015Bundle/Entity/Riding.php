@@ -3,6 +3,7 @@
 namespace Jlam\Cdn2015Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Translation\Tests\String;
 
 /**
  * Riding
@@ -49,6 +50,80 @@ class Riding
      */
     private $source;
 
+    
+    
+    /**
+     * @var string
+     * 
+     * @ORM\Column(name="identifier", type="string", length=50)
+     * 
+     */
+    private $identfier;
+    
+    
+    /**
+     * Adds a candidate, also takes care of 
+     * adding the party of that candidate
+     */
+    public function addCandidate() {
+    	
+    }
+    
+    
+    /**
+     * Calculates the participation rate
+     * 
+     * Returns a float between 0 and 1
+     * 
+     * @return float
+     */
+    public function calcParticipationRate() {
+    	
+    }
+    
+    
+    /**
+     * Calculates the number of unrepresented votes
+     * in absolute numbers
+     * 
+     * @return integer
+     */
+    public function calcUnrepresentedVotes() {
+    	
+    }
+    
+    
+    /**
+     * Calculates the number of unrepresented votes
+     * for each party.  Independants are agregated together
+     * 
+     * @return array
+     * 
+     */
+    public function calcUnrepresentedVotesByParty() {
+    	
+    }
+    
+    /**
+     * calls on the updating of the tallies
+     * 
+     * @return null
+     */
+    public function updateTallies() {
+    	
+    }
+    
+    
+    
+    public static function setPartyTallyHolder($partyTally) {
+    	
+    }
+    
+    
+    public static function setJurisdictionTallyHolder($jurisdictionTally) {
+    	
+    }
+    
 
     /**
      * Get id
@@ -94,6 +169,16 @@ class Riding
         $this->candidates = $candidates;
 
         return $this;
+    }
+    
+    
+    /** 
+     * Set identifier 
+     * 
+     * @param string $identifier
+     */
+    public function setIdentifier($identifier) {
+    	$this->identfier = $identifer;
     }
 
     /**
