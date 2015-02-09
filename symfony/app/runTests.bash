@@ -3,6 +3,13 @@
 
 #../bin/resetPerms.bash `whoami`
 
+if [ ! -d "../vendor" ]; then 
+    cd ..
+    composer install
+    cd -
+fi
+
+
 echo > logs/test.log ; 
 echo > logs/dev.log ; 
 echo > logs/prod.log ; 
