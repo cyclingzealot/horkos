@@ -21,6 +21,8 @@ clear
 length=`tput cols`
 yes '#' |  head -n $length | tr -d "\n" | xargs echo
 
+phpunit ../src/Jlam/Cdn2015Bundle/Tests/TallyHolderTest.php
+sleep 5
 phpunit $1
 
 /usr/bin/notify-send -t 8000 "$0 done"
