@@ -61,12 +61,24 @@ class Riding
     private $identfier;
     
     
+    
+    
     /**
      * Adds a candidate, also takes care of 
      * adding the party of that candidate
      */
     public function addCandidate() {
     	
+    }
+    
+    
+    
+    public function getParticipationRate() {
+    	return $this->calcParticipationRate();
+    }
+    
+    public function getUnrepresentedVotes() {
+    	return $this->calcUnrepresentedVotes();
     }
     
     
@@ -113,6 +125,8 @@ class Riding
     	
     }
     
+    
+     
     
     
     public static function setPartyTallyHolder($partyTally) {
@@ -179,6 +193,11 @@ class Riding
      */
     public function setIdentifier($identifier) {
     	$this->identfier = $identifer;
+    }
+    
+    
+    public function getIdentifier() {
+    	return $this->identfier;
     }
 
     /**

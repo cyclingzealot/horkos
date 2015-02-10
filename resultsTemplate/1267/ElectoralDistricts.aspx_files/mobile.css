@@ -1,0 +1,931 @@
+﻿/************************/
+/* Smartphone formating */
+/************************/
+/* http://pxtoem.com/ */
+
+ /* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	html {width:100%;}
+    body
+    {
+        /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0 10px;
+        width: auto;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+	.tblResults th .desktop {color:#fff;}
+
+    #body
+    {
+        width: auto;
+    }
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+   
+    #top_menu a
+    {
+       /*  font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+
+	
+    /* Section buttons */
+    #section_buttons
+    {
+        /* padding-bottom:40px; */
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+	#control_panel_title {clear:both;}
+	#section_buttons {width:100%;}
+    #section_buttons a
+    {
+        
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+    }
+	#top_summary p {margin:-5px 0 0 0 !important;}
+	#divBodyHeader {clear:both;}
+	
+   
+   	#left_content {float:none; width:160px; text-align:left;}
+		#left_content img {max-width:160px;}
+    
+
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+    #tblSummary
+    {
+        width: 100%;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	
+
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+    
+	
+	#control_panel .cmd, #settings_panel .cmd {margin:10px 0;}
+	.results_toolbar input {width:auto;}
+	#control_panel #cp_left {float:none;}
+	#control_panel .search_by {height:auto;}
+	#searchByProvince label {display:none;}
+	#control_panel #cp_left, #control_panel #cp_right {width:98%;}
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#control_panel #lblMaxNumberOfResults {clear:both;}
+	#lblVersion {display:none;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	#divResults .results_top {height:auto;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	#MainContent_grdResults td {white-space:normal;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	
+	.floatRightbuttons {float:right; width:100%; margin-bottom:15px; text-align:right;}
+	#control_panel .row .col {clear:none; float:left; width:auto; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {float:none; margin-top:10px !important; width:9.583em;}
+	#divSearchCriteria {padding-top:0 !important;}
+	.row .divButton {float:right !important;}
+	.tblResults td {padding-right:18px;}
+	.tblResults td.tdLeading {padding-right:66px;}
+	.tblResults caption {margin:0 !important;}
+}
+
+ /* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 769px) and (max-width: 801px) {
+	html {width:100%;}
+    body
+    {
+       /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0 10px;
+		width:auto;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+	.tblResults th .desktop {color:#fff;}
+
+    #body
+    {
+        width: auto;
+    }
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+   
+    #top_menu a
+    {
+        /* font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+    
+	#bottom_summary {display:block;}
+	/* Section buttons */
+    #section_buttons
+    {
+        
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+    #section_buttons a
+    {
+       
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+    }
+	#divBodyHeader {clear:both;}
+   
+   	#left_content {float:none; width:180px;}
+		#left_content img {max-width:180px;}
+   
+	
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+    #tblSummary
+    {
+        width: 100%;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	
+
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+   
+	.results_title {text-align:left;}
+	
+	#control_panel .cmd, #settings_panel .cmd {margin:10px 0;}
+	.results_toolbar input {width:auto;}
+	#control_panel #cp_left {float:none;}
+	#control_panel .search_by {height:auto;}
+	#searchByProvince label {display:none;}
+	#control_panel #cp_left, #control_panel #cp_right {width:98%;}
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#control_panel #lblMaxNumberOfResults {clear:both;}
+	#lblVersion {display:none;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	#divResults .results_top {height:auto;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	#MainContent_grdResults td {white-space:normal;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	.floatRightbuttons {float:right; width:100%; text-align:right; margin-bottom:15px;}
+	#control_panel .row .col {clear:none; float:left; width:auto; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {float:none; margin-top:10px !important; width:9.583em !important;}
+	#divSearchCriteria {padding-top:0 !important;}
+	.row .divButton {float:right !important;}
+		.row .divButton input.cmd {margin-top:25px !important;}
+	.tblResults td {padding-right:18px;}
+	.tblResults td.tdLeading {padding-right:66px;}
+	.tblResults caption {margin:0 !important;}
+}
+
+ /* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+	html {width:100%;}
+    body
+    {
+       /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0;
+        width: 100%;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+	.tblResults th .desktop {color:#fff;}
+    #body
+    {
+        width: auto;
+    }
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+    #top_menu
+    {
+        display: none;
+    }
+    #top_menu a
+    {
+        /* font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+
+    /* Section buttons */
+    #section_buttons
+    {
+        height: 12em;
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+    #section_buttons a
+    {
+        
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+    }
+	
+    
+
+    #right_content
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+	#bottom_content{margin-left:0;}
+
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+    #tblSummary
+    {
+        width: 100%;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+    .tblResults .td_no_mobile
+    {
+        display: none;
+    }
+
+    /* Bottom */
+    #hlkElectionsCanadaBottom, #hlkTermsConditionsBottom
+    {
+        display: none;
+    }
+	
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	#divResults .results_top {height:auto;}
+	.results_top .results_toolbar {margin:-10px 0 10px 0;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	.no_mobile {display:none;}
+	#MainContent_grdResults td {white-space:normal;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	.floatRightbuttons {float:right; width:100%; text-align:right; margin-bottom:15px;}
+	#control_panel .row .col {clear:both; float:none; width:100%; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {float:none; margin-top:10px !important;}
+	#divSearchCriteria {padding-top:0 !important;}
+	.tblResults td {padding-right:18px;}
+	.tblResults td.tdLeading {padding-right:66px;}
+	.tblResults caption {margin:0 !important;}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	html {width:100%;}
+    body
+    {
+       /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0 10px;
+        width: auto;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+	.tblResults th .desktop {color:#fff;}
+
+
+    #body
+    {
+        width: auto;
+    }
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+    #top_menu
+    {
+        display: none;
+    }
+    #top_menu a
+    {
+        /* font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+    
+
+    /* Section buttons */
+    #section_buttons
+    {
+        height: 10em;
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+	#section_buttons #nav li {float:left; display:block; width:50%;}
+    #section_buttons a
+    {
+		display:block;
+        
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+		width:90%;
+    }
+
+    #left_content
+    {
+        display: none;
+    }
+
+    #right_content
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+	#bottom_content{margin-left:0;}
+
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+    #tblSummary
+    {
+        width: 100%;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	
+
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+	
+	
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+    .tblResults .td_no_mobile
+    {
+        display: none;
+    }
+  
+    /* Bottom */
+    #hlkElectionsCanadaBottom, #hlkTermsConditionsBottom
+    {
+        display: none;
+    }
+	
+	.results_title {text-align:left;}
+			#control_panel #divSearchCriteria {margin-top:0;}
+	#control_panel .cmd, #settings_panel .cmd {margin:10px 0;}
+	
+	#control_panel #cp_left {float:none;}
+	#control_panel .search_by {height:auto;}
+	#searchByProvince label {display:none;}
+	#control_panel #cp_left, #control_panel #cp_right {width:99%;}
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#control_panel #updSearchControls, #control_panel #cp_left, #control_panel #cp_right, #control_panel .search_by, #control_panel #divProvinces, #control_panel #divSearchType, #control_panel #divSearchCriteria, #control_panel #divElectoralDistrict, #control_panel .txt, #control_panel #div_or {float:none;}
+	#lblVersion {display:none;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	#divResults .results_top {height:auto;}
+	.results_top h2 {text-align:left;}
+	.results_top .results_toolbar {clear:both; float:none; width:100%; text-align:right; margin-top:10px; margin-bottom:0;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	.no_mobile {display:none;}
+	#MainContent_grdResults td {white-space:normal;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	.floatRightbuttons {float:right; width:100%; margin-bottom:0; text-align:right;}
+	.floatRightbuttons .btnClose {margin-left:0; margin-right:10px;}
+	#control_panel .row .col {clear:both; float:none; width:100%; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {float:none; margin-top:10px !important;}
+	#divSearchCriteria {padding-top:0 !important;}
+	.tblResults td {padding-right:12px;}
+	.tblResults td.tdLeading {padding-right:63px;}
+	.tblResults caption {margin:0 !important;}
+	#FrmSearch #bottom_content {margin-top:0 !important;}
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 490px) and (max-width: 600px) {
+	html {width:100%;}
+    body
+    {
+       /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0 10px;
+        width: auto;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+
+	.tblResults th .desktop {color:#fff;}
+
+
+    #body
+    {
+        width: auto;
+    }
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+    #top_menu
+    {
+        display: none;
+    }
+    #top_menu a
+    {
+        /* font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+    
+
+    /* Section buttons */
+    #section_buttons
+    {
+        height: 10em;
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+	#section_buttons #nav li {float:left; display:block; width:50%;}
+    #section_buttons a
+    {
+		display:block;
+        
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+		width:90%;
+    }
+
+    #left_content
+    {
+        display: none;
+    }
+
+    #right_content
+    {
+        margin-left: 0;
+        width: 100%;
+    }
+	#bottom_content{margin-left:0;}
+
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+    #tblSummary
+    {
+        width: 100%;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	
+
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+	
+	
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+    .tblResults .td_no_mobile
+    {
+        display: none;
+    }
+    
+    /* Bottom */
+    #hlkElectionsCanadaBottom, #hlkTermsConditionsBottom
+    {
+        display: none;
+    }
+	
+	.results_title {text-align:left;}
+			#control_panel #divSearchCriteria {margin-top:0;}
+	#control_panel .cmd, #settings_panel .cmd {margin:10px 0;}
+	
+	#control_panel #cp_left {float:none;}
+	#control_panel .search_by {height:auto;}
+	#searchByProvince label {display:none;}
+	#control_panel #cp_left, #control_panel #cp_right {width:99%;}
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#control_panel #updSearchControls, #control_panel #cp_left, #control_panel #cp_right, #control_panel .search_by, #control_panel #divProvinces, #control_panel #divSearchType, #control_panel #divSearchCriteria, #control_panel #divElectoralDistrict, #control_panel .txt, #control_panel #div_or {float:none;}
+	#lblVersion {display:none;}
+	.results_top h2 {text-align:left;}
+	#divResults .results_top {height:auto;}
+	.results_top .results_toolbar {clear:both; float:none; width:100%; text-align:right; margin-top:10px; margin-bottom:0;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	.no_mobile {display:none;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	.floatRightbuttons {float:right; width:100%; margin-bottom:0; text-align:right;}
+	.floatRightbuttons .btnClose {margin-left:0; margin-right:10px;}
+	#control_panel .row .col {clear:both; float:none; width:100%; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {float:none; margin-top:10px !important;}
+	#divSearchCriteria {padding-top:0 !important;}
+	.tblResults td {padding-right:31px;}
+	.tblResults td.tdLeading {padding-right:71px;}
+	#grdNationalDataBlock th {padding-right:0.417em !important;}
+	#grdNationalDataBlock tr.td_datacolumn td {padding-right:0.417em !important;}
+	.tblResults caption {margin:0 !important;}
+	#FrmSearch #bottom_content {margin-top:0 !important;}
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px)
+{
+	html {width:100%;}
+    body
+    {
+       /*  font-size: 8pt !important; */
+        margin: 0;
+        overflow-x: hidden;
+    	overflow-y: scroll;
+        padding: 0 10px;
+        width: auto;
+    }
+	#FrmSearch {padding:0;}
+
+    ﻿.td_no_mobile, .desktop
+    {
+        color: transparent;
+    }
+    .mobile
+    {
+        position:relative !important;
+        left:0 !important;
+        color: #fff;
+    }
+	.tblResults th .mobile {color:#fff;}
+
+
+    #body
+    {
+        width: auto;
+    }
+	
+	#top_left, #top_right {width:100%;}
+	#top_left img {float:left; max-width:225px;}
+	h1 {text-align:left;}
+	#bottom_summary {text-align:left;}
+	#grdNationalDataBlock .td_no_mobile {display:none;}
+
+    /* Top */
+    #top, #summary
+    {
+        padding-right: 0.2em;
+    }
+    #top
+    {
+        background-size: 58%;
+        margin-bottom: 0em;
+    }
+    #top_menu
+    {
+        display: none;
+    }
+    #top_menu a
+    {
+        /* font-size: 0.900em; */
+        padding: 0em 0.5em 0em 0.5em;
+    }
+    #top_menu #lnk04 
+    { 
+        padding-right: 0.083em; 
+    }
+    
+
+    /* Section buttons */
+    #section_buttons
+    {
+        height: 10em;
+        margin: 10px auto;
+        text-align: center;
+        width:100%;
+    }
+	#section_buttons #nav li {float:left; display:block; width:50%;}
+    #section_buttons a
+    {
+		display:block;
+        
+        margin: 0.15em 0.1em 0em auto;
+        text-align: center;
+		line-height:1em;
+		min-height:2em;
+		height:auto;
+    }
+
+    #left_content
+    {
+        display: none;
+    }
+
+	#top_right {
+        float:none; clear:both;
+    }
+    #right_content
+    {
+       
+        width: 100%;
+    }
+	#bottom_content{margin-left:0;}
+	#content {clear:both;}
+    /* Summary */
+    #summary
+    {
+        margin: 0.2em 0em 0em 0em;
+        width: 100%;
+    }
+	#tblSummary
+    {
+        width: 100%;
+		margin:0.5em auto;
+    }
+	
+	#grdNationalDataBlock {width:100%;}
+	#grdNationalDataBlock .td_emptycell {display:none;}
+
+
+    /* Message board */
+    #message_board_container
+    {
+        width: 100%;
+    }
+
+    /* Control Panel */
+    #control_panel input, #control_panel select
+    {
+        margin-right: 0.3em;
+    }
+
+    /* Results */
+    .tblResults
+    {
+        width: 100%;
+    }
+    .tblResults .td_no_mobile
+    {
+        display: none;
+    }
+
+    /* Bottom */
+    #hlkElectionsCanadaBottom, #hlkTermsConditionsBottom
+    {
+        display: none;
+    }
+	
+	.results_title {text-align:left;}
+			#control_panel #divSearchCriteria {margin-top:0;}
+	#control_panel .cmd, #settings_panel .cmd {width:auto; margin:10px 0;}
+	.results_toolbar input {width:auto;}
+	#control_panel #cp_left {float:none;}
+	#control_panel .search_by {height:auto;}
+	#searchByProvince label {display:none;}
+	#control_panel #cp_left, #control_panel #cp_right {width:99%;}
+	/* .tblResults th, .tblResults td {font-size:0.875em;} */
+	#control_panel #updSearchControls, #control_panel #cp_left, #control_panel #cp_right, #control_panel .search_by, #control_panel #divProvinces, #control_panel #divSearchType, #control_panel #divSearchCriteria, #control_panel #divElectoralDistrict, #control_panel .txt, #control_panel #div_or {float:none;}
+	#lblVersion {display:none;}
+	#divResults .results_top {height:auto;}
+	.results_top .results_toolbar {clear:both; float:none; width:100%; text-align:right; margin:0;}
+	.results_top h2 {text-align:left;}
+	.results_top .results_title {margin:0; line-height:1em;}
+	.results_title, .results_type {display:block; text-align:left; clear:both; margin:0;}
+	.results_toolbar input {float:none; display:inline-block; margin:10px 10px 0 0;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li input {float:left;}
+	#settings_panel #SettingsContent_rdbtlRefreshRate li label {width:90%;}
+	.no_mobile {display:none;}
+	.no_mobile_iphone {display:none;}
+	.tblResults th, .tblResults td {white-space:normal;}
+	#MainContent_divGridResultsSummaryTitle, #MainContent_divGridResultsDetailsTitle, #divShowDetails {width:99% !important;}
+	.lblTotal .label, .lblPolls .label, .lblVoter .label, .lblPopulation .label, .lblValidationDate .label, .lblElectorNumber .label{width:100%;}
+	.floatRightbuttons {float:right; width:100%; text-align:right; margin-bottom:0;}
+	#control_panel .row .col {clear:both; float:none; width:100%; padding-bottom:10px;}
+	#control_panel .cmd, #settings_panel .cmd {width:9.583em !important; float:none; margin-top:10px !important; width:9.583em;}
+	#divSearchCriteria {padding-top:0 !important;}
+	#title, #date {float:left;}
+	.tblResults .td_numeric {white-space:nowrap;}
+	.tblResults td {/*text-align:right !important*/; padding-right:2px;}
+	.tblResults td.tdLeading {padding-right:43px;}
+	#grdNationalDataBlock th {padding-right:0.417em !important;}
+	#grdNationalDataBlock tr.td_datacolumn td {padding-right:0.417em !important;}
+	.tblResults th {font-size:8px !important;}
+	.tblResults td {font-size:10px !important;}
+	#bottom_content{margin-left:0em;}
+	.tblResults caption {margin:0 !important;}
+	#FrmSearch #bottom_content {margin-top:0 !important;}
+	
+	#title {margin-bottom:10px;}
+
+}
+
+
+

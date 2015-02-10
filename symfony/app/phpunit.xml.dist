@@ -15,11 +15,9 @@
         </testsuite>
     </testsuites>
 
-    <!--
     <php>
-        <server name="KERNEL_DIR" value="/path/to/your/app/" />
+        <server name="KERNEL_DIR" value="/home/cdn2015/code/cdn2015/symfony/app" />
     </php>
-    -->
 
     <filter>
         <whitelist>

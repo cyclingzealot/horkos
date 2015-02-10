@@ -3,6 +3,7 @@
 namespace Jlam\Cdn2015Bundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use src\Jlam\Cdn2015Bundle\Cdn2015scrapper;
 
 class Cdn2015Controller extends Controller
 {
@@ -11,12 +12,12 @@ class Cdn2015Controller extends Controller
 	#If a cache is available, use it.
 
 	#If not, slurp data
-
-	#Produce a riding object from the data
+	Cdn2015scrapper::initialize($this->container);
+	Cdn2015scrapper::scrape();
 
 	#Export the data
 
-        #Render and save into cachihng
+    #Render and save into cachihng
 
 	#Return the controller 
         return $this->render('JlamCdn2015Bundle:Cdn2015:index.html.twig', array('data' => $data));
