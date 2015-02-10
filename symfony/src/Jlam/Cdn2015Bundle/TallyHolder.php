@@ -34,6 +34,9 @@ class TallyHolder {
 		$flatAdditive =	 self::array_flat($additive);
 		
 		foreach($flatAdditive as $path => $addValue) {
+			if(!isset($this->tally[$path])) {
+				$this->tally[$path] = 0;
+			}
 			$this->tally[$path] += $addValue;
 		}
 	}
@@ -56,7 +59,7 @@ class TallyHolder {
 	
 	        if (is_array($value))
 	        {
-	            $result = array_merge($result, self::array_flat($value, $new_key));
+	            $result = array_merge($result, self::array_flat($value, $seperator, $new_key));
 	        }
 	        else
 	        {
@@ -83,16 +86,24 @@ class TallyHolder {
 		foreach ( $array as $path => $value ) {
 			$newValue = null;
 			$pathParts = explode ( $seperator, $path );
+			$topKey = $pathParts[0];
 			
 			if (count ( $pathParts ) == 1) {
 				$newValue = $value;
 			} else {
+				array_shift($pathParts);
+				$newKey = implode($seperator, $pathParts);
 				$newValue = self::array_unflat(
-					array(implode($seperator, array_shift($pathParts)) => $value)
+					array($newKey => $value)
 					, $seperator);
 			}
 			
-			$result[$pathParts[0]] = $newValue;
+			if(!isset($result[$topKey])) {
+				$result[$topKey] = $newValue;
+			} else {
+				$result[$topKey] = array_merge($result[$topKey], $newValue);
+			}
+			
 		}
 		
 		return $result;
