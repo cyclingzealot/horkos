@@ -4,12 +4,15 @@ namespace Jlam\Cdn2015Bundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Translation\Tests\String;
+use Jlam\Cdn2015Bundle\TallyHolder;
 
 /**
  * Riding
  *
  * @ORM\Table()
  * @ORM\Entity
+ * 
+ * @author jlam@credil.org
  */
 class Riding
 {
@@ -52,6 +55,16 @@ class Riding
 
     
     
+    private $localRaceTally;
+    
+    
+    private $allRidingVotes;
+    
+    
+    
+    
+    
+    
     /**
      * @var string
      * 
@@ -61,6 +74,23 @@ class Riding
     private $identfier;
     
     
+    static protected $partyWastedVotesTally;
+    static protected $jurisdictionTally;
+    
+    
+    
+    static protected $talliesInitialized;
+    
+    static protected $ridingsContainer;
+    
+    
+    public function __construct() {
+    	self::initializeTallies();
+    	
+    	$this->localRaceTally = new TallyHolder();
+    	
+    	self::$ridingsContainer[] = $this;
+    }
     
     
     /**
@@ -73,6 +103,8 @@ class Riding
     
     
     
+    
+    
     public function getParticipationRate() {
     	return $this->calcParticipationRate();
     }
@@ -80,6 +112,12 @@ class Riding
     public function getUnrepresentedVotes() {
     	return $this->calcUnrepresentedVotes();
     }
+    
+    
+    public function setVotes($party, $votes) {
+    	$this->localRaceTally->add(array($party=>$votes));
+    }
+    
     
     
     /**
@@ -122,22 +160,62 @@ class Riding
      * @return null
      */
     public function updateTallies() {
+    	$localTally		= $this->localRaceTally->getTally();
+    	$wastedTally	= self::copyWithoutHighest($localTally);
     	
+    	self::$jurisdictionTally->add(array(
+    		'elibegable'=>$this->getEligibleVoters(),
+    		'valid'		=>array_sum($localTally),
+    		'wasted'	=>array_sum($wastedTally),
+    		'all'		=>$this->allRidingVotes
+    	));
+    	
+    	self::$partyWastedVotesTally->add($wastedTally);
     }
     
     
-     
-    
-    
-    public static function setPartyTallyHolder($partyTally) {
+    public static function copyWithoutHighest($arrayIn) {
+    	$array = $arrayIn;
     	
+    	$keyMax = null;
+    	$max = null;
+    	
+    	foreach($array as $key=>$value) {
+    		if(!isset($max) || $value>$max) {
+				$max	= $value;
+				$keyMax	= $key;
+    		}
+    	}
+    	
+    	unset($array[$keyMax]);
+    	
+    	return $array;
     }
     
     
-    public static function setJurisdictionTallyHolder($jurisdictionTally) {
+    /**
+     * Called in the constructor so you don't 
+     * have to do it in the Controller
+     * 
+     */
+    public static function initializeTallies() {
+    	if(self::$talliesInitialized)  return;
     	
+    	self::$partyTallyHolder =			new TallyHolder();
+    	self::$jurisdictionTallyHolder =	new TallyHolder();
+    	
+    	self::$talliesInitialized = TRUE;
     }
     
+    
+    public static function getPartyTallyHolder() {
+    	return self::$partyTallyHolder;
+    }
+    
+    
+    public static function getJurisdictionTallyHolder() {
+    	return self::$jurisdictionTallyHolder;
+    }
 
     /**
      * Get id
@@ -255,4 +333,15 @@ class Riding
     {
         return $this->source;
     }
+    
+    
+    public static function getAllRdiings() {
+    	return self::$ridingsContainer;
+    }
+    
+    
+    public function setAllRidingVotes($allRidingVotes) {
+    	$this->allRidingVotes = $allRidingVotes;
+    }
+    
 }

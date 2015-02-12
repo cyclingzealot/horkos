@@ -2,6 +2,7 @@
 
 namespace Jlam\Cdn2015Bundle;
 
+use Jlam\Cdn2015Bundle\Entity\Riding;
 class Cdn2015scrapper extends ScrapingEngine {
 	
 	static $devRidings = array(0);
@@ -16,11 +17,12 @@ class Cdn2015scrapper extends ScrapingEngine {
 		$ridingIdentfiers = self::addDevRidings($ridingIdentfiers);
 		
 		foreach ($ridingIdentfiers as $i ) {
-			$district = sprintf ( '%03d', $i );
-			
+			$url = self::getFinalPath($i);
 			
 			self::addLog("Getting results for riding $i $url...");
 			
+			$riding = new Riding();
+			$riding->setSource($url);
 			
 			$html = file_get_contents ( $url );
 			
@@ -60,26 +62,28 @@ class Cdn2015scrapper extends ScrapingEngine {
 				
 				$cells = $row->getElementsByTagName('td');
 			
-				$partyNode = $cells->item(0);
-			
-				if(!is_object($partyNode))  
-					throw \Exception("partyNode is not an object\n");
-			
 				$party = $cells->item(0)->textContent;
 			
 				$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
 			
 				self::addLog("Scrapped: $party\t$votes\n");
-			
-			
-				$resultsByRidingByParty[$i][$party] = $votes;
-				$resultsByPartyByRiding[$party][$i] = $votes;
-			
-				#var_export($resultsByRidingByParty);
-				#echo "\n\n";
-				#var_export($resultsByPartyByRiding);
-				#echo "\n\n";
+
+				$riding->setVotes($party, $votes);
 			}
+			
+			$xPathQuery = '//*[@id="divElectorNumberucElectoralDistrictResult' . $i . '"]/p';
+			$numVoters = trim(substr($xpath->query($xPathQuery)->item(0)->textContent, 80));
+			self::addLog("Number of Voters: $numVoters");
+			$riding->setEligibleVoters($numVoters);
+			
+
+			$row = $rows->item($numRows-1);
+			$cells = $row->getElementsByTagName('td');
+			$totalVotes = $cells->item(2)->textContent;
+			self::addLog("Number of total votes: $totalVotes");
+			$riding->setAllRidingVotes($totalVotes);
+			
+			$riding->updateTallies();
 				
 		}
 	}
@@ -108,8 +112,8 @@ class Cdn2015scrapper extends ScrapingEngine {
 		
 		$lang = self::getLanguageEquivalent();
 		
-		$url = "http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang";
-			
+		$url = "http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang";	
+		
 		$html = file_get_contents ( $url );
 			
 		$doc = new \DOMDocument ();
