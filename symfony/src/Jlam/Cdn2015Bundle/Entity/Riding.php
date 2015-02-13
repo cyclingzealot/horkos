@@ -74,7 +74,7 @@ class Riding
     private $identfier;
     
     
-    static protected $partyWastedVotesTally;
+    static protected $partyVotesTally;
     static protected $jurisdictionTally;
     
     
@@ -170,7 +170,10 @@ class Riding
     		'all'		=>$this->allRidingVotes
     	));
     	
-    	self::$partyWastedVotesTally->add($wastedTally);
+    	self::$partyVotesTally->add(array(
+    			'wasted'=>$wastedTally,
+    			'valid' =>$localTally,
+    	));
     }
     
     

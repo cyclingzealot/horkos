@@ -73,7 +73,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 			
 			$xPathQuery = '//*[@id="divElectorNumberucElectoralDistrictResult' . $i . '"]/p';
 			$numVoters = trim(substr($xpath->query($xPathQuery)->item(0)->textContent, 80));
-			self::addLog("Number of Voters: $numVoters");
+			self::addLog("Number of voters: $numVoters");
 			$riding->setEligibleVoters($numVoters);
 			
 
