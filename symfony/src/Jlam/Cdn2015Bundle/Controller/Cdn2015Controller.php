@@ -17,11 +17,17 @@ class Cdn2015Controller extends Controller
 		Cdn2015scrapper::initialize($this->container);
 		Cdn2015scrapper::scrape();
 	
-		#Export the data
-	
-	    #Render and save into cachihng
-	
+	    #Render
+        $response = $this->render('JlamCdn2015Bundle:Cdn2015:index.html.twig', array(
+        	'ridings'	 	=> Riding::getAllRdings(),
+        	'partyTally' 	=> Riding::getPartyTally(),
+        	'jurisdiction'	=> Riding::getJurisdictionTally(),
+        ));
+        
+        #Save into caching
+        
+        
 		#Return the controller 
-        return $this->render('JlamCdn2015Bundle:Cdn2015:index.html.twig', array('data' => $data));
+        return $response;
     }
 }

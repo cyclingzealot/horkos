@@ -74,7 +74,7 @@ class Riding
     private $identfier;
     
     
-    static protected $partyVotesTally;
+    static protected $partyTally;
     static protected $jurisdictionTally;
     
     
@@ -162,6 +162,7 @@ class Riding
     public function updateTallies() {
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
+    	$winnerCount	= self::leadingOnly($localTally);
     	
     	self::$jurisdictionTally->add(array(
     		'elibegable'=>$this->getEligibleVoters(),
@@ -170,29 +171,54 @@ class Riding
     		'all'		=>$this->allRidingVotes
     	));
     	
-    	self::$partyVotesTally->add(array(
-    			'wasted'=>$wastedTally,
-    			'valid' =>$localTally,
+    	self::$partyTally->add(array(
+    			'wasted' =>$wastedTally,
+    			'valid'  =>$localTally,
+    			'leading'=>$winnerCount,
     	));
+    	
+    	/*
+    	 * Riding ($this) is already added to the 
+    	 * allRidingsContainer in the 
+    	 * contructor
+    	 */
     }
     
     
     public static function copyWithoutHighest($arrayIn) {
     	$array = $arrayIn;
     	
-    	$keyMax = null;
-    	$max = null;
-    	
-    	foreach($array as $key=>$value) {
-    		if(!isset($max) || $value>$max) {
-				$max	= $value;
-				$keyMax	= $key;
-    		}
-    	}
+    	$keyMax = self::findKeyOfMaxValue($arrayIn);
     	
     	unset($array[$keyMax]);
     	
     	return $array;
+    }
+    
+    
+    public static function leadingOnly($arrayIn) {
+    	$array = $arrayIn;
+    	
+    	$keyMax = self::findKeyOfMaxValue($arrayIn);
+    	
+    	return array($keyMax=>1);
+    	
+    }
+    
+    
+    
+    public static function findKeyOfMaxValue($arrayIn) {
+    	$keyMax = null;
+    	$max = null;
+    	 
+    	foreach($array as $key=>$value) {
+    		if(!isset($max) || $value>$max) {
+    			$max	= $value;
+    			$keyMax	= $key;
+    		}
+    	}
+    	
+    	return $keyMax;
     }
     
     
@@ -211,12 +237,12 @@ class Riding
     }
     
     
-    public static function getPartyTallyHolder() {
-    	return self::$partyTallyHolder;
+    public static function getPartyTally() {
+    	return self::$partyTally;
     }
     
     
-    public static function getJurisdictionTallyHolder() {
+    public static function getJurisdictionTally() {
     	return self::$jurisdictionTallyHolder;
     }
 
@@ -338,7 +364,7 @@ class Riding
     }
     
     
-    public static function getAllRdiings() {
+    public static function getAllRdings() {
     	return self::$ridingsContainer;
     }
     
