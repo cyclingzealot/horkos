@@ -1,0 +1,80 @@
+<a name="top"></a>
+
+<h1>{{summary.totalWastedVotes}} unrepresented votes (so far) in {{summary.electionName}} election</h1><table>
+
+<tr><td bgcolor="#00AAB4" border="1"><a href="http://www.fairvote.ca"><img src="http://campaign2015.fairvote.ca/wp-content/themes/fairvotecanada/images/structure/unfair.png"></a></td>
+
+
+<td>Hello,
+
+
+<p>My name is <a href="https://www.linkedin.com/in/julienlamarche">Julien Lamarche</a>.  I am a volunteer for <a href="http://www.fairvote.ca">Fair Vote Canada</a>, an organization that does 
+public education and lobbying to change the voting system so that more votes count.</p>
+
+<p>Below is a compilation of the numbers taken from the 
+<a href="{{summary.source}}">{{summary.electionName}} live election results</a>.  
+
+<p>It sorts ridings by percentage of unrepresented votes.  An unrepresented vote is a vote that will not be represented in the legislature because it did not 
+go to the winning candidate.  At the bottom you will also see <a href="#byParty">unrepresented votes by party</a>.</p>
+
+<p>Winner-take-all systems (both first past the post and preferential ballot - ie Alternative Vote) have a high 
+rate of wasted or unreprested votes.  But most democracies have moved on to some form of proportional voting system which greatly diminish the lack of 
+representation (to about 5% of unrepresented votes). A proportional voting system also eliminates false government majorities.</p>
+
+<p>If you wish to help:<ul>
+<li>go <a href="http://secure.fairvote.ca/en/declaration">Sign the Declaration of Voters Rights</a></li>
+<li>Retweet relevant <a href="https://twitter.com/cyclingzealot">@cyclingzealot</a>, <a href="https://twitter.com/search?q=%23wastedvotes">#wastedvotes</a> tweets during the election</li>
+<li>After the election, follow and retweet <a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a>, <a href="https://twitter.com/search?q=%23pr2015">#pr2015</a> and <a href="https://twitter.com/search?q=%23fairvote">#fairvote</a></li>
+</ul>
+
+More information is available on the website of <a href="http://www.fairvote.ca">Fair Vote Canada</a></p>
+
+<p>For more information: 
+<table border="1">
+<tr><th>Position</th><th>Name & email</th></tr>
+<tr><td>Contact francophone</td><td><a href="mailto:julien.lamarche@gmail.com">Julien Lamarche</a></td></tr>
+<tr><td>National Executive Director</td><td><a href="mailto:office@fairvote.ca">Kelly Carmichael</a></td></tr>
+<tr><td>Script author</td><td><a href="mailto:julien.lamarche@gmail.com">Julien Lamarche</td></tr>
+</table>
+</p>
+
+</td></tr></table>
+
+<!-- Riding table -->
+<a name="data"></a>
+<p><table width="100%" border="1">
+<tr><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th><th>Participation rate % (so far) </th></tr>
+<tr><td>Fredericton-Grand Lake</td><td>71.21 %</td><td>5944</td><td>71 %</td></tr>
+
+{% for riding in ridings %}
+	<tr>
+		<td>riding.name</td>
+		<td>{{"%.2f %%" | format(riding.unrepresentedVotes / riding.validVotes * 100)}}</td>
+		<td>riding.unrepresentedVotes</td>
+		<td>{{"%.2f %%" | format(riding.participationRate * 100)}}</td>
+	</tr>
+{% endfor %}
+
+<tr style="font-weight: bold;">
+	<td>{{summary.jurisdictionName}}</td>
+	<td>{{"%.2f %%" | format(jurisdiction.wasted / jurisdiction.valid * 100)}}</td>
+	<td>{{jurisdiction.wasted}}</td>
+	<td>{{"%.2f %%" | format(jurisdiction.all / jurisdiction.eligible * 100)}}</td>
+</tr>
+
+</table></p>
+
+
+<p><a name="byParty">Unrepresented votes by party:</a>
+<ol><li>PC: 62187</li>
+<li>L: 49360</li>
+<li>NDP/NPD: 48259</li>
+<li>PARTI VERT N.B. GREEN PARTY: 22300</li>
+<li>PANB/AGNB: 7964</li>
+<li>IND: 3077</li>
+</ol></p><a href="#top">Top</a>
+
+<hr />
+
+<p><font size="-1">Results as of {{ "now"|date("Y-m-d H:i:s") }}</font></p>
+<p><font size="-1">Code available on <a href="{{summary.gitHubSource}}">Github</a></font></p>

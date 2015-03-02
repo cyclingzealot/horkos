@@ -74,6 +74,27 @@ class Riding
     private $identfier;
     
     
+    
+    /**
+     * Array in the structure of array(
+     * 		'wasted' => array(
+     * 			$nameForParty1	=> $wastedVotesForParty1,
+     * 			$nameForParty2	=> $wastedVotesForParty2,
+     * 		)
+     * 		'valid'	 => array(
+     * 			$nameForParty1	=> $validVotesForParty1,
+     * 			$nameForParty2	=> $validVotesForParty2,
+     * 		)
+     * 		//Leading means where the votes for that party would count if 
+     * 		//counting finished
+     * 		'leading'=> array(
+     * 			$nameForParty1	=> $votesForParty1whereParty1Leading
+     * 			$nameForParty2	=> $votesForParty2whereParty2leading
+     * )
+     * 
+     * @var array
+     * @authour jlam@credil.org
+     */
     static protected $partyTally;
     static protected $jurisdictionTally;
     
@@ -119,6 +140,11 @@ class Riding
     }
     
     
+    public function getValidVotes() {
+    	return $this->calcValidVotes();
+    }
+    
+    
     
     /**
      * Calculates the participation rate
@@ -128,7 +154,11 @@ class Riding
      * @return float
      */
     public function calcParticipationRate() {
+    	$voters = $this->getEligibleVoters();
     	
+    	$totalVotes = $this->allRidingVotes;
+    	
+    	return $totalVotes / $voters;
     }
     
     
@@ -139,7 +169,17 @@ class Riding
      * @return integer
      */
     public function calcUnrepresentedVotes() {
+    	$localTally		= $this->localRaceTally->getTally();
+    	$wastedTally	= self::copyWithoutHighest($localTally);
     	
+    	return array_sum($wastedTally);	
+    }
+    
+    
+    public function calcValidVotes() {
+    	$tally = $this->localRaceTally->getTally();
+    	
+    	return array_sum($tally);
     }
     
     
@@ -165,7 +205,7 @@ class Riding
     	$winnerCount	= self::leadingOnly($localTally);
     	
     	self::$jurisdictionTally->add(array(
-    		'elibegable'=>$this->getEligibleVoters(),
+    		'eligible'=>$this->getEligibleVoters(),
     		'valid'		=>array_sum($localTally),
     		'wasted'	=>array_sum($wastedTally),
     		'all'		=>$this->allRidingVotes
@@ -180,7 +220,7 @@ class Riding
     	/*
     	 * Riding ($this) is already added to the 
     	 * allRidingsContainer in the 
-    	 * contructor
+    	 * contructor, no need to add here
     	 */
     }
     

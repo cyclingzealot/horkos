@@ -114,6 +114,8 @@ class Cdn2015scrapper extends ScrapingEngine {
 		
 		$url = "http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang";	
 		
+		$this->setSource($url);
+		
 		$html = file_get_contents ( $url );
 			
 		$doc = new \DOMDocument ();
@@ -157,11 +159,13 @@ class Cdn2015scrapper extends ScrapingEngine {
 	
 	
 	public static function getFinalPath($identifer) {
+		$logger = self::getLogger('In final path');
+		
 
 		$lang = self::getLanguageEquivalent();
 		
 		if(in_array($identifer, self::$devRidings)) {
-				throw new \Exception("Dev files not implemented yet for identifier $identifer");
+				$logger->warn("Dev files not implemented yet for identifier $identifer");
 		}
 	
 		return "http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang";

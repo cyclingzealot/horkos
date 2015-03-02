@@ -116,6 +116,8 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$source = $source;
 	}
 	
+	public static function getSource() {return self::$source;}
+	
 	/**
 	 * 
 	 * @param string $message

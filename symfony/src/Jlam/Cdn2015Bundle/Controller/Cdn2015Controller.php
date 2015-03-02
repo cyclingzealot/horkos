@@ -16,11 +16,22 @@ class Cdn2015Controller extends Controller
 		#If not, slurp data
 		Cdn2015scrapper::initialize($this->container);
 		Cdn2015scrapper::scrape();
+		
+		$partyTally = Riding::getPartyTally();
+		
+		$summary = array(
+				'jurisdictionName'	=> 'Canada',
+			'electionName'			=> 'Canadian 2015',
+				'source'			=> \Jlam\Cdn2015Bundle\Cdn2015scrapper::getSource(),
+				'totalWastedVotes'	=> array_sum($partyTally['wasted']),
+				'tweetHandle'		=> '#elxn42',
+				'gitHubSource'		=> 'https://github.com/cyclingzealot/cdn2015',
+		);
 	
 	    #Render
         $response = $this->render('JlamCdn2015Bundle:Cdn2015:index.html.twig', array(
         	'ridings'	 	=> Riding::getAllRdings(),
-        	'partyTally' 	=> Riding::getPartyTally(),
+        	'partyTally' 	=> $partyTally,
         	'jurisdiction'	=> Riding::getJurisdictionTally(),
         ));
         
