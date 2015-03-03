@@ -62,6 +62,10 @@ class Riding
     
     
     
+    private static $logger;
+    
+    
+    
     
     
     
@@ -93,7 +97,7 @@ class Riding
      * )
      * 
      * @var array
-     * @authour jlam@credil.org
+     * @author jlam@credil.org
      */
     static protected $partyTally;
     static protected $jurisdictionTally;
@@ -157,6 +161,11 @@ class Riding
     	$voters = $this->getEligibleVoters();
     	
     	$totalVotes = $this->allRidingVotes;
+    	
+    	if($voters == 0) {
+    		self::$logger->warn("0 eligible voters for " . $this->name);
+    		return 0;
+    	}
     	
     	return $totalVotes / $voters;
     }
@@ -251,7 +260,7 @@ class Riding
     	$keyMax = null;
     	$max = null;
     	 
-    	foreach($array as $key=>$value) {
+    	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
     			$max	= $value;
     			$keyMax	= $key;
@@ -270,8 +279,8 @@ class Riding
     public static function initializeTallies() {
     	if(self::$talliesInitialized)  return;
     	
-    	self::$partyTallyHolder =			new TallyHolder();
-    	self::$jurisdictionTallyHolder =	new TallyHolder();
+    	self::$partyTally			=	new TallyHolder();
+    	self::$jurisdictionTally	=	new TallyHolder();
     	
     	self::$talliesInitialized = TRUE;
     }
@@ -283,7 +292,7 @@ class Riding
     
     
     public static function getJurisdictionTally() {
-    	return self::$jurisdictionTallyHolder;
+    	return self::$jurisdictionTally;
     }
 
     /**
@@ -405,12 +414,23 @@ class Riding
     
     
     public static function getAllRdings() {
-    	return self::$ridingsContainer;
+    	$allRidings = self::$ridingsContainer;
+    	return $allRidings;
     }
     
     
     public function setAllRidingVotes($allRidingVotes) {
     	$this->allRidingVotes = $allRidingVotes;
+    }
+    
+    
+    public static function setLogger($logger) {
+    	self::$logger = $logger;
+    }
+    
+    
+    public static function addLog($message) {
+    	self::$logger->info($message);
     }
     
 }

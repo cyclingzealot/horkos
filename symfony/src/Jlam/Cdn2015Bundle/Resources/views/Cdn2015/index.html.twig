@@ -44,35 +44,33 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 <a name="data"></a>
 <p><table width="100%" border="1">
 <tr><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th><th>Participation rate % (so far) </th></tr>
-<tr><td>Fredericton-Grand Lake</td><td>71.21 %</td><td>5944</td><td>71 %</td></tr>
 
 {% for riding in ridings %}
 	<tr>
-		<td>riding.name</td>
-		<td>{{"%.2f %%" | format(riding.unrepresentedVotes / riding.validVotes * 100)}}</td>
-		<td>riding.unrepresentedVotes</td>
+		<td><a href="{{riding.source}}">{{riding.name}}</a></td>
+		<td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
+		<td>{{riding.unrepresentedVotes}}</td>
 		<td>{{"%.2f %%" | format(riding.participationRate * 100)}}</td>
 	</tr>
 {% endfor %}
 
 <tr style="font-weight: bold;">
 	<td>{{summary.jurisdictionName}}</td>
-	<td>{{"%.2f %%" | format(jurisdiction.wasted / jurisdiction.valid * 100)}}</td>
+	<td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
 	<td>{{jurisdiction.wasted}}</td>
-	<td>{{"%.2f %%" | format(jurisdiction.all / jurisdiction.eligible * 100)}}</td>
+	<td>{{"%.2f %%" | format(safe_divide(jurisdiction.all , jurisdiction.eligible) * 100)}}</td>
 </tr>
 
 </table></p>
 
 
 <p><a name="byParty">Unrepresented votes by party:</a>
-<ol><li>PC: 62187</li>
-<li>L: 49360</li>
-<li>NDP/NPD: 48259</li>
-<li>PARTI VERT N.B. GREEN PARTY: 22300</li>
-<li>PANB/AGNB: 7964</li>
-<li>IND: 3077</li>
-</ol></p><a href="#top">Top</a>
+<ol>
+{% for party, wastedVotes in partyTallyWasted %}
+<li>{{party}}: {{wastedVotes}}</li>
+{% endfor %}
+</ol>
+</p><a href="#top">Top</a>
 
 <hr />
 

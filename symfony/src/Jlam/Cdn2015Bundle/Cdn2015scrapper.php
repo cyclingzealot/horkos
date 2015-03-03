@@ -3,9 +3,11 @@
 namespace Jlam\Cdn2015Bundle;
 
 use Jlam\Cdn2015Bundle\Entity\Riding;
+
+
 class Cdn2015scrapper extends ScrapingEngine {
 	
-	static $devRidings = array(0);
+	protected static $devRidings = array(0);
 	
 	
 	public static function scrape() {
@@ -15,8 +17,15 @@ class Cdn2015scrapper extends ScrapingEngine {
 		$ridingIdentfiers = self::getRidingIdentifiers();
 		
 		$ridingIdentfiers = self::addDevRidings($ridingIdentfiers);
+
+		$devRidings = self::$devRidings;
 		
 		foreach ($ridingIdentfiers as $i ) {
+			//Don't do dev ridings for now
+			if(in_array($i, $devRidings)) {
+				continue;
+			}
+		
 			$url = self::getFinalPath($i);
 			
 			self::addLog("Getting results for riding $i $url...");
@@ -26,18 +35,19 @@ class Cdn2015scrapper extends ScrapingEngine {
 			
 			$html = file_get_contents ( $url );
 			
-			$doc = new DOMDocument ();
+			$doc = new \DOMDocument ();
 			$doc->loadHTML ( $html );
-			$xpath = new DOMXPath ( $doc );
+			$xpath = new \DOMXPath ( $doc );
 			
 			$xPathQuery = '//*[@id="grdResultsucElectoralDistrictResult' . $i . '"]/caption';
 			
-			$this->addLog("xPath: $xPathQuery");
+			self::addLog("xPath: $xPathQuery");
 			
 			$ridingNode = $xpath->query ( $xPathQuery );
-			$ridingNames [$i] = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
+			$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
 			
-			$this->addLog($ridingNames[$i]);
+			self::addLog($ridingName);
+			$riding->setName($ridingName);
 			
 			$tables = $doc->getElementsByTagName('table');
 			
@@ -47,11 +57,15 @@ class Cdn2015scrapper extends ScrapingEngine {
 			// ar_export($tables->item(0)->textContent);
 			// cho "\n\n";
 			
+			$tablesLength = $tables->length;
+			
+			self::addLog("Found $tablesLength items in \$tables");
+			
 			$rows = $tables->item ( 0 )->getElementsByTagName ( 'tr' );
 			
 			$numRows = $rows->length;
 			
-			$this->addLog("There are $numRows rows\n");
+			self::addLog("There are $numRows rows\n");
 			
 			$j = 0;
 			
@@ -65,14 +79,15 @@ class Cdn2015scrapper extends ScrapingEngine {
 				$party = $cells->item(0)->textContent;
 			
 				$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
-			
+				$votes = str_replace(",", "", $votes);
+				
 				self::addLog("Scrapped: $party\t$votes\n");
-
 				$riding->setVotes($party, $votes);
 			}
 			
 			$xPathQuery = '//*[@id="divElectorNumberucElectoralDistrictResult' . $i . '"]/p';
 			$numVoters = trim(substr($xpath->query($xPathQuery)->item(0)->textContent, 80));
+			$numVoters = str_replace(',', '', $numVoters);
 			self::addLog("Number of voters: $numVoters");
 			$riding->setEligibleVoters($numVoters);
 			
@@ -80,12 +95,16 @@ class Cdn2015scrapper extends ScrapingEngine {
 			$row = $rows->item($numRows-1);
 			$cells = $row->getElementsByTagName('td');
 			$totalVotes = $cells->item(2)->textContent;
+			$totalVotes = str_replace(',', '', $totalVotes);
 			self::addLog("Number of total votes: $totalVotes");
 			$riding->setAllRidingVotes($totalVotes);
 			
 			$riding->updateTallies();
 				
 		}
+		
+		
+		
 	}
 	
 	
@@ -98,7 +117,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 	 * @return array
 	 */
 	protected static function addDevRidings($ridingIdentifiers) {
-		return array_merge($ridingIdentifiers, self::devRidings);
+		return array_merge($ridingIdentifiers, self::$devRidings);
 	}
 	
 	
@@ -114,7 +133,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 		
 		$url = "http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang";	
 		
-		$this->setSource($url);
+		self::setSource($url);
 		
 		$html = file_get_contents ( $url );
 			
@@ -158,7 +177,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 	}
 	
 	
-	public static function getFinalPath($identifer) {
+	public static function getFinalPath($identifier) {
 		$logger = self::getLogger('In final path');
 		
 
