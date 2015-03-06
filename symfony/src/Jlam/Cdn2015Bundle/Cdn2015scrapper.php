@@ -35,8 +35,12 @@ class Cdn2015scrapper extends ScrapingEngine {
 			
 			$html = file_get_contents ( $url );
 			
+			
+			
 			$doc = new \DOMDocument ();
+			self::setErrorHandler();
 			$doc->loadHTML ( $html );
+			self::setErrorHandler(TRUE);
 			$xpath = new \DOMXPath ( $doc );
 			
 			$xPathQuery = '//*[@id="grdResultsucElectoralDistrictResult' . $i . '"]/caption';

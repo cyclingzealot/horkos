@@ -146,6 +146,68 @@ abstract class ScrapingEngine implements Scrapper {
 		
 	}
 	
+	/**
+	 * Sets the error hangler to monolog 
+	 * to suppress the DOMDocument::loadHTML() warnings
+	 * 
+	 * Most of this function copied from 
+	 * @author Jeremy Cook http://jeremycook.ca/2012/10/02/turbocharging-your-logs/
+	 */
+	protected static function setErrorHandler($reset = FALSE) {
+		if($reset === TRUE) {
+			restore_error_handler();
+		}
+		elseif($reset === FALSE) {
+			set_error_handler(function($errno, $errstr, $errfile, $errline, array $errcontext){
+				$message = 'Error of level ';
+				switch ($errno) {
+					case E_USER_ERROR:
+						$message .= 'E_USER_ERROR';
+						break;
+					case E_USER_WARNING:
+						$message .= 'E_USER_WARNING';
+						break;
+					case E_USER_NOTICE:
+						$message .= 'E_USER_NOTICE';
+						break;
+					case E_STRICT:
+						$message .= 'E_STRICT';
+						break;
+					case E_RECOVERABLE_ERROR:
+						$message .= 'E_RECOVERABLE_ERROR';
+						break;
+					case E_DEPRECATED:
+						$message .= 'E_DEPRECATED';
+						break;
+					case E_USER_DEPRECATED:
+						$message .= 'E_USER_DEPRECATED';
+						break;
+					case E_NOTICE:
+						$message .= 'E_NOTICE';
+						break;
+					case E_WARNING:
+						$message .= 'E_WARNING';
+						break;
+					default:
+						$message .= sprintf('Unknown error level, code of %d passed', $errno);
+				}
+				$message .= sprintf(
+						'. Error message was "%s" in file %s at line %d.',
+						$errstr,
+						$errfile,
+						$errline
+				);
+				
+				$logger = self::getLogger();
+				
+				
+				$logger->warn($message);
+				
+				return true;//Returning false will mean that PHP's error handling mechanism will not be bypassed.
+			});
+		}
+	}
+	
 }
 
 ?>
