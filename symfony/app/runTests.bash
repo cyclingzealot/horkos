@@ -21,7 +21,7 @@ clear
 length=`tput cols`
 yes '#' |  head -n $length | tr -d "\n" | xargs echo
 
-phpunit ../src/Jlam/Cdn2015Bundle/Tests/TallyHolderTest.php
+phpunit ../src/Jlam/HorkosBundle/Tests/TallyHolderTest.php
 sleep 5
 phpunit $1
 

@@ -1,4 +1,4 @@
-cdn2015
+horkos
 =======
 
-For scrapping live results of Canada 2015 federal election + wasted votes analysis
+For scrapping live results of canadian elections (provincial as well) + wasted votes analysis

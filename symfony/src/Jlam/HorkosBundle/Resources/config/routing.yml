@@ -1,0 +1,8 @@
+jlam_horkos_index:
+    path:	/
+    defaults: { _controller: JlamHorkosBundle:Horkos:index }
+
+
+jlam_horkos_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: JlamHorkosBundle:Default:index }
