@@ -58,6 +58,27 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$initialized = TRUE;
 	}
 	
+	
+	public static function grep($strings, $pattern) {
+		$matches = array ();
+		
+		if(is_string($strings))
+			$strings = array($strings);
+		
+		foreach ($strings as $str)
+			if (preg_match ("/$pattern/", $str, $m))
+				$matches[] = $m[1];
+		
+		return $matches;
+	}
+	
+	
+	public static function cut($string, $delimiter, $field) {
+		$array = explode($delimiter, $string);
+		
+		return $array[$field];
+	}
+	
 	/**
 	 * Return array of riding objects
 	 * 

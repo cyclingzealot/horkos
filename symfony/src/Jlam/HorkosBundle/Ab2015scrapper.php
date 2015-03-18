@@ -133,8 +133,9 @@ class Ab2015scrapper extends ScrapingEngine {
 		libxml_use_internal_errors(false);
 		$xpath = new \DOMXPath ( $doc );
 			
-		$xPathQuery = 'body > center:nth-child(6) > b:nth-child(2) > table:nth-child(3)';
-			
+		$xPathQuery = 'body > center:nth-child(6) > b:nth-child(2) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > a:nth-child(1)';
+		$xPathQuery = 'body / table';
+		
 		self::addLog("xPath: $xPathQuery");
 		$ridingList = $xpath->query ( $xPathQuery );
 		
