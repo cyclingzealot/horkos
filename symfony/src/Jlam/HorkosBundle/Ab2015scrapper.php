@@ -13,7 +13,7 @@ class Ab2015scrapper extends ScrapingEngine {
 		
 		$ridingIdentfiers = self::getRidingIdentifiers();
 
-		self::addLog('Got ' . count($ridingIdentifiers) . ' ridings');
+		self::addLog('Got ' . count($ridingIdentifiers) . ' ridings: ' . join(', ', $ridingIdentfiers));
 		
 		foreach ($ridingIdentfiers as $i ) {
 			self::addLog("Getting results for riding $i $url...");
@@ -139,9 +139,11 @@ class Ab2015scrapper extends ScrapingEngine {
 		foreach($strings as $string) {
 			$href = self::cut($string, '"', 2);
 
+			self::addLog("string is $string, href is $href");
+
 			$match = preg_match_all('/([0-9]+)/', $href, $matches);
 
-			$identifiers[] = $matches[0];
+			$identifiers[] = $matches[1];
 		}
 
 		$identifiers = array_unique($identifiers);
