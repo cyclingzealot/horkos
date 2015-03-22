@@ -12,6 +12,8 @@ class Ab2015scrapper extends ScrapingEngine {
 		$logger = self::getLogger('Starting scrape...');
 		
 		$ridingIdentfiers = self::getRidingIdentifiers();
+
+		self::addLog('Got ' . count($ridingIdentifiers) . ' ridings');
 		
 		foreach ($ridingIdentfiers as $i ) {
 			self::addLog("Getting results for riding $i $url...");
@@ -126,38 +128,26 @@ class Ab2015scrapper extends ScrapingEngine {
 		self::setSource($url);
 		
 		$html = file_get_contents ( $url );
-			
-		$doc = new \DOMDocument ();
-		libxml_use_internal_errors(true);
-		$doc->loadHTML ( $html );
-		libxml_use_internal_errors(false);
-		$xpath = new \DOMXPath ( $doc );
-			
-		$xPathQuery = 'body > center:nth-child(6) > b:nth-child(2) > table:nth-child(3) > tbody:nth-child(1) > tr:nth-child(3) > td:nth-child(1) > a:nth-child(1)';
-		$xPathQuery = 'body / table';
-		
-		self::addLog("xPath: $xPathQuery");
-		$ridingList = $xpath->query ( $xPathQuery );
-		
-		// RENDU ICI
-		
-		$count = $ridingList->length;
-		
-		foreach($ridingList as $ridingHTML) {
-			
-			$string = $ridingHTML->tagName;
-			
-			$aHref = $ridingHTML->getElementsByTagName('a');
-			
-			$url = $aHref->item(0)->getAttribute('href');
-			
-			$parts = parse_url($url);
-			parse_str($parts['query'], $query);
-			$ridingIdentifiers[] = $query['ed'];
-			
+
+		$strings = explode("\n", $html);
+		self::addLog('Got ' . count($strings) . ' strings');
+		$strings = self::grep($strings, 'BE\.htm');
+		self::addLog('Got ' . count($strings) . ' strings');
+
+
+		$identifiers = array();
+		foreach($strings as $string) {
+			$href = self::cut($string, '"', 2);
+
+			$match = preg_match_all('/([0-9]+)/', $href, $matches);
+
+			$identifiers[] = $matches[0];
 		}
-		
-		return $ridingIdentifiers;
+
+		$identifiers = array_unique($identifiers);
+
+		return $identifiers;
+
 	}
 	
 	

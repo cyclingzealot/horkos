@@ -65,9 +65,10 @@ abstract class ScrapingEngine implements Scrapper {
 		if(is_string($strings))
 			$strings = array($strings);
 		
-		foreach ($strings as $str)
+		foreach ($strings as $str) {
 			if (preg_match ("/$pattern/", $str, $m))
 				$matches[] = $m[1];
+		}
 		
 		return $matches;
 	}
