@@ -6,16 +6,18 @@ use Jlam\HorkosBundle\Entity\Riding;
 
 
 class Ab2015scrapper extends ScrapingEngine {
-	
+
 	
 	public static function scrape() {
 		$logger = self::getLogger('Starting scrape...');
 		
 		$ridingIdentfiers = self::getRidingIdentifiers();
 
-		self::addLog('Got ' . count($ridingIdentifiers) . ' ridings: ' . join(', ', $ridingIdentfiers));
+		self::addLog('Got ' . count($ridingIdentfiers) . ' ridings: ' . join(', ', $ridingIdentfiers));
 		
 		foreach ($ridingIdentfiers as $i ) {
+			$url = self::getFinalPath($i);
+
 			self::addLog("Getting results for riding $i $url...");
 			
 			$riding = new Riding();
@@ -131,13 +133,12 @@ class Ab2015scrapper extends ScrapingEngine {
 
 		$strings = explode("\n", $html);
 		self::addLog('Got ' . count($strings) . ' strings');
-		$strings = self::grep($strings, 'BE\.htm');
+		$identifiers = self::grep($strings, '([0-9]+)BE\.htm');
 		self::addLog('Got ' . count($strings) . ' strings');
 
-
-		$identifiers = array();
+		/*
 		foreach($strings as $string) {
-			$href = self::cut($string, '"', 2);
+			$href = self::cut($string, '"', 1);
 
 			self::addLog("string is $string, href is $href");
 
@@ -145,6 +146,7 @@ class Ab2015scrapper extends ScrapingEngine {
 
 			$identifiers[] = $matches[1];
 		}
+		*/
 
 		$identifiers = array_unique($identifiers);
 
@@ -168,11 +170,13 @@ class Ab2015scrapper extends ScrapingEngine {
 
 		$lang = self::getLanguageEquivalent();
 		
+		/*
 		if(in_array($identifier, self::$devRidings)) {
 				$logger->warn("Dev files not implemented yet for identifier $identifer");
 		}
+		*/
 	
-		return "http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang";
+		return "http://results.elections.ab.ca/${identifier}BE.htm";
 		
 		
 	}

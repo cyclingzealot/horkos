@@ -66,18 +66,27 @@ abstract class ScrapingEngine implements Scrapper {
 			$strings = array($strings);
 		
 		foreach ($strings as $str) {
-			if (preg_match ("/$pattern/", $str, $m))
-				$matches[] = $m[1];
+			self::addLog("Matching $pattern in $str");
+			if (preg_match ("/$pattern/", $str, $m)) {
+				$match = $m[1];
+				self::addLog("Matched $match");
+				$matches[] = $match;
+			}
 		}
-		
+	
+		self::addLog('Returning ' . count($matches) . ' matches');
+
 		return $matches;
 	}
 	
 	
 	public static function cut($string, $delimiter, $field) {
+		self::addLog("Cutting $string with $delimiter, field $field");
 		$array = explode($delimiter, $string);
 		
-		return $array[$field];
+		$return = $array[$field];
+		self::addLog("Returning $return");
+		return $return;
 	}
 	
 	/**
