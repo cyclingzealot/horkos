@@ -59,22 +59,27 @@ abstract class ScrapingEngine implements Scrapper {
 	}
 	
 	
-	public static function grep($strings, $pattern) {
+	public static function grep($strings, $pattern, $returnLines = FALSE) {
 		$matches = array ();
 		
 		if(is_string($strings))
-			$strings = array($strings);
+			$strings = explode("\n", $strings);
 		
 		foreach ($strings as $str) {
-			self::addLog("Matching $pattern in $str");
-			if (preg_match ("/$pattern/", $str, $m)) {
+			self::addLog("Searching $pattern in $str");
+			if (!$returnLines && preg_match ("/$pattern/", $str, $m)) {
 				$match = $m[1];
 				self::addLog("Matched $match");
 				$matches[] = $match;
+			} elseif (strpos($str, $pattern) !== FALSE) {
+				self::addLog("Adding $str cause it contains $pattern");
+			    $matches[] = $str;
+			} else {
+				self::addLog("$str does not contain $pattern");
 			}
 		}
 	
-		self::addLog('Returning ' . count($matches) . ' matches');
+		self::addLog('Returning ' . count($matches) . ' matches: ' . join('#*#', $matches));
 
 		return $matches;
 	}

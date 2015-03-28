@@ -27,23 +27,19 @@ class Ab2015scrapper extends ScrapingEngine {
 			
 			
 			
+			/*
 			$doc = new \DOMDocument ();
 			self::setErrorHandler();
 			$doc->loadHTML ( $html );
 			self::setErrorHandler(TRUE);
 			$xpath = new \DOMXPath ( $doc );
+			*/
+
+			$string     = self::grep($html, 'Unofficial Poll Results', TRUE);
+			$ridingName = self::grep($string, 'Unofficial Poll Results - [0-9][0-9]* ([A-Z-]*)')[0];
 			
-			$xPathQuery = '//*[@id="grdResultsucElectoralDistrictResult' . $i . '"]/caption';
-			
-			self::addLog("xPath: $xPathQuery");
-			
-			$ridingNode = $xpath->query ( $xPathQuery );
-			$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
-			
-			self::addLog($ridingName);
+			self::addLog("Got ridingName: $ridingName");
 			$riding->setName($ridingName);
-			
-			$tables = $doc->getElementsByTagName('table');
 			
 			// nodes = $xpath->query('/html/body/div[2]/div[2]/div[2]/div[3]/table/tbody');
 			
@@ -51,18 +47,16 @@ class Ab2015scrapper extends ScrapingEngine {
 			// ar_export($tables->item(0)->textContent);
 			// cho "\n\n";
 			
-			$tablesLength = $tables->length;
 			
-			self::addLog("Found $tablesLength items in \$tables");
+			$string  = self::grep($html, 'ColHeadingCA', TRUE);
+			preg_match_all("|<SPAN STYLE='font-size: 12pt'>([A-Z]*)</SPAN>|", $string[0], $matches);
+			self::addLog('Got ' . count($matches[1]) . ' matches: ' . join(',', $matches[1]));
 			
-			$rows = $tables->item ( 0 )->getElementsByTagName ( 'tr' );
-			
-			$numRows = $rows->length;
-			
-			self::addLog("There are $numRows rows\n");
-			
+			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9],[0-9]{3})<BR>|", $stringVotes[1], $matchesVotes);
+			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(',', $matchesVotes[1]));
+
 			$j = 0;
-			
 			for($j=0; $j<$numRows-3; $j++) {
 				if($j==0)  continue;
 			
