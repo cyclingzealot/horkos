@@ -61,6 +61,7 @@ class Ab2015scrapper extends ScrapingEngine {
 				$riding->setVotes($party, $votes);
 			}
 
+			# Find and set eligeable voters
 			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
 			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)|", $stringVotes[1], $matchesVotes);
 			self::addLog('Got for voters count ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
@@ -68,14 +69,15 @@ class Ab2015scrapper extends ScrapingEngine {
 			self::addLog("Number of voters: $numVoters");
 			$riding->setEligibleVoters($numVoters);
 			
+			# Find and save all votes (aka total votes)
 			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
-			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)</TABLE>|", $stringVotes[2], $matchesVotes);
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)</TABLE>|", $stringVotes[5], $matchesVotes);
 			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
-
 			$totalVotes = str_replace(',', '', $matchesVotes[1][0]);
 			self::addLog("Number of total votes: $totalVotes");
 			$riding->setAllRidingVotes($totalVotes);
 			
+			# Update talies 
 			$riding->updateTallies();
 				
 		}
