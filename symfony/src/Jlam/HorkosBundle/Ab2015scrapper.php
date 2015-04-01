@@ -53,37 +53,26 @@ class Ab2015scrapper extends ScrapingEngine {
 			self::addLog('Got ' . count($matches[1]) . ' matches: ' . join(',', $matches[1]));
 			
 			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
-			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9],[0-9]{3})<BR>|", $stringVotes[1], $matchesVotes);
-			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(',', $matchesVotes[1]));
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)<BR>|", $stringVotes[2], $matchesVotes);
+			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
 
-			$j = 0;
-			for($j=0; $j<$numRows-3; $j++) {
-				if($j==0)  continue;
-			
-				$row = $rows->item($j);
-				
-				$cells = $row->getElementsByTagName('td');
-			
-				$party = $cells->item(0)->textContent;
-			
-				$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
-				$votes = str_replace(",", "", $votes);
-				
-				self::addLog("Scrapped: $party\t$votes\n");
+			foreach($matches[1] as $index => $party) {
+				$votes = str_replace(',', '', $matchesVotes[1][$index]);
 				$riding->setVotes($party, $votes);
 			}
-			
-			$xPathQuery = '//*[@id="divElectorNumberucElectoralDistrictResult' . $i . '"]/p';
-			$numVoters = trim(substr($xpath->query($xPathQuery)->item(0)->textContent, 80));
-			$numVoters = str_replace(',', '', $numVoters);
+
+			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)|", $stringVotes[1], $matchesVotes);
+			self::addLog('Got for voters count ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
+			$numVoters = str_replace(',', '', $matchesVotes[1][0]);
 			self::addLog("Number of voters: $numVoters");
 			$riding->setEligibleVoters($numVoters);
 			
+			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)</TABLE>|", $stringVotes[2], $matchesVotes);
+			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
 
-			$row = $rows->item($numRows-1);
-			$cells = $row->getElementsByTagName('td');
-			$totalVotes = $cells->item(2)->textContent;
-			$totalVotes = str_replace(',', '', $totalVotes);
+			$totalVotes = str_replace(',', '', $matchesVotes[1][0]);
 			self::addLog("Number of total votes: $totalVotes");
 			$riding->setAllRidingVotes($totalVotes);
 			
