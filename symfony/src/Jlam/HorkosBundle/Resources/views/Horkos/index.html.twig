@@ -50,7 +50,7 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 		<td><a href="{{riding.source}}">{{riding.name}}</a></td>
 		<td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
 		<td>{{riding.unrepresentedVotes}}</td>
-		<td>{{"%.2f %%" | format(riding.participationRate * 100)}}</td>
+		<td>{{"%.2f %%" | format(riding.participationRate * 100)}} <!-- {{riding.allRidingVotes}} / {{riding.eligibleVoters}} --> </td>
 	</tr>
 {% endfor %}
 

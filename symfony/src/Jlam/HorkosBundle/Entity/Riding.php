@@ -422,7 +422,10 @@ class Riding
     public function setAllRidingVotes($allRidingVotes) {
     	$this->allRidingVotes = $allRidingVotes;
     }
-    
+
+	public function getAllRidingVotes() {
+		return $this->allRidingVotes;
+    }
     
     public static function setLogger($logger) {
     	self::$logger = $logger;
