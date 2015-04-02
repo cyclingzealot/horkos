@@ -3,3 +3,4 @@
 .settings/
 *~
 .*.sw?
+bin/updateDevRsync.bash
