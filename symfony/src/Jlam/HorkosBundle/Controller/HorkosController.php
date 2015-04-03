@@ -85,7 +85,7 @@ class HorkosController extends Controller
         $response->setMaxAge(self::CACHE_TTL_SECS);
         $response->setSharedMaxAge(self::CACHE_TTL_SECS);
         
-		$cache->set($cacheKey, $response, 30);
+		$cache->set($cacheKey, $response, self::CACHE_TTL_SECS);
                 
         
 		#Return the controller 
