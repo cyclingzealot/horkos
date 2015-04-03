@@ -11,14 +11,13 @@ class HorkosController extends Controller
 {
 	
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'cdn2015';
+	const DEFAULT_ELECTION		= 'ab2015';
+	const CACHE_TTL_SECS		= 30;
 	
     public function indexAction()
     {
 		#If a cache is available, use it.
-	
-    	
-    	
+		
     	
     	# Get the engine class name
     	$election			= $this->getRequest()->get('election');
@@ -49,7 +48,15 @@ class HorkosController extends Controller
         	'summary'			=> $summary,
         ));
         
+        
         #Save into caching
+        $date = new DateTime();
+        $date->modify('+'. self::CACHE_TTL_SECS .' seconds');
+        
+        $response->setPublic();
+        $response->setExpires($date);
+        $response->setMaxAge(self::CACHE_TTL_SECS);
+        $response->setSharedMaxAge(self::CACHE_TTL_SECS);
         
         
 		#Return the controller 
