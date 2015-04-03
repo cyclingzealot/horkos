@@ -1,0 +1,5 @@
+A few tweaks to do, in priority order:
+1. Add a  Fair Vote Alberta contact
+4. Implement cahcing for average faster delivery
+5. Add column for sharing on social media
+6. Add JSON interface
