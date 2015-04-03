@@ -50,7 +50,7 @@ class HorkosController extends Controller
         
         
         #Save into caching
-        $date = new DateTime();
+        $date = new \DateTime();
         $date->modify('+'. self::CACHE_TTL_SECS .' seconds');
         
         $response->setPublic();
