@@ -2,10 +2,13 @@
 
 namespace Jlam\HorkosBundle\Controller;
 
+
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Jlam\HorkosBundle\Entity\Riding;
 use Jlam\HorkosBundle\TallyHolder;
 use Jlam\HorkosBundle\Twig\SafeDivideExtension;
+use Jlam\HorkosBundle\phpFastCache;
 
 class HorkosController extends Controller
 {
@@ -16,11 +19,35 @@ class HorkosController extends Controller
 	
     public function indexAction()
     {
-		#If a cache is available, use it.
-		
+    	
+    	#Get request parameters
+    	$election			= $this->getRequest()->get('election');
+    	$language			= 'en';
+    	
+		#Setup caching
+    	$cacheKey			= "$election.$language";
+    	$root = $this->get('kernel')->getRootDir();
+    	require_once("$root/../src/Jlam/HorkosBundle/phpfastcache-final/phpfastcache.php");
+    	phpFastCache::setup("storage", "auto");
+    	$cache = new phpFastCache();
+    	
+    	
+    	#If a cache is available, use it and return it right away.
+    	$response = $cache->get($cacheKey);
+    	
+    	if($response !== null) {
+    		return $response;
+    	}
+    	/* Doing it with ACL:
+    	if ($responseObject = $this->get('cache')->fetch($cacheKey)) {
+    		$response = unserialize($responseObject);
+    		return $response;
+    	}
+    	*/
+    	
+    	
     	
     	# Get the engine class name
-    	$election			= $this->getRequest()->get('election');
     	$engineClassName	= self::getScrappingEngineClassName($election);
 
     	# Set the logger for the riding entity
@@ -58,6 +85,8 @@ class HorkosController extends Controller
         $response->setMaxAge(self::CACHE_TTL_SECS);
         $response->setSharedMaxAge(self::CACHE_TTL_SECS);
         
+		$cache->set($cacheKey, $response, 30);
+                
         
 		#Return the controller 
         return $response;
