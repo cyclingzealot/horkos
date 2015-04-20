@@ -73,6 +73,7 @@ class HorkosController extends Controller
         	'partyTallyWasted' 	=> $partyTallyWasted,
         	'jurisdiction'		=> $jurisdictionTally,
         	'summary'			=> $summary,
+        	'election'			=> $election ? $election : self::DEFAULT_ELECTION,
         ));
         
         
