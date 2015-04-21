@@ -23,6 +23,7 @@ class HorkosController extends Controller
     	#Get request parameters
     	$election			= $this->getRequest()->get('election');
     	$language			= 'en';
+    	$fresh				= $this->getRequest()->get('fresh');
     	
 		#Setup caching
     	$cacheKey			= "$election.$language";
@@ -35,7 +36,7 @@ class HorkosController extends Controller
     	#If a cache is available, use it and return it right away.
     	$response = $cache->get($cacheKey);
     	
-    	if($response !== null) {
+    	if($response !== null && $fresh !== 'yes') {
     		return $response;
     	}
     	/* Doing it with ACL:

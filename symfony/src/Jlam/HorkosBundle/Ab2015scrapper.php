@@ -25,7 +25,7 @@ class Ab2015scrapper extends ScrapingEngine {
 			
 			$html = file_get_contents ( $url );
 			
-			
+			if(!$html) continue;
 			
 			/*
 			$doc = new \DOMDocument ();
@@ -172,7 +172,7 @@ class Ab2015scrapper extends ScrapingEngine {
 				'jurisdictionName'	=> 'Alberta',
 				'electionName'		=> 'Alberta 2015',
 				'source'			=> self::getSource(),
-				'tweetHandle'		=> '#elxn42',
+				'tweetHandle'		=> '#abvote',
 				'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
 		);
 	}

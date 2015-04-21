@@ -1,4 +1,7 @@
 <html>
+<head>
+<title>My vote should count</title>
+</head>
 <body>
 <a name="top"></a>
 
@@ -40,10 +43,11 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 <!-- Riding table -->
 <a name="data"></a>
 <p><table width="100%" border="1">
-<tr><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th><th>Participation rate % (so far) </th></tr>
+<tr><th>Share</th><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th><th>Participation rate % (so far) </th></tr>
 
 {% for riding in ridings %}
 	<tr>
+		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{riding.unrepresentedVotes}} wasted votes in {{riding.name | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
 		<td><a href="{{riding.source}}">{{riding.name}}</a></td>
 		<td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
 		<td>{{riding.unrepresentedVotes}}</td>
@@ -52,6 +56,7 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 {% endfor %}
 
 <tr style="font-weight: bold;">
+		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.unrepresentedVotes}} wasted votes in {{jurisdiction.name | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
 	<td>{{summary.jurisdictionName}}</td>
 	<td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
 	<td>{{jurisdiction.wasted}}</td>
