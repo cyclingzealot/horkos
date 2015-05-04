@@ -5,7 +5,12 @@
 <body>
 <a name="top"></a>
 
+{% if error == true %} 
+<h1>How many votes will the {{summary.jurisdictionName}} election waste this time?</h1><table>
+{% else %}
 <h1>{{summary.totalWastedVotes}} unrepresented votes (so far) in {{summary.electionName}} election</h1><table>
+{% endif %}
+
 
 <tr><td bgcolor="#00AAB4" border="1"><a href="http://www.fairvote.ca"><img src="http://campaign2015.fairvote.ca/wp-content/themes/fairvotecanada/images/structure/unfair.png"></a></td>
 
@@ -16,11 +21,16 @@
 <p>My name is <a href="https://www.linkedin.com/in/julienlamarche">Julien Lamarche</a>.  I am a volunteer for <a href="http://www.fairvote.ca">Fair Vote Canada</a>, an organization that does 
 public education and lobbying to change the voting system so that more votes count.</p>
 
+{% if error == true %}
+<p>We will be showing a compilation of unrepresented votes by riding and by party below  once the
+{{summary.electionName}}<a href="{{summary.source}}">*</a> live election results are published.</p>  
+{% else %}
 <p>Below is a compilation of the numbers taken from the 
-<a href="{{summary.source}}">{{summary.electionName}} live election results</a>.  
+<a href="{{summary.source}}">{{summary.electionName}} live election results</a>.  </p>
 
 <p>It sorts ridings by percentage of unrepresented votes.  An unrepresented vote is a vote that will not be represented in the legislature because it did not 
 go to the winning candidate.  At the bottom you will also see <a href="#byParty">unrepresented votes by party</a>.</p>
+{% endif %}
 
 <p>Winner-take-all systems (both first past the post and preferential ballot - ie Alternative Vote) have a high 
 rate of wasted or unrepresented votes.  But most democracies have moved on to some form of proportional voting system which greatly diminish the lack of 
@@ -42,6 +52,7 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 </td></tr></table>
 
 <!-- Riding table -->
+{% if error != true %}
 <a name="data"></a>
 <p><table width="100%" border="1">
 <tr><th>Share</th><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th><th>Participation rate % (so far) </th></tr>
@@ -75,9 +86,11 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 </ol>
 </p><a href="#top">Top</a>
 
+{% endif %}
+
 <hr />
 
-<p><font size="-1">Results as of {{ "now"|date("Y-m-d H:i:s") }}</font></p>
+<p><font size="-1">Results as of {{ "now"|date("Y-m-d H:i:s T") }}</font></p>
 <p><font size="-1">Code available on <a href="{{summary.gitHubSource}}">Github</a></font></p>
 </body>
 </html>

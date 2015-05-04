@@ -34,6 +34,8 @@ abstract class ScrapingEngine implements Scrapper {
 	
 	protected static $container;
 	
+	protected static $error;
+	
 	/*
 	 * @var array
 	 */
@@ -56,8 +58,29 @@ abstract class ScrapingEngine implements Scrapper {
 		self::setContainer($container);
 		
 		self::$initialized = TRUE;
+		
+		self::$error = FALSE;
 	}
 	
+	
+	protected static function setError($message = null) {
+		self::$error = TRUE;
+		
+		if(is_string($message)) {
+			self::addError($message);
+		}
+	}
+	
+	public static function getScraperError() {
+		return self::$error;
+	}
+	
+	
+	public static function validate() {
+		if(count(Riding::getAllRdings()) == 0) {
+			self::setError("getAllRidings returned 0 ridings");
+		}
+	}
 	
 	public static function grep($strings, $pattern, $returnLines = FALSE) {
 		$matches = array ();

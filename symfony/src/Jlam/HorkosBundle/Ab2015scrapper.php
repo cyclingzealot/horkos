@@ -23,9 +23,12 @@ class Ab2015scrapper extends ScrapingEngine {
 			$riding = new Riding();
 			$riding->setSource($url);
 			
-			$html = file_get_contents ( $url );
+			$html = @file_get_contents ( $url );
 			
-			if(!$html) continue;
+			if($html === FALSE) {
+				self::addLog("Warning: no content for riding $i at $url");
+				continue;
+			}
 			
 			/*
 			$doc = new \DOMDocument ();
@@ -84,6 +87,7 @@ class Ab2015scrapper extends ScrapingEngine {
 		
 		
 		
+		
 	}
 	
 	
@@ -114,8 +118,14 @@ class Ab2015scrapper extends ScrapingEngine {
 		
 		self::setSource($url);
 		
-		$html = file_get_contents ( $url );
+		$html = @file_get_contents ( $url );
 
+		if($html === FALSE) {
+			self::setError("Content returned by riding identifiers page $url was empty");
+			return array();
+		}
+		
+		
 		$strings = explode("\n", $html);
 		self::addLog('Got ' . count($strings) . ' strings');
 		$identifiers = self::grep($strings, '([0-9]+)BE\.htm');

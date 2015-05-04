@@ -15,7 +15,7 @@ class HorkosController extends Controller
 	
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
 	const DEFAULT_ELECTION		= 'ab2015';
-	const CACHE_TTL_SECS		= 30;
+	const CACHE_TTL_SECS		= 10;
 	
     public function indexAction()
     {
@@ -57,16 +57,25 @@ class HorkosController extends Controller
 		#If not, slurp data
 		$engineClassName::initialize($this->container);
 		$engineClassName::scrape();
+		$engineClassName::validate();
+
 		
 		
 		### Prepare the rendering #####################################################
-		$partyTally			= Riding::getPartyTally()->getTally();
-		$jurisdictionTally	= Riding::getJurisdictionTally()->getTally();
-		$partyTallyWasted	= $partyTally['wasted'];
-		arsort($partyTallyWasted);
-		
 		$summary						= $engineClassName::getSummary();
-		$summary['totalWastedVotes']	= array_sum($partyTallyWasted);
+		
+		if(! $engineClassName::getScraperError()) {
+			$partyTally			= Riding::getPartyTally()->getTally();
+			$jurisdictionTally	= Riding::getJurisdictionTally()->getTally();
+			$partyTallyWasted	= $partyTally['wasted'];
+			arsort($partyTallyWasted);
+			$summary['totalWastedVotes']	= array_sum($partyTallyWasted);
+		} else {
+			$partyTally			= array();
+			$jurisdictionTally	= array();
+			$partyTallyWasted	= array();
+			$summary['totalWastedVotes']	= null;
+		}
 	
 	    #Render
         $response = $this->render('JlamHorkosBundle:Horkos:index.html.twig', array(
@@ -75,6 +84,7 @@ class HorkosController extends Controller
         	'jurisdiction'		=> $jurisdictionTally,
         	'summary'			=> $summary,
         	'election'			=> $election ? $election : self::DEFAULT_ELECTION,
+        	'error'				=> $engineClassName::getScraperError(),
         ));
         
         

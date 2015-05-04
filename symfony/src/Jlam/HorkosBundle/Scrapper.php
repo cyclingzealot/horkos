@@ -19,6 +19,10 @@ interface Scrapper {
 	static function scrape();
 	
 	
+	
+	static function getScraperError();
+	
+	
 	/**
 	 * Returns an array with summary information 
 	 * about an election
