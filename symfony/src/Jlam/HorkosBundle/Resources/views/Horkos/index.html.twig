@@ -38,7 +38,11 @@ representation (to about 5% of unrepresented votes). A proportional voting syste
 
 <p>If you wish to help:<ul>
 <li>Go <a href="http://secure.fairvote.ca/en/declaration">Sign the Declaration of Voters Rights</a></li>
-<li>Share: <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.wasted}} wasted votes in {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{% if error == true %} 
+<li>Share: <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="How many votes will the {{summary.jurisdictionName}} election waste this time?" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{% else %}
+<li>Share: <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.wasted}} wasted votes in {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+{% endif %}
 <li><a href="http://www.fairvote.ca/donate/">Donate</a> to Fair Vote Canada
 <li><a href="https://payment.csfm.com/donations/fair_vote/en/index.php">Join</a> Fair Vote Canada</li>
 <li>Retweet relevant <a href="https://twitter.com/cyclingzealot">@cyclingzealot</a>, <a href="https://twitter.com/search?q=%23wastedvotes">#wastedvotes</a> tweets during the election</li>
@@ -59,7 +63,7 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 
 {% for riding in ridings %}
 	<tr>
-		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{riding.unrepresentedVotes}} wasted votes in {{riding.name | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
+		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{riding.unrepresentedVotes}} wasted votes in {{riding.name | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
 		<td><a href="{{riding.source}}">{{riding.name}}</a></td>
 		<td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
 		<td>{{riding.unrepresentedVotes}}</td>
@@ -68,7 +72,7 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 {% endfor %}
 
 <tr style="font-weight: bold;">
-		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.wasted}} wasted votes in {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
+		<td><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.wasted}} wasted votes in {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></td>
 	<td>{{summary.jurisdictionName}}</td>
 	<td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
 	<td>{{jurisdiction.wasted}}</td>
