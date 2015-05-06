@@ -22,6 +22,8 @@ class Ab2015scrapper extends ScrapingEngine {
 			
 			$riding = new Riding();
 			$riding->setSource($url);
+			$ridingCount = count(Riding::getAllRidings());
+			self::addLog("Riding count is $ridingCount");
 			
 			$html = @file_get_contents ( $url );
 			
@@ -51,16 +53,22 @@ class Ab2015scrapper extends ScrapingEngine {
 			// cho "\n\n";
 			
 			
-			$string  = self::grep($html, 'ColHeadingCA', TRUE);
-			preg_match_all("|<SPAN STYLE='font-size: 12pt'>([A-Z]*)</SPAN>|", $string[0], $matches);
-			self::addLog('Got ' . count($matches[1]) . ' matches: ' . join(',', $matches[1]));
+			$string  = self::grep($html, 'CHeadCA', TRUE);
+			preg_match_all("|<DIV CLASS=CHPA>([A-Z]*)</DIV>|", $string[0], $matches);
+			self::addLog('Got for party: ' . count($matches[1]) . ' matches: ' . join(',', $matches[1]));
 			
 			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
-			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)<BR>|", $stringVotes[2], $matchesVotes);
-			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([ 0-9,]*)<BR>|", $stringVotes[2], $matchesVotes);
+			self::addLog('Got for votes: ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
+
+			if(count($matches == 0))  self::addError("No matches found for party");
 
 			foreach($matches[1] as $index => $party) {
 				$votes = str_replace(',', '', $matchesVotes[1][$index]);
+			
+				if(empty($votes))  self::addError("No votes found for $party in $ridingName");
+
+				self::addLog("Setting $votes votes for $party in $ridingName");
 				$riding->setVotes($party, $votes);
 			}
 
@@ -114,7 +122,7 @@ class Ab2015scrapper extends ScrapingEngine {
 		
 		$lang = self::getLanguageEquivalent();
 		
-		$url = "http://results.elections.ab.ca/wtResultsBE.htm";	
+		$url = "http://results.elections.ab.ca/wtResultsPGE.htm";
 		
 		self::setSource($url);
 		
@@ -128,7 +136,7 @@ class Ab2015scrapper extends ScrapingEngine {
 		
 		$strings = explode("\n", $html);
 		self::addLog('Got ' . count($strings) . ' strings');
-		$identifiers = self::grep($strings, '([0-9]+)BE\.htm');
+		$identifiers = self::grep($strings, '([0-9]+)\.htm');
 		self::addLog('Got ' . count($strings) . ' strings');
 
 		/*
@@ -171,7 +179,7 @@ class Ab2015scrapper extends ScrapingEngine {
 		}
 		*/
 	
-		return "http://results.elections.ab.ca/${identifier}BE.htm";
+		return "http://results.elections.ab.ca/${identifier}.htm";
 		
 		
 	}

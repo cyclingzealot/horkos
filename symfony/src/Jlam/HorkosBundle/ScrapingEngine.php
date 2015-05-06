@@ -77,7 +77,7 @@ abstract class ScrapingEngine implements Scrapper {
 	
 	
 	public static function validate() {
-		if(count(Riding::getAllRdings()) == 0) {
+		if(count(Riding::getAllRidings()) == 0) {
 			self::setError("getAllRidings returned 0 ridings");
 		}
 	}
@@ -89,16 +89,16 @@ abstract class ScrapingEngine implements Scrapper {
 			$strings = explode("\n", $strings);
 		
 		foreach ($strings as $str) {
-			self::addLog("Searching $pattern in $str");
+			#self::addLog("Searching $pattern in $str");
 			if (!$returnLines && preg_match ("/$pattern/", $str, $m)) {
 				$match = $m[1];
-				self::addLog("Matched $match");
+				#self::addLog("Matched $match");
 				$matches[] = $match;
 			} elseif (strpos($str, $pattern) !== FALSE) {
-				self::addLog("Adding $str cause it contains $pattern");
+				#self::addLog("Adding $str cause it contains $pattern");
 			    $matches[] = $str;
 			} else {
-				self::addLog("$str does not contain $pattern");
+				#self::addLog("$str does not contain $pattern");
 			}
 		}
 	

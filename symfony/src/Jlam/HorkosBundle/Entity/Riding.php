@@ -115,6 +115,7 @@ class Riding
     	$this->localRaceTally = new TallyHolder();
     	
     	self::$ridingsContainer[] = $this;
+
     }
     
     
@@ -413,10 +414,25 @@ class Riding
     }
     
     
-    public static function getAllRdings() {
+    public static function getAllRidings() {
     	$allRidings = self::$ridingsContainer;
     	return $allRidings;
     }
+    
+    public static function getAllRdingsSorted() {
+    	$allRidings = self::getAllRidings();
+
+		usort($allRidings, array('Jlam\HorkosBundle\Entity\Riding', 'sortRidings')); 
+		$allRidings = array_reverse($allRidings);
+
+    	return $allRidings;
+    }
+
+	public static function sortRidings($a, $b) {
+		$diff = $a->getUnrepresentedVotes() - $b->getUnrepresentedVotes();
+		file_put_contents('/tmp/horkosDiff.txt', "$diff, ", FILE_APPEND);
+		return $diff;
+	}
     
     
     public function setAllRidingVotes($allRidingVotes) {
