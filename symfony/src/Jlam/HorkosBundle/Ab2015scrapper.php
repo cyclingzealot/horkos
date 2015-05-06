@@ -41,7 +41,8 @@ class Ab2015scrapper extends ScrapingEngine {
 			*/
 
 			$string     = self::grep($html, 'Unofficial Poll Results', TRUE);
-			$ridingName = self::grep($string, 'Unofficial Poll Results - [0-9][0-9]* ([A-Z-]*)')[0];
+			$ridingName = self::grep($string, 'Unofficial Poll Results - [0-9][0-9]* ([\. A-Z-]*)')[0];
+			$ridingName = substr_replace($ridingName, '', -2);
 			
 			self::addLog("Got ridingName: $ridingName");
 			$riding->setName($ridingName);
@@ -82,7 +83,7 @@ class Ab2015scrapper extends ScrapingEngine {
 			
 			# Find and save all votes (aka total votes)
 			$stringVotes  = self::grep($html, 'ColFooter', TRUE);
-			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([0-9,]*)</TABLE>|", $stringVotes[5], $matchesVotes);
+			preg_match_all("|<TD Class=ColFooter ALIGN=RIGHT VALIGN=TOP>([ 0-9,]*)</TABLE>|", $stringVotes[5], $matchesVotes);
 			self::addLog('Got ' . count($matchesVotes[1]) . ' matches: ' . join(' ', $matchesVotes[1]));
 			$totalVotes = str_replace(',', '', $matchesVotes[1][0]);
 			self::addLog("Number of total votes: $totalVotes");
