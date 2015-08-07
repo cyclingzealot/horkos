@@ -14,7 +14,7 @@ Installation
 Some requirements:
 * sudo apt-get install apache2 php5-curl php5-cli
 * Composer: cd /usr/local/bin;  sudo apt-get install curl && curl -sS https://getcomposer.org/installer | php
-** To install composer on dreamhost, see http://www.geekality.net/2013/02/01/dreamhost-composer/
+ * To install composer on dreamhost, see http://www.geekality.net/2013/02/01/dreamhost-composer/
 * Populate the symphony dir with vendor extensions: 
 	cd horkos/symfony; composer.phar install
 * Generate the bootstrap file: ./vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/bin/build_bootstrap.php
