@@ -66,6 +66,7 @@ pauseSecs=2
 restSecs=10
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
+maxRuns=100
 
 touch $continueFlag
 
@@ -75,7 +76,12 @@ if [[ -f $stopFlag ]]; then
 	exit 1
 fi
 
-while [[ -f $continueFlag && ! -f $stopFlag ]]; do 
+runs=0
+set -x
+while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do 
+set +x
+	echo Run $runs of $maxRuns...
+
 	for lang in e f; do 
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
@@ -124,6 +130,12 @@ while [[ -f $continueFlag && ! -f $stopFlag ]]; do
 		sleep 1; 
 	done
 	echo ; echo
+
+	echo Run $runs of $maxRuns done
+
+	let runs++ || true
+
+
 done
 
 
