@@ -63,7 +63,7 @@ echo Begin `date`  .....
 
 electionID=`echo $__base | cut -d '.' -f 1`
 pauseSecs=2
-restSecs=10
+restSecs=60
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
 maxRuns=100
