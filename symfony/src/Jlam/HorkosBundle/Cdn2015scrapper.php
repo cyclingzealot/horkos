@@ -9,31 +9,29 @@ class Cdn2015scrapper extends ScrapingEngine {
 	
 	protected static $devRidings = array(0);
 	
+	const JURISDICTION_SHORTHAND = 'cdn';
 	
-	public static function scrape() {
-		$logger = self::getLogger('Starting scrape...');
+	
+	public static function scrape($lang = 'en') {
+		$logger = self::getLogger('Starting offline scrape...');
 		
+		$langPathPart = self::langPathPartLookup($lang);
 		
-		$ridingIdentfiers = self::getRidingIdentifiers();
+		$ridingPaths = parent::getRidingPaths(self::JURISDICTION_SHORTHAND, $langPathPart);
 		
-		$ridingIdentfiers = self::addDevRidings($ridingIdentfiers);
-
-		$devRidings = self::$devRidings;
+		$ridingCount = count($ridingPaths);
 		
-		foreach ($ridingIdentfiers as $i ) {
-			//Don't do dev ridings for now
-			if(in_array($i, $devRidings)) {
-				continue;
-			}
+		self::addLog("$ridingCount ridings found");
 		
-			$url = self::getFinalPath($i);
+		foreach ($ridingPaths as $i => $path ) {
+			$sourceUrl = self::generateSource($lang, $i);
 			
-			self::addLog("Getting results for riding $i $url...");
+			self::addLog("Getting results for riding $i $path...");
 			
 			$riding = new Riding();
-			$riding->setSource($url);
+			$riding->setSource($sourceUrl);
 			
-			$html = file_get_contents ( $url );
+			$html = file_get_contents ( $path );
 			
 			
 			
@@ -109,6 +107,24 @@ class Cdn2015scrapper extends ScrapingEngine {
 		
 		
 		
+	}
+	
+	
+	
+	static function langPathPartLookup($lang = 'en') {
+		$langReturn = 'e';
+		
+		switch ($lang) {
+			case 'fr':
+				$langReturn = 'f';
+				break;
+				
+			case 'en':
+			default:
+				$langReturn = 'e';
+		}
+		
+		return $langReturn;
 	}
 	
 	
@@ -194,6 +210,11 @@ class Cdn2015scrapper extends ScrapingEngine {
 		return "http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang";
 		
 		
+	}
+	
+	
+	public static function generateSource($identifier, $lang) {
+		return "http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang";
 	}
 	
 	
