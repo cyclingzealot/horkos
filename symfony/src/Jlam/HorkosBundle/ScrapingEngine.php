@@ -175,6 +175,41 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$source = $source;
 	}
 	
+	protected static function getRidingPaths($jurisdiction, $lang) {
+		$kernelRootDir = self::$container->getParameter('kernel.root_dir');
+		
+		$dataDir = $kernelRootDir . "/../../eshu/data/$jurisdiction/$lang/ready/";
+		
+		self::addLog("Opening data dir $dataDir");
+		
+		$listOfFiles	= scandir($dataDir);
+		$fileCount 		= count($listOfFiles);
+		
+		if($listOfFiles === FALSE) {
+			self::addError("SERIOUS: scandir of $dataDir returned FALSE");
+		}
+		
+		self::addLog("Found $fileCount files");
+		
+		$returnArray = array();
+		
+		foreach($listOfFiles as $fileName) {
+			if(in_array($fileName, array('.', '..'))) {
+				continue;
+			}
+			
+			$ridingNumber = explode('.', $fileName)[0];
+			
+			$path = "$dataDir/$fileName";
+			
+			self::addLog("Adding $path for $ridingNumber");
+			
+			$returnArray[intval($ridingNumber)] = $path;
+		}
+		
+		return $returnArray;
+	}
+	
 	public static function getSource() {return self::$source;}
 	
 	/**
