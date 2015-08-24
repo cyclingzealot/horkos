@@ -210,7 +210,9 @@ abstract class ScrapingEngine implements Scrapper {
 		return $returnArray;
 	}
 	
-	public static function getSource() {return self::$source;}
+	public static function getSource() {
+		return self::$source;
+	}
 	
 	/**
 	 * 

@@ -9,6 +9,8 @@ class Cdn2015scrapper extends ScrapingEngine {
 	
 	protected static $devRidings = array(0);
 	
+	protected static $source = 'http://enr.elections.ca/ElectoralDistricts.aspx';
+	
 	const JURISDICTION_SHORTHAND = 'cdn';
 	
 	
@@ -213,7 +215,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 	}
 	
 	
-	public static function generateSource($identifier, $lang) {
+	public static function generateSource($lang, $identifier) {
 		return "http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang";
 	}
 	
@@ -222,7 +224,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 		return array(
 				'jurisdictionName'	=> 'Canada',
 				'electionName'		=> 'Canadian 2015',
-				'source'			=> self::getSource(),
+				'source'			=> 'http://enr.elections.ca/ElectoralDistricts.aspx',
 				'tweetHandle'		=> '#elxn42',
 				'gitHubSource'		=> 'https://github.com/cyclingzealot/cdn2015',
 		);
