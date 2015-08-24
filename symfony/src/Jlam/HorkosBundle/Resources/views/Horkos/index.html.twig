@@ -82,17 +82,17 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 </table></p>
 
 
-<p><a name="byParty">Unrepresented votes by party:</a>
-<table>
+<p><a name="byParty"><b>Unrepresented votes by party:</b></a>
+<table border="1">
 <tr><th>Party initials</th><th>Effective votes</th><th>Wasted votes</th><th>Total votes</th><th>Wasted votes %</th></tr>
 {% for party, partyData in partyTally %}
 
 <tr>
 <td>{{party}}</td>
-<td>{{partyData.wasted}}</td>
-<td>{{partyData.effective}}</td>
-<td>{{partyData.effective + partyData.wasted}}</td>
-<td>{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.effective + partyData.wasted) * 100)}}</td>
+<td align="right">{{partyData.effective}}</td>
+<td align="right">{{partyData.wasted}}</td>
+<td align="right">{{partyData.effective + partyData.wasted}}</td>
+<td align="right">{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.effective + partyData.wasted) * 100)}}</td>
 </tr>
 
 

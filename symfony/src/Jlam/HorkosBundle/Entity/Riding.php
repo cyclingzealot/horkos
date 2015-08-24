@@ -298,8 +298,22 @@ class Riding
     }
     
     
-    public static function getPartyTally() {
-    	return self::$partyTally;
+    public static function getPartyTally($byStatistic=TRUE) {
+	if($byStatistic) {
+    		return self::$partyTally;
+	}
+
+	$invertedTally = new TallyHolder();
+
+	$currentTally = self::$partyTally;
+	
+	foreach($currentTally->getTally() as $stat => $partyData) {
+		foreach($partyData as $party => $value) {
+			$invertedTally->add(array($party=>array($stat=>$value)));
+		}
+	}
+
+	return $invertedTally;	
     }
     
     

@@ -65,11 +65,11 @@ class HorkosController extends Controller
 		$summary						= $engineClassName::getSummary();
 		
 		if(! $engineClassName::getScraperError()) {
-			$partyTally			= Riding::getPartyTally()->getTally();
+			$partyTally			= Riding::getPartyTally(FALSE)->getTally();
 			$jurisdictionTally	= Riding::getJurisdictionTally()->getTally();
-			$partyTallyWasted	= $partyTally['wasted'];
-			arsort($partyTallyWasted);
-			$summary['totalWastedVotes']	= array_sum($partyTallyWasted);
+			#$partyTallyWasted	= $partyTally['wasted'];
+			#arsort($partyTallyWasted);
+			$summary['totalWastedVotes']	= $jurisdictionTally['wasted'];
 		} else {
 			$partyTally			= array();
 			$jurisdictionTally	= array();
@@ -86,6 +86,8 @@ class HorkosController extends Controller
         	'election'	=> $election ? $election : self::DEFAULT_ELECTION,
         	'error'		=> $engineClassName::getScraperError(),
         ));
+
+
         
         
         #Save into caching
