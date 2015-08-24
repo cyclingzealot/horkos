@@ -213,6 +213,7 @@ class Riding
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
     	$winnerCount	= self::leadingOnly($localTally);
+	$effectiveVotes = self::keepOnlyHighest($localTally);
     	
     	self::$jurisdictionTally->add(array(
     		'eligible'=>$this->getEligibleVoters(),
@@ -222,9 +223,10 @@ class Riding
     	));
     	
     	self::$partyTally->add(array(
-    			'wasted' =>$wastedTally,
-    			'valid'  =>$localTally,
-    			'leading'=>$winnerCount,
+    			'wasted' 	=>$wastedTally,
+    			'valid'  	=>$localTally,
+    			'leading'	=>$winnerCount,
+    			'effective'	=>$effectiveVotes,
     	));
     	
     	/*
@@ -244,6 +246,15 @@ class Riding
     	
     	return $array;
     }
+
+    public static function keepOnlyHighest($arrayIn) {
+    	$array = $arrayIn;
+    	
+    	$keyMax = self::findKeyOfMaxValue($arrayIn);
+    	
+    	return array($keyMax=>$array[$keyMax]);
+    }
+    
     
     
     public static function leadingOnly($arrayIn) {

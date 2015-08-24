@@ -79,12 +79,12 @@ class HorkosController extends Controller
 	
 	    #Render
         $response = $this->render('JlamHorkosBundle:Horkos:index.html.twig', array(
-        	'ridings'	 		=> Riding::getAllRdingsSorted(),
-        	'partyTallyWasted' 	=> $partyTallyWasted,
-        	'jurisdiction'		=> $jurisdictionTally,
-        	'summary'			=> $summary,
-        	'election'			=> $election ? $election : self::DEFAULT_ELECTION,
-        	'error'				=> $engineClassName::getScraperError(),
+        	'ridings'	=> Riding::getAllRdingsSorted(),
+        	'partyTally' 	=> $partyTally,
+        	'jurisdiction'	=> $jurisdictionTally,
+        	'summary'	=> $summary,
+        	'election'	=> $election ? $election : self::DEFAULT_ELECTION,
+        	'error'		=> $engineClassName::getScraperError(),
         ));
         
         
