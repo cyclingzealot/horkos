@@ -64,7 +64,7 @@ echo Begin `date`  .....
 
 
 electionID=`echo $__base | cut -d '.' -f 1`
-maxPause=6
+curlTimeout=6
 restSecs=60
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
@@ -95,7 +95,7 @@ set +x
 		sourceFile="$dataDir/source.html"
 
 		echo; echo Getting riding list...
-		curl $sourceUrl > $sourceFile
+		curl  $sourceUrl > $sourceFile
 		echo; echo Done. ; echo
 	
 		ridingList="$dataDir/ridingIDsList.txt"
@@ -107,7 +107,7 @@ set +x
 			readyFile=$readyDir/$identifier.html
 	
 			startCurl=$(date +%s.%N)
-			curl -s $ridingUrl > $ridingFile && mv -v $ridingFile $readyFile || true
+			curl -m $curlTimeout -s $ridingUrl > $ridingFile && mv -v $ridingFile $readyFile || true
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
