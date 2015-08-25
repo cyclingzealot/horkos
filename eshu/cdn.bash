@@ -61,8 +61,10 @@ echo Begin `date`  .....
 
 ### BEGIN SCRIPT ###############################################################
 
+
+
 electionID=`echo $__base | cut -d '.' -f 1`
-pauseSecs=2
+maxPause=6
 restSecs=60
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
@@ -104,13 +106,18 @@ set +x
 			ridingFile=$workDir/$identifier.html
 			readyFile=$readyDir/$identifier.html
 	
+			startCurl=$(date +%s.%N)
 			curl -s $ridingUrl > $ridingFile && mv -v $ridingFile $readyFile || true
+			endCurl=$(date +%s.%N)
+			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
 			echo; echo 
 			echo Data for riding $identifier in language $lang ready!
 			echo; echo 
 	
-			sleep $pauseSecs
+			echo Sleeping for $diffCurl + 1 seconds
+			sleep $diffCurl
+			sleep 1
 		done	
 	
 	done
