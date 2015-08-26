@@ -236,6 +236,24 @@ class Riding
     	 */
     }
     
+   
+    
+    /**
+     * Given the party tally, calculates the order of magitude of 
+     * seats for the largest winner
+     */
+    public static function calculateMagnitudeWinner() {
+    	$perPartyTally = self::getPartyTally(TRUE);
+    	
+    	$perPartyTally = $perPartyTally->getTally();
+    	
+    	$totalVotesLeading = array_sum($perPartyTally['valid']);
+    	
+    	$orderMagnitude = intval(floor(log10(max($totalVotesLeading, 1))));
+    	
+    	return pow(10, $orderMagnitude);
+    }
+    
     
     public static function copyWithoutHighest($arrayIn) {
     	$array = $arrayIn;

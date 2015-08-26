@@ -85,6 +85,7 @@ class HorkosController extends Controller
         	'summary'	=> $summary,
         	'election'	=> $election ? $election : self::DEFAULT_ELECTION,
         	'error'		=> $engineClassName::getScraperError(),
+        	'magnitude' => Riding::calculateMagnitudeWinner(),
         ));
 
 
