@@ -240,14 +240,18 @@ class Riding
     
     /**
      * Given the party tally, calculates the order of magitude of 
-     * seats for the largest winner
+     * seats for the largest winner for X seats per F votes 
+     * 
+     * Anoter suggested formula is 
+     * F = 50 * Total valid votes / total number of seats 
+     *
      */
     public static function calculateMagnitudeWinner() {
     	$perPartyTally = self::getPartyTally(TRUE);
     	
     	$perPartyTally = $perPartyTally->getTally();
     	
-    	$totalVotesLeading = array_sum($perPartyTally['valid']);
+    	$totalVotesLeading = current(self::findMaxSet($perPartyTally['valid']));
     	
     	$orderMagnitude = intval(floor(log10(max($totalVotesLeading, 1))));
     	
@@ -289,7 +293,12 @@ class Riding
     public static function findKeyOfMaxValue($arrayIn) {
     	$keyMax = null;
     	$max = null;
-    	 
+    	
+    	return key(self::findMaxSet($arrayIn));
+    }
+    
+    
+    public static function findMaxSet($arrayIn) {
     	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
     			$max	= $value;
@@ -297,9 +306,9 @@ class Riding
     		}
     	}
     	
-    	return $keyMax;
+    	return array($keyMax => $max);
     }
-    
+     
     
     /**
      * Called in the constructor so you don't 
