@@ -108,10 +108,8 @@ set +x
 	
 			startCurl=$(date +%s.%N)
 			curl -m $curlTimeout -s $ridingUrl > $ridingFile || true
-			string='<td class="  td_numeric ">'
-			set -x 
-			grep "$string" $ridingFile > /dev/null 
-			set +x
+			string='<th class=" td_no_mobile " scope="col">'
+			grep "$string" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $string in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
