@@ -107,12 +107,16 @@ set +x
 			readyFile=$readyDir/$identifier.html
 	
 			startCurl=$(date +%s.%N)
-			curl -m $curlTimeout -s $ridingUrl > $ridingFile && mv -v $ridingFile $readyFile || true
+			curl -m $curlTimeout -s $ridingUrl > $ridingFile || true
+			string='<td class="  td_numeric ">'
+			set -x 
+			grep "$string" $ridingFile > /dev/null 
+			set +x
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
 			echo; echo 
-			echo Data for riding $identifier in language $lang ready!
+			echo Data for riding $identifier in language $lang done!
 			echo; echo 
 	
 			echo Sleeping for $diffCurl + 1 seconds
