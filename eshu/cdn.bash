@@ -117,7 +117,7 @@ set +x
 			echo Data for riding $identifier in language $lang done!
 			echo; echo 
 	
-			echo Sleeping for $diffCurl + 1 seconds
+			echo `date`   Sleeping for $diffCurl + 1 seconds
 			sleep $diffCurl
 			sleep 1
 		done	
