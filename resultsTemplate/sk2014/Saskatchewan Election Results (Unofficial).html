@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+	Saskatchewan Election Results (Unofficial)
+</title><link rel="icon" type="image/x-icon" href="http://results.elections.sk.ca/images/favicon.ico"><link href="Saskatchewan%20Election%20Results%20%28Unofficial%29_fichiers/css.css" rel="stylesheet" type="text/css"><link href="Saskatchewan%20Election%20Results%20%28Unofficial%29_fichiers/default.css" rel="stylesheet">
+<script src="Saskatchewan%20Election%20Results%20%28Unofficial%29_fichiers/ga.html" async="" type="text/javascript"></script><script src="Saskatchewan%20Election%20Results%20%28Unofficial%29_fichiers/default.js"></script>
+
+	<script type="text/javascript">
+		var counter = 30 + 0;
+
+		var months = new Array("January", "February", "March",
+			"April", "May", "June", "July", "August", "September",
+			"October", "November", "December");
+
+		function GetDate() {
+			var currentTime = new Date();
+
+			var year = currentTime.getFullYear();
+			var month = months[currentTime.getMonth()];
+			var day = currentTime.getDate();
+
+			var hours = currentTime.getHours();
+			var minutes = currentTime.getMinutes();
+			var seconds = currentTime.getSeconds();
+			if (minutes < 10)
+				minutes = "0" + minutes
+			if (seconds < 10)
+				seconds = "0" + seconds
+			return hours + ":" + minutes + ":" + seconds + " " + month + " " + day + ", " + year;
+		}
+
+		function Tick() {
+			if (counter == 0) {
+				RefreshResults();
+				counter = 30 + 0;
+				
+			    $("#lastupdated").html("Last update: " + $("#LastUpdated").text());
+			}
+
+			counter = counter - 1;
+
+			if (counter < 10) {
+				$("#counter").html("0" + counter);
+			}
+			else {
+				$("#counter").html(counter);
+			}
+		}
+
+		$(document).ready(function () {
+			$("#counter").html("00");
+			$("#lastupdated").html("Last update: " + $("#LastUpdated").text());
+			setInterval("Tick()", 1000);
+
+            
+
+		});
+	</script>
+
+
+    <script type="text/javascript">
+    (function () {
+        if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/))
+        {
+		    var msViewportStyle = document.createElement("style");
+		    msViewportStyle.appendChild(
+			    document.createTextNode("@-ms-viewport{width:auto!important}")
+		    );
+		    document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+	    }
+    })();
+
+    </script>
+</head>
+<body>
+	<form method="post" action="" id="ctl01">
+<div class="aspNetHidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTU2NTIwMDU3NWRku1WPmIktLB/6L4j03z0Ed8kMDe8=" type="hidden">
+</div>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" type="hidden">
+</div>
+	<div class="page">
+
+		
+    <div class="header-top">
+        <div class="container">
+            <div class="elections-brand col-xs-4">
+	            <a href="http://results.elections.sk.ca/"><img src="Saskatchewan%20Election%20Results%20%28Unofficial%29_fichiers/logo-w-back.png" alt="home" height="150" width="140"></a>
+	        </div>
+
+            <h1 class="header-right col-xs-8">Official Live Results </h1><!--Make Official = Unofficial if election is live -->
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container"><!-- remove visibility hidden if election is live -->
+            <div class="medium" style="visibility:hidden;"><span class="green">Auto-refresh in:</span> <span class="white">00:<span id="counter">01</span></span></div><div></div>
+			<span class="grey small" id="lastupdated">Last update: 09:25:47 November 26, 2014</span>
+        </div>
+    </div>
+
+
+
+
+		<div id="main" class="container">
+				
+
+    <div id="Results">
+	
+<div style="display:none" id="LastUpdated">09:25:47 November 26, 2014</div>
+    <div class="row constituency">
+
+        <div class="col-sm-4 col-xs-4">
+            <i class="fa-map-marker"></i>
+	        CONSTITUENCY:
+            <span class="large blue">Lloydminster</span>
+	    </div>
+	    <div class="col-sm-4 col-xs-4">
+            <i class="fa-check-square"></i>
+	        TOTAL VOTES:
+            <span class="large blue">2806</span>
+	    </div>
+	    <div class="col-sm-4 col-xs-4">
+            <i class="fa-bullhorn"></i>
+	        POLLS REPORTING:
+            <span class="large blue">46 of 46</span><!-- -1  if there is a mail in poll and election is live -->
+	    </div>
+    </div>
+<div class="table">
+    <div class="row table-header">
+        <div class="col-xs-4"><span class="vertical-align">Candidates</span></div>
+        <div class="col-xs-4"><span class="vertical-align">Party</span></div>
+        <div class="col-xs-2"><span class="vertical-align">Votes</span></div>
+        <div class="col-xs-2"><span class="vertical-align">Vote %</span></div>
+    </div>
+    <div class="row table-row">
+        <div class="col-xs-4"><span class="vertical-align">Luke Bonsan</span></div>
+        <div class="col-xs-4"><span class="vertical-align">Green Party</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">49</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align">2%</span></div>
+    </div>              
+    <div class="row table-row ">   
+        <div class="col-xs-4"><span class="vertical-align">Wayne Byers</span></div>
+        <div class="col-xs-4"><span class="vertical-align">New Democratic Party (N.D.P.)</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">808</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">29%</span></div>
+    </div>              
+    <div class="row table-row">   
+        <div class="col-xs-4"><span class="vertical-align">Randall Edge</span></div>
+        <div class="col-xs-4"><span class="vertical-align">P.C. Party of Sask.</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">70</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align">2%</span></div>
+    </div>              
+    <div class="row table-row ">   
+        <div class="col-xs-4"><span class="vertical-align">Darrin Lamoureux</span></div>
+        <div class="col-xs-4"><span class="vertical-align">Saskatchewan Liberal Party</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">77</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">3%</span></div>
+    </div>              
+    <div class="row table-row">   
+        <div class="col-xs-4"><span class="vertical-align">Colleen Young</span></div>
+        <div class="col-xs-4"><span class="vertical-align">Saskatchewan Party</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">1802</span></div>
+        <div class="col-xs-2 center"><span class="vertical-align ">64%</span></div>
+    </div>
+</div></div>
+
+
+		</div>
+			
+	    <div id="footer">
+			<div class="copyright container">
+				<p>Copyright © 2014 Elections Saskatchewan</p>
+                <a href="http://elections.sk.ca/">Visit elections.sk.ca</a>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-26787330-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function () {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
+
+	</form>
+
+
+
+</body></html>
+<!-- Page OK -->
