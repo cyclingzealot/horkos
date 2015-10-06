@@ -88,8 +88,9 @@ set +x
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
+        subJurDir="$dataDir/subJurs/"
 	
-		mkdir -p $workDir $readyDir
+		mkdir -p $workDir $readyDir $subJurDir
 	
 		sourceUrl="http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang"
 		sourceFile="$dataDir/source.html"
@@ -100,6 +101,7 @@ set +x
 	
 		ridingList="$dataDir/ridingIDsList.txt"
 		grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '=' -f 3 | cut -d '&' -f 1 > $ridingList
+        
 	
 		for identifier in `cat $ridingList`; do
 			ridingUrl="http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"
@@ -114,13 +116,29 @@ set +x
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
 			echo; echo 
-			echo Data for riding $identifier in language $lang done!
+			echo "Data for riding $identifier in language $lang done!"
 			echo; echo 
 	
 			echo `date`   Sleeping for $diffCurl + 1 seconds
 			sleep $diffCurl
 			sleep 1
+
 		done	
+
+        echo Create the lists of subjuristictions
+        echo If you have a subJur which is a substring of another, YOU WILL HAVE A BUG
+
+        subJurList="$subJurDir/provinceList.txt"
+        subJurListUniq="$subJurDir/provinceListUniq.txt"
+        combineList="$subJurDir/ridingIDprovCombined.txt"
+
+		grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '(' -f 2 | cut -d ')' -f 1 | recode html..utf8 > $subJurList
+        sort $subJurList > $subJurListUniq
+        paste -d':' $ridingList $subJurList > $combineList
+
+        for subJur in `cat $subJurListUniq` ; do
+            grep $subJur $combineList | cut -d ':' -f 1 > $subJurDir/data.$subJur
+        done
 	
 	done
 	
