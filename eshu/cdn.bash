@@ -128,8 +128,8 @@ set +x
         echo Create the lists of subjuristictions
         echo If you have a subJur which is a substring of another, YOU WILL HAVE A BUG
 
-        subJurList="$subJurDir/provinceList.txt"
-        subJurListUniq="$subJurDir/provinceListUniq.txt"
+        subJurList="$subJurDir/subJurList.txt"
+        subJurListUniq="$subJurDir/subJurListUniq.txt"
         combineList="$subJurDir/ridingIDprovCombined.txt"
 
 		grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '(' -f 2 | cut -d ')' -f 1 | recode html..utf8 > $subJurList

@@ -3,7 +3,7 @@
 namespace Jlam\HorkosBundle;
 
 interface Scrapper {
-	
+
 
 
 	/**
@@ -17,16 +17,16 @@ interface Scrapper {
 	 *
 	 */
 	static function scrape();
-	
-	
-	
+
+
+
 	static function getScraperError();
-	
-	
+
+
 	/**
-	 * Returns an array with summary information 
+	 * Returns an array with summary information
 	 * about an election
-	 * 
+	 *
 	 * Example of a recommended array for 2015 federal election
 	 * array(
 				'jurisdictionName'	=> 'Canada',
@@ -35,11 +35,20 @@ interface Scrapper {
 				'totalWastedVotes'	=> array_sum($partyTallyWasted),
 				'tweetHandle'		=> '#elxn42',
 				'gitHubSource'		=> 'https://github.com/cyclingzealot/cdn2015',
-		); 
+		);
 	 *
 	 */
 	static function getSummary();
-	
+
+	static function initialize($container, $language = 'en');
+
+
+	static function getJurisdictionShorthand();
+	static function setJurisdictionShorthand($subJur);
+
+
+	static function getSubJurisdictions();
+
 }
 
 ?>
