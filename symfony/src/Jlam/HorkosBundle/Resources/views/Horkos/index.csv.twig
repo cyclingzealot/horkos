@@ -1,0 +1,10 @@
+Hello!
+
+{{ ridings|length }}
+
+{% for i,riding in ridings %}
+	{{ ridings.partyTally.tally | length }}
+	{% for party,result in ridings.partyTally.tally %}
+		{{i}}\t{{riding.name}}\t{{party}}\t{{result}}
+	{% endfor %}
+{% endfor %}
