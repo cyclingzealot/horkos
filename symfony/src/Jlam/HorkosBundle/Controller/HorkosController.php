@@ -105,6 +105,11 @@ class HorkosController extends Controller
         $response->setMaxAge(self::CACHE_TTL_SECS);
         $response->setSharedMaxAge(self::CACHE_TTL_SECS);
 
+        if($format == 'csv') {
+			$response->headers->set('Content-Type', 'text/csv');
+			$response->headers->set('Content-Disposition', 'attachment; filename="export.csv"');
+        }
+
 		$cache->set($cacheKey, $response, self::CACHE_TTL_SECS);
 
 
