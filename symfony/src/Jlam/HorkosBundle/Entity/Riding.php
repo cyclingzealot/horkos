@@ -11,7 +11,7 @@ use Jlam\HorkosBundle\TallyHolder;
  *
  * @ORM\Table()
  * @ORM\Entity
- * 
+ *
  * @author jlam@credil.org
  */
 class Riding
@@ -53,32 +53,32 @@ class Riding
      */
     private $source;
 
-    
-    
+
+
     private $localRaceTally;
-    
-    
+
+
     private $allRidingVotes;
-    
-    
-    
+
+
+
     private static $logger;
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     /**
      * @var string
-     * 
+     *
      * @ORM\Column(name="identifier", type="string", length=50)
-     * 
+     *
      */
     private $identfier;
-    
-    
-    
+
+
+
     /**
      * Array in the structure of array(
      * 		'wasted' => array(
@@ -89,124 +89,129 @@ class Riding
      * 			$nameForParty1	=> $validVotesForParty1,
      * 			$nameForParty2	=> $validVotesForParty2,
      * 		)
-     * 		//Leading means where the votes for that party would count if 
+     * 		//Leading means where the votes for that party would count if
      * 		//counting finished
      * 		'leading'=> array(
      * 			$nameForParty1	=> $votesForParty1whereParty1Leading
      * 			$nameForParty2	=> $votesForParty2whereParty2leading
      * )
-     * 
+     *
      * @var array
      * @author jlam@credil.org
      */
     static protected $partyTally;
     static protected $jurisdictionTally;
-    
-    
-    
+
+
+
     static protected $talliesInitialized;
-    
+
     static protected $ridingsContainer;
-    
-    
+
+
     public function __construct() {
     	self::initializeTallies();
-    	
+
     	$this->localRaceTally = new TallyHolder();
-    	
+
     	self::$ridingsContainer[] = $this;
 
     }
-    
-    
+
+
     /**
-     * Adds a candidate, also takes care of 
+     * Adds a candidate, also takes care of
      * adding the party of that candidate
      */
     public function addCandidate() {
-    	
+
     }
-    
-    
-    
-    
-    
+
+
+
+
+
     public function getParticipationRate() {
     	return $this->calcParticipationRate();
     }
-    
+
     public function getUnrepresentedVotes() {
     	return $this->calcUnrepresentedVotes();
     }
-    
-    
+
+
     public function setVotes($party, $votes) {
     	$this->localRaceTally->add(array($party=>$votes));
     }
-    
-    
+
+
     public function getValidVotes() {
     	return $this->calcValidVotes();
     }
-    
-    
-    
+
+
+
     /**
      * Calculates the participation rate
-     * 
+     *
      * Returns a float between 0 and 1
-     * 
+     *
      * @return float
      */
     public function calcParticipationRate() {
     	$voters = $this->getEligibleVoters();
-    	
+
     	$totalVotes = $this->allRidingVotes;
-    	
+
     	if($voters == 0) {
     		self::$logger->warn("0 eligible voters for " . $this->name);
     		return 0;
     	}
-    	
+
     	return $totalVotes / $voters;
     }
-    
-    
+
+
     /**
      * Calculates the number of unrepresented votes
      * in absolute numbers
-     * 
+     *
      * @return integer
      */
     public function calcUnrepresentedVotes() {
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
-    	
-    	return array_sum($wastedTally);	
+
+    	return array_sum($wastedTally);
     }
-    
-    
+
+
     public function calcValidVotes() {
     	$tally = $this->localRaceTally->getTally();
-    	
+
     	return array_sum($tally);
     }
-    
-    
+
+
+    public function getLocalResults() {
+		return $this->localRaceTally;
+    }
+
+
     /**
      * Calculates the number of unrepresented votes
      * for each party.  Independants are agregated together
-     * 
+     *
      * @return array
-     * 
+     *
      */
     public function calcUnrepresentedVotesByParty() {
-    	
+
     }
-    
+
     /**
      * calls on the updating of the tallies
-     * 
+     *
      * @return null
      */
     public function updateTallies() {
@@ -214,90 +219,90 @@ class Riding
     	$wastedTally	= self::copyWithoutHighest($localTally);
     	$winnerCount	= self::leadingOnly($localTally);
 	$effectiveVotes = self::keepOnlyHighest($localTally);
-    	
+
     	self::$jurisdictionTally->add(array(
     		'eligible'=>$this->getEligibleVoters(),
     		'valid'		=>array_sum($localTally),
     		'wasted'	=>array_sum($wastedTally),
     		'all'		=>$this->allRidingVotes
     	));
-    	
+
     	self::$partyTally->add(array(
     			'wasted' 	=>$wastedTally,
     			'valid'  	=>$localTally,
     			'leading'	=>$winnerCount,
     			'effective'	=>$effectiveVotes,
     	));
-    	
+
     	/*
-    	 * Riding ($this) is already added to the 
-    	 * allRidingsContainer in the 
+    	 * Riding ($this) is already added to the
+    	 * allRidingsContainer in the
     	 * contructor, no need to add here
     	 */
     }
-    
-   
-    
+
+
+
     /**
-     * Given the party tally, calculates the order of magitude of 
-     * seats for the largest winner for X seats per F votes 
-     * 
-     * Anoter suggested formula is 
-     * F = 50 * Total valid votes / total number of seats 
+     * Given the party tally, calculates the order of magitude of
+     * seats for the largest winner for X seats per F votes
+     *
+     * Anoter suggested formula is
+     * F = 50 * Total valid votes / total number of seats
      *
      */
     public static function calculateMagnitudeWinner() {
     	$perPartyTally = self::getPartyTally(TRUE);
-    	
+
     	$perPartyTally = $perPartyTally->getTally();
-    	
+
     	$totalVotesLeading = current(self::findMaxSet($perPartyTally['valid']));
-    	
+
     	$orderMagnitude = intval(floor(log10(max($totalVotesLeading, 1))));
-    	
+
     	return pow(10, $orderMagnitude);
     }
-    
-    
+
+
     public static function copyWithoutHighest($arrayIn) {
     	$array = $arrayIn;
-    	
+
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
-    	
+
     	unset($array[$keyMax]);
-    	
+
     	return $array;
     }
 
     public static function keepOnlyHighest($arrayIn) {
     	$array = $arrayIn;
-    	
+
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
-    	
+
     	return array($keyMax=>$array[$keyMax]);
     }
-    
-    
-    
+
+
+
     public static function leadingOnly($arrayIn) {
     	$array = $arrayIn;
-    	
+
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
-    	
+
     	return array($keyMax=>1);
-    	
+
     }
-    
-    
-    
+
+
+
     public static function findKeyOfMaxValue($arrayIn) {
     	$keyMax = null;
     	$max = null;
-    	
+
     	return key(self::findMaxSet($arrayIn));
     }
-    
-    
+
+
     public static function findMaxSet($arrayIn) {
     	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
@@ -305,26 +310,26 @@ class Riding
     			$keyMax	= $key;
     		}
     	}
-    	
+
     	return array($keyMax => $max);
     }
-     
-    
+
+
     /**
-     * Called in the constructor so you don't 
+     * Called in the constructor so you don't
      * have to do it in the Controller
-     * 
+     *
      */
     public static function initializeTallies() {
     	if(self::$talliesInitialized)  return;
-    	
+
     	self::$partyTally			=	new TallyHolder();
     	self::$jurisdictionTally	=	new TallyHolder();
-    	
+
     	self::$talliesInitialized = TRUE;
     }
-    
-    
+
+
     public static function getPartyTally($byStatistic=TRUE) {
 	if($byStatistic) {
     		return self::$partyTally;
@@ -333,17 +338,17 @@ class Riding
 	$invertedTally = new TallyHolder();
 
 	$currentTally = self::$partyTally;
-	
+
 	foreach($currentTally->getTally() as $stat => $partyData) {
 		foreach($partyData as $party => $value) {
 			$invertedTally->add(array($party=>array($stat=>$value)));
 		}
 	}
 
-	return $invertedTally;	
+	return $invertedTally;
     }
-    
-    
+
+
     public static function getJurisdictionTally() {
     	return self::$jurisdictionTally;
     }
@@ -351,7 +356,7 @@ class Riding
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -374,7 +379,7 @@ class Riding
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -393,18 +398,18 @@ class Riding
 
         return $this;
     }
-    
-    
-    /** 
-     * Set identifier 
-     * 
+
+
+    /**
+     * Set identifier
+     *
      * @param string $identifier
      */
     public function setIdentifier($identifier) {
     	$this->identfier = $identifer;
     }
-    
-    
+
+
     public function getIdentifier() {
     	return $this->identfier;
     }
@@ -412,7 +417,7 @@ class Riding
     /**
      * Get candidates
      *
-     * @return array 
+     * @return array
      */
     public function getCandidates()
     {
@@ -435,7 +440,7 @@ class Riding
     /**
      * Get eligibleVoters
      *
-     * @return integer 
+     * @return integer
      */
     public function getEligibleVoters()
     {
@@ -458,23 +463,23 @@ class Riding
     /**
      * Get source
      *
-     * @return string 
+     * @return string
      */
     public function getSource()
     {
         return $this->source;
     }
-    
-    
+
+
     public static function getAllRidings() {
     	$allRidings = self::$ridingsContainer;
     	return $allRidings;
     }
-    
+
     public static function getAllRdingsSorted() {
     	$allRidings = self::getAllRidings();
 
-		usort($allRidings, array('Jlam\HorkosBundle\Entity\Riding', 'sortRidings')); 
+		usort($allRidings, array('Jlam\HorkosBundle\Entity\Riding', 'sortRidings'));
 		$allRidings = array_reverse($allRidings);
 
     	return $allRidings;
@@ -485,8 +490,8 @@ class Riding
 		file_put_contents('/tmp/horkosDiff.txt', "$diff, ", FILE_APPEND);
 		return $diff;
 	}
-    
-    
+
+
     public function setAllRidingVotes($allRidingVotes) {
     	$this->allRidingVotes = $allRidingVotes;
     }
@@ -494,14 +499,14 @@ class Riding
 	public function getAllRidingVotes() {
 		return $this->allRidingVotes;
     }
-    
+
     public static function setLogger($logger) {
     	self::$logger = $logger;
     }
-    
-    
+
+
     public static function addLog($message) {
     	self::$logger->info($message);
     }
-    
+
 }
