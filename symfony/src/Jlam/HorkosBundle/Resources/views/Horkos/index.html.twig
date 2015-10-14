@@ -55,12 +55,21 @@ More information is available on the website of <a href="http://www.fairvote.ca"
 
 </td></tr></table>
 
-<!-- SubJur menu -->
+
+
 {% if subJurisdictions is defined %}
-{% for subJur in subJurisdictions %}
-	{{ subJur }} {% if not loop.last %} | {% endif %}
+<!-- SubJur menu -->
+<p><div>By subjurisdiction (experimental): <a href="{{currentURInoSubJur}}">None</a> |
+
+{% for subJurMenu in subJurisdictions %}
+	<a href="{{currentURInoSubJur ~ "&subJur=" ~ subJurMenu}}">{{subJurMenu}}</a>
+	{% if not loop.last %} | {% endif %}
 {% endfor %}
+
+</div></p>
 {% endif %}
+
+
 
 <!-- Riding table -->
 {% if error != true %}

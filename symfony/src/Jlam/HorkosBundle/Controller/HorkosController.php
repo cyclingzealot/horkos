@@ -2,7 +2,7 @@
 
 namespace Jlam\HorkosBundle\Controller;
 
-
+require 'http_build_url.php';
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Jlam\HorkosBundle\Entity\Riding;
@@ -97,7 +97,7 @@ class HorkosController extends Controller
         	'election'			=> $election ? $election : self::DEFAULT_ELECTION,
         	'error'				=> $engineClassName::getScraperError(),
         	'magnitude' 		=> $magnitude,
-        	'currentURI'		=> $this->getRequest()->getUri(),
+        	'currentURInoSubJur'=> self::stripSubJur($this->getRequest()->getUri()),
         	'currentSubJur'		=> $subJurisdiction,
         );
 
@@ -124,6 +124,32 @@ class HorkosController extends Controller
 
 		#Return the controller
         return $response;
+    }
+
+
+
+    /**
+     * Strip the URL of subjurisdiction so the template can build urls for subjurisdictions
+     * From http://stackoverflow.com/questions/4937478/strip-off-url-parameter-with-php
+     * @author Marc B
+     */
+    private static function stripSubJur($url) {
+		$urlParts = parse_url($url);
+
+		$queryParts = parse_str($urlParts['query']);
+
+		unset($queryParts['subJur']);
+
+		$urlParts['query'] = http_build_query($queryParts);
+
+		#### WHATR DO WE DO HERE?????? Can't use build_url #####
+		$url = http_build_url($urlParts);
+
+		if(strpos($url, '?') === FALSE) {
+			$url .= '?hello=bonjour';
+		}
+
+		return $url;
     }
 
 
