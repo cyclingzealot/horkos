@@ -9,7 +9,7 @@ START=$(date +%s.%N)
 set -o nounset
 
 #(a.k.a set -x) to trace what gets executed
-set -o xtrace
+#set -o xtrace
 
 # in scripts to catch mysqldump fails 
 set -o pipefail
@@ -50,7 +50,7 @@ touch $log
 chmod 600 $log
 
 
-Check that the config file exists
+#Check that the config file exists
 if [[ ! -f "$configFile" ]] ; then
         echo "I need a file at $configFile with the recipient of notifications, one line, no carriage return"
         exit 1
@@ -65,28 +65,36 @@ error=1
 thresholdMinutes=20
 notifyEmail=`cat $configFile`
 fileList=/tmp/eshuOldFiles.txt
-emailFlag=/tmp/${__file}.alertflag
+emailFlag=/tmp/${__base}.alertflag
 alertThreshold=900 # 15 minutes
+scanTarget=$__dir/../eshu/data/
 
-find ../eshu/data/ -mmin +$thresholdMinutes -type f > $fileList
+find $scanTarget -mmin +$thresholdMinutes -type f > $fileList
+findExitCode=$?
 count=`wc -l $fileList | cut -d ' ' -f 1 `
 
-if [[ ! -z "$count" && "$count" -eq "0" ]]; then
+if [[ ! -z "$count" && $findExitCode -eq "0" && "$count" -eq "0" ]]; then
 	error=0
 fi
 
 if [[ "$error" -eq "1" ]]; then 
-	if [[ ! -f  $emailFlag || `expr $(date +%s) - $(date +%s -r file.txt)` -gt "$alertThreshold" ]]; then
+	if [[ ! -f  $emailFlag || `expr $(date +%s) - $(date +%s -r $emailFlag)` -gt "$alertThreshold" ]]; then
 		msgFile=/tmp/eshuAlertMessage.txt
 
 		echo "There are files older than $thresholdMinutes in horkos/eshu/data on `hostname` or I was not able to get a count:" > $msgFile
 		cat $fileList >> $msgFile
+		echo  >> $msgFile
+		echo "Find exit code was $findExitCode" >> $msgFile
 		echo "Running on `hostname`" >> $msgFile
 		cat $msgFile | mail -s "ALERT: horkos: Old data - not refreshing?" $notifyEmail
 		rm $msgFile
 
 		touch $emailFlag
+	else 
+		echo "We got an error, but the email was already sent.  Threshold is $alertThreshold"
 	fi
+else 
+	echo "Find on $scanTarget ran OK.  No errors.  No old files above $thresholdMinutes"
 fi
 
 rm $fileList
