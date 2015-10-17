@@ -66,10 +66,12 @@ thresholdMinutes=20
 notifyEmail=`cat $configFile`
 fileList=/tmp/eshuOldFiles.txt
 emailFlag=/tmp/${__base}.alertflag
-alertThreshold=900 # 15 minutes
+alertThreshold=1800 # 15 minutes
 scanTarget=$__dir/../eshu/data/
 
+set -x
 find $scanTarget -mmin +$thresholdMinutes -type f > $fileList
+set +x
 findExitCode=$?
 count=`wc -l $fileList | cut -d ' ' -f 1 `
 
