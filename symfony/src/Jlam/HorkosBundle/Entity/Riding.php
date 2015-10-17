@@ -217,8 +217,8 @@ class Riding
     public function updateTallies() {
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
-    	$winnerCount	= self::leadingOnly($localTally);
-	$effectiveVotes = self::keepOnlyHighest($localTally);
+    	$winnerCount	= self::leadingOnly($localTally); // count winning seats
+	$effectiveVotes = self::keepOnlyHighest($localTally); // with how many votes
 
     	self::$jurisdictionTally->add(array(
     		'eligible'=>$this->getEligibleVoters(),
