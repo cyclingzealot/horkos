@@ -62,11 +62,11 @@ echo Begin `date`  .....
 ### BEGIN SCRIPT ###############################################################
 
 error=1
-thresholdMinutes=20
+thresholdMinutes=30
 notifyEmail=`cat $configFile`
 fileList=/tmp/eshuOldFiles.txt
 emailFlag=/tmp/${__base}.alertflag
-alertThreshold=1800 # 15 minutes
+alertThreshold=900 # 15 minutes
 scanTarget=$__dir/../eshu/data/
 
 set -x
