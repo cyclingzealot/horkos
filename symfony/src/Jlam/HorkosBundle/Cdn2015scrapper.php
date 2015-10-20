@@ -66,7 +66,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			self::addLog("Found $tablesLength items in \$tables");
 
-			$rows = $tables->item ( 1 )->getElementsByTagName ( 'tr' );
+			$rows = $tables->item ( 0 )->getElementsByTagName ( 'tr' );
 
 			$numRows = $rows->length;
 
