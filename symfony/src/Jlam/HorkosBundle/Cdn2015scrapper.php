@@ -74,7 +74,7 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			$j = 0;
 
-			for($j=0; $j<$numRows-3; $j++) {
+			for($j=0; $j<$numRows-1; $j++) {
 				if($j==0)  continue;
 
 				$row = $rows->item($j);
