@@ -62,11 +62,11 @@ echo Begin `date`  .....
 ### BEGIN SCRIPT ###############################################################
 
 error=1
-thresholdMinutes=20
+thresholdMinutes=30
 notifyEmail=`cat $configFile`
 fileList=/tmp/eshuOldFiles.txt
 emailFlag=/tmp/${__base}.alertflag
-alertThreshold=1800 # 15 minutes
+alertThreshold=900 # 15 minutes
 scanTarget=$__dir/../eshu/data/
 
 set -x
@@ -80,21 +80,23 @@ if [[ ! -z "$count" && $findExitCode -eq "0" && "$count" -eq "0" ]]; then
 fi
 
 if [[ "$error" -eq "1" ]]; then 
-	if [[ ! -f  $emailFlag || `expr $(date +%s) - $(date +%s -r $emailFlag)` -gt "$alertThreshold" ]]; then
-		msgFile=/tmp/eshuAlertMessage.txt
+	msgFile=/tmp/eshuAlertMessage.txt
 
-		echo "There are files older than $thresholdMinutes in horkos/eshu/data on `hostname` or I was not able to get a count:" > $msgFile
-		cat $fileList >> $msgFile
-		echo  >> $msgFile
-		echo "Find exit code was $findExitCode" >> $msgFile
-		echo "Running on `hostname`" >> $msgFile
+	echo "There are files older than $thresholdMinutes in horkos/eshu/data on `hostname` or I was not able to get a count:" > $msgFile
+	cat $fileList >> $msgFile
+	age.bash >> $msgFile
+	echo  >> $msgFile
+	echo "Find exit code was $findExitCode" >> $msgFile
+	echo "Running on `hostname`" >> $msgFile
+
+	if [[ ! -f  $emailFlag || `expr $(date +%s) - $(date +%s -r $emailFlag)` -gt "$alertThreshold" ]]; then
 		cat $msgFile | mail -s "ALERT: horkos: Old data - not refreshing?" $notifyEmail
-		rm $msgFile
 
 		touch $emailFlag
 	else 
 		echo "We got an error, but the email was already sent.  Threshold is $alertThreshold"
 	fi
+	rm $msgFile
 else 
 	echo "Find on $scanTarget ran OK.  No errors.  No old files above $thresholdMinutes"
 fi
