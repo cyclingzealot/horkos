@@ -83,6 +83,8 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 				$party = $cells->item(0)->textContent;
 
+				if(strpos($party, ':') !== FALSE)  continue;
+
 				$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
 				$votes = str_replace(",", "", $votes);
 
