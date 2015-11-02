@@ -43,6 +43,7 @@ echo ${pid} > ${pidfile}
 
 
 #Capture everything to log
+mkdir -p ~/log
 log=~/log/$__base-${ts}.log
 exec >  >(tee -a $log)
 exec 2> >(tee -a $log >&2)
