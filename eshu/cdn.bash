@@ -85,7 +85,7 @@ while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do
 set +x
 	echo Run $runs of $maxRuns...
 
-	for lang in e f; do 
+	for lang in e ; do 
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
