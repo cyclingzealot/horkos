@@ -32,7 +32,7 @@ if [ -f ${pidfile} ]; then
    result=`ps -ef | grep ${oldpid} | grep ${__base}  || true`
 
    if [ -n "${result}" ]; then
-     echo "Script already running! Exiting"
+     echo "Script already running! Check $pidfile. Exiting"
      exit 255
    fi
 fi
@@ -43,6 +43,7 @@ echo ${pid} > ${pidfile}
 
 
 #Capture everything to log
+mkdir -p ~/log
 log=~/log/$__base-${ts}.log
 exec >  >(tee -a $log)
 exec 2> >(tee -a $log >&2)
@@ -84,22 +85,27 @@ while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do
 set +x
 	echo Run $runs of $maxRuns...
 
-	for lang in e f; do 
+	for lang in e ; do 
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
 	
 		mkdir -p $workDir $readyDir
 	
-		sourceUrl="http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang"
-		sourceFile="$dataDir/source.html"
-
-		echo; echo Getting riding list...
-		curl  $sourceUrl > $sourceFile
-		echo; echo Done. ; echo
+		#This was for the byelection when the riding list was in simple HTML
+		#sourceUrl="http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang"
+		#sourceFile="$dataDir/source.html"
+		#
+		#echo; echo Getting riding list...
+		#curl  $sourceUrl > $sourceFile
+		#echo; echo Done. ; echo
 	
 		ridingList="$dataDir/ridingIDsList.txt"
-		grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '=' -f 3 | cut -d '&' -f 1 > $ridingList
+		#grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '=' -f 3 | cut -d '&' -f 1 > $ridingList
+
+		# For federal election, riding list was manually determined
+		# Alberta       # British Columbia # Manitoba # New Brunsw   # NFLD          # NWT       #Nova Scotia    # Nunavut  # Ontario      # PEI	   # Quebec       # Saskatchewan  # Yukon
+		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort > $ridingList
 	
 		for identifier in `cat $ridingList`; do
 			ridingUrl="http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"

@@ -16,6 +16,7 @@ use Jlam\HorkosBundle\TallyHolder;
  */
 class Riding
 {
+
     /**
      * @var integer
      *
@@ -217,8 +218,8 @@ class Riding
     public function updateTallies() {
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
-    	$winnerCount	= self::leadingOnly($localTally);
-	$effectiveVotes = self::keepOnlyHighest($localTally);
+    	$winnerCount	= self::leadingOnly($localTally); // count winning seats
+	$effectiveVotes = self::keepOnlyHighest($localTally); // with how many votes
 
     	self::$jurisdictionTally->add(array(
     		'eligible'=>$this->getEligibleVoters(),
@@ -276,7 +277,6 @@ class Riding
 
     public static function keepOnlyHighest($arrayIn) {
     	$array = $arrayIn;
-
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
 
     	return array($keyMax=>$array[$keyMax]);
@@ -296,14 +296,15 @@ class Riding
 
 
     public static function findKeyOfMaxValue($arrayIn) {
-    	$keyMax = null;
-    	$max = null;
 
     	return key(self::findMaxSet($arrayIn));
     }
 
 
     public static function findMaxSet($arrayIn) {
+        $keyMax = null;
+        $max = null;
+
     	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
     			$max	= $value;
