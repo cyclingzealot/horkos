@@ -31,7 +31,7 @@ class Sk2016scrapper extends ScrapingEngine {
         $csvFile = fopen($dataSourcePath, 'r');
 
         $line=0;
-        while($row = fgetcsv($csvFile) !== FALSE) {
+        while(($row = fgetcsv($csvFile)) !== FALSE) {
             $line++;
             self::addLog("At line $line of CSV file");
             #Skil until line 12 of csv file
@@ -55,7 +55,9 @@ class Sk2016scrapper extends ScrapingEngine {
             );
 
             foreach ($partyColumnArray as $index => $party){
-                $riding->setVotes($party, $row[$index]);
+                $votes = $row[$index];
+                self::addLog("Read $votes for $party for $ridingName");
+                $riding->setVotes($party, $votes);
             }
 
             #$riding->setEligibleVoters(round(1033381/60));

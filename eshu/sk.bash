@@ -101,7 +101,8 @@ set +x
 
 			startCurl=$(date +%s.%N)
 			curl -m $curlTimeout -s $csvSource > $ridingFile || true
-			grep "$completeStr" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $string in $ridingFile"
+            dos2unix $ridingFile
+			grep "$completeStr" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $completeStr in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
