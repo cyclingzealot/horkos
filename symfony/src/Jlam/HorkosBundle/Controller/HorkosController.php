@@ -14,7 +14,7 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'cdn2015';
+	const DEFAULT_ELECTION		= 'sk2016';
 	const CACHE_TTL_SECS		= 30;
 
     public function indexAction()
@@ -122,6 +122,7 @@ class HorkosController extends Controller
     	$engineClassNames = array(
     		'cdn2015'	=> 'Cdn2015scrapper',
     		'ab2015'	=> 'Ab2015scrapper',
+    		'sk2016'	=> 'Sk2016scrapper',
     	);
 
     	if(!isset($engineClassNames[$electionShorthand]))
