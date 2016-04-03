@@ -58,7 +58,7 @@ class Sk2016scrapper extends ScrapingEngine {
                 $riding->setVotes($party, $row[$index]);
             }
 
-            $riding->setEligibleVoters(round(1033381/60));
+            #$riding->setEligibleVoters(round(1033381/60));
 
             $riding->updateTallies();
         }
