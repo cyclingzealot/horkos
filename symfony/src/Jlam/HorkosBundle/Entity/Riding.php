@@ -16,6 +16,7 @@ use Jlam\HorkosBundle\TallyHolder;
  */
 class Riding
 {
+
     /**
      * @var integer
      *
@@ -276,7 +277,6 @@ class Riding
 
     public static function keepOnlyHighest($arrayIn) {
     	$array = $arrayIn;
-
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
 
     	return array($keyMax=>$array[$keyMax]);
@@ -296,14 +296,15 @@ class Riding
 
 
     public static function findKeyOfMaxValue($arrayIn) {
-    	$keyMax = null;
-    	$max = null;
 
     	return key(self::findMaxSet($arrayIn));
     }
 
 
     public static function findMaxSet($arrayIn) {
+        $keyMax = null;
+        $max = null;
+
     	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
     			$max	= $value;
