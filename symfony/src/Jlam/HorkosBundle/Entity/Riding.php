@@ -277,6 +277,14 @@ class Riding
 
     public static function keepOnlyHighest($arrayIn) {
     	$array = $arrayIn;
+
+
+        ### If all values are 0,
+        ### just return the array as 8it was given
+        if (self::isAllZero($arrayIn)) {
+            return $arrayIn;
+        }
+
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
 
     	return array($keyMax=>$array[$keyMax]);
@@ -286,6 +294,11 @@ class Riding
 
     public static function leadingOnly($arrayIn) {
     	$array = $arrayIn;
+
+        ### If all values are 0, there is no one leading
+        if (self::isAllZero($arrayIn)) {
+            return array();
+        }
 
     	$keyMax = self::findKeyOfMaxValue($arrayIn);
 
@@ -300,10 +313,19 @@ class Riding
     	return key(self::findMaxSet($arrayIn));
     }
 
+    public static function isAllZero($arrayIn) {
+        return (count(array_unique($arrayIn)) === 1 && end($arrayIn) === 0);
+    }
+
 
     public static function findMaxSet($arrayIn) {
         $keyMax = null;
         $max = null;
+
+        ### If all values are 0, there is no maximum to return
+        if (self::isAllZero($arrayIn)) {
+            return array();
+        }
 
     	foreach($arrayIn as $key=>$value) {
     		if(!isset($max) || $value>$max) {
