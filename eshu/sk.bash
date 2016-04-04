@@ -66,7 +66,7 @@ echo Begin `date`  .....
 
 electionID=`echo $__base | cut -d '.' -f 1`
 curlTimeout=6
-restSecs=60
+restSecs=10
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
 maxRuns=100
