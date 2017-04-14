@@ -22,7 +22,7 @@ class HorkosController extends Controller
 
     	#Get request parameters
     	$election			= $this->getRequest()->get('election')	?: self::DEFAULT_ELECTION;
-    	$language			= 'en';
+    	$language			= $this->getLanguage() ?: 'en';
     	$fresh				= $this->getRequest()->get('fresh');
     	$format				= $this->getRequest()->get('format')	?: 'html';
 
@@ -124,7 +124,34 @@ class HorkosController extends Controller
     }
 
 
-    private static function getScrappingEngineClassName($electionShorthand = null) {
+    private function getLanguage() {
+    	#Fist let's see if the language is set in the string
+    	$requestedLang = $this->getRequest()->get('language');
+
+    	if($requestedLang) {
+    		return $requestedLang;
+    	}
+
+    	#If not, check host being requested
+    	if(strpos($this->getRequest()->getHttpHost(), 'monvotedoitcompter') !== FALSE)
+    		return 'fr';
+
+    	#If not, look at the browsers setting
+		$searchingFor = array('en', 'fr');
+
+		$acceptedLanguages = $this->getRequest()->getLanguages();
+
+		foreach ($acceptedLanguages as $acceptedLang) {
+			foreach($searchingFor as $searchedLang) {
+				if(explode("-", $acceptedLang)[0] == $searchedLang) {
+					return $searchedLang;
+				}
+			}
+		}
+    }
+
+    private static function getScrappingEngineClassName($electionShorthand = self::DEFAULT_ELECTION) {
+
     	$engineClassNames = array(
     		'cdn2015'	=> 'Cdn2015scrapper',
     		'ab2015'	=> 'Ab2015scrapper',
