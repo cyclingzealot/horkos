@@ -14,7 +14,7 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'sk2016';
+	const DEFAULT_ELECTION		= 'qc2016';
 	const CACHE_TTL_SECS		= 30;
 
     public function indexAction()
@@ -53,6 +53,7 @@ class HorkosController extends Controller
 
     	# Get the engine class name
     	$engineClassName	= self::getScrappingEngineClassName($election);
+        $this->get('logger')->debug("engineClassName = $engineClassName");
 
     	# Set the logger for the riding entity
     	Riding::setLogger($this->get('logger'));
@@ -123,6 +124,7 @@ class HorkosController extends Controller
     		'cdn2015'	=> 'Cdn2015scrapper',
     		'ab2015'	=> 'Ab2015scrapper',
     		'sk2016'	=> 'Sk2016scrapper',
+    		'qc2016'	=> 'Qc2016scrapper',
     	);
 
     	if(!isset($engineClassNames[$electionShorthand]))

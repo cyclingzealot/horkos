@@ -9,6 +9,16 @@ class Qc2016scrapper extends ScrapingEngine {
 
     const JURISDICTION_SHORTHAND = 'qc';
 
+    public static function getSummary() {
+    	return array(
+    			'jurisdictionName'	=> 'Québec',
+    			'electionName'		=> 'Québec 2018',
+    			'source'			=> self::getSource(),
+    			'tweetHandle'		=> '#qcpoli',
+    			'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
+    	);
+    }
+
 	public static function scrape() {
 		$logger = self::getLogger('Starting offline scrape...');
 
@@ -28,7 +38,7 @@ class Qc2016scrapper extends ScrapingEngine {
 
         $dataSourcePath = $ridingPaths[0];
 
-        $json = json_decode(file_get_contents($dataSourcePath, 'r'));
+        $json = json_decode(file_get_contents($dataSourcePath, 'r'), TRUE);
 
         $line=0;
         foreach($json['circonscriptions'] as $i=>$data) {
@@ -163,15 +173,4 @@ class Qc2016scrapper extends ScrapingEngine {
 	}
 
 
-	public static function getSummary() {
-		return array(
-				'jurisdictionName'	=> 'Saskatchewan',
-				'electionName'		=> 'Saskatchewan 2016',
-				'source'			=> self::getSource(),
-				'tweetHandle'		=> '#skvotes',
-				'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
-		);
-	}
 }
-
-?>
