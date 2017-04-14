@@ -84,7 +84,11 @@ class HorkosController extends Controller
 		}
 
 	    ### Render ####################################################################
-	    $response = $this->render("JlamHorkosBundle:Horkos:index.$format.twig", array(
+	    $viewName = "JlamHorkosBundle:Horkos:index.$language.$format.twig";
+	    if ($format != 'html')
+	    	$viewName = "JlamHorkosBundle:Horkos:index.$format.twig";
+
+	    $response = $this->render($viewName, array(
     				'ridings'	=> Riding::getAllRdingsSorted(),
     				'partyTally' 	=> $partyTally,
     				'jurisdiction'	=> $jurisdictionTally,
@@ -92,6 +96,7 @@ class HorkosController extends Controller
     				'election'	=> $election ? $election : self::DEFAULT_ELECTION,
     				'error'		=> $engineClassName::getScraperError(),
     				'magnitude' => $magnitude,
+    				'language'	=> $language,
     		));
 
 
