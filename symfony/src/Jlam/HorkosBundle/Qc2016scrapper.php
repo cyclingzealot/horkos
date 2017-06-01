@@ -79,7 +79,7 @@ class Qc2016scrapper extends ScrapingEngine {
 
 
     static function langPathPartLookup($lang = 'fr') {
-        $langReturn = 'f';
+        $langReturn = 'fr';
 
         return $langReturn;
     }
