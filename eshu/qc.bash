@@ -100,7 +100,7 @@ set +x
 		startCurl=$(date +%s.%N)
 		curl -m $curlTimeout -s $jsonSource > $ridingFile || true
         #dos2unix $ridingFile
-		test `wc -c $ridingFile  | cut -f 1 -d' '` -gt $minChars && mv -v "$ridingFile" "$readyFile" || echo "$ridingFile has less than $minLines"
+		test `wc -c $ridingFile  | cut -f 1 -d' '` -gt $minChars && mv -v "$ridingFile" "$readyFile" || echo "$ridingFile has less than $minChars"
 		endCurl=$(date +%s.%N)
 		diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
