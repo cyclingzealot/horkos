@@ -34,7 +34,7 @@
             {% if error == true %}
             <button type="button" class="btn btn-danger wraap"><h2>How many votes will the {{summary.jurisdictionName}} election waste this time?</h2></button>
             {% else %}
-                <button type="button" class="btn btn-danger wraap"><h2> &nbsp;<strong><ins id="unrepresented_votes">{{summary.totalWastedVotes}}</ins></strong> unrepresented votes in {{summary.electionName}} election </h2></button>
+                <button type="button" class="btn btn-danger wraap"><h2> &nbsp;<strong><ins id="unrepresented_votes">{{summary.totalWastedVotes}}</ins></strong> votes non-repr&eacute;sent&eacute;s dans l'élection {{summary.electionName}} </h2></button>
             {% endif %}
             <br>
 
