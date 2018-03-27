@@ -1,0 +1,175 @@
+body.highContrast  {background:#000;border:0;color:#FFF;}
+body.highContrast a {color:#FFF;}
+body.highContrast div#alert {color:#4EFFFF;margin:10px 0 12px;}
+body.highContrast div#alert a {color:#4EFFFF;}
+
+body.highContrast h2, body.highContrast .topRule {border-bottom:1px solid #FFF;}
+
+body.highContrast div.logo .img {background-image:url(/images/en/contrast/bg-logo-home.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.whoCanVote .img {background-image:url(/images/en/contrast/h1-who-can-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.howToVote .img {background-image:url(/images/en/contrast/h1-how-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.weMakeVotingEasy .img {background-image:url(/images/en/contrast/h1-we-make-voting-easy.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.whenToVote .img {background-image:url(/images/en/contrast/h1-when-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.whereToVote .img {background-image:url(/images/en/contrast/h1-where-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.howToVote .img {background-image:url(/images/en/contrast/h1-how-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.aboutThisElection .img {background-image:url(/images/en/contrast/h1-about-elections.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.accessibility .img {background-image:url(/images/en/contrast/h1-accessibility.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.contactUs .img {background-image:url(/images/en/contrast/h1-contact-us.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.studentsAndTeachers .img {background-image:url(/images/en/contrast/h1-students-and-teachers.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.pageNotFound .img {background-image:url(/images/en/contrast/h1-page-not-found.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.communityOutreach .img {background-image:url(/images/en/contrast/h1-community-outreach.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.financialStatementsAndContributions .img {background-image:url(/images/en/contrast/h1-financial-statements-and-contributions.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.findYourCandidate .img {background-image:url(/images/en/contrast/h1-find-your-candidate.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.advancePoll .img {background-image:url(/images/en/contrast/h1-advance-poll-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.mobilePoll .img {background-image:url(/images/en/contrast/h1-mobile-poll-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.informationForCandidates .img {background-image:url(/images/en/contrast/h1-information-for-candidates.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.informationForConstituencyAssoc .img {background-image:url(/images/en/contrast/h1-information-for-constituency-associations.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.informationForPoliticalParties .img {background-image:url(/images/en/contrast/h1-information-for-political-parties.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.media_centre .img {background-image:url(/images/en/contrast/h1-media-centre.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.messageFromTheCeo .img {background-image:url(/images/en/contrast/h1-message-from-the-ceo.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.noticeOfRegistrationCard .img {background-image:url(/images/en/contrast/h1-notice-of-registration-card.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.alertsAndDisruptionsOfService .img {background-image:url(/images/en/contrast/h1-alerts-and-disruptions-of-service.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.realTimeDisclosureOfContributions .img {background-image:url(/images/en/contrast/h1-real-time-disclosure-of-contributions.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.registerOfAbsenteeElectors .img {background-image:url(/images/en/contrast/h1-register-of-absentee-electors.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.sitemap .img {background-image:url(/images/en/contrast/h1-sitemap.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.specialBallots .img {background-image:url(/images/en/contrast/h1-special-ballots.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.votersList .img {background-image:url(/images/en/contrast/h1-voters-list.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.whereDoIVote .img {background-image:url(/images/en/contrast/h1-where-do-i-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.noticeOfElection .img {background-image:url(/images/en/contrast/h1-notice-of-election-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.workingForTheElection .img {background-image:url(/images/en/contrast/h1-working-for-the-election.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.registerToVote .img {background-image:url(/images/en/contrast/h1-register-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.informationForThirdParty .img {background-image:url(/images/en/contrast/h1-information-for-third-party-advertisers.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.whatHappensAfterThePolls .img {background-image:url(/images/en/contrast/h1-what-happens-after-the-polls-close.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.testPageTwo .img {background-image:url(/images/en/contrast/h1-test.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.generalElectionResults .img {background-image:url(/images/en/contrast/h1-2011-general-election-results-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.generalElectionResultsByPP .img {background-image:url(/images/en/contrast/h1-2011-general-election-results-pp-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.byElecKitchener .img {background-image:url(/images/en/contrast/by-elec-kitchener-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecVaughan .img {background-image:url(/images/en/contrast/by-elec-vaughan-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecOttawaSouth .img {background-image:url(/images/en/contrast/h1-by-elec-ottawa-south-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecEtobicokeLakeshore .img {background-image:url(/images/en/contrast/h1-by-elec-etobicoke-lakeshore-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecLondonWest .img {background-image:url(/images/en/contrast/h1-by-elec-london-west-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecWindsorTecumseh .img {background-image:url(/images/en/contrast/h1-by-elec-windsor-tecumseh-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecScarboroughGuildwood .img {background-image:url(/images/en/contrast/h1-by-elec-scarborough-guildwood-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.generalElectionResultsByDistrict .img {background-image:url(/images/en/contrast/h1-2011-general-election-results-district-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.electionCandidates .img {background-image:url(/images/en/contrast/h1-2011-general-election-candidates-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.voteByMail .img {background-image:url(/images/en/contrast/h1-vote-by-mail-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.postSecondaryStudents .img {background-image:url(/images/en/contrast/h1-post-secondary-students-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.socialMedia .img {background-image:url(/images/en/contrast/h1-social-media-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.photoGallery .img {background-image:url(/images/en/contrast/h1-photo-gallery-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.keyElectionDates .img {background-image:url(/images/en/contrast/h1-key-election-dates-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.videoGallery .img {background-image:url(/images/en/contrast/h1-video-gallery-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.mediaBReels .img {background-image:url(/images/en/contrast/h1-media-b-reels-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.ed_maps .img {background-image:url(/images/en/contrast/h1-electoral-district-maps-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.comingSoon .img {background-image:url(/images/en/contrast/h1-coming-soon-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.canSomeoneElse .img {background-image:url(/images/en/contrast/h1-can-someone-else-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.whatIfICannot .img {background-image:url(/images/en/contrast/h1-what-if-i-cannot-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.doIHaveTo .img {background-image:url(/images/en/contrast/h1-do-i-have-to-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.houseHolder .img {background-image:url(/images/en/contrast/h1-house-holder-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.newsLetter .img {background-image:url(/images/en/contrast/h1-newsletter-archive-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+body.highContrast h1.efNews .img {background-image:url(/images/en/contrast/h1-ef-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.eesNews .img {background-image:url(/images/en/contrast/h1-ees-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.outreachNews .img {background-image:url(/images/en/contrast/h1-outreach-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.newsLetter .img {background-image:url(/images/en/contrast/h1-newsletter-archive-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.psnNewsletter .img {background-image:url(/images/en/contrast/h1-psn-newsletter-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.byElecDistResultsByDistrict .img {background-image:url(/images/en/contrast/h1-by-election-district-results-by-district-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.byElecResults .img {background-image:url(/images/en/contrast/h1-by-election-district-results-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.byElecResults2013 .img {background-image:url(/images/en/contrast/h1-by-elec-results-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.postEventRepo .img {background-image:url(/images/en/contrast/h1-ge-post-event-report.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast h1.stratPlan .img {background-image: url(/images/en/contrast/h1-strat-plan-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.ravt .img {background-image: url(/images/en/contrast/h1-ravt-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.voteUpdate .img {background-image: url(/images/en/contrast/h1-voteUpdate-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.firstWeek .img {background-image:url(/images/en/contrast/h1-first-week-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecNiagara .img {background-image:url(/images/en/contrast/h1-by-elec-niagara-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.byElecThornhill .img {background-image:url(/images/en/contrast/h1-by-elec-thornhill-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.noticeDirectives .img {background-image:url(/images/en/contrast/h1-notices-directives-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast h1.specialBallotInfo .img {background-image: url(/images/en/contrast/h1-special-ballot-contact-info-contrast.gif); background-position:0 0; background-repeat:no-repeat;}
+
+body.highContrast #jobAppWrap .image {background-image:url(/images/en/contrast/online_application_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #wdiv .image {background-image:url(/images/en/contrast/where-do-i-vote-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.interactiveTools .img {background-image:url(/images/en/contrast/h1-interactive-tools-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.moreDaysMoreWays .img {background-image:url(/images/en/contrast/h1-more-days-more-ways-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast h1.moreWaysToVote .img {background-image:url(/images/en/contrast/h1-more-ways-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #aiotl .image {background-image:url(/images/en/contrast/aiotl-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #fyed .image {background-image:url(/images/en/contrast/fyed-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #per .image {background-image:url(/images/en/contrast/past-election-results-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #er .image {background-image:url(/images/en/contrast/election-results-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #ej .image {background-image:url(/images/en/contrast/election-job-contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+/*Home page tiles*/
+body.highContrast #tileOneRowOne .image {background-image:url(/images/en/contrast/home_voters_list_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileTwoRowOne .image {background-image:url(/images/en/contrast/home_election_job_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileThreeRowOne .image {background-image:url(/images/en/contrast/home_wdiv_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast #tileOneRowTwo .image {background-image:url(/images/en/contrast/home_find_my_candidate_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileTwoRowTwo .image {background-image:url(/images/en/contrast/home_electoral_district_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileThreeRowTwo .image {background-image:url(/images/en/contrast/home_returning_office_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast #tileOneRowThree .image {background-image:url(/images/en/contrast/home_away_polls_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileTwoRowThree .image {background-image:url(/images/en/contrast/home_identification_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileThreeRowThree .image {background-image:url(/images/en/contrast/home_poll_locations_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.highContrast #tileOneRowFour .image {background-image:url(/images/en/contrast/home_information_for_candidates_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileTwoRowFour .image {background-image:url(/images/en/contrast/home_notice_disruption_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+body.highContrast #tileThreeRowFour .image {background-image:url(/images/en/contrast/home_about_my_card_contrast.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+
+body.highContrast #global-nav li a span {background-image:url(/images/en/contrast/btn-nav.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+body.highContrast .contentColumns h3 {border-bottom:1px solid #333;}
+body.highContrast .accordion .heading {border-bottom:1px solid #333;}
+
+body.highContrast #page {background-image:url(/images/contrast/bg-header.gif);background-position:right 138px;background-repeat:no-repeat;}
+
+body.highContrast #footer {background:#050505;}
+body.highContrast #footer .col {border-top:1px solid #FFF;}
+body.highContrast #footer .copyright {color:#747474;}
+
+body.highContrast #countdown, body.highContrast #calendar {color:#a8a8a8;}
+body.highContrast ul#util a, body.highContrast ul#util span {color:#a8a8a8;}
+body.highContrast .accordion .heading h3 span.button {background-image:url(/images/contrast/btn-accordion-show.gif);background-position:right 0.5em;background-repeat:no-repeat;}
+body.highContrast .accordion .heading.active h3 span.button {background-image:url(/images/contrast/btn-accordion-hide.gif);background-position:right 0;background-repeat:no-repeat;}
+
+
+body.highContrast div#banner, body.highContrast #island .image img {display:none;}
+
+/* Styling For Test And Proxy Pages*/
+body.highContrast #footer .col.no_border, #footer .col.last.no_border  {border:none;}

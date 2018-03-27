@@ -1,0 +1,582 @@
+div.logo, div.logo a, div.logo span {display:block;height:72px;width:79px;}
+body.en div.logo .img {background-image:url(/images/en/bg-logo-home.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.weMakeVotingEasy {margin-left:0;} /* This used to have a margin of 160px */
+body.en h1.weMakeVotingEasy, h1.weMakeVotingEasy span {height:32px;width:500px;}
+body.en h1.weMakeVotingEasy .img {background-image:url(/images/en/h1-we-make-voting-easy.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whoCanVote {margin:0;}
+body.en h1.whoCanVote, h1.whoCanVote span {height:32px;width:500px;}
+body.en h1.whoCanVote .img {background-image:url(/images/en/h1-who-can-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whenToVote {margin:0;}
+body.en h1.whenToVote, h1.whenToVote span {height:32px;width:500px;}
+body.en h1.whenToVote .img {background-image:url(/images/en/h1-when-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whereToVote {margin:0;}
+body.en h1.whereToVote, h1.whereToVote span {height:32px;width:500px;}
+body.en h1.whereToVote .img {background-image:url(/images/en/h1-where-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.howToVote {margin:0;}
+body.en h1.howToVote, h1.howToVote span {height:32px;width:500px;}
+body.en h1.howToVote .img {background-image:url(/images/en/h1-how-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.aboutThisElection {margin:0;}
+body.en h1.aboutThisElection, h1.aboutThisElection span {height:32px;width:500px;}
+body.en h1.aboutThisElection .img {background-image:url(/images/en/h1-about-elections.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.accessibility {margin:0;}
+body.en h1.accessibility, h1.accessibility span {height:32px;width:500px;}
+body.en h1.accessibility .img {background-image:url(/images/en/h1-accessibility.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.contactUs {margin:0;}
+body.en h1.contactUs, h1.contactUs span {height:32px;width:500px;}
+body.en h1.contactUs .img {background-image:url(/images/en/h1-contact-us.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.studentsAndTeachers {margin:0;}
+body.en h1.studentsAndTeachers, h1.studentsAndTeachers span {height:32px;width:500px;}
+body.en h1.studentsAndTeachers .img {background-image:url(/images/en/h1-students-and-teachers.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.pageNotFound {margin:0;}
+body.en h1.pageNotFound, h1.pageNotFound span {height:32px;width:500px;}
+body.en h1.pageNotFound .img {background-image:url(/images/en/h1-page-not-found.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.communityOutreach {margin:0;}
+body.en h1.communityOutreach, h1.communityOutreach span {height:32px;width:500px;}
+body.en h1.communityOutreach .img {background-image:url(/images/en/h1-community-outreach.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.financialStatementsAndContributions {margin:0;}
+body.en h1.financialStatementsAndContributions, h1.financialStatementsAndContributions span {height:60px;width:500px;}
+body.en h1.financialStatementsAndContributions .img {background-image:url(/images/en/h1-financial-statements-and-contributions.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.findYourCandidate {margin:0;}
+body.en h1.findYourCandidate, h1.findYourCandidate span {height:32px;width:500px;}
+body.en h1.findYourCandidate .img {background-image:url(/images/en/h1-find-your-candidate.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.advancePoll {margin:0;}
+body.en h1.advancePoll, h1.advancePoll span {height:32px;width:500px;}
+body.en h1.advancePoll .img {background-image:url(/images/en/h1-advance-poll.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.mobilePoll {margin:0;}
+body.en h1.mobilePoll, h1.mobilePoll span {height:32px;width:500px;}
+body.en h1.mobilePoll .img {background-image:url(/images/en/h1-mobile-poll.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.informationForCandidates {margin:0;}
+body.en h1.informationForCandidates, h1.informationForCandidates span {height:32px;width:500px;}
+body.en h1.informationForCandidates .img {background-image:url(/images/en/h1-information-for-candidates.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.informationForConstituencyAssoc {margin:0;}
+body.en h1.informationForConstituencyAssoc, h1.informationForConstituencyAssoc span {height:60px;width:500px;}
+body.en h1.informationForConstituencyAssoc .img {background-image:url(/images/en/h1-information-for-constituency-associations.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.informationForPoliticalParties {margin:0;}
+body.en h1.informationForPoliticalParties, h1.informationForPoliticalParties span {height:32px;width:500px;}
+body.en h1.informationForPoliticalParties .img {background-image:url(/images/en/h1-information-for-political-parties.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.media_centre {margin:0;}
+body.en h1.media_centre, h1.media_centre span {height:32px;width:500px;}
+body.en h1.media_centre .img {background-image:url(/images/en/h1-media-centre.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.messageFromTheCeo {margin:0;}
+body.en h1.messageFromTheCeo, h1.messageFromTheCeo span {height:62px;width:500px;}
+body.en h1.messageFromTheCeo .img {background-image:url(/images/en/h1-message-from-the-ceo.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.noticeOfRegistrationCard {margin:0;}
+body.en h1.noticeOfRegistrationCard, h1.noticeOfRegistrationCard span {height:32px;width:500px;}
+body.en h1.noticeOfRegistrationCard .img {background-image:url(/images/en/h1-notice-of-registration-card.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.alertsAndDisruptionsOfService {margin:0;}
+body.en h1.alertsAndDisruptionsOfService, h1.alertsAndDisruptionsOfService span {height:32px;width:513px;}
+body.en h1.alertsAndDisruptionsOfService .img {background-image:url(/images/en/h1-alerts-and-disruptions-of-service.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.realTimeDisclosureOfContributions {margin:0;}
+body.en h1.realTimeDisclosureOfContributions, h1.realTimeDisclosureOfContributions span {height:60px;width:500px;}
+body.en h1.realTimeDisclosureOfContributions .img {background-image:url(/images/en/h1-real-time-disclosure-of-contributions.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.registerOfAbsenteeElectors {margin:0;}
+body.en h1.registerOfAbsenteeElectors, h1.registerOfAbsenteeElectors span {height:32px;width:500px;}
+body.en h1.registerOfAbsenteeElectors .img {background-image:url(/images/en/h1-register-of-absentee-electors.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.sitemap {margin:0;}
+body.en h1.sitemap, h1.sitemap span {height:32px;width:500px;}
+body.en h1.sitemap .img {background-image:url(/images/en/h1-sitemap.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.specialBallots {margin:0;}
+body.en h1.specialBallots, h1.specialBallots span {height:32px;width:500px;}
+body.en h1.specialBallots .img {background-image:url(/images/en/h1-special-ballots.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.votersList {margin:0;}
+body.en h1.votersList, h1.votersList span {height:32px;width:500px;}
+body.en h1.votersList .img {background-image:url(/images/en/h1-voters-list.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whereDoIVote {margin:0;}
+body.en h1.whereDoIVote, h1.whereDoIVote span {height:32px;width:500px;}
+body.en h1.whereDoIVote .img {background-image:url(/images/en/h1-where-do-i-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.workingForTheElection {margin:0;}
+body.en h1.workingForTheElection, h1.workingForTheElection span {height:32px;width:500px;}
+body.en h1.workingForTheElection .img {background-image:url(/images/en/h1-working-for-the-election.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.registerToVote {margin:0;}
+body.en h1.registerToVote, h1.registerToVote span {height:32px;width:500px;}
+body.en h1.registerToVote .img {background-image:url(/images/en/h1-register-to-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.informationForThirdParty {margin:0;}
+body.en h1.informationForThirdParty, h1.informationForThirdParty span {height:62px;width:500px;}
+body.en h1.informationForThirdParty .img {background-image:url(/images/en/h1-information-for-third-party-advertisers.gif);background-position:0 0;background-repeat:no-repeat;}
+
+/*  Added Class For Test Page 2  */
+h1.testPageTwo {margin:0;}
+body.en h1.testPageTwo, h1.testPageTwo span {height:32px;width:500px;}
+body.en h1.testPageTwo .img {background-image:url(/images/en/h1-test.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whatHappensAfterThePolls {margin:0;}
+body.en h1.whatHappensAfterThePolls, h1.whatHappensAfterThePolls span {height:32px;width:500px;}
+body.en h1.whatHappensAfterThePolls .img {background-image:url(/images/en/h1-what-happens-after-the-polls-close.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.generalElectionResults {margin:0;}
+body.en h1.generalElectionResults, h1.generalElectionResults span {height:32px;width:500px;}
+body.en h1.generalElectionResults .img {background-image:url(/images/en/h1-2011-general-election-results.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.postSecondaryStudents {margin:0;}
+body.en h1.postSecondaryStudents, h1.postSecondaryStudents span {height:32px;width:500px;}
+body.en h1.postSecondaryStudents .img {background-image:url(/images/en/h1-post-secondary-students.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.generalElectionResultsByPP {margin:0;}
+body.en h1.generalElectionResultsByPP, h1.generalElectionResultsByPP span {height:70px;width:500px;}
+body.en h1.generalElectionResultsByPP .img {background-image:url(/images/en/h1-2011-general-election-results-pp.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.generalElectionResultsByDistrict {margin:0;}
+body.en h1.generalElectionResultsByDistrict, h1.generalElectionResultsByDistrict span {height:70px;width:500px;}
+body.en h1.generalElectionResultsByDistrict .img {background-image:url(/images/en/h1-2011-general-election-results-district.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+generalElectionResults {margin:0;}
+body.en generalElectionResults, generalElectionResults span {height:70px;width:500px;}
+body.en generalElectionResults .img {background-image:url(/images/en/general-election-results.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+h1.electionCandidates {margin:0;}
+body.en h1.electionCandidates, h1.electionCandidates span {height:32px;width:500px;}
+body.en h1.electionCandidates .img {background-image:url(/images/en/h1-2011-general-election-candidates.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.interactiveTools {margin:0;}
+body.en h1.interactiveTools, h1.interactiveTools span {height:32px;width:500px;}
+body.en h1.interactiveTools .img {background-image:url(/images/en/h1-interactive-tools.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.moreDaysMoreWays {margin:0;}
+body.en h1.moreDaysMoreWays, h1.moreDaysMoreWays span {height:32px;width:500px;}
+body.en h1.moreDaysMoreWays .img {background-image:url(/images/en/h1-more-days-more-ways.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.moreWaysToVote {margin:0;}
+body.en h1.moreWaysToVote, h1.moreWaysToVote span {height:32px;width:500px;}
+body.en h1.moreWaysToVote .img {background-image:url(/images/en/h1-more-ways.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.voteByMail {margin:0;}
+body.en h1.voteByMail, h1.voteByMail span {height:32px;width:500px;}
+body.en h1.voteByMail .img {background-image:url(/images/en/h1-vote-by-mail.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.socialMedia {margin:0;}
+body.en h1.socialMedia, h1.socialMedia span {height:32px;width:500px;}
+body.en h1.socialMedia .img {background-image:url(/images/en/h1-social-media.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.photoGallery {margin:0;}
+body.en h1.photoGallery, h1.photoGallery span {height:32px;width:500px;}
+body.en h1.photoGallery .img {background-image:url(/images/en/h1-photo-gallery.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.keyElectionDates {margin:0;}
+body.en h1.keyElectionDates, h1.keyElectionDates span {height:32px;width:500px;}
+body.en h1.keyElectionDates .img {background-image:url(/images/en/h1-key-election-dates.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+h1.videoGallery {margin:0;}
+body.en h1.videoGallery, h1.videoGallery span {height:32px;width:500px;}
+body.en h1.videoGallery .img {background-image:url(/images/en/h1-video-gallery.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.mediaBReels {margin:0;}
+body.en h1.mediaBReels, h1.mediaBReels span {height:32px;width:500px;}
+body.en h1.mediaBReels .img {background-image:url(/images/en/h1-media-b-reels.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.comingSoon {margin:0;}
+body.en h1.comingSoon, h1.comingSoon span {height:32px;width:500px;}
+body.en h1.comingSoon .img {background-image:url(/images/en/h1-coming-soon.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.doIHaveTo {margin:0;}
+body.en h1.doIHaveTo, h1.doIHaveTo span {height:62px;width:500px;}
+body.en h1.doIHaveTo .img {background-image:url(/images/en/h1-do-i-have-to.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.whatIfICannot {margin:0;}
+body.en h1.whatIfICannot, h1.whatIfICannot span {height:72px;width:500px;}
+body.en h1.whatIfICannot .img {background-image:url(/images/en/h1-what-if-i-cannot.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.canSomeoneElse {margin:0;}
+body.en h1.canSomeoneElse, h1.canSomeoneElse span {height:62px;width:500px;}
+body.en h1.canSomeoneElse .img {background-image:url(/images/en/h1-can-someone-else.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.noticeOfElection {margin:0;}
+body.en h1.noticeOfElection, h1.noticeOfElection span {height:32px;width:500px;}
+body.en h1.noticeOfElection .img {background-image:url(/images/en/h1-notice-of-election.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.houseHolder {margin:0;}
+body.en h1.houseHolder, h1.houseHolder span {height:32px;width:500px;}
+body.en h1.houseHolder .img {background-image:url(/images/en/h1-house-holder.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.ed_maps {margin:0;}
+body.en h1.ed_maps, h1.ed_maps span {height:32px;width:500px;}
+body.en h1.ed_maps .img {background-image:url(/images/en/h1-electoral-district-maps.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.efNews {margin:0;}
+body.en h1.efNews, h1.efNews span {height:32px;width:500px;}
+body.en h1.efNews .img {background-image:url(/images/en/h1-ef.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.eesNews {margin:0;}
+body.en h1.eesNews, h1.eesNews span {height:32px;width:500px;}
+body.en h1.eesNews .img {background-image:url(/images/en/h1-ees.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.outreachNews {margin:0;}
+body.en h1.outreachNews, h1.outreachNews span {height:32px;width:500px;}
+body.en h1.outreachNews .img {background-image:url(/images/en/h1-outreach.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.newsLetter {margin:0;}
+body.en h1.newsLetter, h1.newsLetter span {height:32px;width:500px;}
+body.en h1.newsLetter .img {background-image:url(/images/en/h1-newsletter-archive.gif);background-position:0 0;background-repeat:no-repeat;}
+
+h1.specialBallotInfo {margin:0;}
+body.en h1.specialBallotInfo, h1.specialBallotInfo span {height:72px; width:500px;}
+body.en h1.specialBallotInfo .img {background-image:url(/images/en/h1-special-ballot-contact-info.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecVaughan {margin:0;}
+body.en h1.byElecVaughan, h1.byElecVaughan span {height:32px; width:500px;}
+body.en h1.byElecVaughan .img {background-image:url(/images/en/by-elec-vaughan.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecOttawaSouth {margin:0;}
+body.en h1.byElecOttawaSouth, h1.byElecOttawaSouth span {height:32px; width:500px;}
+body.en h1.byElecOttawaSouth .img {background-image:url(/images/en/h1-by-elec-ottawa-south.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecEtobicokeLakeshore {margin:0;}
+body.en h1.byElecEtobicokeLakeshore, h1.byElecEtobicokeLakeshore span {height:32px; width:500px;}
+body.en h1.byElecEtobicokeLakeshore .img {background-image:url(/images/en/h1-by-elec-etobicoke-lakeshore.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecLondonWest {margin:0;}
+body.en h1.byElecLondonWest, h1.byElecLondonWest span {height:32px; width:500px;}
+body.en h1.byElecLondonWest .img {background-image:url(/images/en/h1-by-elec-london-west.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecWindsorTecumseh {margin:0;}
+body.en h1.byElecWindsorTecumseh, h1.byElecWindsorTecumseh span {height:32px; width:500px;}
+body.en h1.byElecWindsorTecumseh .img {background-image:url(/images/en/h1-by-elec-windsor-tecumseh.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecScarboroughGuildwood {margin:0;}
+body.en h1.byElecScarboroughGuildwood, h1.byElecScarboroughGuildwood span {height:72px; width:500px;}
+body.en h1.byElecScarboroughGuildwood .img {background-image:url(/images/en/h1-by-elec-scarborough-guildwood.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecKitchener {margin:0;}
+body.en h1.byElecKitchener, h1.byElecKitchener span {height:32px; width:510px;}
+body.en h1.byElecKitchener .img {background-image:url(/images/en/by-elec-kitchener.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecDistResults {margin:0;}
+body.en h1.byElecDistResults, h1.byElecDistResults span {height:32px; width:510px;}
+body.en h1.byElecDistResults .img {background-image:url(/images/en/h1-by-election-district-results.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecDistResultsByDistrict {margin:0;}
+body.en h1.byElecDistResultsByDistrict, h1.byElecDistResultsByDistrict span {height:32px; width:510px;}
+body.en h1.byElecDistResultsByDistrict .img {background-image:url(/images/en/h1-by-election-district-results-by-district.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecResults {margin:0;}
+body.en h1.byElecResults, h1.byElecResults span {height:32px; width:510px;}
+body.en h1.byElecResults .img {background-image:url(/images/en/h1-by-election-district-results.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecResults2013 {margin:0;}
+body.en h1.byElecResults2013, h1.byElecResults2013 span {height:32px; width:510px;}
+body.en h1.byElecResults2013 .img {background-image:url(/images/en/h1-by-elec-results.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.postEventRepo {margin:0;}
+body.en h1.postEventRepo, h1.postEventRepo span {height:72px; width:510px;}
+body.en h1.postEventRepo .img {background-image:url(/images/en/h1-ge-post-event-report.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.geCalendar {margin:0;}
+body.en h1.geCalendar, h1.geCalendar span {height:32px; width:510px;}
+body.en h1.geCalendar .img {background-image:url(/images/en/h1-ge-calendar.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.psnNewsletter {margin:0;}
+body.en h1.psnNewsletter, h1.psnNewsletter span {height:32px; width:510px;}
+body.en h1.psnNewsletter .img {background-image:url(/images/en/h1-psn-newsletter.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.stratPlan {margin:0;}
+body.en h1.stratPlan, h1.stratPlan span {height:32px; width:510px;}
+body.en h1.stratPlan .img {background-image:url(/images/en/h1-strat-plan.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.ravt {margin:0;}
+body.en h1.ravt, h1.ravt span {height:72px; width:510px;}
+body.en h1.ravt .img {background-image:url(/images/en/h1-ravt.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.voteUpdate {margin:0;}
+body.en h1.voteUpdate, h1.voteUpdate span {height:72px; width:500px;}
+body.en h1.voteUpdate .img {background-image:url(/images/en/h1-voteUpdate.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.firstWeek {margin:0;}
+body.en h1.firstWeek, h1.firstWeek span {height:32px; width:500px;}
+body.en h1.firstWeek .img {background-image:url(/images/en/h1-first-week.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecNiagara {margin:0;}
+body.en h1.byElecNiagara, h1.byElecNiagara span {height:32px; width:500px;}
+body.en h1.byElecNiagara .img {background-image:url(/images/en/h1-by-elec-niagara.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.byElecThornhill {margin:0;}
+body.en h1.byElecThornhill, h1.byElecThornhill span {height:32px; width:500px;}
+body.en h1.byElecThornhill .img {background-image:url(/images/en/h1-by-elec-thornhill.gif); background-position:0 0; background-repeat:no-repeat;}
+
+h1.noticeDirectives {margin:0;}
+body.en h1.noticeDirectives, h1.noticeDirectives span {height:32px; width:500px;}
+body.en h1.noticeDirectives .img {background-image:url(/images/en/h1-notices-directives.gif); background-position:0 0; background-repeat:no-repeat;}
+
+
+body.en #jobAppWrap {margin:35px auto 35px; display:block; overflow:hidden; width:127px; height:53px; position:relative;}
+body.en #jobAppWrap span {width:127px;height:53px; position:absolute;}
+body.en #jobAppWrap .image {background-image:url(/images/en/online_application.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #whereDoIVoteLink {margin:35px auto 35px; display:block; overflow:hidden; width:198px; height:35px; position:relative;}
+body.en #whereDoIVoteLink span {width:198px;height:35px; position:absolute;}
+body.en #whereDoIVoteLink .image {background-image:url(/images/en/where-do-I-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+
+
+
+
+body.en #aiotl {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #aiotl span {width:320px;height:58px; position:absolute;}
+body.en #aiotl .image {background-image:url(/images/en/aiotl.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #fyed {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #fyed span {width:320px; height:58px; position:absolute;}
+body.en #fyed .image {background-image:url(/images/en/fyed.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #ej {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #ej span {width:320px; height:58px; position:absolute;}
+body.en #ej .image {background-image:url(/images/en/election-job.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #wdiv {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #wdiv span {width:320px; height:58px; position:absolute;}
+body.en #wdiv .image {background-image:url(/images/en/where-do-i-vote.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #er {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #er span {width:320px; height:58px; position:absolute;}
+body.en #er .image {background-image:url(/images/en/election-results.gif);background-position:0 0;background-repeat:no-repeat;}
+
+body.en #per {margin:25px 0; display:block; overflow:hidden; width:320px; height:58px; position:relative;}
+body.en #per span {width:320px; height:58px; position:absolute;}
+body.en #per .image {background-image:url(/images/en/past-election-results.gif);background-position:0 0;background-repeat:no-repeat;}
+
+#interactAppsP {width:293px; height:auto; margin:0 0 0 15px;}
+
+body.en #global-nav li a span {background-image:url(/images/en/btn-nav.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+/*Home page tile images*/
+body.en #tileOneRowOne {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileOneRowOne span {width: 200px; height: 120px; position:absolute;}
+body.en #tileOneRowOne .image{background-image:url(/images/en/home_voters_list.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileTwoRowOne {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileTwoRowOne span {width: 200px; height: 120px; position:absolute;}
+body.en #tileTwoRowOne .image{background-image:url(/images/en/home_election_job.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileThreeRowOne {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileThreeRowOne span {width: 200px; height: 120px; position:absolute;}
+body.en #tileThreeRowOne .image{background-image:url(/images/en/home_wdiv.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileOneRowTwo {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileOneRowTwo span {width: 200px; height: 120px; position:absolute;}
+body.en #tileOneRowTwo .image{background-image:url(/images/en/home_find_my_candidate.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileTwoRowTwo {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileTwoRowTwo span {width: 200px; height: 120px; position:absolute;}
+body.en #tileTwoRowTwo .image{background-image:url(/images/en/home_electoral_district.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileThreeRowTwo {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileThreeRowTwo span {width: 200px; height: 120px; position:absolute;}
+body.en #tileThreeRowTwo .image{background-image:url(/images/en/home_returning_office.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileOneRowThree {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileOneRowThree span {width: 200px; height: 120px; position:absolute;}
+body.en #tileOneRowThree .image{background-image:url(/images/en/home_away_polls.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileTwoRowThree {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileTwoRowThree span {width: 200px; height: 120px; position:absolute;}
+body.en #tileTwoRowThree .image{background-image:url(/images/en/home_identification.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileThreeRowThree {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileThreeRowThree span {width: 200px; height: 120px; position:absolute;}
+body.en #tileThreeRowThree .image{background-image:url(/images/en/home_poll_locations.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileOneRowFour {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileOneRowFour span {width: 200px; height: 120px; position:absolute;}
+body.en #tileOneRowFour .image{background-image:url(/images/en/home_information_for_candidates.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileTwoRowFour {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileTwoRowFour span {width: 200px; height: 120px; position:absolute;}
+body.en #tileTwoRowFour .image{background-image:url(/images/en/home_notice_disruption.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileThreeRowFour {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileThreeRowFour span {width: 200px; height: 120px; position:absolute;}
+body.en #tileThreeRowFour .image{background-image:url(/images/en/home_about_my_card.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileOneRowFive {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileOneRowFive span {width: 200px; height: 120px; position:absolute;}
+body.en #tileOneRowFive .image{background-image:url(/images/en/home_key_dates.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileTwoRowFive {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileTwoRowFive span {width: 200px; height: 120px; position:absolute;}
+body.en #tileTwoRowFive .image{background-image:url(/images/en/home_notice_disruption.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+body.en #tileThreeRowFive {margin: 0 auto; display:block; overflow:hidden; width:200px; height:120px; position:relative;}
+body.en #tileThreeRowFive span {width: 200px; height: 120px; position:absolute;}
+body.en #tileThreeRowFive .image{background-image:url(/images/en/home_voters_card.gif);background-position:0 0;background-repeat:no-repeat;left:0;position:absolute;top:0;}
+
+
+/*nav*/
+#global-nav {display:block;height:32px;list-style:none;margin:57px 0 72px 0;padding:0;}
+#global-nav li, #global-nav li a, #global-nav li a span {float:left;font-size:0.94em;height:32px;overflow:hidden;width:80px;}
+#global-nav li a, #global-nav li a span {display:block;height:32px;width:80px;}
+#global-nav li a {position:relative;text-align:center;}
+#global-nav li a#primary01 span {background-position:0 0;}
+#global-nav li a#primary02 span {background-position:-80px 0;}
+#global-nav li a#primary03 span {background-position:-160px 0;}
+#global-nav li a#primary04 span {background-position:-240px 0;}
+#global-nav li a#primary05 span {background-position:-320px 0;}
+
+
+#global-nav li a#primary01:hover span, 
+#global-nav li a#primary01:focus span, 
+#global-nav li a#primary01.focus span {background-position:0 -32px;}
+body.primary01 #global-nav li a#primary01:hover span, 
+body.primary01 #global-nav li a#primary01:focus span, 
+body.primary01 #global-nav li a#primary01.focus span {background-position:0 0;}
+body.primary01 #global-nav li a#primary02 span {background-position:-80px -64px;}
+body.primary01 #global-nav li a#primary03 span {background-position:-160px -64px;}
+body.primary01 #global-nav li a#primary04 span {background-position:-240px -64px;}
+body.primary01 #global-nav li a#primary05 span {background-position:-320px -64px;}
+
+body.primary01 #global-nav li a#primary02:hover span, 
+body.primary01 #global-nav li a#primary02:focus span, 
+body.primary01 #global-nav li a#primary02.focus span {background-position:-80px -32px;}
+
+body.primary01 #global-nav li a#primary03:hover span, 
+body.primary01 #global-nav li a#primary03:focus span, 
+body.primary01 #global-nav li a#primary03.focus span {background-position:-160px -32px;}
+
+body.primary01 #global-nav li a#primary04:hover span, 
+body.primary01 #global-nav li a#primary04:focus span, 
+body.primary01 #global-nav li a#primary04.focus span {background-position:-240px -32px;}
+
+body.primary01 #global-nav li a#primary05:hover span, 
+body.primary01 #global-nav li a#primary05:focus span, 
+body.primary01 #global-nav li a#primary05.focus span {background-position:-320px -32px;}
+
+
+#global-nav li a#primary02:hover span, 
+#global-nav li a#primary02:focus span, 
+#global-nav li a#primary02.focus span {background-position:-80px -32px;}
+body.primary02 #global-nav li a#primary02:hover span, 
+body.primary02 #global-nav li a#primary02:focus span, 
+body.primary02 #global-nav li a#primary02.focus span {background-position:-80px 0;}
+body.primary02 #global-nav li a#primary01 span {background-position:0 -64px;}
+body.primary02 #global-nav li a#primary03 span {background-position:-160px -64px;}
+body.primary02 #global-nav li a#primary04 span {background-position:-240px -64px;}
+body.primary02 #global-nav li a#primary05 span {background-position:-320px -64px;}
+
+body.primary02 #global-nav li a#primary01:hover span, 
+body.primary02 #global-nav li a#primary01:focus span, 
+body.primary02 #global-nav li a#primary01.focus span {background-position:0 -32px;}
+
+body.primary02 #global-nav li a#primary03:hover span, 
+body.primary02 #global-nav li a#primary03:focus span, 
+body.primary02 #global-nav li a#primary03.focus span {background-position:-160px -32px;}
+
+body.primary02 #global-nav li a#primary04:hover span, 
+body.primary02 #global-nav li a#primary04:focus span, 
+body.primary02 #global-nav li a#primary04.focus span {background-position:-240px -32px;}
+
+body.primary02 #global-nav li a#primary05:hover span, 
+body.primary02 #global-nav li a#primary05:focus span, 
+body.primary02 #global-nav li a#primary05.focus span {background-position:-320px -32px;}
+
+#global-nav li a#primary03:hover span, 
+#global-nav li a#primary03:focus span, 
+#global-nav li a#primary03.focus span {background-position:-160px -32px;}
+body.primary03 #global-nav li a#primary03:hover span, 
+body.primary03 #global-nav li a#primary03:focus span, 
+body.primary03 #global-nav li a#primary03.focus span {background-position:-160px 0;}
+body.primary03 #global-nav li a#primary01 span {background-position:0 -64px;}
+body.primary03 #global-nav li a#primary02 span {background-position:-80px -64px;}
+body.primary03 #global-nav li a#primary04 span {background-position:-240px -64px;}
+body.primary03 #global-nav li a#primary05 span {background-position:-320px -64px;}
+
+body.primary03 #global-nav li a#primary01:hover span, 
+body.primary03 #global-nav li a#primary01:focus span, 
+body.primary03 #global-nav li a#primary01.focus span {background-position:0 -32px;}
+
+body.primary03 #global-nav li a#primary02:hover span, 
+body.primary03 #global-nav li a#primary02:focus span, 
+body.primary03 #global-nav li a#primary02.focus span {background-position:-80px -32px;}
+
+body.primary03 #global-nav li a#primary04:hover span, 
+body.primary03 #global-nav li a#primary04:focus span, 
+body.primary03 #global-nav li a#primary04.focus span {background-position:-240px -32px;}
+
+body.primary03 #global-nav li a#primary05:hover span, 
+body.primary03 #global-nav li a#primary05:focus span, 
+body.primary03 #global-nav li a#primary05.focus span {background-position:-320px -32px;}
+
+#global-nav li a#primary04:hover span, 
+#global-nav li a#primary04:focus span, 
+#global-nav li a#primary04.focus span {background-position:-240px -32px;}
+body.primary04 #global-nav li a#primary04:hover span, 
+body.primary04 #global-nav li a#primary04:focus span, 
+body.primary04 #global-nav li a#primary04.focus span {background-position:-240px 0;}
+body.primary04 #global-nav li a#primary01 span {background-position:0 -64px;}
+body.primary04 #global-nav li a#primary02 span {background-position:-80px -64px;}
+body.primary04 #global-nav li a#primary03 span {background-position:-160px -64px;}
+body.primary04 #global-nav li a#primary05 span {background-position:-320px -64px;}
+
+body.primary04 #global-nav li a#primary01:hover span, 
+body.primary04 #global-nav li a#primary01:focus span, 
+body.primary04 #global-nav li a#primary01.focus span {background-position:0 -32px;}
+
+body.primary04 #global-nav li a#primary02:hover span, 
+body.primary04 #global-nav li a#primary02:focus span, 
+body.primary04 #global-nav li a#primary02.focus span {background-position:-80px -32px;}
+
+body.primary04 #global-nav li a#primary03:hover span, 
+body.primary04 #global-nav li a#primary03:focus span, 
+body.primary04 #global-nav li a#primary03.focus span {background-position:-160px -32px;}
+
+body.primary04 #global-nav li a#primary05:hover span, 
+body.primary04 #global-nav li a#primary05:focus span, 
+body.primary04 #global-nav li a#primary05.focus span {background-position:-320px -32px;}
+
+
+#global-nav li a#primary05:hover span, 
+#global-nav li a#primary05:focus span, 
+#global-nav li a#primary05.focus span {background-position:-320px -32px;}
+body.primary05 #global-nav li a#primary05:hover span, 
+body.primary05 #global-nav li a#primary05:focus span, 
+body.primary05 #global-nav li a#primary05.focus span {background-position:-320px 0;}
+body.primary05 #global-nav li a#primary02 span {background-position:-80px -64px;}
+body.primary05 #global-nav li a#primary03 span {background-position:-160px -64px;}
+body.primary05 #global-nav li a#primary04 span {background-position:-240px -64px;}
+body.primary05 #global-nav li a#primary01 span {background-position:0 -64px;}
+
+body.primary05 #global-nav li a#primary02:hover span, 
+body.primary05 #global-nav li a#primary02:focus span, 
+body.primary05 #global-nav li a#primary02.focus span {background-position:-80px -32px;}
+
+body.primary05 #global-nav li a#primary03:hover span, 
+body.primary05 #global-nav li a#primary03:focus span, 
+body.primary05 #global-nav li a#primary03.focus span {background-position:-160px -32px;}
+
+body.primary05 #global-nav li a#primary04:hover span, 
+body.primary05 #global-nav li a#primary04:focus span, 
+body.primary05 #global-nav li a#primary04.focus span {background-position:-240px -32px;}
+
+body.primary05 #global-nav li a#primary01:hover span, 
+body.primary05 #global-nav li a#primary01:focus span, 
+body.primary05 #global-nav li a#primary01.focus span {background-position:0 -32px;}

@@ -1,0 +1,232 @@
+/* Defaults */
+body {background:#FFF;border:0;color:#000;font-family:Arial,Verdana,Helvetica,sans-serif;font-size:1em;margin:0;padding:0;text-align:center;}
+
+body, input, select, textarea, table, td, div {font-family:Arial,Verdana,Helvetica,sans-serif;}
+body, form, h1, h2, h3, h4, h5, h6, input, select, textarea {margin:0;padding:0;}
+input {line-height:normal;}
+input, select, textarea {font-size:100%;}
+ul {margin:0 0 1.4em 0;padding:0 0 0 1.3em;}
+ul.plain {list-style-type:none;margin:0;padding-left:0;}
+ul.plain li {margin:0 0 .3em 0;}
+ol {margin:0 0 1.4em 0;padding:0 0 0 1.9em;}
+#content ul li, #content ol li {margin-bottom:0.2em;}
+/* Addded To Style Object/Flash Video Tags */
+object {padding:0 0 40px}
+body.xsmall {font-size:0.75em;}
+body.small {font-size:0.813em;}
+body.large {font-size:1.313em;}
+body.xlarge {font-size:	1.5em;}
+body.xxlarge {font-size:2em;}
+body.pop {}
+#skip {height:1px;left:-10000px;overflow:hidden;position:absolute;top:auto;width:1px;}
+
+a {color:#000;text-decoration:underline;}
+.red_alert {color:#C03;}
+a.top_bottom_space {margin:30px 0;}
+p {margin:0 0 1.4em 0;padding:0;}
+.toolsAndApps {line-height:150%;}
+address {display:block;font-style:normal;margin:0 0 1.4em 0;padding:0;}
+img {border:0;}
+label {cursor:pointer;}
+.phone {white-space:nowrap;}
+.p_padding_top {padding: 20px 0 0;}
+
+/* clearfix */
+.clearfix:after {clear:both;content:" ";display:block;font-size:0;height:0;visibility:hidden;}
+
+h2, .topRule {border-bottom:1px solid #000;font-size:1.2em;margin:0 0 1.2em 0;padding:0 0 0.75em 0;}
+.topRule {padding:0 0 2em 0;}
+h3 {font-size:1.2em;font-weight:normal;margin:0 0 0.78em 0;padding:0 0 0.5em 0;}
+h3.short {margin:0;padding:0 0 0.3em 0;}
+h4, #footer h2 {font-size:100%;margin:0 0 1.4em 0;padding:0;border:none;}
+
+/* graphical headings */
+div.logo {font-size:1.06em;}
+h1.imgHead {font-size:1.5em;}
+h2.imgHead {font-size:1em;}
+
+.logo, .imgHead {display:block;line-height:normal;overflow:hidden;position:relative;}
+.logo span, .imgHead span {display:block;left:0;line-height:normal;position:absolute;top:0;}
+
+
+
+.splash div.logo {margin:0 0 27px 0;}
+.splash div.logo, .splash div.logo span {display:block;font-size:1.1em;height:88px;width:87px;}
+.splash div.logo .img {background-image:url(/images/bg-logo-splash.gif);background-position:0 0;background-repeat:no-repeat;}
+.splash .frSplashCol div.logo .img {background-position:0 -88px;}
+
+
+
+
+h1.electionsOntarioHomeSite {font-size:1em;margin:0 0 0 0;}
+h1.ontarioElection2011 {font-size:1em;margin:0 0 0 0; text-align:left;}
+h2.ontarioElection2011 {font-size:1em;margin:0 0 0 0; text-align:left; border:none;}
+h1.electionNightResults {font-size:1em;margin:0 0 7px 0;}
+
+.splash li.eoHome {font-size:1.45em;font-weight:bold;}
+
+
+div#banner {background-image:url(/images/bg-banner.gif);background-position:0 0;background-repeat:no-repeat;height:336px;margin:1.2em 0 0 0;max-width:940px;min-width:320px;}
+div#elec_night_banner {height:136px;margin:1.2em 0 0 0;max-width:940px;min-width:320px;}
+div#blankbanner {background-position:0 0;background-repeat:no-repeat;height:auto;margin:90px 0 50px;width:940px;min-width:320px; height:166px;}
+div.nobanner {background-position:0 0;background-repeat:no-repeat;height:auto;margin:90px 0 50px;width:940px;min-width:320px;}
+div.nobanner p {width:540px; height:auto; margin:0 auto 30px; font-size:16px;}
+div.nobanner h1 {margin:125px 100px 0 0; text-align:center;}
+div.nobanner h3 {width:540px; height:auto; margin:0 auto 30px; font-size:18px; font-weight:bold; text-decoration:underline;}
+
+div#notice_banner {background-position:0 0;background-repeat:no-repeat;height:auto;margin:50px auto 90px;width:940px;min-width:320px; position:relative;}
+div#notice_banner p {width:550px; height:auto; margin:0 auto 30px; font-size:18px; font-weight:bold; padding:0 0 0 55px;}
+div#notice_banner h1 {margin:125px 100px 0 0; text-align:center;}
+
+div#alert {color:#B10000;margin:10px 0 12px;}
+div#alert a {color:#B10000;}
+div#alert .pageCol01 {height:1px;overflow:hidden;}
+
+#page {background-image:url(/images/bg-header.gif);background-position:right 138px;background-repeat:no-repeat;margin:0 auto;max-width:940px;min-width:320px;padding:10px 10px 40px;position:relative;text-align:left;}
+#page.home {padding-bottom:0;}
+
+.splash #page {background:none;min-width:305px;max-width:900px;padding:90px 0 65px 0;}
+.splash #page.election {padding-bottom:0;}
+.splash #results_page {background:none;min-width:305px;max-width:900px;padding:90px 0 5px 0; margin: 0 auto;}
+.splash div#banner {background-image:url(/images/bg-splash-banner.jpg);background-position:0 0;background-repeat:no-repeat;height:267px;margin:0;max-width:900px;min-width:338px;}
+.preElection div#banner {margin-top:100px;}
+/*10-6-2011
+.duringElection div#banner {margin-top:100px;}
+*/
+.postElection div#banner {margin-top:100px;}
+.splashFaux {float:left;height:1px;width:200px;}
+.enSplashCol, .frSplashCol {float:left;width:305px;}
+/*6-16-2011*/
+.resultsBanner {background:#f1c753;height:auto;left:0;opacity:0.95;position:relative;top:0;width:100%;z-index:100;}
+.manual_resultsBanner {background:#f1c753;height:auto;left:0;opacity:0.95;position:relative;top:0;width:100%;z-index:100; margin: 0 0 30px 0;}
+.resultsHeadings {margin:0 auto;width:900px;}
+.resultsHeadings_byDefault {margin:100px auto;width:900px;}
+.splashHeadEn {float:left;height:auto;padding-left:170px;width:242px;}
+.splashHeadFr {float:left;height:auto;padding-left:70px;width:330px;}
+/*10-6-2011
+.splashHeadEn.election {padding-left:200px;}
+.splashHeadFr.election {padding-left:64px;}
+*/
+.splashHeadEn h2, .splashHeadFr h2 {border-bottom:none;margin:0 0 15px;padding:0;text-align:left;}
+.splashHeadEn h2.electionNightResults {height:18px;margin-top:30px;width:202px; padding: 0 0 8px 0;}
+.splashHeadFr h2.electionNightResults {height:18px;margin-top:30px;width:278px; padding:0 0 8px 0;}
+.splashHeadEn h2.electionNightResultsTonight {height:47px;margin-top:26px;width:242px;}
+.splashHeadFr h2.electionNightResultsTonight {height:47px;margin-top:26px;width:330px;}
+
+.splashHeadEn h2.defaultElectionDay {margin-top:30px; padding: 0 0 8px 0;}
+.splashHeadFr h2.defaultElectionDay {margin-top:30px; padding:0 0 8px 0;}
+/*6-16-2011*/
+
+/*7-19-2011*/
+.election_night_splash_list {margin-top:15px; text-align:left; font-weight:bold;}
+
+/*7-19-2011*/
+
+.pageCol01 {float:left;width:160px;}
+.pageCol02 {float:left;max-width:570px;}
+.pageCol03 {float:right;margin:0 0 0 10px;position:relative;width:200px;}
+
+#content {float:left;margin:0;max-width:700px;width:100%;}
+#alert #content {float:none;max-width:570px;width:auto;}
+#island {font-size:1.0em;min-height:120px;}
+#island .content {float:left;margin:2.9em 12px 1.6em 0;width:225px;}
+#island .image {float:left;margin:0 0 1.5em 0;width:463px;}
+
+.contentCol01, .contentCol02, .contentCol03 {float:left;margin:0 12px .5em 0;overflow:hidden;width:225px;}
+.contentCol03 {margin:0 0 .5em 0;width:226px;}
+
+/*Custom contenCol rules have Cust abreviated to them*/
+.contentCol01Cust, .contentCol02Cust, .contentCol03Cust {float:left;margin:10px 30px 10px 10px;overflow:hidden;width:200px;height:120px;text-align:center;}
+.contentCol03Cust {margin:10px 0 0 10px;width:200px;}
+
+.contentCol01-02 {float:left;margin:0 12px .5em 0;width:462px;}
+.contentCol02-03 {float:left;margin:0 0 .5em 0;width:463px;}
+.contentCol01-02 .contentCol02 {margin-right:0;}
+
+.contentCol01Half {float:left;margin:0 20px 0 0;overflow:hidden;width:340px;}
+.contentCol02Half {float:left;width:340px;}
+
+.contentColumns h3 {border-bottom:1px solid #CCC;}
+
+/*10-18-2013*/
+
+.fltLeft {float:left;}
+
+/*accordion*/
+
+.accordion .content {padding:0 0 .8em 0;}
+.accordion .heading {border-bottom:1px solid #CCC;margin:0 0 1.85em 0;padding:0 0 0.73em 0;}
+.accordion .heading h3 {display:inline;max-width:700px;margin:0;padding:0;}
+.accordion .heading h3 a {display:block;text-decoration:none;}
+.accordion .heading h3 span.title {}
+.accordion .heading h3 span.button {background-image:url(/images/btn-accordion-show.gif);background-position:right 0.5em;background-repeat:no-repeat;float:right;font-size:0.67em;margin:0.37em 0 0 5px;padding:0 12px 0 0;text-decoration:underline;text-align:right;}
+.accordion .heading.active h3 span.button {background-image:url(/images/btn-accordion-hide.gif);background-position:right 0;background-repeat:no-repeat;text-decoration:none;width:10px;height:9px;}
+.accordion p.close {margin-right:15px;text-align:right;}
+
+#sitemap .contentCol01Half, #sitemap .contentCol02Half {line-height:150%;}
+
+/*footer*/
+#footer {background:#FAFAFA;font-size:0.69em;}
+#footer .container {margin:0 auto;max-width:940px;padding:20px 10px 45px 10px;text-align:left;}
+#footer .pageCol01 {float:left;width:160px;height:1px;}
+#footer .pageCol02 {float:left;margin:0 20px 0 0;max-width:460px;width:auto;}
+#footer .pageCol03 {float:left;margin:0;width:300px;}
+#footer .socialPageCol03 {float:right;margin:0;width:300px;}
+
+#footer h2 {margin-bottom:0.38em;}
+#footer .col {border-top:1px solid #000;float:left;list-style:none;margin:0;padding:17px 20px 17px 0;width:140px;}
+#footer .col li {padding:0 0 .4em 0;}
+#footer .pageCol02 .col.last {padding:17px 10px 17px 0;width:130px;}
+#footer .pageCol02 img {vertical-align:bottom;}
+#footer .pageCol03 .col {padding:17px 0;width:205px;}
+
+#footer .copyright {color:#000;font-size:0.91em;}
+
+.splash #footer .container {max-width:900px;min-width:305px;}
+.splash #footer .col {border:none;padding:0 0 1.4em 0;width:305px;}
+.splash #footer .copyright {display:block;padding:1em 0 0 0;}
+
+
+/*days left*/
+#countdown {color:#575757;font-size:0.81em;font-weight:normal;left:-100px;line-height:105%;margin-top:15px;position:absolute;text-align:right;top:0;width:300px;
+display:none;}
+#calendar {color:#575757;font-size:0.81em;font-weight:normal;margin:.3em auto 0;text-align:right;width:940px;}
+
+/*util*/
+ul#util {display:block;font-size:0.81em;line-height:normal;list-style:none;margin:0;padding:0;/*position:absolute;top:82px;left:-100px;*/width:200px;}
+ul#util li {display:block;margin-bottom:.23em;text-align:right;width:200px;}
+ul#util a, ul#util span {color:#575757;font-weight:bold;}
+ul#util #toggleFont {margin-top:.5em;}
+ul#util #toggleFont a, ul#util #toggleFont span {vertical-align:bottom;}
+
+/*custom font size scaling*/
+body.large h1.imgHead {font-size:1.14em;}
+body.xlarge h1.imgHead {font-size:1em;}
+body.xxlarge h1.imgHead {font-size:0.75em;}
+
+body.large div.logo {font-size:0.81em;}
+body.xlarge div.logo {font-size:0.71em;}
+body.xxlarge div.logo {font-size:0.53em;}
+
+body.large #global-nav li a {font-size:0.71em;}
+body.xlarge #global-nav li a {font-size:0.63em;}
+body.xxlarge #global-nav li a {font-size:0.47em;}
+
+/*out-dated styling for proxy pages*/
+#footer ul.social {margin:0;padding:0;}
+#footer ul.social li {float:left;list-style-type:none;padding-right:13px;}
+#footer ul.social li a {display:block;height:30px;width:30px;}
+
+/*out-dated styling for proxy pages
+.top_space {margin-top:20px;}
+#footer .col.no_border, #footer .col.last.no_border  {border:none;}
+#footer .col.no_border.icon_list {padding:0;}
+#footer .col li.icons.first {padding:0;}
+.icons {float:left; margin: 0 0 0 5px;}
+.icons .first {margin:0;}
+.fb_icon {background: url("http://s7.addthis.com/static/r07/widget32.png") no-repeat scroll 0 0 transparent; display: block; height: 16px; line-height: 16px !important; overflow: hidden; width: 16px;}*/
+
+/* XML Style Rules */
+.cell_border {border-width:1px; border-style:solid; border-color:#131313;}
+.cell_padding {padding:5px 0 5px 20px;}
+.head_padding {padding:5px 0 5px;}

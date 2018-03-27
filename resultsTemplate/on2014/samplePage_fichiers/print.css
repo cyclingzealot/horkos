@@ -1,0 +1,27 @@
+body {font-size:14pt;}
+/*
+body {font-size:0.81em;}
+body.xsmall {font-size:0.56em;}
+body.small {font-size:0.63em;}
+body.large {font-size:0.88em;}
+body.xlarge {font-size:1.13em;}
+body.xxlarge {font-size:1.5em;}
+*/
+
+#global-nav, 
+ul#util, 
+#footer, 
+#skip, 
+.accordion .heading span.button, 
+#island .image, 
+#calendar {
+	display:none;
+}
+
+.logo a {color:#000;text-decoration:none;}
+a {color:#000;}
+
+.accordion .content {display:block !important;}
+.accordion .heading h3 a {color:#000;text-decoration:none;}
+
+.splash h1 {font-size:1.14em;}
