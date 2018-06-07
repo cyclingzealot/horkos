@@ -22,7 +22,7 @@
             <br>
 
             <div class="table-responsive">
-                {% include 'JlamHorkosBundle:Horkos:' ~ election ~ '.contact.html.twig' %}
+                {% include 'JlamHorkosBundle:Horkos:none.contact.html.twig' %}
             </div>
         </div>
 
@@ -31,11 +31,7 @@
 
 
         <div class="col-sm-9" >
-            {% if error == true %}
-            <button type="button" class="btn btn-danger wraap"><h2>How many votes will the {{summary.jurisdictionName}} election waste this time?</h2></button>
-            {% else %}
-                <button type="button" class="btn btn-danger wraap"><h2> &nbsp;<strong><ins id="unrepresented_votes">{{summary.totalWastedVotes}}</ins></strong> unrepresented votes in {{summary.electionName}} election </h2></button>
-            {% endif %}
+            <button type="button" class="btn btn-danger wraap"><h2>How many wasted votes this time?</h2></button>
             <br>
 
             <h5 class="">
@@ -53,21 +49,7 @@
                 an organization that does public education and lobbying to change the voting system so that more votes count.
             </p>
 
-
-
-            {% if error == true %}
-                <p>We will be showing a compilation of unrepresented votes by riding and by party below  once the
-                {{summary.electionName}}<a href="{{summary.source}}">*</a> live election results are published.</p>
-            {% else %}
-                <p>Below is a compilation of the numbers taken from the
-                <a href="{{summary.source}}">{{summary.electionName}} live election results</a>.  </p>
-
-                <p>It sorts ridings by percentage of unrepresented votes.  An unrepresented vote is a vote that will not be represented in the legislature because it did not
-                go to the winning candidate.  At the bottom you will also see <a href="#byParty">unrepresented votes by party</a>.</p>
-            {% endif %}
-            <br><br>
-
-
+            <p>I use code run on this site to compile live election results and compute wasted votes.</p>
 
             <b>Winner-take-all : </b>
             <p class="bg-info padded">
@@ -75,26 +57,50 @@
                 rate of wasted or unrepresented votes.  But most democracies have moved on to some form of proportional voting system which greatly diminish the lack of
                 representation (to about 5% of unrepresented votes). A proportional voting system also eliminates false government majorities.
             </p>
-            <br><br>
 
-
-
-
-            <b>If you wish to help : </b>
-            <ul class="helpList">
-                <li><span class="glyphicon glyphicon-triangle-right"></span>Go <a href="http://secure.fairvote.ca/en/declaration">Sign the Declaration of Voters Rights</a></li>
-                {% if error == true %}
-                    <li></span><span class="twitterFix"><span class="glyphicon glyphicon-triangle-right">Share:</span> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="How many votes will the {{summary.jurisdictionName}} election waste this time?" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-                {% else %}
-                    <li><span class="twitterFix"><span class="glyphicon glyphicon-triangle-right"></span>Share:</span> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca" data-text="{{jurisdiction.wasted}} wasted votes in {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-                {% endif %}
-                <li><span class="glyphicon glyphicon-triangle-right"></span><a href="http://www.fairvote.ca/donate/">Donate</a> to Fair Vote Canada
-                <li><span class="glyphicon glyphicon-triangle-right"></span><a href="https://payment.csfm.com/donations/fair_vote/en/index.php">Join</a> Fair Vote Canada</li>
-                <li><span class="glyphicon glyphicon-triangle-right"></span>Retweet relevant <a href="https://twitter.com/cyclingzealot">@cyclingzealot</a>, <a href="https://twitter.com/search?q=%23wastedvotes">#wastedvotes</a> tweets during the election</li>
-                <li><span class="glyphicon glyphicon-triangle-right"></span>After the election, follow and retweet <a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a>, <a href="https://twitter.com/search?q=%23pr2015">#pr2015</a> and <a href="https://twitter.com/search?q=%23fairvote">#fairvote</a></li>
+            <p>Elections available on this site are:</p>
+            <ul>
+            {% for electionShorthand , electionName in electionsList %}
+                <li><a href="http:///?election={{electionShorthand}}">{{electionName}}</a></li>
+            {% endfor %}
             </ul>
 
-            More information is available on the website of <a href="http://www.fairvote.ca">Fair Vote Canada</a></p>
+
+            <p>As for Ontario 2018, Elections Ontario has been most uncooperative to sharing live results with the public:</p>
+            <div class="bg-info padded">
+            <p>From: &quot;info@elections.on.ca &quot; <info@elections.on.ca>  <br />
+            To: Julien Lamarche <julien.lamarche@gmail.com>   <br />
+            Subject: RE:  Template of live results<br />
+            Date: Fri, 16 Mar 2018 12:23:07 -0400  <br />
+            Message-ID: <9299B16F0A88B74C8B480208939224D906FC6430@eoabigdcapmxs02.eo.on.local></p>
+
+            <p> Hello,</p>
+
+            <p> Thank you for contacting Elections Ontario.</p>
+
+            <p> The json feed will only be provided to the media consortium. If you are interested in joining the Ontario Media Election Consortium, you will need to reach out to that organization. Elections Ontario does not manage the consortium.</p>
+
+            <p> We hope this information is useful.</p>
+
+            <p> Regards,</p>
+
+            <p> Elections Ontario elections.on.ca  1.888.668.8683 Fax: 416.326.6200 </p>
+            </div>
+
+            <p>Elections Quebec shares a live JSON feed with the public. The staff at Elections Saskatchewan were very helpful.  But Elections Ontario?  Oh no, only the media elite can get live results!</p>
+
+            <p>I suspect there will be some sort of web page with live results on the elections Ontario site once the ballot counting starts.  Time permitting, I will be code as fast as I can to scrape those results.</p>
+
+
+
+            <p><b>If you wish to help : </b>
+            <ul class="helpList">
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Go <a href="http://secure.fairvote.ca/en/declaration">Sign the Declaration of Voters Rights</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right"></span><a href="https://secure.fairvote.ca/en/civicrm/contribute/transact?reset=1&id=9">Donate</a> to Fair Vote Canada
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Follow and retweet <a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a> and <a href="https://twitter.com/search?q=%23fairvote">#fairvote</a></li>
+            </ul></p>
+
+            <p>More information is available on the website of <a href="http://www.fairvote.ca">Fair Vote Canada</a></p>
 
 
 
@@ -115,74 +121,6 @@
 
 
 
-
-
-    <!-- Riding table -->
-    {% if error != true %}
-    <a name="data"></a>
-
-    <h1><b>The numbers</b></h1>
-    <i>Data from indvidual ridings used in this compilation may be from 0 to 30 minutes late.</i>
-    <div class="table-responsive">
-        <table class="table table-striped  ">
-            <tr><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th>{% if jurisdiction.eligible > 0 %}<th>Participation rate % (so far) </th>{% endif %}</tr>
-
-            {% for riding in ridings %}
-                <tr>
-                    <td><a href="{{riding.source}}">{{riding.name}}</a></td>
-                    <td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
-                    <td>{{riding.unrepresentedVotes}}</td>
-                    {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(riding.participationRate * 100)}} <!-- {{riding.allRidingVotes}} / {{riding.eligibleVoters}} --> </td>{% endif %}
-                </tr>
-            {% endfor %}
-
-            <tr style="font-weight: bold;">
-                <td>{{summary.jurisdictionName}}</td>
-                <td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
-                <td>{{jurisdiction.wasted}}</td>
-                {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(safe_divide(jurisdiction.all , jurisdiction.eligible) * 100)}}</td>{% endif %}
-            </tr>
-
-        </table>
-    </div>
-
-    <br><br><br><br>
-
-    <h1 name="byParty"><b><a name="byParty">Unrepresented votes by party:</a></b></h1>
-
-    <div class="table-responsive">
-        <table class="table table-striped  ">
-            <tr><th>Party initials</th><th>Effective votes</th><th>Wasted votes</th><th>Total votes</th><th>Wasted votes %</th><th>Seats per {{magnitude}} votes</tr>
-
-            {% for party, partyData in partyTally %}
-            <tr>
-                <td>{{party}}</td>
-                <td align="right">{{partyData.effective}}</td>
-                <td align="right">{{partyData.wasted}}</td>
-                <td align="right">{{partyData.valid}}</td>
-                <td align="right">{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.valid) * 100)}}</td>
-                <td align="right">{{"%.1f" | format(safe_divide(partyData.leading , safe_divide(partyData.valid, magnitude)))}}</td>
-            </tr>
-            {% endfor %}
-
-        </table>
-    </div>
-    {% endif %}
-
-
-
-    <hr />
-    <p>
-        <i>Results compiled on <b>{{ "now"|date("Y-m-d H:i:s T") }}.</b>  Data used for individual ridings may be from 0 to 30 minutes late. </i>
-    </p>
-    <p>
-        Code available on <a href="{{summary.gitHubSource}}"> Github</a>.  If you add "?format=csv" you will get the votes for each party in every riding in tabular format.
-    </p>
-    <div id="top" >
-        <a href="#top" >Back to Top</a>
-    </div>
-
-
-</div>{#container#}
+</div>
 </body>
 </html>

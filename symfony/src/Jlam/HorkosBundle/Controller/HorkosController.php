@@ -14,7 +14,7 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'sk2016';
+	const DEFAULT_ELECTION		= 'none';
 	const CACHE_TTL_SECS		= 30;
 
     public function indexAction()
@@ -25,6 +25,14 @@ class HorkosController extends Controller
     	$language			= 'en';
     	$fresh				= $this->getRequest()->get('fresh');
     	$format				= $this->getRequest()->get('format')	?: 'html';
+
+
+        if (empty($election) || $election == 'none') {
+	        $response = $this->render("JlamHorkosBundle:Horkos:none.html.twig", array(
+                        electionsList => self::getElectionNames()
+                        ));
+            return $response;
+        }
 
 
 
@@ -118,12 +126,18 @@ class HorkosController extends Controller
     }
 
 
-    private static function getScrappingEngineClassName($electionShorthand = null) {
-    	$engineClassNames = array(
-    		'cdn2015'	=> 'Cdn2015scrapper',
-    		'ab2015'	=> 'Ab2015scrapper',
-    		'sk2016'	=> 'Sk2016scrapper',
-    	);
+    public static function getElectionNames() {
+        return array(
+    		'cdn2015'	=> 'Canadian 2015 election',
+    		'sk2016'	=> 'Saskatchewan 2016 election',
+        );
+    }
+    public static function getScrappingEngineClassName($electionShorthand = null) {
+        $engineClassNames = array(
+            'cdn2015'   => 'Cdn2015scrapper',
+            'ab2015'    => 'Ab2015scrapper',
+            'sk2016'    => 'Sk2016scrapper',
+        );
 
     	if(!isset($engineClassNames[$electionShorthand]))
     		$electionShorthand = self::DEFAULT_ELECTION;
