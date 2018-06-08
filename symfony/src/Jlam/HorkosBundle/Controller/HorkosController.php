@@ -14,8 +14,8 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'none';
-	const CACHE_TTL_SECS		= 1;
+	const DEFAULT_ELECTION		= 'on2018';
+	const CACHE_TTL_SECS		= 10;
 
     public function indexAction()
     {

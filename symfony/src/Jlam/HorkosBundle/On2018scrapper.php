@@ -28,6 +28,12 @@ class On2018scrapper extends ScrapingEngine {
             self::addLog("WARNING:  Not 124 ridings found. $ridingCount found in $ridingPaths!");
         }
 
+        $ridingNameData = json_decode(file_get_contents("https://www4.elections.on.ca/RealTimeResults/api/refdata/geteds/504/en"), TRUE);
+        $ridingIdToName = [];
+        foreach($ridingNameData as $ridingId => $ridingData) {
+            $ridingIdToName[$ridingData["i"]] = $ridingData["n"];
+        }
+
 
         $partyString = <<<EOT
                 [{"n":"INDEPENDENT"},{"n":""},{"n":""},{"n":"PC Party of Ontario"},{"n":"Green Party of Ontario"},{"n":"Ontario NDP/NPD"},{"n":"Ontario Liberal Party"},{"n":"Freedom Party of Ontario"},{"n":"Communist"},{"n":"Ontario Provincial Confederation of Regions Party"},{"n":"Libertarian"},{"n":"Party for People with Special Needs"},{"n":""},{"n":"Paupers"},{"n":"Go Vegan"},{"n":"The People"},{"n":"N O P"},{"n":"CCP"},{"n":"Ontario Moderate Party"},{"n":"Trillium Party TPO"},{"n":"None of the Above Direct Democracy Party"},{"n":"Stop the New Sex-Ed Agenda"},{"n":"CAP"},{"n":"Alliance"},{"n":"The New People's Choice Party of Ontario"},{"n":"Multicultural Party of Ontario"},{"n":"Consensus Ontario"},{"n":"CEP"},{"n":"Stop Climate Change"},{"n":"SRP"},{"n":"Ontario Party"},{"n":"P.O.T."}]
@@ -39,8 +45,11 @@ EOT;
         }
 
         foreach($ridingPaths as $i=>$dataSourcePath) {
+            // get the riding id from the file name, without the suffix
+            $id = basename($dataSourcePath, '.json');
+
             // Initialize riding name
-	        $ridingName = "riding no $i";
+	        $ridingName = $ridingIdToName[$id];
 	        self::addLog("Doing $ridingName....");
 
 
