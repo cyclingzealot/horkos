@@ -219,6 +219,7 @@ class Riding
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
     	$winnerCount	= self::leadingOnly($localTally); // count winning seats
+        self::addLog("localTally is " . var_export($localTally, TRUE));
 	$effectiveVotes = self::keepOnlyHighest($localTally); // with how many votes
 
     	self::$jurisdictionTally->add(array(
@@ -234,6 +235,10 @@ class Riding
     			'leading'	=>$winnerCount,
     			'effective'	=>$effectiveVotes,
     	));
+
+        self::addLog("wastedTally is " . var_export($wastedTally, TRUE));
+        self::addLog("jurisdictionTally is " . var_export(self::$jurisdictionTally, TRUE));
+        self::addLog("partyTally is " . var_export(self::$partyTally, TRUE));
 
     	/*
     	 * Riding ($this) is already added to the

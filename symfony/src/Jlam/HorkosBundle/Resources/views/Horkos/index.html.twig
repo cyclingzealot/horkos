@@ -157,11 +157,22 @@
             {% for party, partyData in partyTally %}
             <tr>
                 <td>{{party}}</td>
-                <td align="right">{{partyData.effective}}</td>
+                <td align="right">{% if partyData.effective is defined %}
+                    {{partyData.effective}}
+                    {% else %}
+                    0
+                    {% endif %}
+                </td>
                 <td align="right">{{partyData.wasted}}</td>
                 <td align="right">{{partyData.valid}}</td>
                 <td align="right">{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.valid) * 100)}}</td>
-                <td align="right">{{"%.1f" | format(safe_divide(partyData.leading , safe_divide(partyData.valid, magnitude)))}}</td>
+                <td align="right">
+                    {% set leading = 0 %}
+                    {% if partyData.leading is defined %}
+                        {% set leading = partyData.leading %}
+                    {% endif %}
+                    {{"%.1f" | format(safe_divide(leading , safe_divide(partyData.valid, magnitude)))}}
+                </td>
             </tr>
             {% endfor %}
 
