@@ -33,10 +33,10 @@
 
         <div class="col-sm-9" >
             {% if error == true %}
-                {% if ( 'now' <= (electionDate + 1)) %}
+                {% if ( 'now'|date('U') <= electionDate|date('U')) %}
                     <button type="button" class="btn btn-danger wraap"><h2>How many votes will the {{summary.jurisdictionName}} election waste this time?</h2></button>
                 {% else %}
-                    <button type="button" class="btn btn-danger wraap"><h2>That's it folks!</h2></button>
+                    <button type="button" class="btn btn-danger wraap"><h2>How many votes will the next {{summary.jurisdictionName}} election waste ?</h2></button>
                 {% endif %}
             {% else %}
                 <button type="button" class="btn btn-danger wraap"><h2> &nbsp;<strong><ins id="unrepresented_votes">{{summary.totalWastedVotes}}</ins></strong> unrepresented votes in {{summary.electionName}} election </h2></button>
@@ -61,11 +61,11 @@
 
 
             {% if (error == true) %}
-                {% if ( 'now' <= (electionDate + 1)) %}
+                {% if ( 'now'|date('U') <= electionDate|date('U')) %}
                     <p>We will be showing a compilation of unrepresented votes by riding and by party below  once the
                     {{summary.electionName}}<a href="{{summary.source}}">*</a> live election results are published.</p>
                 {% else %}
-                    <p>That's it folks!  If you're seeing this message, there's probably something that changed in the data source meaning the code can't compile results anymore!  Head over to <a href="http://www.fairvote.ca/">http://www.fairvote.ca/</a> or <a href="http://wastedvotes.ca">http://wastedvotes.ca</a> for more data</p>
+                    <p> If you're seeing this message, there's probably something that changed in the data source of the election agency meaning the code can't compile results anymore!  Head over to <a href="http://www.fairvote.ca/">http://www.fairvote.ca/</a> or <a href="http://wastedvotes.ca">http://wastedvotes.ca</a> for more data</p>
                 {% endif %}
             {% else %}
                 <p>Below is a compilation of the numbers taken from the
