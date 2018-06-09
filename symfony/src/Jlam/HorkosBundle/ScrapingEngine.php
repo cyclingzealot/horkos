@@ -71,6 +71,7 @@ abstract class ScrapingEngine implements Scrapper {
 		}
 	}
 
+
 	public static function getScraperError() {
 		return self::$error;
 	}

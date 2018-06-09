@@ -79,6 +79,8 @@ class HorkosController extends Controller
 		$summary						= $engineClassName::getSummary();
 		$magnitude = 1;
 
+        $electionDateObj = $engineClassName::getElectionDate();
+
 		if(! $engineClassName::getScraperError()) {
 			$partyTally			= Riding::getPartyTally(FALSE)->getTally();
 			$jurisdictionTally	= Riding::getJurisdictionTally()->getTally();
@@ -95,13 +97,14 @@ class HorkosController extends Controller
 
 	    ### Render ####################################################################
 	    $response = $this->render("JlamHorkosBundle:Horkos:index.$format.twig", array(
-    				'ridings'	=> Riding::getAllRdingsSorted(),
+    				'ridings'	    => Riding::getAllRdingsSorted(),
     				'partyTally' 	=> $partyTally,
     				'jurisdiction'	=> $jurisdictionTally,
-    				'summary'	=> $summary,
-    				'election'	=> $election ? $election : self::DEFAULT_ELECTION,
-    				'error'		=> $engineClassName::getScraperError(),
-    				'magnitude' => $magnitude,
+    				'summary'	    => $summary,
+    				'election'	    => $election ? $election : self::DEFAULT_ELECTION,
+    				'error'		    => $engineClassName::getScraperError(),
+    				'magnitude'     => $magnitude,
+                    'electionDate'  => $electionDateObj
     		));
 
 

@@ -9,7 +9,23 @@ class On2018scrapper extends ScrapingEngine {
 
     const JURISDICTION_SHORTHAND = 'on';
 
+    const ELECTION_DATE = "2018-06-07";
+
     const ROOT_SOURCE_URL = "https://www4.elections.on.ca/RealTimeResults";
+
+
+
+    public static function getElectionDate() {
+        $dateReturn = '1970-01-01';
+
+        if (defined(self::ELECTION_DATE)) {
+            $dateReturn = self::ELECTION_DATE;
+        }
+
+        return date_create($dateReturn);
+    }
+
+
 
 	public static function scrape() {
 		$logger = self::getLogger('Starting offline scrape...');

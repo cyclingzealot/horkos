@@ -71,7 +71,7 @@ restSecs=10
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
 maxRuns=100
-completeStr='vtp'
+completeStr='"cs":[{"n":"'
 dataFormat='json'
 
 touch $continueFlag
