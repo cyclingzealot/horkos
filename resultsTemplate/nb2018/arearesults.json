@@ -1,0 +1,6824 @@
+﻿{
+	"statistics": {
+		"projectName": "ENB 2018 09 24 PROV",
+		"official": "",
+		"timeStamp": "2018-09-25 00:12:47",
+		"eligibleVoters": 568671,
+		"globTurnout": "67.13%",
+		"globBallotCast": 381775,
+		"globTabulators": 730,
+		"globClosedTabulators": 730,
+		"globStartedPolls": 0,
+		"globPolls": 1766,
+		"globClosedPolls": 1766,
+		"countinggroups": [
+				{
+					"countingGroupId": "1",
+					"countingGroupName": "Election Day",
+					"tabulators": 493,
+					"closedTabulators": 493
+				},
+				{
+					"countingGroupId": "2",
+					"countingGroupName": "Advance",
+					"tabulators": 179,
+					"closedTabulators": 179
+				},
+				{
+					"countingGroupId": "3",
+					"countingGroupName": "Special",
+					"tabulators": 58,
+					"closedTabulators": 58
+				}
+			]
+,
+		"partyStats": [
+				{
+					"id": "1",
+					"party": "Liberal Party / Parti Libéral",
+					"abr": "L",
+					"candidates": 49,
+					"elected": 21,
+					"sort": 1
+				},
+				{
+					"id": "2",
+					"party": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+					"abr": "PC",
+					"candidates": 49,
+					"elected": 22,
+					"sort": 2
+				},
+				{
+					"id": "3",
+					"party": "KISS N.B. Political Party",
+					"abr": "KNB",
+					"candidates": 9,
+					"elected": 0,
+					"sort": 3
+				},
+				{
+					"id": "4",
+					"party": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+					"abr": "NBNDP / NPDNB",
+					"candidates": 49,
+					"elected": 0,
+					"sort": 4
+				},
+				{
+					"id": "5",
+					"party": "Parti Vert N.B. Green Party",
+					"abr": "PVNBGP",
+					"candidates": 47,
+					"elected": 3,
+					"sort": 5
+				},
+				{
+					"id": "6",
+					"party": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+					"abr": "PANB / AGNB",
+					"candidates": 30,
+					"elected": 3,
+					"sort": 6
+				},
+				{
+					"id": "7",
+					"party": "Independent / Indépendant",
+					"abr": "IND",
+					"candidates": 8,
+					"elected": 0,
+					"sort": 7
+				}
+			]
+	},
+	"areaResults": [
+		{
+			"51": {
+				"statistics": {
+					"eligibleVoters": 568671,
+					"turnout": "67.13%",
+					"turnout2": "67.13%",
+					"ballotCast": 381775,
+					"ballotCast2": 381775,
+					"tabulators": 730,
+					"closedTabulators": 730,
+					"startedPolls": 0,
+					"polls": 1766,
+					"closedPolls": 1766,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 493,
+								"closedTabulators": 493
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 179,
+								"closedTabulators": 179
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+				]
+			},
+			"2": {
+				"statistics": {
+					"eligibleVoters": 11597,
+					"turnout": "68.36%",
+					"turnout2": "70.04%",
+					"ballotCast": 7928,
+					"ballotCast2": 8123,
+					"tabulators": 77,
+					"closedTabulators": 77,
+					"startedPolls": 0,
+					"polls": 40,
+					"closedPolls": 40,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 14,
+								"closedTabulators": 14
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "1",
+						"contestName": "MLA / Député, 01 Restigouche West / Restigouche-Ouest",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11597,
+						"turnout": "70.04%",
+						"ballotCast": 8123,
+						"sort": 1,
+						"choiceResults": [
+							{
+								"id": "1",
+								"choiceName": "Gilles LEPAGE",
+								"votes": 4233,
+								"percentage": "52.53%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4233,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "2",
+								"choiceName": "David MOREAU",
+								"votes": 961,
+								"percentage": "11.92%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 961,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "3",
+								"choiceName": "Travis POLLOCK",
+								"votes": 62,
+								"percentage": "0.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 62,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "4",
+								"choiceName": "Beverly A. MANN",
+								"votes": 263,
+								"percentage": "3.26%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 263,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "5",
+								"choiceName": "Charles THÉRIAULT",
+								"votes": 2540,
+								"percentage": "31.52%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 2540,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"3": {
+				"statistics": {
+					"eligibleVoters": 11020,
+					"turnout": "65.92%",
+					"turnout2": "67.57%",
+					"ballotCast": 7264,
+					"ballotCast2": 7446,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 38,
+					"closedPolls": 38,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 7,
+								"closedTabulators": 7
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "2",
+						"contestName": "MLA / Député, 02 Campbellton-Dalhousie",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11020,
+						"turnout": "67.57%",
+						"ballotCast": 7446,
+						"sort": 2,
+						"choiceResults": [
+							{
+								"id": "6",
+								"choiceName": "Guy ARSENEAULT",
+								"votes": 3720,
+								"percentage": "50.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3720,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "7",
+								"choiceName": "Diane CYR",
+								"votes": 1761,
+								"percentage": "23.81%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1761,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "8",
+								"choiceName": "Thérèse TREMBLAY",
+								"votes": 721,
+								"percentage": "9.75%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 721,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "9",
+								"choiceName": "Annie THÉRIAULT",
+								"votes": 637,
+								"percentage": "8.61%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 637,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "10",
+								"choiceName": "Robert BOUDREAU",
+								"votes": 558,
+								"percentage": "7.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 558,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"4": {
+				"statistics": {
+					"eligibleVoters": 11123,
+					"turnout": "59.96%",
+					"turnout2": "60.55%",
+					"ballotCast": 6669,
+					"ballotCast2": 6735,
+					"tabulators": 75,
+					"closedTabulators": 75,
+					"startedPolls": 0,
+					"polls": 38,
+					"closedPolls": 38,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 12,
+								"closedTabulators": 12
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "3",
+						"contestName": "MLA / Député, 03 Restigouche-Chaleur",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11123,
+						"turnout": "60.55%",
+						"ballotCast": 6735,
+						"sort": 3,
+						"choiceResults": [
+							{
+								"id": "11",
+								"choiceName": "Daniel GUITARD",
+								"votes": 4430,
+								"percentage": "66.04%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4430,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "12",
+								"choiceName": "Charles STEWART",
+								"votes": 826,
+								"percentage": "12.31%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 826,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "13",
+								"choiceName": "Paul TREMBLAY",
+								"votes": 621,
+								"percentage": "9.26%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 621,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "14",
+								"choiceName": "Mario COMEAU",
+								"votes": 831,
+								"percentage": "12.39%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 831,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"5": {
+				"statistics": {
+					"eligibleVoters": 10915,
+					"turnout": "58.60%",
+					"turnout2": "59.41%",
+					"ballotCast": 6396,
+					"ballotCast2": 6485,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "4",
+						"contestName": "MLA / Député, 04 Bathurst West-Beresford / Bathurst-Ouest-Beresford",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10915,
+						"turnout": "59.41%",
+						"ballotCast": 6485,
+						"sort": 4,
+						"choiceResults": [
+							{
+								"id": "15",
+								"choiceName": "Brian KENNY",
+								"votes": 4351,
+								"percentage": "67.53%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4351,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "16",
+								"choiceName": "Yvon LANDRY",
+								"votes": 1082,
+								"percentage": "16.79%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1082,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "17",
+								"choiceName": "James RISDON",
+								"votes": 64,
+								"percentage": "0.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 64,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "18",
+								"choiceName": "Anne-Renée THOMAS",
+								"votes": 443,
+								"percentage": "6.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 443,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "19",
+								"choiceName": "Mike RAU",
+								"votes": 503,
+								"percentage": "7.81%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 503,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"6": {
+				"statistics": {
+					"eligibleVoters": 10802,
+					"turnout": "63.19%",
+					"turnout2": "63.86%",
+					"ballotCast": 6826,
+					"ballotCast2": 6898,
+					"tabulators": 73,
+					"closedTabulators": 73,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "5",
+						"contestName": "MLA / Député, 05 Bathurst East-Nepisiguit-Saint-Isidore / Bathurst-Est-Nepisiguit-Saint-Isidore",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10802,
+						"turnout": "63.86%",
+						"ballotCast": 6898,
+						"sort": 5,
+						"choiceResults": [
+							{
+								"id": "20",
+								"choiceName": "Denis LANDRY",
+								"votes": 3550,
+								"percentage": "51.79%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3550,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "21",
+								"choiceName": "Michelle BRANCH",
+								"votes": 858,
+								"percentage": "12.52%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 858,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "22",
+								"choiceName": "Jean Maurice LANDRY",
+								"votes": 2026,
+								"percentage": "29.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 2026,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "23",
+								"choiceName": "Robert KRYSZKO",
+								"votes": 421,
+								"percentage": "6.14%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 421,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"7": {
+				"statistics": {
+					"eligibleVoters": 10932,
+					"turnout": "76.66%",
+					"turnout2": "78.12%",
+					"ballotCast": 8381,
+					"ballotCast2": 8540,
+					"tabulators": 73,
+					"closedTabulators": 73,
+					"startedPolls": 0,
+					"polls": 36,
+					"closedPolls": 36,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 12,
+								"closedTabulators": 12
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "6",
+						"contestName": "MLA / Député, 06 Caraquet",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10932,
+						"turnout": "78.12%",
+						"ballotCast": 8540,
+						"sort": 6,
+						"choiceResults": [
+							{
+								"id": "24",
+								"choiceName": "Isabelle THÉRIAULT",
+								"votes": 5420,
+								"percentage": "63.78%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 5420,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "25",
+								"choiceName": "Kevin HACHÉ",
+								"votes": 1827,
+								"percentage": "21.50%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1827,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "26",
+								"choiceName": "Katy CASAVANT",
+								"votes": 548,
+								"percentage": "6.45%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 548,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "27",
+								"choiceName": "Yvon DURELLE",
+								"votes": 330,
+								"percentage": "3.88%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 330,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "28",
+								"choiceName": "Guilmond HÉBERT",
+								"votes": 373,
+								"percentage": "4.39%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 373,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"8": {
+				"statistics": {
+					"eligibleVoters": 11129,
+					"turnout": "78.85%",
+					"turnout2": "79.64%",
+					"ballotCast": 8775,
+					"ballotCast2": 8863,
+					"tabulators": 69,
+					"closedTabulators": 69,
+					"startedPolls": 0,
+					"polls": 38,
+					"closedPolls": 38,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 8,
+								"closedTabulators": 8
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "7",
+						"contestName": "MLA / Député, 07 Shippagan-Lamèque-Miscou",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11129,
+						"turnout": "79.64%",
+						"ballotCast": 8863,
+						"sort": 7,
+						"choiceResults": [
+							{
+								"id": "29",
+								"choiceName": "Wilfred ROUSSEL",
+								"votes": 3949,
+								"percentage": "45.12%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3949,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "30",
+								"choiceName": "Robert GAUVIN",
+								"votes": 4048,
+								"percentage": "46.25%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 4048,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "31",
+								"choiceName": "Albert ROUSSELLE",
+								"votes": 578,
+								"percentage": "6.60%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 578,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "32",
+								"choiceName": "Philippe TISSEUIL",
+								"votes": 178,
+								"percentage": "2.03%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 178,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"9": {
+				"statistics": {
+					"eligibleVoters": 11967,
+					"turnout": "72.14%",
+					"turnout2": "74.53%",
+					"ballotCast": 8633,
+					"ballotCast2": 8919,
+					"tabulators": 73,
+					"closedTabulators": 73,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 12,
+								"closedTabulators": 12
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "8",
+						"contestName": "MLA / Député, 08 Tracadie-Sheila",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11967,
+						"turnout": "74.53%",
+						"ballotCast": 8919,
+						"sort": 8,
+						"choiceResults": [
+							{
+								"id": "33",
+								"choiceName": "Keith CHIASSON",
+								"votes": 4320,
+								"percentage": "48.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4320,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "34",
+								"choiceName": "Claude LANDRY",
+								"votes": 2390,
+								"percentage": "26.98%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2390,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "35",
+								"choiceName": "Francis DUGUAY",
+								"votes": 1213,
+								"percentage": "13.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 1213,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "36",
+								"choiceName": "Nancy BENOIT",
+								"votes": 390,
+								"percentage": "4.40%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 390,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "37",
+								"choiceName": "Stéphane RICHARDSON",
+								"votes": 544,
+								"percentage": "6.14%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 544,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"10": {
+				"statistics": {
+					"eligibleVoters": 11734,
+					"turnout": "70.31%",
+					"turnout2": "71.51%",
+					"ballotCast": 8250,
+					"ballotCast2": 8391,
+					"tabulators": 73,
+					"closedTabulators": 73,
+					"startedPolls": 0,
+					"polls": 42,
+					"closedPolls": 42,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 12,
+								"closedTabulators": 12
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "9",
+						"contestName": "MLA / Député, 09 Miramichi Bay-Neguac / Baie-de-Miramichi-Neguac",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11734,
+						"turnout": "71.51%",
+						"ballotCast": 8391,
+						"sort": 9,
+						"choiceResults": [
+							{
+								"id": "38",
+								"choiceName": "Lisa HARRIS",
+								"votes": 3512,
+								"percentage": "41.97%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3512,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "39",
+								"choiceName": "Debi TOZER",
+								"votes": 1741,
+								"percentage": "20.81%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1741,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "40",
+								"choiceName": "Willie ROBICHAUD",
+								"votes": 718,
+								"percentage": "8.58%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 718,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "41",
+								"choiceName": "James (Junior) DENNY",
+								"votes": 349,
+								"percentage": "4.17%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 349,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "42",
+								"choiceName": "Terry COLLETTE",
+								"votes": 2047,
+								"percentage": "24.47%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 2047,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"11": {
+				"statistics": {
+					"eligibleVoters": 11044,
+					"turnout": "72.01%",
+					"turnout2": "73.19%",
+					"ballotCast": 7953,
+					"ballotCast2": 8083,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 7,
+								"closedTabulators": 7
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "10",
+						"contestName": "MLA / Député, 10 Miramichi",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11044,
+						"turnout": "73.19%",
+						"ballotCast": 8083,
+						"sort": 10,
+						"choiceResults": [
+							{
+								"id": "43",
+								"choiceName": "Bill FRASER",
+								"votes": 2825,
+								"percentage": "35.02%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2825,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "44",
+								"choiceName": "Peggy MCLEAN",
+								"votes": 1154,
+								"percentage": "14.31%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1154,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "45",
+								"choiceName": "Douglas MULLIN",
+								"votes": 110,
+								"percentage": "1.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 110,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "46",
+								"choiceName": "Louann SAVAGE",
+								"votes": 189,
+								"percentage": "2.34%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 189,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "47",
+								"choiceName": "Michelle CONROY",
+								"votes": 3788,
+								"percentage": "46.96%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 3788,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"12": {
+				"statistics": {
+					"eligibleVoters": 11156,
+					"turnout": "66.74%",
+					"turnout2": "75.13%",
+					"ballotCast": 7445,
+					"ballotCast2": 8381,
+					"tabulators": 82,
+					"closedTabulators": 82,
+					"startedPolls": 0,
+					"polls": 43,
+					"closedPolls": 43,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 14,
+								"closedTabulators": 14
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 10,
+								"closedTabulators": 10
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "11",
+						"contestName": "MLA / Député, 11 Southwest Miramichi-Bay du Vin / Miramichi-Sud-Ouest-Baie-du-Vin",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11156,
+						"turnout": "75.13%",
+						"ballotCast": 8381,
+						"sort": 11,
+						"choiceResults": [
+							{
+								"id": "48",
+								"choiceName": "Andy HARDY",
+								"votes": 1909,
+								"percentage": "22.84%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1909,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "49",
+								"choiceName": "Jake STEWART",
+								"votes": 2960,
+								"percentage": "35.42%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2960,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "50",
+								"choiceName": "Dawson BRIDEAU",
+								"votes": 19,
+								"percentage": "0.23%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 19,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "51",
+								"choiceName": "Roger VAUTOUR",
+								"votes": 97,
+								"percentage": "1.16%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 97,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "52",
+								"choiceName": "Byron J. CONNORS",
+								"votes": 447,
+								"percentage": "5.35%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 447,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "53",
+								"choiceName": "Art O'DONNELL",
+								"votes": 2925,
+								"percentage": "35.00%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 2925,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"13": {
+				"statistics": {
+					"eligibleVoters": 12234,
+					"turnout": "69.25%",
+					"turnout2": "72.58%",
+					"ballotCast": 8472,
+					"ballotCast2": 8879,
+					"tabulators": 77,
+					"closedTabulators": 77,
+					"startedPolls": 0,
+					"polls": 39,
+					"closedPolls": 39,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 16,
+								"closedTabulators": 16
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "12",
+						"contestName": "MLA / Député, 12 Kent North / Kent-Nord",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12234,
+						"turnout": "72.58%",
+						"ballotCast": 8879,
+						"sort": 12,
+						"choiceResults": [
+							{
+								"id": "54",
+								"choiceName": "Emery COMEAU",
+								"votes": 3301,
+								"percentage": "37.37%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3301,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "55",
+								"choiceName": "Katie ROBERTSON",
+								"votes": 1112,
+								"percentage": "12.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1112,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "56",
+								"choiceName": "Neil GARDNER",
+								"votes": 171,
+								"percentage": "1.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 171,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "57",
+								"choiceName": "Kevin ARSENEAU",
+								"votes": 4056,
+								"percentage": "45.91%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 4056,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "58",
+								"choiceName": "Roger RICHARD",
+								"votes": 194,
+								"percentage": "2.20%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 194,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"14": {
+				"statistics": {
+					"eligibleVoters": 12470,
+					"turnout": "73.06%",
+					"turnout2": "73.91%",
+					"ballotCast": 9110,
+					"ballotCast2": 9216,
+					"tabulators": 72,
+					"closedTabulators": 72,
+					"startedPolls": 0,
+					"polls": 40,
+					"closedPolls": 40,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 11,
+								"closedTabulators": 11
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "13",
+						"contestName": "MLA / Député, 13 Kent South / Kent-Sud",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12470,
+						"turnout": "73.91%",
+						"ballotCast": 9216,
+						"sort": 13,
+						"choiceResults": [
+							{
+								"id": "59",
+								"choiceName": "Benoit BOURQUE",
+								"votes": 5595,
+								"percentage": "60.93%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 5595,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "60",
+								"choiceName": "Ricky GAUTREAU",
+								"votes": 1848,
+								"percentage": "20.12%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1848,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "61",
+								"choiceName": "Serge Rémi PARENT",
+								"votes": 436,
+								"percentage": "4.75%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 436,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "62",
+								"choiceName": "Alain ROUSSELLE",
+								"votes": 1304,
+								"percentage": "14.20%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1304,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"15": {
+				"statistics": {
+					"eligibleVoters": 13349,
+					"turnout": "67.71%",
+					"turnout2": "69.17%",
+					"ballotCast": 9039,
+					"ballotCast2": 9233,
+					"tabulators": 70,
+					"closedTabulators": 70,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 8,
+								"closedTabulators": 8
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 4,
+								"closedTabulators": 4
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "14",
+						"contestName": "MLA / Député, 14 Shediac Bay-Dieppe / Baie-de-Shediac-Dieppe",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 13349,
+						"turnout": "69.17%",
+						"ballotCast": 9233,
+						"sort": 14,
+						"choiceResults": [
+							{
+								"id": "63",
+								"choiceName": "Brian GALLANT",
+								"votes": 6162,
+								"percentage": "67.09%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 6162,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "64",
+								"choiceName": "Paulin Blaise NGWETH",
+								"votes": 1353,
+								"percentage": "14.73%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1353,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "65",
+								"choiceName": "Michel BOUDREAU",
+								"votes": 764,
+								"percentage": "8.32%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 764,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "66",
+								"choiceName": "Michel ALBERT",
+								"votes": 906,
+								"percentage": "9.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 906,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"16": {
+				"statistics": {
+					"eligibleVoters": 12969,
+					"turnout": "71.42%",
+					"turnout2": "72.22%",
+					"ballotCast": 9262,
+					"ballotCast2": 9366,
+					"tabulators": 70,
+					"closedTabulators": 70,
+					"startedPolls": 0,
+					"polls": 36,
+					"closedPolls": 36,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "15",
+						"contestName": "MLA / Député, 15 Shediac-Beaubassin-Cap-Pelé",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12969,
+						"turnout": "72.22%",
+						"ballotCast": 9366,
+						"sort": 15,
+						"choiceResults": [
+							{
+								"id": "67",
+								"choiceName": "Jacques LEBLANC",
+								"votes": 5919,
+								"percentage": "63.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 5919,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "68",
+								"choiceName": "Marcel DOIRON",
+								"votes": 2081,
+								"percentage": "22.34%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2081,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "69",
+								"choiceName": "Lise POTVIN",
+								"votes": 428,
+								"percentage": "4.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 428,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "70",
+								"choiceName": "Greta DOUCET",
+								"votes": 888,
+								"percentage": "9.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 888,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"17": {
+				"statistics": {
+					"eligibleVoters": 11745,
+					"turnout": "69.29%",
+					"turnout2": "70.13%",
+					"ballotCast": 8138,
+					"ballotCast2": 8237,
+					"tabulators": 74,
+					"closedTabulators": 74,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 13,
+								"closedTabulators": 13
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "16",
+						"contestName": "MLA / Député, 16 Memramcook-Tantramar",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11745,
+						"turnout": "70.13%",
+						"ballotCast": 8237,
+						"sort": 16,
+						"choiceResults": [
+							{
+								"id": "71",
+								"choiceName": "Bernard LEBLANC",
+								"votes": 3137,
+								"percentage": "38.20%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3137,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "72",
+								"choiceName": "Etienne GAUDET",
+								"votes": 1518,
+								"percentage": "18.48%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1518,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "73",
+								"choiceName": "Hélène BOUDREAU",
+								"votes": 410,
+								"percentage": "4.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 410,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "74",
+								"choiceName": "Megan MITTON",
+								"votes": 3148,
+								"percentage": "38.33%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 3148,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"18": {
+				"statistics": {
+					"eligibleVoters": 11077,
+					"turnout": "59.43%",
+					"turnout2": "65.65%",
+					"ballotCast": 6583,
+					"ballotCast2": 7272,
+					"tabulators": 66,
+					"closedTabulators": 66,
+					"startedPolls": 0,
+					"polls": 30,
+					"closedPolls": 30,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "17",
+						"contestName": "MLA / Député, 17 Dieppe",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11077,
+						"turnout": "65.65%",
+						"ballotCast": 7272,
+						"sort": 17,
+						"choiceResults": [
+							{
+								"id": "75",
+								"choiceName": "Roger MELANSON",
+								"votes": 5173,
+								"percentage": "71.57%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 5173,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "76",
+								"choiceName": "Pierre BRINE",
+								"votes": 998,
+								"percentage": "13.81%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 998,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "77",
+								"choiceName": "Joyce RICHARDSON",
+								"votes": 1057,
+								"percentage": "14.62%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 1057,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"19": {
+				"statistics": {
+					"eligibleVoters": 12247,
+					"turnout": "61.68%",
+					"turnout2": "63.57%",
+					"ballotCast": 7554,
+					"ballotCast2": 7785,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 36,
+					"closedPolls": 36,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "18",
+						"contestName": "MLA / Député, 18 Moncton East / Moncton-Est",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12247,
+						"turnout": "63.57%",
+						"ballotCast": 7785,
+						"sort": 18,
+						"choiceResults": [
+							{
+								"id": "78",
+								"choiceName": "Monique LEBLANC",
+								"votes": 3626,
+								"percentage": "46.81%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3626,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "79",
+								"choiceName": "Marty KINGSTON",
+								"votes": 2771,
+								"percentage": "35.77%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2771,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "80",
+								"choiceName": "Anthony CRANDALL",
+								"votes": 424,
+								"percentage": "5.47%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 424,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "81",
+								"choiceName": "Matthew Ian CLARK",
+								"votes": 925,
+								"percentage": "11.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 925,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"20": {
+				"statistics": {
+					"eligibleVoters": 10495,
+					"turnout": "58.04%",
+					"turnout2": "59.11%",
+					"ballotCast": 6091,
+					"ballotCast2": 6204,
+					"tabulators": 65,
+					"closedTabulators": 65,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "19",
+						"contestName": "MLA / Député, 19 Moncton Centre / Moncton-Centre",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10495,
+						"turnout": "59.11%",
+						"ballotCast": 6204,
+						"sort": 19,
+						"choiceResults": [
+							{
+								"id": "82",
+								"choiceName": "Rob MCKEE",
+								"votes": 2698,
+								"percentage": "43.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2698,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "83",
+								"choiceName": "Claudette BOUDREAU-TURNER",
+								"votes": 982,
+								"percentage": "15.87%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 982,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "84",
+								"choiceName": "Jessica CAISSIE",
+								"votes": 229,
+								"percentage": "3.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 229,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "85",
+								"choiceName": "Jean-Marie NADEAU",
+								"votes": 771,
+								"percentage": "12.46%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 771,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "86",
+								"choiceName": "Kevin MCCLURE",
+								"votes": 309,
+								"percentage": "4.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 309,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "87",
+								"choiceName": "Chris COLLINS",
+								"votes": 1200,
+								"percentage": "19.39%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 1200,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"21": {
+				"statistics": {
+					"eligibleVoters": 11405,
+					"turnout": "56.92%",
+					"turnout2": "57.47%",
+					"ballotCast": 6492,
+					"ballotCast2": 6555,
+					"tabulators": 68,
+					"closedTabulators": 68,
+					"startedPolls": 0,
+					"polls": 34,
+					"closedPolls": 34,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 7,
+								"closedTabulators": 7
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "20",
+						"contestName": "MLA / Député, 20 Moncton South / Moncton-Sud",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11405,
+						"turnout": "57.47%",
+						"ballotCast": 6555,
+						"sort": 20,
+						"choiceResults": [
+							{
+								"id": "88",
+								"choiceName": "Cathy ROGERS",
+								"votes": 3099,
+								"percentage": "47.44%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3099,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "89",
+								"choiceName": "Moira MURPHY",
+								"votes": 2090,
+								"percentage": "32.00%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2090,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "90",
+								"choiceName": "Amy JOHNSON",
+								"votes": 249,
+								"percentage": "3.81%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 249,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "91",
+								"choiceName": "Laura SANDERSON",
+								"votes": 628,
+								"percentage": "9.61%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 628,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "92",
+								"choiceName": "Marilyn CROSSMAN-RIEL",
+								"votes": 466,
+								"percentage": "7.13%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 466,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"22": {
+				"statistics": {
+					"eligibleVoters": 12258,
+					"turnout": "62.92%",
+					"turnout2": "63.40%",
+					"ballotCast": 7713,
+					"ballotCast2": 7771,
+					"tabulators": 66,
+					"closedTabulators": 66,
+					"startedPolls": 0,
+					"polls": 30,
+					"closedPolls": 30,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "21",
+						"contestName": "MLA / Député, 21 Moncton Northwest / Moncton-Nord-Ouest",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12258,
+						"turnout": "63.40%",
+						"ballotCast": 7771,
+						"sort": 21,
+						"choiceResults": [
+							{
+								"id": "93",
+								"choiceName": "Courtney PRINGLE-CARVER",
+								"votes": 2963,
+								"percentage": "38.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2963,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "94",
+								"choiceName": "Ernie STEEVES",
+								"votes": 3186,
+								"percentage": "41.07%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3186,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "95",
+								"choiceName": "Cyprien OKANA",
+								"votes": 297,
+								"percentage": "3.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 297,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "96",
+								"choiceName": "Keagan SLUPSKY",
+								"votes": 437,
+								"percentage": "5.63%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 437,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "97",
+								"choiceName": "Myrna GELDART",
+								"votes": 875,
+								"percentage": "11.28%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 875,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"23": {
+				"statistics": {
+					"eligibleVoters": 12162,
+					"turnout": "54.65%",
+					"turnout2": "57.82%",
+					"ballotCast": 6646,
+					"ballotCast2": 7032,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 34,
+					"closedPolls": 34,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "22",
+						"contestName": "MLA / Député, 22 Moncton Southwest / Moncton-Sud-Ouest",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12162,
+						"turnout": "57.82%",
+						"ballotCast": 7032,
+						"sort": 22,
+						"choiceResults": [
+							{
+								"id": "98",
+								"choiceName": "Susy CAMPOS",
+								"votes": 2667,
+								"percentage": "38.12%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2667,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "99",
+								"choiceName": "Sherry WILSON",
+								"votes": 2920,
+								"percentage": "41.73%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2920,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "100",
+								"choiceName": "Hailey DUFFY",
+								"votes": 503,
+								"percentage": "7.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 503,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "101",
+								"choiceName": "Sarah COLWELL",
+								"votes": 907,
+								"percentage": "12.96%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 907,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"24": {
+				"statistics": {
+					"eligibleVoters": 11723,
+					"turnout": "61.76%",
+					"turnout2": "64.52%",
+					"ballotCast": 7240,
+					"ballotCast2": 7564,
+					"tabulators": 65,
+					"closedTabulators": 65,
+					"startedPolls": 0,
+					"polls": 33,
+					"closedPolls": 33,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 1,
+								"closedTabulators": 1
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "23",
+						"contestName": "MLA / Député, 23 Riverview",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11723,
+						"turnout": "64.52%",
+						"ballotCast": 7564,
+						"sort": 23,
+						"choiceResults": [
+							{
+								"id": "102",
+								"choiceName": "Brent MAZEROLLE",
+								"votes": 2053,
+								"percentage": "27.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2053,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "103",
+								"choiceName": "R. Bruce FITCH",
+								"votes": 3701,
+								"percentage": "49.02%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3701,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "104",
+								"choiceName": "Madison DUFFY",
+								"votes": 249,
+								"percentage": "3.30%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 249,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "105",
+								"choiceName": "Stephanie COBURN",
+								"votes": 542,
+								"percentage": "7.18%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 542,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "106",
+								"choiceName": "Heather COLLINS",
+								"votes": 1005,
+								"percentage": "13.31%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1005,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"25": {
+				"statistics": {
+					"eligibleVoters": 12504,
+					"turnout": "64.85%",
+					"turnout2": "65.16%",
+					"ballotCast": 8109,
+					"ballotCast2": 8148,
+					"tabulators": 79,
+					"closedTabulators": 79,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 15,
+								"closedTabulators": 15
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "24",
+						"contestName": "MLA / Député, 24 Albert",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12504,
+						"turnout": "65.16%",
+						"ballotCast": 8148,
+						"sort": 24,
+						"choiceResults": [
+							{
+								"id": "107",
+								"choiceName": "Catherine BLACK",
+								"votes": 1775,
+								"percentage": "21.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1775,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "108",
+								"choiceName": "Mike HOLLAND",
+								"votes": 3479,
+								"percentage": "42.78%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3479,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "109",
+								"choiceName": "Betty WEIR",
+								"votes": 375,
+								"percentage": "4.61%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 375,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "110",
+								"choiceName": "Moranda VAN GEEST",
+								"votes": 870,
+								"percentage": "10.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 870,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "111",
+								"choiceName": "Sharon BUCHANAN",
+								"votes": 1546,
+								"percentage": "19.01%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1546,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "112",
+								"choiceName": "James WILSON",
+								"votes": 87,
+								"percentage": "1.07%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 87,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"26": {
+				"statistics": {
+					"eligibleVoters": 11672,
+					"turnout": "67.85%",
+					"turnout2": "68.90%",
+					"ballotCast": 7919,
+					"ballotCast2": 8042,
+					"tabulators": 87,
+					"closedTabulators": 87,
+					"startedPolls": 0,
+					"polls": 41,
+					"closedPolls": 41,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 20,
+								"closedTabulators": 20
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "25",
+						"contestName": "MLA / Député, 25 Gagetown-Petitcodiac",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11672,
+						"turnout": "68.90%",
+						"ballotCast": 8042,
+						"sort": 25,
+						"choiceResults": [
+							{
+								"id": "113",
+								"choiceName": "Brigitte NOEL",
+								"votes": 1153,
+								"percentage": "14.35%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1153,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "114",
+								"choiceName": "Ross WETMORE",
+								"votes": 3674,
+								"percentage": "45.71%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3674,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "115",
+								"choiceName": "Carolyn MACDONALD",
+								"votes": 56,
+								"percentage": "0.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 56,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "116",
+								"choiceName": "Anne Marie F. RICHARDSON",
+								"votes": 165,
+								"percentage": "2.05%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 165,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "117",
+								"choiceName": "Marilyn MERRITT-GRAY",
+								"votes": 1097,
+								"percentage": "13.65%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1097,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "118",
+								"choiceName": "Craig DYKEMAN",
+								"votes": 1892,
+								"percentage": "23.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1892,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"27": {
+				"statistics": {
+					"eligibleVoters": 12013,
+					"turnout": "62.10%",
+					"turnout2": "64.30%",
+					"ballotCast": 7460,
+					"ballotCast2": 7724,
+					"tabulators": 75,
+					"closedTabulators": 75,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 13,
+								"closedTabulators": 13
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 4,
+								"closedTabulators": 4
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "26",
+						"contestName": "MLA / Député, 26 Sussex-Fundy-St. Martins",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12013,
+						"turnout": "64.30%",
+						"ballotCast": 7724,
+						"sort": 26,
+						"choiceResults": [
+							{
+								"id": "119",
+								"choiceName": "Ian SMYTH",
+								"votes": 1212,
+								"percentage": "15.71%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1212,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "120",
+								"choiceName": "Bruce N. NORTHRUP",
+								"votes": 3816,
+								"percentage": "49.46%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3816,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "121",
+								"choiceName": "Dawna ROBERTSON",
+								"votes": 254,
+								"percentage": "3.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 254,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "122",
+								"choiceName": "Fred HARRISON",
+								"votes": 505,
+								"percentage": "6.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 505,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "123",
+								"choiceName": "Jim BEDFORD",
+								"votes": 1874,
+								"percentage": "24.29%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1874,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "124",
+								"choiceName": "David Raymond AMOS",
+								"votes": 54,
+								"percentage": "0.70%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 54,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"28": {
+				"statistics": {
+					"eligibleVoters": 11760,
+					"turnout": "63.26%",
+					"turnout2": "64.18%",
+					"ballotCast": 7439,
+					"ballotCast2": 7547,
+					"tabulators": 71,
+					"closedTabulators": 71,
+					"startedPolls": 0,
+					"polls": 36,
+					"closedPolls": 36,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 4,
+								"closedTabulators": 4
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "27",
+						"contestName": "MLA / Député, 27 Hampton",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11760,
+						"turnout": "64.18%",
+						"ballotCast": 7547,
+						"sort": 27,
+						"choiceResults": [
+							{
+								"id": "125",
+								"choiceName": "Carley PARISH",
+								"votes": 1454,
+								"percentage": "19.31%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1454,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "126",
+								"choiceName": "Gary CROSSMAN",
+								"votes": 3702,
+								"percentage": "49.17%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3702,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "127",
+								"choiceName": "Layton PECK",
+								"votes": 384,
+								"percentage": "5.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 384,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "128",
+								"choiceName": "John SABINE",
+								"votes": 743,
+								"percentage": "9.87%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 743,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "129",
+								"choiceName": "Dana HANSEN",
+								"votes": 1246,
+								"percentage": "16.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1246,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"29": {
+				"statistics": {
+					"eligibleVoters": 11929,
+					"turnout": "68.87%",
+					"turnout2": "69.25%",
+					"ballotCast": 8216,
+					"ballotCast2": 8261,
+					"tabulators": 66,
+					"closedTabulators": 66,
+					"startedPolls": 0,
+					"polls": 31,
+					"closedPolls": 31,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "28",
+						"contestName": "MLA / Député, 28 Quispamsis",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11929,
+						"turnout": "69.25%",
+						"ballotCast": 8261,
+						"sort": 28,
+						"choiceResults": [
+							{
+								"id": "130",
+								"choiceName": "Aaron KENNEDY",
+								"votes": 2078,
+								"percentage": "25.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2078,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "131",
+								"choiceName": "Blaine HIGGS",
+								"votes": 4691,
+								"percentage": "56.87%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 4691,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "132",
+								"choiceName": "Ryan JEWKES",
+								"votes": 239,
+								"percentage": "2.90%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 239,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "133",
+								"choiceName": "Mark WOOLSEY",
+								"votes": 445,
+								"percentage": "5.40%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 445,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "134",
+								"choiceName": "Keith PORTER",
+								"votes": 795,
+								"percentage": "9.64%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 795,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"30": {
+				"statistics": {
+					"eligibleVoters": 11122,
+					"turnout": "62.91%",
+					"turnout2": "63.92%",
+					"ballotCast": 6997,
+					"ballotCast2": 7109,
+					"tabulators": 66,
+					"closedTabulators": 66,
+					"startedPolls": 0,
+					"polls": 31,
+					"closedPolls": 31,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "29",
+						"contestName": "MLA / Député, 29 Rothesay",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11122,
+						"turnout": "63.92%",
+						"ballotCast": 7109,
+						"sort": 29,
+						"choiceResults": [
+							{
+								"id": "135",
+								"choiceName": "Stephanie TOMILSON",
+								"votes": 2001,
+								"percentage": "28.23%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2001,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "136",
+								"choiceName": "Hugh J. (Ted) FLEMMING",
+								"votes": 3542,
+								"percentage": "49.98%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3542,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "137",
+								"choiceName": "Josh FLOYD",
+								"votes": 251,
+								"percentage": "3.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 251,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "138",
+								"choiceName": "Ann MCALLISTER",
+								"votes": 571,
+								"percentage": "8.06%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 571,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "139",
+								"choiceName": "Michael GRIFFIN",
+								"votes": 722,
+								"percentage": "10.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 722,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"31": {
+				"statistics": {
+					"eligibleVoters": 11329,
+					"turnout": "56.96%",
+					"turnout2": "58.50%",
+					"ballotCast": 6453,
+					"ballotCast2": 6627,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 7,
+								"closedTabulators": 7
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "30",
+						"contestName": "MLA / Député, 30 Saint John East / Saint John-Est",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11329,
+						"turnout": "58.50%",
+						"ballotCast": 6627,
+						"sort": 30,
+						"choiceResults": [
+							{
+								"id": "140",
+								"choiceName": "Clare MANZER",
+								"votes": 1775,
+								"percentage": "26.84%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1775,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "141",
+								"choiceName": "Glen SAVOIE",
+								"votes": 3017,
+								"percentage": "45.62%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3017,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "142",
+								"choiceName": "Alex WHITE",
+								"votes": 402,
+								"percentage": "6.08%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 402,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "143",
+								"choiceName": "Lynaya ASTEPHEN",
+								"votes": 373,
+								"percentage": "5.64%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 373,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "144",
+								"choiceName": "Matthew THOMPSON",
+								"votes": 1047,
+								"percentage": "15.83%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1047,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"32": {
+				"statistics": {
+					"eligibleVoters": 10959,
+					"turnout": "53.59%",
+					"turnout2": "54.53%",
+					"ballotCast": 5873,
+					"ballotCast2": 5976,
+					"tabulators": 65,
+					"closedTabulators": 65,
+					"startedPolls": 0,
+					"polls": 33,
+					"closedPolls": 33,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "31",
+						"contestName": "MLA / Député, 31 Portland-Simonds",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10959,
+						"turnout": "54.53%",
+						"ballotCast": 5976,
+						"sort": 31,
+						"choiceResults": [
+							{
+								"id": "145",
+								"choiceName": "John MACKENZIE",
+								"votes": 1703,
+								"percentage": "28.64%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1703,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "146",
+								"choiceName": "Trevor A. HOLDER",
+								"votes": 3168,
+								"percentage": "53.28%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3168,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "147",
+								"choiceName": "Kim BLUE",
+								"votes": 449,
+								"percentage": "7.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 449,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "148",
+								"choiceName": "Sheila CROTEAU",
+								"votes": 435,
+								"percentage": "7.32%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 435,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "149",
+								"choiceName": "Artie WATSON",
+								"votes": 191,
+								"percentage": "3.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "7",
+										"partyName": "Independent / Indépendant",
+										"votes": 191,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"33": {
+				"statistics": {
+					"eligibleVoters": 10510,
+					"turnout": "43.41%",
+					"turnout2": "54.12%",
+					"ballotCast": 4562,
+					"ballotCast2": 5688,
+					"tabulators": 72,
+					"closedTabulators": 72,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 11,
+								"closedTabulators": 11
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "32",
+						"contestName": "MLA / Député, 32 Saint John Harbour",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10510,
+						"turnout": "54.12%",
+						"ballotCast": 5688,
+						"sort": 32,
+						"choiceResults": [
+							{
+								"id": "150",
+								"choiceName": "Gerry LOWE",
+								"votes": 1865,
+								"percentage": "32.89%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1865,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "151",
+								"choiceName": "Barry OGDEN",
+								"votes": 1855,
+								"percentage": "32.72%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1855,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "152",
+								"choiceName": "Jennifer MCKENZIE",
+								"votes": 836,
+								"percentage": "14.74%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 836,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "153",
+								"choiceName": "Wayne DRYER",
+								"votes": 721,
+								"percentage": "12.72%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 721,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "154",
+								"choiceName": "Margot BRIDEAU",
+								"votes": 393,
+								"percentage": "6.93%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 393,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"34": {
+				"statistics": {
+					"eligibleVoters": 10582,
+					"turnout": "61.88%",
+					"turnout2": "62.97%",
+					"ballotCast": 6548,
+					"ballotCast2": 6663,
+					"tabulators": 65,
+					"closedTabulators": 65,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 1,
+								"closedTabulators": 1
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "33",
+						"contestName": "MLA / Député, 33 Saint John Lancaster",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10582,
+						"turnout": "62.97%",
+						"ballotCast": 6663,
+						"sort": 33,
+						"choiceResults": [
+							{
+								"id": "155",
+								"choiceName": "Kathleen RILEY-KARAMANOS",
+								"votes": 1727,
+								"percentage": "25.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1727,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "156",
+								"choiceName": "Dorothy SHEPHARD",
+								"votes": 3001,
+								"percentage": "45.15%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3001,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "157",
+								"choiceName": "Tony MOWERY",
+								"votes": 414,
+								"percentage": "6.23%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 414,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "158",
+								"choiceName": "Doug JAMES",
+								"votes": 582,
+								"percentage": "8.76%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 582,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "159",
+								"choiceName": "Paul SEELYE",
+								"votes": 922,
+								"percentage": "13.87%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 922,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"35": {
+				"statistics": {
+					"eligibleVoters": 11378,
+					"turnout": "65.75%",
+					"turnout2": "66.70%",
+					"ballotCast": 7481,
+					"ballotCast2": 7589,
+					"tabulators": 71,
+					"closedTabulators": 71,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 10,
+								"closedTabulators": 10
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "34",
+						"contestName": "MLA / Député, 34 Kings Centre / Kings-Centre",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11378,
+						"turnout": "66.70%",
+						"ballotCast": 7589,
+						"sort": 34,
+						"choiceResults": [
+							{
+								"id": "160",
+								"choiceName": "Bill MERRIFIELD",
+								"votes": 1785,
+								"percentage": "23.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1785,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "161",
+								"choiceName": "Bill OLIVER",
+								"votes": 3267,
+								"percentage": "43.11%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3267,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "162",
+								"choiceName": "Susan Jane SHEDD",
+								"votes": 342,
+								"percentage": "4.51%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 342,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "163",
+								"choiceName": "Bruce DRYER",
+								"votes": 731,
+								"percentage": "9.65%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 731,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "164",
+								"choiceName": "Dave PETERS",
+								"votes": 1454,
+								"percentage": "19.18%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1454,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"36": {
+				"statistics": {
+					"eligibleVoters": 11303,
+					"turnout": "66.77%",
+					"turnout2": "71.03%",
+					"ballotCast": 7547,
+					"ballotCast2": 8029,
+					"tabulators": 79,
+					"closedTabulators": 79,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 15,
+								"closedTabulators": 15
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "35",
+						"contestName": "MLA / Député, 35 Fundy-The Isles-Saint John West / Fundy-Les-Îles-Saint John-Ouest",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11303,
+						"turnout": "71.03%",
+						"ballotCast": 8029,
+						"sort": 35,
+						"choiceResults": [
+							{
+								"id": "165",
+								"choiceName": "Rick DOUCET",
+								"votes": 2422,
+								"percentage": "30.25%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2422,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "166",
+								"choiceName": "Andrea ANDERSON-MASON",
+								"votes": 3808,
+								"percentage": "47.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3808,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "167",
+								"choiceName": "Keith LEBLANC",
+								"votes": 203,
+								"percentage": "2.54%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 203,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "168",
+								"choiceName": "Romey Frances HEUFF",
+								"votes": 469,
+								"percentage": "5.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 469,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "169",
+								"choiceName": "Doug ELLIS",
+								"votes": 1104,
+								"percentage": "13.79%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1104,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"37": {
+				"statistics": {
+					"eligibleVoters": 12170,
+					"turnout": "67.23%",
+					"turnout2": "68.21%",
+					"ballotCast": 8182,
+					"ballotCast2": 8301,
+					"tabulators": 75,
+					"closedTabulators": 75,
+					"startedPolls": 0,
+					"polls": 38,
+					"closedPolls": 38,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 13,
+								"closedTabulators": 13
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 4,
+								"closedTabulators": 4
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "36",
+						"contestName": "MLA / Député, 36 Saint Croix / Sainte-Croix",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12170,
+						"turnout": "68.21%",
+						"ballotCast": 8301,
+						"sort": 36,
+						"choiceResults": [
+							{
+								"id": "170",
+								"choiceName": "John B. AMES",
+								"votes": 2436,
+								"percentage": "29.40%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2436,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "171",
+								"choiceName": "Greg THOMPSON",
+								"votes": 3249,
+								"percentage": "39.21%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3249,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "172",
+								"choiceName": "Jan UNDERHILL",
+								"votes": 89,
+								"percentage": "1.07%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 89,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "173",
+								"choiceName": "Donna LINTON",
+								"votes": 1047,
+								"percentage": "12.63%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1047,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "174",
+								"choiceName": "Joyce WRIGHT",
+								"votes": 1466,
+								"percentage": "17.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1466,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"38": {
+				"statistics": {
+					"eligibleVoters": 11306,
+					"turnout": "65.65%",
+					"turnout2": "66.53%",
+					"ballotCast": 7422,
+					"ballotCast2": 7522,
+					"tabulators": 67,
+					"closedTabulators": 67,
+					"startedPolls": 0,
+					"polls": 33,
+					"closedPolls": 33,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "37",
+						"contestName": "MLA / Député, 37 Oromocto-Lincoln-Fredericton",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11306,
+						"turnout": "66.53%",
+						"ballotCast": 7522,
+						"sort": 37,
+						"choiceResults": [
+							{
+								"id": "175",
+								"choiceName": "John FIFE",
+								"votes": 2306,
+								"percentage": "30.71%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2306,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "176",
+								"choiceName": "Mary E. WILSON",
+								"votes": 2399,
+								"percentage": "31.95%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2399,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "177",
+								"choiceName": "Justin YOUNG",
+								"votes": 159,
+								"percentage": "2.12%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 159,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "178",
+								"choiceName": "Tom MCLEAN",
+								"votes": 903,
+								"percentage": "12.03%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 903,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "179",
+								"choiceName": "Craig RECTOR",
+								"votes": 1741,
+								"percentage": "23.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1741,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"39": {
+				"statistics": {
+					"eligibleVoters": 11724,
+					"turnout": "74.21%",
+					"turnout2": "75.08%",
+					"ballotCast": 8700,
+					"ballotCast2": 8802,
+					"tabulators": 72,
+					"closedTabulators": 72,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 8,
+								"closedTabulators": 8
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "38",
+						"contestName": "MLA / Député, 38 Fredericton-Grand Lake",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11724,
+						"turnout": "75.08%",
+						"ballotCast": 8802,
+						"sort": 38,
+						"choiceResults": [
+							{
+								"id": "180",
+								"choiceName": "Wendy TREMBLAY",
+								"votes": 955,
+								"percentage": "10.86%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 955,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "181",
+								"choiceName": "Pam LYNCH",
+								"votes": 2433,
+								"percentage": "27.67%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2433,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "182",
+								"choiceName": "Gerald BOURQUE",
+								"votes": 19,
+								"percentage": "0.22%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 19,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "183",
+								"choiceName": "Glenna HANLEY",
+								"votes": 114,
+								"percentage": "1.30%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 114,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "184",
+								"choiceName": "Dan WESTON",
+								"votes": 472,
+								"percentage": "5.37%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 472,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "185",
+								"choiceName": "Kris AUSTIN",
+								"votes": 4799,
+								"percentage": "54.58%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 4799,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"40": {
+				"statistics": {
+					"eligibleVoters": 12864,
+					"turnout": "71.11%",
+					"turnout2": "72.60%",
+					"ballotCast": 9147,
+					"ballotCast2": 9339,
+					"tabulators": 73,
+					"closedTabulators": 73,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 10,
+								"closedTabulators": 10
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "39",
+						"contestName": "MLA / Député, 39 New Maryland-Sunbury",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12864,
+						"turnout": "72.60%",
+						"ballotCast": 9339,
+						"sort": 39,
+						"choiceResults": [
+							{
+								"id": "186",
+								"choiceName": "Alex SCHOLTEN",
+								"votes": 2210,
+								"percentage": "23.69%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2210,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "187",
+								"choiceName": "Jeff CARR",
+								"votes": 3844,
+								"percentage": "41.21%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3844,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "188",
+								"choiceName": "Danelle TITUS",
+								"votes": 14,
+								"percentage": "0.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 14,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "189",
+								"choiceName": "Mackenzie THOMASON",
+								"votes": 143,
+								"percentage": "1.53%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 143,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "190",
+								"choiceName": "Jenica ATWIN",
+								"votes": 902,
+								"percentage": "9.67%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 902,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "191",
+								"choiceName": "Morris SHANNON",
+								"votes": 2214,
+								"percentage": "23.74%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 2214,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"41": {
+				"statistics": {
+					"eligibleVoters": 10759,
+					"turnout": "69.40%",
+					"turnout2": "70.63%",
+					"ballotCast": 7467,
+					"ballotCast2": 7599,
+					"tabulators": 65,
+					"closedTabulators": 65,
+					"startedPolls": 0,
+					"polls": 32,
+					"closedPolls": 32,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "40",
+						"contestName": "MLA / Député, 40 Fredericton South / Fredericton-Sud",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 10759,
+						"turnout": "70.63%",
+						"ballotCast": 7599,
+						"sort": 40,
+						"choiceResults": [
+							{
+								"id": "192",
+								"choiceName": "Susan HOLT",
+								"votes": 1525,
+								"percentage": "20.10%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1525,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "193",
+								"choiceName": "Scott SMITH",
+								"votes": 1042,
+								"percentage": "13.73%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1042,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "194",
+								"choiceName": "Chris DURRANT",
+								"votes": 132,
+								"percentage": "1.74%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 132,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "195",
+								"choiceName": "David COON",
+								"votes": 4273,
+								"percentage": "56.31%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 4273,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "196",
+								"choiceName": "Bonnie CLARK",
+								"votes": 616,
+								"percentage": "8.12%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 616,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"42": {
+				"statistics": {
+					"eligibleVoters": 11444,
+					"turnout": "66.63%",
+					"turnout2": "67.67%",
+					"ballotCast": 7625,
+					"ballotCast2": 7744,
+					"tabulators": 66,
+					"closedTabulators": 66,
+					"startedPolls": 0,
+					"polls": 33,
+					"closedPolls": 33,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 6,
+								"closedTabulators": 6
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 2,
+								"closedTabulators": 2
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "41",
+						"contestName": "MLA / Député, 41 Fredericton North / Fredericton-Nord",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11444,
+						"turnout": "67.67%",
+						"ballotCast": 7744,
+						"sort": 41,
+						"choiceResults": [
+							{
+								"id": "197",
+								"choiceName": "Stephen HORSMAN",
+								"votes": 2443,
+								"percentage": "31.61%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2443,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "198",
+								"choiceName": "Jill GREEN",
+								"votes": 2182,
+								"percentage": "28.23%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2182,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "199",
+								"choiceName": "Scarlett TAYS",
+								"votes": 139,
+								"percentage": "1.80%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 139,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "200",
+								"choiceName": "Tamara WHITE",
+								"votes": 1313,
+								"percentage": "16.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1313,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "201",
+								"choiceName": "Lynn KING",
+								"votes": 1651,
+								"percentage": "21.36%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1651,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"43": {
+				"statistics": {
+					"eligibleVoters": 12444,
+					"turnout": "71.13%",
+					"turnout2": "72.40%",
+					"ballotCast": 8852,
+					"ballotCast2": 9010,
+					"tabulators": 69,
+					"closedTabulators": 69,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 8,
+								"closedTabulators": 8
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "42",
+						"contestName": "MLA / Député, 42 Fredericton-York",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12444,
+						"turnout": "72.40%",
+						"ballotCast": 9010,
+						"sort": 42,
+						"choiceResults": [
+							{
+								"id": "202",
+								"choiceName": "Amber BISHOP",
+								"votes": 1652,
+								"percentage": "18.37%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1652,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "203",
+								"choiceName": "Kirk Douglas MACDONALD",
+								"votes": 2777,
+								"percentage": "30.88%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2777,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "204",
+								"choiceName": "Sandra BOURQUE",
+								"votes": 34,
+								"percentage": "0.38%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 34,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "205",
+								"choiceName": "Evelyne GODFREY",
+								"votes": 103,
+								"percentage": "1.15%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 103,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "206",
+								"choiceName": "Amanda WILDEMAN",
+								"votes": 1393,
+								"percentage": "15.49%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1393,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "207",
+								"choiceName": "Rick DESAULNIERS",
+								"votes": 3033,
+								"percentage": "33.73%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 3033,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"44": {
+				"statistics": {
+					"eligibleVoters": 12263,
+					"turnout": "69.55%",
+					"turnout2": "70.34%",
+					"ballotCast": 8529,
+					"ballotCast2": 8626,
+					"tabulators": 70,
+					"closedTabulators": 70,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "43",
+						"contestName": "MLA / Député, 43 Fredericton West-Hanwell / Fredericton-Ouest-Hanwell",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12263,
+						"turnout": "70.34%",
+						"ballotCast": 8626,
+						"sort": 43,
+						"choiceResults": [
+							{
+								"id": "208",
+								"choiceName": "Cindy MILES",
+								"votes": 2404,
+								"percentage": "27.93%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 2404,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "209",
+								"choiceName": "Dominic CARDY",
+								"votes": 2739,
+								"percentage": "31.82%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2739,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "210",
+								"choiceName": "Olivier HÉBERT",
+								"votes": 171,
+								"percentage": "1.99%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 171,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "211",
+								"choiceName": "Susan JONAH",
+								"votes": 1490,
+								"percentage": "17.31%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1490,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "212",
+								"choiceName": "Jason PAULL",
+								"votes": 1803,
+								"percentage": "20.95%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 1803,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"45": {
+				"statistics": {
+					"eligibleVoters": 12066,
+					"turnout": "68.12%",
+					"turnout2": "69.61%",
+					"ballotCast": 8219,
+					"ballotCast2": 8399,
+					"tabulators": 88,
+					"closedTabulators": 88,
+					"startedPolls": 0,
+					"polls": 42,
+					"closedPolls": 42,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 21,
+								"closedTabulators": 21
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 9,
+								"closedTabulators": 9
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "44",
+						"contestName": "MLA / Député, 44 Carleton-York",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 12066,
+						"turnout": "69.61%",
+						"ballotCast": 8399,
+						"sort": 44,
+						"choiceResults": [
+							{
+								"id": "213",
+								"choiceName": "Jackie MOREHOUSE",
+								"votes": 1556,
+								"percentage": "18.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1556,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "214",
+								"choiceName": "Carl URQUHART",
+								"votes": 3118,
+								"percentage": "37.17%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3118,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "215",
+								"choiceName": "Lloyd MAUREY",
+								"votes": 40,
+								"percentage": "0.48%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 40,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "216",
+								"choiceName": "Robert KITCHEN",
+								"votes": 255,
+								"percentage": "3.04%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 255,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "217",
+								"choiceName": "Sue RICKARDS",
+								"votes": 837,
+								"percentage": "9.98%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 837,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "218",
+								"choiceName": "Gary LEMMON",
+								"votes": 2583,
+								"percentage": "30.79%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 2583,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"46": {
+				"statistics": {
+					"eligibleVoters": 11353,
+					"turnout": "66.12%",
+					"turnout2": "66.47%",
+					"ballotCast": 7507,
+					"ballotCast2": 7546,
+					"tabulators": 82,
+					"closedTabulators": 82,
+					"startedPolls": 0,
+					"polls": 35,
+					"closedPolls": 35,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 19,
+								"closedTabulators": 19
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "45",
+						"contestName": "MLA / Député, 45 Carleton",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11353,
+						"turnout": "66.47%",
+						"ballotCast": 7546,
+						"sort": 45,
+						"choiceResults": [
+							{
+								"id": "219",
+								"choiceName": "Christy CULBERSON",
+								"votes": 1197,
+								"percentage": "15.89%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 1197,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "220",
+								"choiceName": "Stewart FAIRGRIEVE",
+								"votes": 2982,
+								"percentage": "39.58%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2982,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "221",
+								"choiceName": "Adam MCAVOY",
+								"votes": 82,
+								"percentage": "1.09%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 82,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "222",
+								"choiceName": "Amy ANDERSON",
+								"votes": 1247,
+								"percentage": "16.55%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 1247,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "223",
+								"choiceName": "Stewart B. MANUEL",
+								"votes": 2026,
+								"percentage": "26.89%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 2026,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"47": {
+				"statistics": {
+					"eligibleVoters": 11557,
+					"turnout": "62.70%",
+					"turnout2": "66.03%",
+					"ballotCast": 7246,
+					"ballotCast2": 7631,
+					"tabulators": 88,
+					"closedTabulators": 88,
+					"startedPolls": 0,
+					"polls": 45,
+					"closedPolls": 45,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 25,
+								"closedTabulators": 25
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 5,
+								"closedTabulators": 5
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "46",
+						"contestName": "MLA / Député, 46 Carleton-Victoria",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11557,
+						"turnout": "66.03%",
+						"ballotCast": 7631,
+						"sort": 46,
+						"choiceResults": [
+							{
+								"id": "224",
+								"choiceName": "Andrew HARVEY",
+								"votes": 3116,
+								"percentage": "40.88%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3116,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "225",
+								"choiceName": "Margaret C. JOHNSON",
+								"votes": 2872,
+								"percentage": "37.68%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 2872,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "226",
+								"choiceName": "Carter EDGAR",
+								"votes": 58,
+								"percentage": "0.76%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "3",
+										"partyName": "KISS N.B. Political Party",
+										"votes": 58,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "227",
+								"choiceName": "Margaret GELDART",
+								"votes": 114,
+								"percentage": "1.50%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 114,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "228",
+								"choiceName": "Paula SHAW",
+								"votes": 503,
+								"percentage": "6.60%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 503,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "229",
+								"choiceName": "Terry Leigh SISSON",
+								"votes": 960,
+								"percentage": "12.59%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "6",
+										"partyName": "People's Alliance of New Brunswick / L'Alliance des gens du Nouveau-Brunswick",
+										"votes": 960,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"48": {
+				"statistics": {
+					"eligibleVoters": 11407,
+					"turnout": "64.54%",
+					"turnout2": "66.56%",
+					"ballotCast": 7362,
+					"ballotCast2": 7592,
+					"tabulators": 70,
+					"closedTabulators": 70,
+					"startedPolls": 0,
+					"polls": 37,
+					"closedPolls": 37,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 8,
+								"closedTabulators": 8
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 4,
+								"closedTabulators": 4
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "47",
+						"contestName": "MLA / Député, 47 Victoria-La Vallée / Victoria-La-Vallée",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11407,
+						"turnout": "66.56%",
+						"ballotCast": 7592,
+						"sort": 47,
+						"choiceResults": [
+							{
+								"id": "230",
+								"choiceName": "Chuck CHIASSON",
+								"votes": 3570,
+								"percentage": "47.24%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 3570,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "231",
+								"choiceName": "Danny SOUCY",
+								"votes": 3212,
+								"percentage": "42.50%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 3212,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "232",
+								"choiceName": "Lina CHIASSON",
+								"votes": 307,
+								"percentage": "4.06%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 307,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "233",
+								"choiceName": "Paul PLOURDE",
+								"votes": 468,
+								"percentage": "6.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 468,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"49": {
+				"statistics": {
+					"eligibleVoters": 11323,
+					"turnout": "61.40%",
+					"turnout2": "62.64%",
+					"ballotCast": 6952,
+					"ballotCast2": 7093,
+					"tabulators": 72,
+					"closedTabulators": 72,
+					"startedPolls": 0,
+					"polls": 38,
+					"closedPolls": 38,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 11,
+								"closedTabulators": 11
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "48",
+						"contestName": "MLA / Député, 48 Edmundston-Madawaska Centre / Edmundston-Madawaska-Centre",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11323,
+						"turnout": "62.64%",
+						"ballotCast": 7093,
+						"sort": 48,
+						"choiceResults": [
+							{
+								"id": "234",
+								"choiceName": "Jean-Claude (JC) D'AMOURS",
+								"votes": 4668,
+								"percentage": "66.56%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4668,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "235",
+								"choiceName": "Gérald LEVESQUE",
+								"votes": 1437,
+								"percentage": "20.49%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1437,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "236",
+								"choiceName": "Anne-Marie COMEAU",
+								"votes": 206,
+								"percentage": "2.94%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 206,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "237",
+								"choiceName": "Sophie VAILLANCOURT",
+								"votes": 702,
+								"percentage": "10.01%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 702,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"50": {
+				"statistics": {
+					"eligibleVoters": 11377,
+					"turnout": "62.45%",
+					"turnout2": "63.20%",
+					"ballotCast": 7105,
+					"ballotCast2": 7190,
+					"tabulators": 71,
+					"closedTabulators": 71,
+					"startedPolls": 0,
+					"polls": 41,
+					"closedPolls": 41,
+					"countinggroups": [
+							{
+								"countingGroupId": "1",
+								"countingGroupName": "Election Day",
+								"tabulators": 10,
+								"closedTabulators": 10
+							},
+							{
+								"countingGroupId": "2",
+								"countingGroupName": "Advance",
+								"tabulators": 3,
+								"closedTabulators": 3
+							},
+							{
+								"countingGroupId": "3",
+								"countingGroupName": "Special",
+								"tabulators": 58,
+								"closedTabulators": 58
+							}
+						]
+				},
+				"contestResults": [
+					{
+						"id": "49",
+						"contestName": "MLA / Député, 49 Madawaska Les Lacs-Edmundston / Madawaska-Les-Lacs-Edmundston",
+						"voteFor": 1,
+						"isAcclaimed": false,
+						"eligibleVoters": 11377,
+						"turnout": "63.20%",
+						"ballotCast": 7190,
+						"sort": 49,
+						"choiceResults": [
+							{
+								"id": "238",
+								"choiceName": "Francine LANDRY",
+								"votes": 4191,
+								"percentage": "58.88%",
+								"isIncumbent": 1,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 1,
+								"partyBreakdown": [
+									{
+										"id": "1",
+										"partyName": "Liberal Party / Parti Libéral",
+										"votes": 4191,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "239",
+								"choiceName": "Jeannot VOLPE",
+								"votes": 1826,
+								"percentage": "25.65%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "2",
+										"partyName": "Progressive Conservative Party of New Brunswick / Le Parti Progressiste-Conservateur du Nouveau-Brunswick",
+										"votes": 1826,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "240",
+								"choiceName": "Cécile RICHARD-HÉBERT",
+								"votes": 156,
+								"percentage": "2.19%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Female",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "4",
+										"partyName": "New Brunswick New Democratic Party / Nouveau Parti démocratique du Nouveau-Brunswick",
+										"votes": 156,
+										"percentage": "100.00%"
+									}
+								]
+							},
+							{
+								"id": "241",
+								"choiceName": "Denis BOULET",
+								"votes": 945,
+								"percentage": "13.28%",
+								"isIncumbent": 0,
+								"isDisabled": 0,
+								"gender": "Male",
+								"isWinner": 0,
+								"partyBreakdown": [
+									{
+										"id": "5",
+										"partyName": "Parti Vert N.B. Green Party",
+										"votes": 945,
+										"percentage": "100.00%"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		}
+	]
+}
