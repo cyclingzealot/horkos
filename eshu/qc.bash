@@ -89,7 +89,7 @@ set +x
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
-        jsonSource='http://dgeq.org/resultats.json'
+        jsonSource='https://dgeq.org/resultats.json'
         minChars=5000
 
 		mkdir -p $workDir $readyDir
