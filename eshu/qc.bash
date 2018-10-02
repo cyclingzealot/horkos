@@ -91,6 +91,7 @@ set +x
 		readyDir="$dataDir/ready"
         jsonSource='https://dgeq.org/resultats.json'
         minChars=5000
+        completeStr='"nbVoteTotal":[0-9]'
 
 		mkdir -p $workDir $readyDir
 
@@ -100,7 +101,7 @@ set +x
 		startCurl=$(date +%s.%N)
 		curl -m $curlTimeout -s $jsonSource > $ridingFile || true
         #dos2unix $ridingFile
-		test `wc -c $ridingFile  | cut -f 1 -d' '` -gt $minChars && mv -v "$ridingFile" "$readyFile" || echo "$ridingFile has less than $minChars"
+		test `wc -c $ridingFile  | cut -f 1 -d' '` -gt $minChars && grep $completeStr $ridingFile && mv -v "$ridingFile" "$readyFile" || echo "$ridingFile has less than $minChars"
 		endCurl=$(date +%s.%N)
 		diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
