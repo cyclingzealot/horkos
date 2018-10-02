@@ -14,8 +14,8 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'on2018';
-	const CACHE_TTL_SECS		= 10;
+	const DEFAULT_ELECTION		= 'qc2016';
+	const CACHE_TTL_SECS		= 30;
 
     public function indexAction()
     {
@@ -25,7 +25,7 @@ class HorkosController extends Controller
 
     	#Get request parameters
     	$election			= $this->getRequest()->get('election')	?: self::DEFAULT_ELECTION;
-    	$language			= 'en';
+    	$language			= $this->getLanguage() ?: 'en';
     	$fresh				= $this->getRequest()->get('fresh');
     	$format				= $this->getRequest()->get('format')	?: 'html';
 
@@ -64,6 +64,7 @@ class HorkosController extends Controller
 
     	# Get the engine class name
     	$engineClassName	= self::getScrappingEngineClassName($election);
+        $this->get('logger')->debug("engineClassName = $engineClassName");
 
     	# Set the logger for the riding entity
     	Riding::setLogger($this->get('logger'));
@@ -96,15 +97,20 @@ class HorkosController extends Controller
 		}
 
 	    ### Render ####################################################################
-	    $response = $this->render("JlamHorkosBundle:Horkos:index.$format.twig", array(
-    				'ridings'	    => Riding::getAllRdingsSorted(),
+	    $viewName = "JlamHorkosBundle:Horkos:index.$language.$format.twig";
+	    if ($format != 'html')
+	    	$viewName = "JlamHorkosBundle:Horkos:index.$format.twig";
+
+	    $response = $this->render($viewName, array(
+    				'ridings'	=> Riding::getAllRdingsSorted(),
     				'partyTally' 	=> $partyTally,
     				'jurisdiction'	=> $jurisdictionTally,
-    				'summary'	    => $summary,
-    				'election'	    => $election ? $election : self::DEFAULT_ELECTION,
-    				'error'		    => $engineClassName::getScraperError(),
+    				'summary'	=> $summary,
+    				'election'	=> $election ? $election : self::DEFAULT_ELECTION,
+    				'error'		=> $engineClassName::getScraperError(),
     				'magnitude'     => $magnitude,
-                    'electionDate'  => $electionDateObj
+                    		'electionDate'  => $electionDateObj
+    				'language'	=> $language,
     		));
 
 
@@ -132,6 +138,32 @@ class HorkosController extends Controller
     }
 
 
+    private function getLanguage() {
+    	#Fist let's see if the language is set in the string
+    	$requestedLang = $this->getRequest()->get('language');
+
+    	if($requestedLang) {
+    		return $requestedLang;
+    	}
+
+    	#If not, check host being requested
+    	if(strpos($this->getRequest()->getHttpHost(), 'monvotedoitcompter') !== FALSE)
+    		return 'fr';
+
+    	#If not, look at the browsers setting
+		$searchingFor = array('en', 'fr');
+
+		$acceptedLanguages = $this->getRequest()->getLanguages();
+
+		foreach ($acceptedLanguages as $acceptedLang) {
+			foreach($searchingFor as $searchedLang) {
+				if(explode("-", $acceptedLang)[0] == $searchedLang) {
+					return $searchedLang;
+				}
+			}
+		}
+    }
+
     public static function getElectionNames() {
         return array(
     		'cdn2015'	=> 'Canadian 2015 election',
@@ -139,12 +171,14 @@ class HorkosController extends Controller
     		'on2018'	=> 'Ontario 2018 election',
         );
     }
+
     public static function getScrappingEngineClassName($electionShorthand = null) {
         $engineClassNames = array(
             'cdn2015'   => 'Cdn2015scrapper',
             'ab2015'    => 'Ab2015scrapper',
             'sk2016'    => 'Sk2016scrapper',
             'on2018'    => 'On2018scrapper',
+    	    'qc2016'	=> 'Qc2016scrapper',
         );
 
     	if(!isset($engineClassNames[$electionShorthand]))
