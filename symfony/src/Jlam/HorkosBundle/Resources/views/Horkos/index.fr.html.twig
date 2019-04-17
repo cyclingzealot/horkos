@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'JlamHorkosBundle:Horkos:head.html.twig' %}
+        <style>
+            {% include 'JlamHorkosBundle:Horkos:main.css.twig' %}
+        </style>
+    </head>
+<body>
+
+
+<div class="container">
+    <a name="top"></a>
+
+
+    <div class="row">
+
+        <div class="col-sm-3" >
+            <div class="logobg" >
+                <a  href="http://www.fairvote.ca"><img src="http://campaign2015.fairvote.ca/wp-content/themes/fairvotecanada/images/structure/unfair.png"></a>
+            </div>
+            <br>
+
+            <div class="table-responsive">
+                {% include 'JlamHorkosBundle:Horkos:' ~ election ~ '.contact.html.twig' %}
+            </div>
+        </div>
+
+        <br><br>
+
+
+
+        <div class="col-sm-9" >
+            {% if error == true %}
+            <button type="button" class="btn btn-danger wraap"><h2>How many votes will the {{summary.jurisdictionName}} election waste this time?</h2></button>
+            {% else %}
+                <button type="button" class="btn btn-danger wraap"><h2> &nbsp;<strong><ins id="unrepresented_votes">{{summary.totalWastedVotes}}</ins></strong> votes non-repr&eacute;sent&eacute;s dans l'élection {{summary.electionName}} </h2></button>
+            {% endif %}
+            <br>
+
+            <h5 class="">
+                <span class="glyphicon glyphicon-info-sign" id="bigIcone"></span>
+                <i>Un vote non-représenté est un vote qui n'ira pas au candidat gagnant de la circonscription de l'électeur.</i>
+            </h5>
+            <br><br>
+
+
+
+            <strong>Bonjour,</strong><br>
+            <p>Je m'appel
+                <a href="https://www.linkedin.com/in/julienlamarche">Julien Lamarche</a> (<a href="https://twitter.com/cyclingzealot">@cyclingzealot</a>).
+                Je suis bénévole avec <a href="http://www.fairvote.ca">Représentation équitable au Canada</a> (<a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a>),
+                une organisation dédié à l'éducation du public et à l'organisation politique pour augmenter le nombre de vote qui compte pour que les citoyens et contribuables soient mieux représentés.
+            </p>
+
+
+
+            {% if error == true %}
+                <p>Nous présenterons une compilation des votes non-représentés par circonscription et parti politique une fois que
+                les résultats de l'élection {{summary.electionName}}<a href="{{summary.source}}">*</a> sont publiés en ligne.</p>
+            {% else %}
+                <p>Voici une compilation des
+                <a href="{{summary.source}}">résultats de l'élection {{summary.electionName}}</a>.  </p>
+
+                <p>Les circonscriptions sont triés par le nombre de votes non-represéntés.
+                 Au bas, vous trouverez aussi les <a href="#byParty">votes non-représentés par parti politque.</a>.</p>
+            {% endif %}
+            <br><br>
+
+
+
+            <b>Gagnant prend tout : </b>
+            <p class="bg-info padded">
+                Les systèmes gagnant prends tout (à la fois le scrutin uninominal à un tour et le vote préférentiel - ie le vote alternatif) ont un taux élevé de vote gaspillés ou non-représentés.  La plupart des démocraties ont modernisé leur système électoral à un système proportionnel qui diminue grandement la non-représentation des votes.   Les systèmes proportionnels éliminent aussi les fausses majorités.
+            </p>
+            <br><br>
+
+
+
+
+            <b>Si vous voulez aidez: </b>
+            <ul class="helpList">
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Go <a href="https://secure.fairvote.ca/en/declaration#francaishttps://secure.fairvote.ca/en/declaration#francais">Signez la Déclaration des droits des électeurs</a></li>
+                {% if error == true %}
+                    <li></span><span class="twitterFix"><span class="glyphicon glyphicon-triangle-right">Partagez:</span> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca/?lang=fr" data-text="Combien de vote l'élection {{summary.jurisdictionName}} gaspillera cette fois-ci?" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+                {% else %}
+                    <li><span class="twitterFix"><span class="glyphicon glyphicon-triangle-right"></span>Partagez:</span> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.myvoteshouldcount.ca/?lang=fr" data-text="{{jurisdiction.wasted}} votes gaspillés par l'élection {{summary.jurisdictionName | title}} {{summary.tweetHandle}}" data-related="FairVoteCanada" data-count="none" data-hashtags="wastedvotes,fairvote" data-dnt="true">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+                {% endif %}
+                <li>Donnez à <span class="glyphicon glyphicon-triangle-right"></span><a href="http://www.fairvote.ca/donate/">Représentation équitable au Canada</a> ou <a href="https://www.democratienouvelle.ca/faire-un-don/">Mouvement démocratie nouvelle</a>
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Adh&eacute;rez-vous &agrave;<a href="https://payment.csfm.com/donations/fair_vote/fr/index.php">Repr&eacute;sentation équitable au Canada</a> ou <a href="http://www.democratienouvelle.ca/sinscrire-au-mdn/">Mouvement démocratie nouvelle</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Re-microposter les gazoullis de <a href="https://twitter.com/cyclingzealot">@cyclingzealot</a> ou avec le mot clique <a href="https://twitter.com/search?q=%23wastedvotes">#wastedvotes</a> durant l'élection</li>
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Abonnez-vous à <a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a>, <a herf="https://twitter.com/mdninfo">@MDNinfo</a> et suivez le mot clique <a href="https://twitter.com/search?q=%23fairvote">#fairvote</a></li>
+            </ul>
+
+        Pour plus d'information, consultez le site de <a href="https://www.democratienouvelle.ca/">Mouvement démocratie nouvelle</a> ou <a href="http://campagne2015.fairvote.ca/">Représentation équitable au Canada</a></p>
+
+
+
+        </div>{#.col-md-9#}
+
+    </div>{#row#}
+    <br><br><br><br>
+
+
+
+
+
+
+
+
+
+<!-- ============================================================================================================= -->
+
+
+
+
+
+    <!-- Riding table -->
+    {% if error != true %}
+    <a name="data"></a>
+
+    <h1><b>The numbers</b></h1>
+    <i>Data from indvidual ridings used in this compilation may be from 0 to 30 minutes late.</i>
+    <div class="table-responsive">
+        <table class="table table-striped  ">
+            <tr><th>Riding name</th><th>Unrepresented votes %</th><th>Unrepresented votes</th>{% if jurisdiction.eligible > 0 %}<th>Participation rate % (so far) </th>{% endif %}</tr>
+
+            {% for riding in ridings %}
+                <tr>
+                    <td><a href="{{riding.source}}">{{riding.name}}</a></td>
+                    <td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
+                    <td>{{riding.unrepresentedVotes}}</td>
+                    {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(riding.participationRate * 100)}} <!-- {{riding.allRidingVotes}} / {{riding.eligibleVoters}} --> </td>{% endif %}
+                </tr>
+            {% endfor %}
+
+            <tr style="font-weight: bold;">
+                <td>{{summary.jurisdictionName}}</td>
+                <td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
+                <td>{{jurisdiction.wasted}}</td>
+                {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(safe_divide(jurisdiction.all , jurisdiction.eligible) * 100)}}</td>{% endif %}
+            </tr>
+
+        </table>
+    </div>
+
+    <br><br><br><br>
+
+    <h1 name="byParty"><b><a name="byParty">Unrepresented votes by party:</a></b></h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped  ">
+            <tr><th>Party initials</th><th>Effective votes</th><th>Wasted votes</th><th>Total votes</th><th>Wasted votes %</th><th>Seats per {{magnitude}} votes</tr>
+
+            {% for party, partyData in partyTally %}
+            <tr>
+                <td>{{party}}</td>
+                <td align="right">{{partyData.effective}}</td>
+                <td align="right">{{partyData.wasted}}</td>
+                <td align="right">{{partyData.valid}}</td>
+                <td align="right">{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.valid) * 100)}}</td>
+                <td align="right">{{"%.1f" | format(safe_divide(partyData.leading , safe_divide(partyData.valid, magnitude)))}}</td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+    {% endif %}
+
+
+
+    <hr />
+    <p>
+        <i>Results compiled on <b>{{ "now"|date("Y-m-d H:i:s T") }}.</b>  Data used for individual ridings may be from 0 to 30 minutes late. </i>
+    </p>
+    <p>
+        Code available on <a href="{{summary.gitHubSource}}"> Github</a>.  If you add "?format=csv" you will get the votes for each party in every riding in tabular format.
+    </p>
+    <div id="top" >
+        <a href="#top" >Back to Top</a>
+    </div>
+
+
+</div>{#container#}
+</body>
+</html>
