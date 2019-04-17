@@ -65,8 +65,8 @@ echo Begin `date`  .....
 
 
 electionID=`echo $__base | cut -d '.' -f 1`
-curlTimeout=10
-sleepSecs=10 #Time between ridings
+curlTimeout=15
+sleepSecs=5 #Time between ridings
 restSecs=120 #Time between runs
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
