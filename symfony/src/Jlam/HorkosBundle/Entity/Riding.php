@@ -142,6 +142,8 @@ class Riding
 
 
     public function setVotes($party, $votes) {
+        $votes = str_replace(',', '', $votes);
+        $party = trim($party);
     	$this->localRaceTally->add(array($party=>$votes));
     }
 
