@@ -9,6 +9,9 @@ class Qc2016scrapper extends ScrapingEngine {
 
     const JURISDICTION_SHORTHAND = 'qc';
 
+
+    const ELECTION_DATE = "2018-10-01";
+
     public static function getSummary() {
     	return array(
     			'jurisdictionName'	=> 'Québec',
@@ -73,7 +76,7 @@ class Qc2016scrapper extends ScrapingEngine {
 
 		self::setSource($url);
 
-        parent::initialize($container);
+        parent::initialize($container, $language, ELECTION_DATE);
 
     }
 

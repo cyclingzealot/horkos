@@ -36,6 +36,8 @@ abstract class ScrapingEngine implements Scrapper {
 
 	protected static $error;
 
+	protected static $electionDate;
+
 	/*
 	 * @var array
 	 */
@@ -50,7 +52,7 @@ abstract class ScrapingEngine implements Scrapper {
 	protected function __construct() {}
 
 
-	public static function initialize($container, $language = 'en') {
+	public static function initialize($container, $language = 'en', $electionDate = '1970-01-01') {
 		if (self::$initialized)  return;
 
 		self::setLanguage($language);
@@ -60,6 +62,8 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$initialized = TRUE;
 
 		self::$error = FALSE;
+
+        self::$electionDate = $electionDate;
 	}
 
 
@@ -75,6 +79,18 @@ abstract class ScrapingEngine implements Scrapper {
 	public static function getScraperError() {
 		return self::$error;
 	}
+
+
+    public static function getElectionDate() {
+         $dateReturn = '1970-01-01';
+
+         if (defined(self::$electionDate)) {
+            $dateReturn = self::$electionDate;
+         }
+
+         return date_create($dateReturn);
+    }
+
 
 
 	public static function validate() {
