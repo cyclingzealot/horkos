@@ -84,13 +84,14 @@ class Ab2015scrapper extends ScrapingEngine {
             foreach($tableHeaders as $nodeElement) {
                 $elements = $nodeElement->childNodes;
                 self::addLog($elements->length . ' elements obtained');
-                $party = $elements->item(2)->textContent;
+                $party = trim($elements->item(2)->textContent);
                 #$text = $nodeElement->textContent;
                 #$party = (explode('>', $text)[1]);
 
                 self::addLog("Found header for $party for $ridingName");
 
                 $votes = $xpath->query('/html/body/div[2]/table[1]/tbody/tr/td')->item($columnIndex)->textContent;
+                $votes = str_replace(',', '', $votes);
 
                 if (ctype_space($votes) || $votes == '') $votes = 0 ;
 
