@@ -116,7 +116,7 @@ set +x
 			echo Data for file $ridingUrl in language $lang done!
 			echo; echo
 
-            echo `date`   "Sleeping for $diffCurl + 1 seconds"
+            echo `date`   "Sleeping for $diffCurl + $sleepSecs seconds"
             sleep $sleepSecs
             sleep $diffCurl
         done
