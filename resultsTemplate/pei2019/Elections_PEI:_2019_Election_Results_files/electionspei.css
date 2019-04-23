@@ -1,0 +1,796 @@
+/*************************************************************
+  ELECTIONSPEI Website CSS
+	- these setting override the default settings found in 
+		http://www.gov.pe.ca/style/css/pegovstyle_2.css
+	- 
+****************************************************************/
+body{
+	background-color: #ffffff;    
+	background-image: url(background.jpg);	
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+
+}
+* {
+    font-family: verdana,arial,sans-serif;
+    font-size: 11pt;
+    line-height: 125%;
+}
+#outer_border {
+    width:1000px;  
+}
+/*******************   Start Image URLS   ************************/ 
+#bk_cols2 {
+	background: url(2col.gif);
+}
+#bk_cols3 {
+	background: url(3col.gif);
+}
+#topBanner { 	
+	background-image: url(topbanner.jpg);
+}
+#topBanner_F { 		
+	background-image: url(topbanner.jpg);
+}
+/***************   END Image URLS   ******************************/
+/******************* Footer *************************************/
+#footer {
+	background-color: #929496;
+	color:#FFF;
+}
+#footer a {
+	color: #FFF;   
+}
+#footer a:hover {
+	color: #FFF;    
+}
+/*********************** Common Menu Bar *************************/
+#navigation {
+    background-color:#000;       
+}
+#homebtn{ 
+	color:#fff;					
+}
+#dropdown-menu li:hover li a, #dropdown-menu li.hover li a {  
+  background-color: #000;       
+  color:#FFF;
+}
+.navlink a:hover{
+    color: #FFF;
+    text-decoration: underline;
+}
+/************ **********  Right column  **************************/
+#rightcolumn {
+	background-color: #FFF;   
+}
+#rightcolumn  a, #rightcolumn  a:visited  {
+    color:#000;          
+}
+#rightcolumn  a:hover {
+    color:#000;         
+}
+/*********************  Left column ******************************/
+#leftcolumn {
+	background-color: #E6E6E7;    
+}
+#leftnav a{
+	background-color: #E6E6E7;    
+}
+#leftnav a:hover {
+    background-color:#E9EBEB;   
+    color:#000;					
+}
+#subleftnav a, #subleftnav a:link, #subnavlist a:visited {
+    background-color:#FFF;
+    color:#000000;
+}
+#subleftnav a:hover {
+    background-color:#E9EBEB;   
+    color:#000000;
+}
+/*************** Recent News ************************/ 
+.new-title, .news-title {
+    background-color:#929496;
+    border: 1px solid #929496;
+}
+/***************  Widgets   *****************/
+/*    Did you know  What's New          */ 
+.whatsNew-title, .dyk-title {
+    background-color:#929496;   
+}
+/****************  A to Z     ***************/
+.atoz a, .atoz a:visited {
+    background-color:#ADAFB0;    /* Medium Grey   */
+    color:#003399;
+}
+.atoz a:hover, .atoz a:active{
+    background-color: #ffffcc;
+}
+.smallwhite {
+	font-family: verdana,arial,sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+}
+/***************************************************************
+*********** originally from elections.css **********************
+****************************************************************/
+
+body, P {
+	font-family: verdana,arial,sans-serif;
+}
+P.tablesplit {
+	padding: 8px 0 4px 0;
+}
+a {
+	outline: none;
+}
+.SmallerText {
+	font-family: verdana,arial,sans-serif;
+	font-size: small;
+}
+ul { margin-top: 5px; margin-bottom: 8px;}
+ol { margin-top: 5px; margin-bottom: 8px;}
+ol li { font-size: 11pt; }
+ul li { font-size: 11pt; }
+li { margin-top: 5px; margin-bottom: 5px; line-height: 140%; }
+
+P { /* font size 13 and line height 145% */
+	margin: 0;
+	font-size: 11pt;
+	font-family: verdana,arial,sans-serif;
+	line-height: 125%;
+}
+P.Indent
+{
+	/* text-indent: 2em; */
+}
+.SmallCaps
+{
+	text-align: right;
+	text-transform: capitalize;
+	font-size: small;	
+}
+.headerlogo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.BoxOnTop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000000;	
+	width: 100%;
+	height: 100px;
+}
+.SideBar {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 170px;
+	bottom: 0;	
+	padding: 10px 0px 14px 0px;
+	margin: 0;
+}
+.BodyWell {
+	position: absolute;
+	top: 100px;
+	left: 160px;
+	background:#FFFFFF;
+	background-color: #FFFFFF;	
+	width: 600px;
+	margin: 20px 20px 20px 30px;
+	padding: 0px 0px 14px 0px;
+}
+.TextSection {
+	margin: 7px 0px 7px 0px;
+}
+.CallOut {
+	font-size: small;
+	font-weight: bold;
+	margin: 9px 0 9px 2em;	
+}
+.BodyDoubleLeft
+{
+	width: auto;
+	float: left;
+	clear: both;
+}
+.BodyDoubleRight
+{
+	width: auto;
+	text-align: right;
+}
+
+.LIBERAL 
+{
+	background: #FF6666;
+	text-align: center;
+	width: 33%;
+}
+.NDP
+{
+	background: #66FF66;
+	text-align: center;
+	width: 33%;
+}
+.PC
+{
+	background: #6666FF;
+	text-align: center;
+	width: 33%;
+}
+.HighlightBar
+{
+	background: #CCCCCC;
+	text-align: center;
+}
+.BlackBar
+{
+	background: #000000;
+	text-align: center;
+}
+.WhiteText
+{
+	color: #FFFFFF;
+	font-family: verdana,arial,sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	background: #000000;
+}
+
+
+.BigNumbers
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 24pt;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.MediumNumbers
+{
+  	text-align:center;
+	font-family: verdana,arial,sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+}
+
+.LittleNumbers
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 0 0 0 0;
+}
+
+.ReallyLittleNumbers
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	margin: 0 0 0 0;
+}
+
+.HighlightBar
+{
+	background: #666666;
+	text-align: center;
+}
+
+.SmallBits
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	background: #CCCCCC;
+	background: #666666;
+}
+
+.UpdateTime
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 80%;
+	font-weight: normal;
+	margin: 4px 0 4px 0;
+}
+
+.UpdateTimeTopHead
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	margin: 8px 0 4px 0;
+}
+
+
+.NoCandidate
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	color: #666666;
+	margin: 0 0 0 0;
+	text-align:center;
+}
+
+.ResultsNote {
+	font-family: verdana,arial,sans-serif;
+	font-size: 10pt; 
+	font-weight: normal; 
+	margin-bottom: 4px;
+}
+
+.CandidateFirstName
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+	font-size: 9pt;
+	margin: 2px 0px 0px 0px;
+	color: #000;
+}
+
+.CandidateLastName
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: 11pt;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+
+.CouncillorFirstName
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+	margin: 2px 0px 0px 0px;
+	color: #000;
+}
+
+.CouncillorLastName
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0px 0px 0px 0px;
+	color: #000;
+}
+
+.CandidateLittleName
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: 9pt;
+	margin: 0px 0px 0px 0px;
+	color: #000;
+}
+
+
+.SideBarLink
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+	margin: 2px 0px 0px 6px;
+	padding: 2px;
+	color: #000;
+	text-indent: 0;
+}
+
+.SideBarLinkHighlight
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+	margin: 2px 0px 0px 6px;
+	padding: 2px;
+	color: #FFFFFF;
+	background-color: #000000;	
+	text-indent: 0;
+}
+
+.SideBarLinkSmall
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+	margin: 2px 0px 0px 21px;
+	padding: 2px;
+	color: #000;
+}
+
+.SideBarLinkSmallHighlight
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	font-size: x-small;
+	margin: 2px 0px 0px 21px;
+	padding: 2px;
+	color: #FFFFFF;
+	background-color: #000000;	
+}
+
+.SideBarLinkReallySmall
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+	font-size: x-small;
+	margin: 2px 0px 0px 36px;
+	color: #000;
+}
+
+.SideBarLinkReallySmallHighlight
+{
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+	font-size: x-small;
+	margin: 2px 0px 0px 36px;
+	color: #FFFFFF;
+	background-color: #000000;	
+}
+
+.SmallBitsLight
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	margin: 0 0 0 0;
+	
+}
+.InsetItem {
+	font-family: verdana,arial,sans-serif;
+	font-size: small;
+	padding: 8px;
+	margin: 15px 0px 10px 0px;
+}
+
+.NameList {
+	font-family: verdana,arial,sans-serif;
+	padding: 8px;
+	margin: 15px 0px 10px 0px;
+}
+
+.PullOutQuote
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: small;
+	border-width: 1px;	
+	border-color: black;
+	border-style: dotted;
+	padding: 8px;
+	margin: 15px 0px 10px 0px;
+	overflow: auto;
+}
+
+.Highlight
+{
+	font-family: verdana,arial,sans-serif;
+	border-width: 1px;	
+	border-color: black;
+	
+	padding: 8px;
+	margin: 15px 0px 10px 0px;
+	overflow: auto;
+}
+
+.header {
+	font-family: verdana,arial,sans-serif;
+	border-width: 1px;	
+	border-color: black;
+	border-style: dotted;
+	padding: 8px;
+	margin: 0px 0px 10px 0px;
+}
+
+.AlertBox
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: medium;
+	border-width: 1px;	
+	border-color: black;
+	border-style: dotted;
+	padding: 8px;
+	margin: 14px 0px 14px 0px;
+	background-color: #EEEEEE;	
+}
+
+H3
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	margin: 0 0 4px 0;
+}
+
+H2
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	margin: 12px 2pc 8px 2pc;
+	background: #ccc;
+	border-bottom: 1px solid black;
+	padding: 2px 0 2px 5px;
+}
+
+H2.notop
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: medium;
+	font-weight: bold;
+	margin: 0px 0 4px 0;
+}
+
+
+H1
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	margin: 5px 2pc 4px 2pc;
+}
+
+P.UpdateTime
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	margin: 0pc 0pc 0pc 2pc;
+}
+
+H1.nobottom
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 16pt;
+	font-weight: bold;
+	margin: 5px 0 0 0;
+}
+
+.overh2 
+{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	border-bottom: 1px dotted black;
+	width: 100%;
+	color: grey;
+	padding-top: 6px;
+}
+
+h2.underover {
+	margin: 0 0 3px 0;
+}
+
+dl {
+margin: 0 0 9px 2em;
+padding: 0;
+font-size: 90%;
+}
+
+dt {
+font-weight: bold;
+}
+
+.table-display dd {
+	float: left;
+	width: 75%;
+	margin: 0;
+	padding-top: 5px;
+}
+
+table.summarytable {
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+tr.summaryheader  {
+	text-align: center;
+	color: #fff;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+tr.summaryheader td {
+	border: 1px solid #aaa;
+	width: 100px;
+	padding: 0;
+}
+
+tr.summaryheader td.districtheader {
+	border: 0;
+	width: 10%;
+	padding: 0;
+	background: #fff;
+	color: #000;
+}
+
+tr.summaryheader td.districtheadertext {
+	width: 10%;
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	background: #ccc;
+	color: #000;
+}
+
+tr.refsummaryheader  {
+	text-align: center;
+	color: #000;
+	background: #000;
+	color: #000;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+tr.refsummaryheader td {
+	font-size: 180%;
+	border: 1px solid #aaa;
+	width: 100px;
+	padding: 0;
+}
+
+tr.refsummaryheader td.districtheader {
+	border: 0;
+	width: 10%;
+	padding: 0;
+	background: #fff;
+	color: #000;
+}
+
+tr.refsummaryheader td.districtheadertext {
+	width: 10%;
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: bold;
+	background: #ccc;
+	color: #000;
+}
+
+tr.results {
+	text-align: center;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+tr.results td {
+	border: 1px solid #aaa;	
+	text-align: center;
+	font-size: 110%;
+	font-weight: bold;
+
+}
+
+tr.districtintro {
+	text-align: center;
+	font-weight: bold;
+}
+
+tr.districtintro td {
+	border: 1px solid #aaa;
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+}
+
+tr.results td.districtheadertext {
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+	text-align: center;
+}
+
+tr.percents {
+	text-align: center;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+tr.percents td {
+	border: 1px solid #aaa;
+	text-align: center;
+}
+
+tr.percents td.districtheadertext {
+	font-size: 60%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+}
+
+tr.districtresults {
+	text-align: center;
+	font-size: 120%;
+	font-weight: normal;
+}
+
+tr.districtresults td {
+	border: 1px solid #aaa;
+}
+
+tr.districtresults td.districtheadertext {
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+	font-weight: normal;
+}
+
+.advancepoll {
+	margin-top: 5px;
+	margin-left: 2pc;
+	font-size: 80%;
+	font-family: verdana,arial,sans-serif;
+}
+
+/* Microformats */
+
+.fn {
+  	font-weight: bold;
+	color: #000;
+}
+
+.phones {
+  margin-top: 6px;
+}
+.boxT {
+    background: none repeat scroll 0 0 #B6B7BC;
+
+}
+#content_2c ul  {
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
+#dropdown-menu li {
+	font-size:100%;
+	margin:0;
+}
+#voteTotal  td{
+    text-align: center;
+}
+#contentoverride td{
+    text-align: center;
+}
+
+.leader:before {
+	content: "Leader: "
+ }
+ .leader{font-family:verdana,arial,sans-serif;font-weight:bold; background-color:#FFFF66;}
+ .CouncillorLastName{font-family:verdana,arial,sans-serif;font-size:10pt}
+ .CouncillorFirstName{font-family:verdana,arial,sans-serif;font-size:9pt}
+ .MidGreyBar	{
+	font-family: verdana,arial,sans-serif;
+	background: #D7D7D7;
+  }
+ .SmallBits2	{
+	font-family: verdana,arial,sans-serif;
+	font-size: 9pt;
+	font-weight: bold;
+	margin: 0 0 0 0;
+	background: #D7D7D7;
+  }
+  .FontSize14	{
+	font-family: verdana,arial,sans-serif;
+	font-size: 14pt;
+	font-weight: normal;
+	margin: 0 0 0 0;
+ }
+ .RegularFont	{
+	font-family: verdana,arial,sans-serif;
+	font-size: 12pt;
+	font-weight: normal;
+	margin: 0 0 0 0;
+ }
+ .RegularBoldFont	{
+	font-family: verdana,arial,sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	margin: 0 0 0 0;
+ }
