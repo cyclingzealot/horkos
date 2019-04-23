@@ -14,7 +14,7 @@ class HorkosController extends Controller
 {
 
 	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'qc2016';
+	const DEFAULT_ELECTION		= 'ab2019';
 	const CACHE_TTL_SECS		= 30;
 
     public function indexAction()
@@ -108,9 +108,9 @@ class HorkosController extends Controller
     				'summary'	=> $summary,
     				'election'	=> $election ? $election : self::DEFAULT_ELECTION,
     				'error'		=> $engineClassName::getScraperError(),
-    				'magnitude'     => $magnitude,
-                    		'electionDate'  => $electionDateObj
+    				'magnitude' => $magnitude,
     				'language'	=> $language,
+                    'electionDate'  => $electionDateObj
     		));
 
 
@@ -135,6 +135,16 @@ class HorkosController extends Controller
 
 		#Return the controller
         return $response;
+    }
+
+
+    public static function getElectionNames() {
+        return array(
+    		'cdn2015'	=> 'Canadian 2015 election',
+    		'sk2016'	=> 'Saskatchewan 2016 election',
+    		'on2018'	=> 'Ontario 2018 election',
+    		'ab2019'	=> 'Alberta 2019 election',
+        );
     }
 
 
@@ -163,22 +173,13 @@ class HorkosController extends Controller
 			}
 		}
     }
-
-    public static function getElectionNames() {
-        return array(
-    		'cdn2015'	=> 'Canadian 2015 election',
-    		'sk2016'	=> 'Saskatchewan 2016 election',
-    		'on2018'	=> 'Ontario 2018 election',
-        );
-    }
-
     public static function getScrappingEngineClassName($electionShorthand = null) {
         $engineClassNames = array(
             'cdn2015'   => 'Cdn2015scrapper',
-            'ab2015'    => 'Ab2015scrapper',
+            'ab2019'    => 'Ab2015scrapper',
             'sk2016'    => 'Sk2016scrapper',
             'on2018'    => 'On2018scrapper',
-    	    'qc2016'	=> 'Qc2016scrapper',
+    		'qc2016'	=> 'Qc2016scrapper',
         );
 
     	if(!isset($engineClassNames[$electionShorthand]))

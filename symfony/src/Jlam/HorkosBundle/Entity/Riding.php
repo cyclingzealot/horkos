@@ -142,6 +142,8 @@ class Riding
 
 
     public function setVotes($party, $votes) {
+        $votes = str_replace(',', '', $votes);
+        $party = trim($party);
     	$this->localRaceTally->add(array($party=>$votes));
     }
 
@@ -219,7 +221,7 @@ class Riding
     	$localTally		= $this->localRaceTally->getTally();
     	$wastedTally	= self::copyWithoutHighest($localTally);
     	$winnerCount	= self::leadingOnly($localTally); // count winning seats
-        self::addLog("localTally is " . var_export($localTally, TRUE));
+        self::addLog("localTally for $this->name is " . var_export($localTally, TRUE));
 	$effectiveVotes = self::keepOnlyHighest($localTally); // with how many votes
 
     	self::$jurisdictionTally->add(array(
@@ -368,6 +370,7 @@ class Riding
 	$currentTally = self::$partyTally;
 
 	foreach($currentTally->getTally() as $stat => $partyData) {
+
 		foreach($partyData as $party => $value) {
 			$invertedTally->add(array($party=>array($stat=>$value)));
 		}
