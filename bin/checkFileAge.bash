@@ -84,7 +84,7 @@ if [[ "$error" -eq "1" ]]; then
 
 	echo "There are files older than $thresholdMinutes in horkos/eshu/data on `hostname` or I was not able to get a count:" > $msgFile
 	cat $fileList >> $msgFile
-	age.bash $scanTarget >> $msgFile
+	~/bin/age.bash $scanTarget >> $msgFile
 	echo  >> $msgFile
 	echo "Find exit code was $findExitCode" >> $msgFile
 	echo "Running on `hostname`" >> $msgFile
@@ -100,7 +100,7 @@ if [[ "$error" -eq "1" ]]; then
 	rm $msgFile
 else 
 	echo "Find on $scanTarget ran OK.  No errors.  No old files above $thresholdMinutes"
-	age.bash $scanTarget 
+	~/bin/age.bash $scanTarget 
 fi
 
 rm $fileList
