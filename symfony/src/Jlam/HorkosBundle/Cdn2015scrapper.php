@@ -227,10 +227,10 @@ class Cdn2015scrapper extends ScrapingEngine {
 	public static function getSummary() {
 		return array(
 				'jurisdictionName'	=> 'Canada',
-				'electionName'		=> 'Canadian 2015',
+				'electionName'		=> 'Canada 2019',
 				'source'			=> 'http://enr.elections.ca/ElectoralDistricts.aspx',
-				'tweetHandle'		=> '#elxn42',
-				'gitHubSource'		=> 'https://github.com/cyclingzealot/cdn2015',
+				'tweetHandle'		=> '#elxn43',
+				'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
 		);
 	}
 }
