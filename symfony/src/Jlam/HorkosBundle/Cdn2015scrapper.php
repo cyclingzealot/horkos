@@ -50,8 +50,9 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			$ridingNode = $xpath->query ( $xPathQuery );
 			$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
+			#$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
 
-			self::addLog($ridingName);
+			self::addLog("Riding name: $ridingName");
 			$riding->setName( utf8_decode($ridingName));
 
 			$tables = $doc->getElementsByTagName('table');
