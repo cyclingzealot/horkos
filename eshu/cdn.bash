@@ -132,7 +132,7 @@ set +x
 
 			echo `date`   Sleeping for $diffCurl + 1 seconds
 			sleep $diffCurl
-			sleep 1
+			sleep 5
 		done
 
 	done
