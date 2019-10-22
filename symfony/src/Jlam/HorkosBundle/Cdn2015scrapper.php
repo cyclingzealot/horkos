@@ -36,7 +36,6 @@ class Cdn2015scrapper extends ScrapingEngine {
 			$html = file_get_contents ( $path );
 
 
-
 			$doc = new \DOMDocument ();
 			self::setErrorHandler();
 			$doc->loadHTML ( $html );
@@ -49,6 +48,12 @@ class Cdn2015scrapper extends ScrapingEngine {
 			self::addLog("xPath: $xPathQuery");
 
 			$ridingNode = $xpath->query ( $xPathQuery );
+
+			if (is_null($ridingNode) or is_null ($ridingNode->item ( 0 ))) {
+				self::addLog("ERROR: Skipping riding $i, \$ridingNode or its item(0) is null (file $path)");
+				continue;
+			}
+
 			$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
 			#$ridingName = trim ( substr ( $ridingNode->item ( 0 )->textContent, 50 ) );
 
@@ -67,15 +72,16 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			self::addLog("Found $tablesLength items in \$tables");
 
-			$rows = $tables->item ( 0 )->getElementsByTagName ( 'tr' );
+			$rows = $tables->item ( 1 )->getElementsByTagName ( 'tr' );
 
 			$numRows = $rows->length;
 
-			self::addLog("There are $numRows rows\n");
+			self::addLog("There are $numRows rows");
 
 			$j = 0;
 
 			for($j=0; $j<$numRows-1; $j++) {
+				self::addLog("Row $j");
 				if($j==0)  continue;
 
 				$row = $rows->item($j);
@@ -84,13 +90,16 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 				$party = $cells->item(0)->textContent;
 
-				if(strpos($party, ':') !== FALSE)  continue;
+				self::addLog("Looking at party $party");
 
-				$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
-				$votes = str_replace(",", "", $votes);
+				if(strpos($party, ':') === FALSE) {
 
-				self::addLog("Scrapped: $party\t$votes\n");
-				$riding->setVotes($party, $votes);
+					$votes = preg_replace("/[^0-9]/", "", $cells->item(2)->textContent);
+					$votes = str_replace(",", "", $votes);
+
+					self::addLog("Scrapped: $party\t$votes\n");
+					$riding->setVotes($party, $votes);
+				}
 			}
 
 			$xPathQuery = '//*[@id="divElectorNumberucElectoralDistrictResult' . $i . '"]/p';
