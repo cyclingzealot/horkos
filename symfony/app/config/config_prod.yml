@@ -14,34 +14,35 @@ imports:
 monolog:
     handlers:
         main:
-            type:   stream
-            path:   "%kernel.logs_dir%/%kernel.environment%.log"
-            level:  info
+            type:         fingers_crossed
+            action_level: info
+            handler:      nested
+        nested:
+            type:  stream
+            path:  "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
         console:
-            type:   console
-            bubble: false
-            verbosity_levels:
-                VERBOSITY_VERBOSE: INFO
-                VERBOSITY_VERY_VERBOSE: DEBUG
-            channels: ["!doctrine"]
-        console_very_verbose:
-            type:   console
-            bubble: false
-            verbosity_levels:
-                VERBOSITY_VERBOSE: NOTICE
-                VERBOSITY_VERY_VERBOSE: NOTICE
-                VERBOSITY_DEBUG: DEBUG
-            channels: ["doctrine"]
-
+            type:  console
+            
+           
+# Dev mode:
 #    handlers:
 #        main:
-#            type:         stream
-##           type:         fingers_crossed
-#            action_level: info
-#            handler:      nested
-#        nested:
-#            type:  stream
-#            path:  "%kernel.logs_dir%/%kernel.environment%.log"
-#            level: debug
+#            type:   stream
+#            path:   "%kernel.logs_dir%/%kernel.environment%.log"
+#            level:  info
 #        console:
-#            type:  console
+#            type:   console
+#            bubble: false
+#            verbosity_levels:
+#                VERBOSITY_VERBOSE: INFO
+#                VERBOSITY_VERY_VERBOSE: DEBUG
+#            channels: ["!doctrine"]
+#        console_very_verbose:
+#            type:   console
+#            bubble: false
+#            verbosity_levels:
+#                VERBOSITY_VERBOSE: NOTICE
+#                VERBOSITY_VERY_VERBOSE: NOTICE
+#                VERBOSITY_DEBUG: DEBUG
+#            channels: ["doctrine"]
