@@ -72,7 +72,23 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			self::addLog("Found $tablesLength items in \$tables");
 
-			$rows = $tables->item ( 1 )->getElementsByTagName ( 'tr' );
+			if (is_null($tables)) { 
+				self::addLog("ERROR: Skipping riding $i, \$tables is null (file $path)");
+				continue;
+			}
+
+				
+			$tablePosition = 1;
+				
+			if (is_null($tables->item($tablePosition))) {
+				$tablePosition = 0;
+				if (is_null($tables->item($tablePosition))) {
+					self::addLog("ERROR: Skipping riding $i, both item(0) and item(1) of\$tables is null (file $path)");
+					continue;
+				}
+			}
+
+			$rows = $tables->item ( $tablePosition )->getElementsByTagName ( 'tr' );
 
 			$numRows = $rows->length;
 
