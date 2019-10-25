@@ -44,9 +44,9 @@ echo ${pid} > ${pidfile}
 
 #Capture everything to log
 mkdir -p ~/log
-log=~/log/$__base-${ts}.log
-exec >  >(tee -a $log)
-exec 2> >(tee -a $log >&2)
+log=~/log/$__base-${ts}.err.log
+#exec >  >(tee -a $log)
+#exec 2> >(tee -a $log >&2)
 touch $log
 chmod 600 $log
 
@@ -105,7 +105,7 @@ set +x
 
 		# For federal election, riding list was manually determined
 		# Alberta       # British Columbia # Manitoba # New Brunsw   # NFLD          # NWT       #Nova Scotia    # Nunavut  # Ontario      # PEI	   # Quebec       # Saskatchewan  # Yukon
-		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort > $ridingList
+		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort -R > $ridingList
 
 		for identifier in `cat $ridingList`; do
 			ridingUrl="https://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"
