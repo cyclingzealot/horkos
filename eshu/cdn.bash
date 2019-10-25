@@ -11,7 +11,7 @@ set -o nounset
 #(a.k.a set -x) to trace what gets executed
 #set -o xtrace
 
-# in scripts to catch mysqldump fails 
+# in scripts to catch mysqldump fails
 set -o pipefail
 
 # Set magic variables for current file & dir
@@ -44,9 +44,9 @@ echo ${pid} > ${pidfile}
 
 #Capture everything to log
 mkdir -p ~/log
-log=~/log/$__base-${ts}.log
-exec >  >(tee -a $log)
-exec 2> >(tee -a $log >&2)
+log=~/log/$__base-${ts}.err.log
+#exec >  >(tee -a $log)
+#exec 2> >(tee -a $log >&2)
 touch $log
 chmod 600 $log
 
@@ -81,17 +81,17 @@ fi
 
 runs=0
 set -x
-while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do 
+while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do
 set +x
 	echo Run $runs of $maxRuns...
 
-	for lang in e ; do 
+	for lang in e ; do
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
-	
+
 		mkdir -p $workDir $readyDir
-	
+
 		#This was for the byelection when the riding list was in simple HTML
 		#sourceUrl="http://enr.elections.ca/ElectoralDistricts.aspx?lang=$lang"
 		#sourceFile="$dataDir/source.html"
@@ -99,38 +99,45 @@ set +x
 		#echo; echo Getting riding list...
 		#curl  $sourceUrl > $sourceFile
 		#echo; echo Done. ; echo
-	
+
 		ridingList="$dataDir/ridingIDsList.txt"
 		#grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '=' -f 3 | cut -d '&' -f 1 > $ridingList
 
 		# For federal election, riding list was manually determined
 		# Alberta       # British Columbia # Manitoba # New Brunsw   # NFLD          # NWT       #Nova Scotia    # Nunavut  # Ontario      # PEI	   # Quebec       # Saskatchewan  # Yukon
-		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort > $ridingList
-	
+		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort -R > $ridingList
+
 		for identifier in `cat $ridingList`; do
-			ridingUrl="http://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"
+			ridingUrl="https://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"
 			ridingFile=$workDir/$identifier.html
 			readyFile=$readyDir/$identifier.html
-	
+
 			startCurl=$(date +%s.%N)
-			curl -m $curlTimeout -s $ridingUrl > $ridingFile || true
+
+            set -x
+			#curl -m $curlTimeout -s $ridingUrl > $ridingFile || true
+            wget --connect-timeout $curlTimeout -U 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0'  -O $ridingFile "$ridingUrl"
+            set +x
+
+            chmod o+r $ridingFile
+
 			string='<th class=" td_no_mobile " scope="col">'
 			grep "$string" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $string in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
-			echo; echo 
+			echo; echo
 			echo Data for riding $identifier in language $lang done!
-			echo; echo 
-	
+			echo; echo
+
 			echo `date`   Sleeping for $diffCurl + 1 seconds
 			sleep $diffCurl
-			sleep 1
-		done	
-	
+			sleep 5
+		done
+
 	done
-	
-	date 
+
+	date
 	echo Resting for $restSecs seconds....
 	echo
 	echo To interupt until next cron:
@@ -139,10 +146,10 @@ set +x
 	echo To stop permantly
 	echo touch $stopFlag
 	echo
-	for i in `seq $restSecs -1 0`; do 
-		printf "$i... " ; 
+	for i in `seq $restSecs -1 0`; do
+		printf "$i... " ;
 		if (( $i % 5 == 0 )) ; then echo ; fi
-		sleep 1; 
+		sleep 1;
 	done
 	echo ; echo
 
@@ -154,7 +161,7 @@ set +x
 done
 
 
-echo; echo; echo; echo; 
+echo; echo; echo; echo;
 
 
 

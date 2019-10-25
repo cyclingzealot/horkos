@@ -248,6 +248,10 @@ abstract class ScrapingEngine implements Scrapper {
 
 
 	protected static function addLog($message) {
+
+		#If you can't get any upates of logging in your files, enable the line below
+		#echo "<!-- $message -->\n";
+
 		$logger = self::getLogger();
 
 		$logger->info($message);
