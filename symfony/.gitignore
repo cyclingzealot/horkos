@@ -9,5 +9,4 @@
 /build/
 /vendor/
 /bin/
-/composer.phar
 *.sw?
