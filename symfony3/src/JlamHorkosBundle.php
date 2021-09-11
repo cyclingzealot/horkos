@@ -1,6 +1,6 @@
 <?php
 
-namespace Jlam\HorkosBundle;
+namespace App\HorkosBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
@@ -9,6 +9,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  */
 
-class JlamHorkosBundle extends Bundle
+class AppHorkosBundle extends Bundle
 {
 }

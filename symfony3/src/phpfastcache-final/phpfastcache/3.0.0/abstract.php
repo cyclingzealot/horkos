@@ -1,6 +1,6 @@
 <?php
 
-use Jlam\HorkosBundle\phpFastCache;
+use App\HorkosBundle\phpFastCache;
 
 
 abstract class BasePhpFastCache {

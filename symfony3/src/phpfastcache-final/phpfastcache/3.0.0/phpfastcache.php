@@ -5,7 +5,7 @@
  * Example at our website, any bugs, problems, please visit http://faster.phpfastcache.com
  */
 
-namespace Jlam\HorkosBundle;
+namespace App\HorkosBundle;
 
 require_once(dirname(__FILE__)."/abstract.php");
 require_once(dirname(__FILE__)."/driver.php");

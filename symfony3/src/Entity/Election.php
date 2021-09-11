@@ -1,6 +1,6 @@
 <?php
 
-namespace Jlam\HorkosBundle\Entity;
+namespace App\HorkosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

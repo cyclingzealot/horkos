@@ -1,9 +1,9 @@
 <?php
 
-namespace Jlam\HorkosBundle;
+namespace App\HorkosBundle;
 
-use Jlam\HorkosBundle\Entity\Riding;
-use Jlam\HorkosBundle\Scrapper;
+use App\HorkosBundle\Entity\Riding;
+use App\HorkosBundle\Scrapper;
 
 /**
  *

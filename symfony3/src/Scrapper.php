@@ -1,6 +1,6 @@
 <?php
 
-namespace Jlam\HorkosBundle;
+namespace App\HorkosBundle;
 
 interface Scrapper {
 	

@@ -1,8 +1,8 @@
 <?php
 
-namespace Jlam\HorkosBundle;
+namespace App\HorkosBundle;
 
-use Jlam\HorkosBundle\Entity\Riding;
+use App\HorkosBundle\Entity\Riding;
 
 
 class Qc2016scrapper extends ScrapingEngine {

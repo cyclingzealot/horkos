@@ -1,10 +1,10 @@
 <?php
 
-namespace Jlam\HorkosBundle\Entity;
+namespace App\HorkosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Translation\Tests\String;
-use Jlam\HorkosBundle\TallyHolder;
+use App\HorkosBundle\TallyHolder;
 
 /**
  * Riding
@@ -510,7 +510,7 @@ class Riding
     public static function getAllRdingsSorted() {
     	$allRidings = self::getAllRidings();
 
-		usort($allRidings, array('Jlam\HorkosBundle\Entity\Riding', 'sortRidings'));
+		usort($allRidings, array('App\HorkosBundle\Entity\Riding', 'sortRidings'));
 		$allRidings = array_reverse($allRidings);
 
     	return $allRidings;
