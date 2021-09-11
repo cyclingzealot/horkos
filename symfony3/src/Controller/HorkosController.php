@@ -1,19 +1,19 @@
 <?php
 
-namespace Jlam\HorkosBundle\Controller;
+namespace App\HorkosBundle\Controller;
 
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Jlam\HorkosBundle\Entity\Riding;
-use Jlam\HorkosBundle\TallyHolder;
-use Jlam\HorkosBundle\Twig\SafeDivideExtension;
-use Jlam\HorkosBundle\phpFastCache;
+use App\HorkosBundle\Entity\Riding;
+use App\HorkosBundle\TallyHolder;
+use App\HorkosBundle\Twig\SafeDivideExtension;
+use App\HorkosBundle\phpFastCache;
 
 class HorkosController extends Controller
 {
 
-	const BASE_DIR_SCRAPPERS	= 'Jlam\HorkosBundle\\';
+	const BASE_DIR_SCRAPPERS	= 'App\HorkosBundle\\';
 	const DEFAULT_ELECTION		= 'cdn2019';
 	const CACHE_TTL_SECS		= 30;
 
@@ -31,7 +31,7 @@ class HorkosController extends Controller
 
 
         if (empty($election) || $election == 'none') {
-	        $response = $this->render("JlamHorkosBundle:Horkos:none.html.twig", array(
+	        $response = $this->render("AppHorkosBundle:Horkos:none.html.twig", array(
                         electionsList => self::getElectionNames()
                         ));
             return $response;
@@ -42,7 +42,7 @@ class HorkosController extends Controller
 		#Setup caching
     	$cacheKey			= "$election.$language.$format";
     	$root = $this->get('kernel')->getRootDir();
-    	require_once("$root/../src/Jlam/HorkosBundle/phpfastcache-final/phpfastcache.php");
+    	require_once("$root/../src/App/HorkosBundle/phpfastcache-final/phpfastcache.php");
     	phpFastCache::setup("storage", "auto");
     	$cache = new phpFastCache();
 
@@ -97,9 +97,9 @@ class HorkosController extends Controller
 		}
 
 	    ### Render ####################################################################
-	    $viewName = "JlamHorkosBundle:Horkos:index.$language.$format.twig";
+	    $viewName = "AppHorkosBundle:Horkos:index.$language.$format.twig";
 	    if ($format != 'html')
-	    	$viewName = "JlamHorkosBundle:Horkos:index.$format.twig";
+	    	$viewName = "AppHorkosBundle:Horkos:index.$format.twig";
 
 	    $response = $this->render($viewName, array(
     				'ridings'	=> Riding::getAllRdingsSorted(),

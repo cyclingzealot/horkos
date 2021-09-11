@@ -1,5 +1,5 @@
 <?php
-namespace Jlam\HorkosBundle\Twig;
+namespace App\HorkosBundle\Twig;
 
 class SafeDivideExtension extends \Twig_Extension
 {
