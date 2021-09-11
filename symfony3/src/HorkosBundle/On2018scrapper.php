@@ -104,7 +104,7 @@ EOT;
 	}
 
 
-    public static function initialize($container, $language = 'en') {
+    public static function initialize($container, $language = 'en', $electionDate = '2018-06-07') {
 		self::setSource(self::ROOT_SOURCE_URL);
 
         parent::initialize($container);
