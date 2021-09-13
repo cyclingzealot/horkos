@@ -71,7 +71,7 @@ class Qc2016scrapper extends ScrapingEngine {
 	}
 
 
-    public static function initialize($container, $language = 'en') {
+    public static function initialize($container, $language = 'en', $electionDate = '20168-10-01') {
 		$url = "http://dgeq.org/resultats.json";
 
 		self::setSource($url);

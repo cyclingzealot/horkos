@@ -9,6 +9,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  */
 
-class AppHorkosBundle extends Bundle
+class JlamHorkosBundle extends Bundle
 {
 }

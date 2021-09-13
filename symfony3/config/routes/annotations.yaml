@@ -1,5 +1,5 @@
 controllers:
-    resource: ../../src/Controller/
+    resource: ../../src/HorkosBundle/Controller/
     type: annotation
 
 kernel:

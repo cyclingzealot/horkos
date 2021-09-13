@@ -70,7 +70,7 @@ class Sk2016scrapper extends ScrapingEngine {
 	}
 
 
-    public static function initialize($container, $language = 'en') {
+    public static function initialize($container, $language = 'en', $electionDate = '2016-04-04') {
 		$url = "http://results.elections.sk.ca/Home/LiveResults";
 
 		self::setSource($url);

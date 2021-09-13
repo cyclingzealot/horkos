@@ -3,8 +3,10 @@
 namespace App\HorkosBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Translation\Tests\String;
 use App\HorkosBundle\TallyHolder;
+
+#Tentaively removing this as Symfony5 / PHP 7 is not allowing us to use special class name String
+#use Symfony\Component\Translation\Tests\String;
 
 /**
  * Riding

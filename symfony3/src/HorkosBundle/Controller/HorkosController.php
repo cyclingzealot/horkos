@@ -4,22 +4,30 @@ namespace App\HorkosBundle\Controller;
 
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+#Apparently, symfony5 controllers don't extend anything
+#https://symfony.com/doc/current/page_creation.html#creating-a-page-route-and-controller
+#use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 use App\HorkosBundle\Entity\Riding;
 use App\HorkosBundle\TallyHolder;
 use App\HorkosBundle\Twig\SafeDivideExtension;
 use App\HorkosBundle\phpFastCache;
+use Psr\Log\LoggerInterface;
 
-class HorkosController extends Controller
+class HorkosController
 {
 
 	const BASE_DIR_SCRAPPERS	= 'App\HorkosBundle\\';
 	const DEFAULT_ELECTION		= 'cdn2019';
 	const CACHE_TTL_SECS		= 30;
 
-    public function indexAction()
+    public function index(LoggerInterface $logger) {
+        return $this->indexAction($logger);
+    }
+
+    public function indexAction(LoggerInterface $logger)
     {
-        $logger = $this->get('logger');
+        #$logger = $this->get('logger');
 
         $logger->info("Starting...");
 

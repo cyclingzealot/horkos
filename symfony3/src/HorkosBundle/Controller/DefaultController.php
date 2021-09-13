@@ -1,10 +1,13 @@
 <?php
 
+
 namespace App\HorkosBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+#Apparently, symofny3 controllers don't extend anything
+#https://symfony.com/doc/current/page_creation.html#creating-a-page-route-and-controller
+#use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class DefaultController
 {
     public function indexAction($name)
     {
