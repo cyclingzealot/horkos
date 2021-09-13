@@ -13,6 +13,8 @@ use App\HorkosBundle\TallyHolder;
 use App\HorkosBundle\Twig\SafeDivideExtension;
 use App\HorkosBundle\phpFastCache;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 class HorkosController
 {
@@ -21,21 +23,24 @@ class HorkosController
 	const DEFAULT_ELECTION		= 'cdn2019';
 	const CACHE_TTL_SECS		= 30;
 
-    public function index(LoggerInterface $logger) {
-        return $this->indexAction($logger);
+    protected $request;
+
+    public function index(Request $request, LoggerInterface $logger, KernelInterface $kernel) {
+        $this->request  = $request;
+        return $this->indexAction($request, $logger, $kernel);
     }
 
-    public function indexAction(LoggerInterface $logger)
+    public function indexAction(Request $request, LoggerInterface $logger, KernelInterface $kernel)
     {
         #$logger = $this->get('logger');
 
         $logger->info("Starting...");
 
     	#Get request parameters
-    	$election			= $this->getRequest()->get('election')	?: self::DEFAULT_ELECTION;
+    	$election			= $this->request->get('election')	?: self::DEFAULT_ELECTION;
     	$language			= $this->getLanguage() ?: 'en';
-    	$fresh				= $this->getRequest()->get('fresh');
-    	$format				= $this->getRequest()->get('format')	?: 'html';
+    	$fresh				= $this->request->get('fresh');
+    	$format				= $this->request->get('format')	?: 'html';
 
 
         if (empty($election) || $election == 'none') {
@@ -49,8 +54,8 @@ class HorkosController
 
 		#Setup caching
     	$cacheKey			= "$election.$language.$format";
-    	$root = $this->get('kernel')->getRootDir();
-    	require_once("$root/../src/App/HorkosBundle/phpfastcache-final/phpfastcache.php");
+    	$root = $kernel->getProjectDir();
+    	require_once("$root/src/HorkosBundle/phpfastcache-final/phpfastcache/3.0.0/phpfastcache.php");
     	phpFastCache::setup("storage", "auto");
     	$cache = new phpFastCache();
 
@@ -72,10 +77,10 @@ class HorkosController
 
     	# Get the engine class name
     	$engineClassName	= self::getScrappingEngineClassName($election);
-        $this->get('logger')->debug("engineClassName = $engineClassName");
+        $logger->debug("engineClassName = $engineClassName");
 
     	# Set the logger for the riding entity
-    	Riding::setLogger($this->get('logger'));
+    	Riding::setLogger($logger);
 
 		#If not, slurp data
 		$engineClassName::initialize($this->container);
@@ -158,20 +163,20 @@ class HorkosController
 
     private function getLanguage() {
     	#Fist let's see if the language is set in the string
-    	$requestedLang = $this->getRequest()->get('language');
+    	$requestedLang = $this->request->get('language');
 
     	if($requestedLang) {
     		return $requestedLang;
     	}
 
     	#If not, check host being requested
-    	if(strpos($this->getRequest()->getHttpHost(), 'monvotedoitcompter') !== FALSE)
+    	if(strpos($this->request->getHttpHost(), 'monvotedoitcompter') !== FALSE)
     		return 'fr';
 
     	#If not, look at the browsers setting
 		$searchingFor = array('en', 'fr');
 
-		$acceptedLanguages = $this->getRequest()->getLanguages();
+		$acceptedLanguages = $this->request->getLanguages();
 
 		foreach ($acceptedLanguages as $acceptedLang) {
 			foreach($searchingFor as $searchedLang) {
