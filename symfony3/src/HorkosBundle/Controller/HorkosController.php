@@ -53,7 +53,7 @@ class HorkosController extends AbstractController
 
 
         if (empty($election) || $election == 'none') {
-	        $response = $this->render("AppHorkosBundle:Horkos:none.html.twig", array(
+	        $response = $this->render("none.html.twig", array(
                         electionsList => self::getElectionNames()
                         ));
             return $response;
@@ -124,9 +124,9 @@ class HorkosController extends AbstractController
 		}
 
 	    ### Render ####################################################################
-	    $viewName = "AppHorkosBundle:Horkos:index.$language.$format.twig";
+	    $viewName = "index.$language.$format.twig";
 	    if ($format != 'html')
-	    	$viewName = "AppHorkosBundle:Horkos:index.$format.twig";
+	    	$viewName = "index.$format.twig";
 
 	    $response = $this->render($viewName, array(
     				'ridings'	=> Riding::getAllRdingsSorted(),

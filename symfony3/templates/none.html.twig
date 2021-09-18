@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include 'JlamHorkosBundle:Horkos:head.html.twig' %}
+        <style>
+            {% include 'JlamHorkosBundle:Horkos:main.css.twig' %}
+        </style>
+    </head>
+<body>
+
+
+<div class="container">
+    <a name="top"></a>
+
+
+    <div class="row">
+
+        <div class="col-sm-3" >
+            <div class="logobg" >
+                <a  href="http://www.fairvote.ca"><img src="/unfair.png"></a>
+            </div>
+            <br>
+
+            <div class="table-responsive">
+                {% include 'JlamHorkosBundle:Horkos:none.contact.html.twig' %}
+            </div>
+        </div>
+
+        <br><br>
+
+
+
+        <div class="col-sm-9" >
+            <button type="button" class="btn btn-danger wraap"><h2>How many wasted votes this time?</h2></button>
+            <br>
+
+            <h5 class="">
+                <span class="glyphicon glyphicon-info-sign" id="bigIcone"></span>
+                <i>An unrepresented vote is a vote that will not be represented in the legislature because it did not go to the winning candidate.</i>
+            </h5>
+            <br><br>
+
+
+
+            <strong>Hello,</strong><br>
+            <p>My name is
+                <a href="https://www.linkedin.com/in/julienlamarche">Julien Lamarche</a>(<a href="https://twitter.com/cyclingzealot">@cyclingzealot</a>).
+                I am a volunteer for <a href="http://www.fairvote.ca">Fair Vote Canada</a>(<a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a>),
+                an organization that does public education and lobbying to change the voting system so that more votes count.
+            </p>
+
+            <p>I use code run on this site to compile live election results and compute wasted votes.</p>
+
+            <b>Winner-take-all : </b>
+            <p class="bg-info padded">
+                Winner-take-all systems (both first past the post and preferential ballot - ie Alternative Vote) have a high
+                rate of wasted or unrepresented votes.  But most democracies have moved on to some form of proportional voting system which greatly diminish the lack of
+                representation (to about 5% of unrepresented votes). A proportional voting system also eliminates false government majorities.
+            </p>
+
+            <p>Elections available on this site are:</p>
+            <ul>
+            {% for electionShorthand , electionName in electionsList %}
+                <li><a href="/?election={{electionShorthand}}">{{electionName}}</a></li>
+            {% endfor %}
+            </ul>
+
+
+            <p>As for Ontario 2018, Elections Ontario has been most uncooperative to sharing live results with the public:</p>
+            <div class="bg-info padded">
+            <p>From: &quot;info@elections.on.ca &quot; <info@elections.on.ca>  <br />
+            To: Julien Lamarche <julien.lamarche@gmail.com>   <br />
+            Subject: RE:  Template of live results<br />
+            Date: Fri, 16 Mar 2018 12:23:07 -0400  <br />
+            Message-ID: <9299B16F0A88B74C8B480208939224D906FC6430@eoabigdcapmxs02.eo.on.local></p>
+
+            <p> Hello,</p>
+
+            <p> Thank you for contacting Elections Ontario.</p>
+
+            <p> The json feed will only be provided to the media consortium. If you are interested in joining the Ontario Media Election Consortium, you will need to reach out to that organization. Elections Ontario does not manage the consortium.</p>
+
+            <p> We hope this information is useful.</p>
+
+            <p> Regards,</p>
+
+            <p> Elections Ontario elections.on.ca  1.888.668.8683 Fax: 416.326.6200 </p>
+            </div>
+
+            <p>Elections Quebec shares a live JSON feed with the public. The staff at Elections Saskatchewan were very helpful.  But Elections Ontario?  Oh no, only the media elite can get live results!</p>
+
+            <p>I suspect there will be some sort of web page with live results on the elections Ontario site once the ballot counting starts.  Time permitting, I will be code as fast as I can to scrape those results.</p>
+
+
+
+            <p><b>If you wish to help : </b>
+            <ul class="helpList">
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Go <a href="http://secure.fairvote.ca/en/declaration">Sign the Declaration of Voters Rights</a></li>
+                <li><span class="glyphicon glyphicon-triangle-right"></span><a href="https://secure.fairvote.ca/en/civicrm/contribute/transact?reset=1&id=9">Donate</a> to Fair Vote Canada
+                <li><span class="glyphicon glyphicon-triangle-right"></span>Follow and retweet <a href="https://twitter.com/FairVoteCanada">@FairVoteCanada</a> and <a href="https://twitter.com/search?q=%23fairvote">#fairvote</a></li>
+            </ul></p>
+
+            <p>More information is available on the website of <a href="http://www.fairvote.ca">Fair Vote Canada</a></p>
+
+
+
+        </div>{#.col-md-9#}
+
+    </div>{#row#}
+    <br><br><br><br>
+
+
+
+
+
+
+
+
+
+<!-- ============================================================================================================= -->
+
+
+
+</div>
+</body>
+</html>

@@ -10,11 +10,15 @@ class SafeDivideExtension extends AbstractExtension
 	public function getFunctions()
 	{
 	   	return array(
-            'safe_divide' => new TwigFunction('safeDivide', [$this, 'safeDevide'])
+            'safe_divide' => new TwigFunction('safeDivide', [$this, 'safeDivide']),
+            'safeDivide' => new TwigFunction('safeDivide', [$this, 'safeDivide']),
         );
 
     }
 
+	public function safe_divide($a, $b) {
+    return $this->safeDivide($a, $b);
+  }
 	public function safeDivide($a, $b) {
 			if($b == 0)  return 0;
 

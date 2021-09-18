@@ -1,0 +1,3 @@
+{% for i,riding in ridings %}{% for party,result in riding.getLocalResults().getTally() %}
+{{riding.getId()}}	{{riding.name}}	{{party}}	{{result}}
+{% endfor %}{% endfor %}
