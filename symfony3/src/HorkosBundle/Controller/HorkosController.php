@@ -12,19 +12,21 @@ use App\HorkosBundle\Entity\Riding;
 use App\HorkosBundle\TallyHolder;
 use App\HorkosBundle\Twig\SafeDivideExtension;
 use App\HorkosBundle\phpFastCache;
+
 use Psr\Log\LoggerInterface;
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 # https://stackoverflow.com/questions/42182245/access-container-in-symfony-controllers
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
-use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+# use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+# use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-class HorkosController implements ContainerAwareInterface
+class HorkosController extends AbstractController
 {
-
-    use ContainerAwareTrait;
 
 	const BASE_DIR_SCRAPPERS	= 'App\HorkosBundle\\';
 	const DEFAULT_ELECTION		= 'cdn2019';

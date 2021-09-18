@@ -175,7 +175,7 @@ abstract class ScrapingEngine implements Scrapper {
 	 *
 	 * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
 	 */
-	public static function setContainer(\Symfony\Component\DependencyInjection\ContainerInterface $container) {
+	public static function setContainer($container) {
 		self::$container = $container;
 	}
 
