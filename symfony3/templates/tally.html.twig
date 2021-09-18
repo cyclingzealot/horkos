@@ -13,13 +13,13 @@
                 </td>
                 <td align="right">{{partyData.wasted}}</td>
                 <td align="right">{{partyData.valid}}</td>
-                <td align="right">{{"%.2f %%" | format(safe_divide(partyData.wasted , partyData.valid) * 100)}}</td>
+                <td align="right">{{"%.2f %%" | format(safeDivide(partyData.wasted , partyData.valid) * 100)}}</td>
                 <td align="right">
                     {% set leading = 0 %}
                     {% if partyData.leading is defined %}
                         {% set leading = partyData.leading %}
                     {% endif %}
-                    {{"%.1f" | format(safe_divide(leading , safe_divide(partyData.valid, magnitude)))}}
+                    {{"%.1f" | format(safeDivide(leading , safeDivide(partyData.valid, magnitude)))}}
                 </td>
             </tr>
             {% endfor %}

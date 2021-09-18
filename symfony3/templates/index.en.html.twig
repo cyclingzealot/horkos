@@ -137,7 +137,7 @@
             {% for riding in ridings %}
                 <tr>
                     <td><a href="{{riding.source}}">{{riding.name}}</a></td>
-                    <td>{{"%.2f %%" | format(safe_divide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
+                    <td>{{"%.2f %%" | format(safeDivide(riding.unrepresentedVotes , riding.validVotes) * 100)}}</td>
                     <td>{{riding.unrepresentedVotes}}</td>
                     {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(riding.participationRate * 100)}} <!-- {{riding.allRidingVotes}} / {{riding.eligibleVoters}} --> </td>{% endif %}
                 </tr>
@@ -145,9 +145,9 @@
 
             <tr style="font-weight: bold;">
                 <td>{{summary.jurisdictionName}}</td>
-                <td>{{"%.2f %%" | format(safe_divide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
+                <td>{{"%.2f %%" | format(safeDivide(jurisdiction.wasted , jurisdiction.valid) * 100)}}</td>
                 <td>{{jurisdiction.wasted}}</td>
-                {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(safe_divide(jurisdiction.all , jurisdiction.eligible) * 100)}}</td>{% endif %}
+                {% if jurisdiction.eligible > 0 %}<td>{{"%.2f %%" | format(safeDivide(jurisdiction.all , jurisdiction.eligible) * 100)}}</td>{% endif %}
             </tr>
 
         </table>
