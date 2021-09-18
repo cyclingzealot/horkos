@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% include 'JlamHorkosBundle:Horkos:head.html.twig' %}
+        {% include 'head.html.twig' %}
         <style>
-            {% include 'JlamHorkosBundle:Horkos:main.css.twig' %}
+            {% include 'main.css.twig' %}
         </style>
     </head>
 <body>
@@ -22,7 +22,7 @@
             <br>
 
             <div class="table-responsive">
-                {% include 'JlamHorkosBundle:Horkos:' ~ election ~ '.contact.html.twig' %}
+                {% include '' ~ election ~ '.contact.html.twig' %}
             </div>
         </div>
 
@@ -148,7 +148,7 @@
 
     <h1 name="byParty"><b><a name="byParty">Unrepresented votes by party:</a></b></h1>
 
-   {% include 'JlamHorkosBundle:Horkos:tally.html.twig' %}
+   {% include 'tally.html.twig' %}
     {% endif %}
 
 
