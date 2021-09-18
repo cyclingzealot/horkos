@@ -3,6 +3,7 @@
 namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
+use Psr\Log\LoggerInterface;
 
 
 class Ab2015scrapper extends ScrapingEngine {
@@ -11,7 +12,7 @@ class Ab2015scrapper extends ScrapingEngine {
 
     const ELECTION_DATE = "2019-04-16";
 
-   public static function initialize($container, $language = 'en', $electionDate = self::ELECTION_DATE) {
+   public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = self::ELECTION_DATE) {
         $url = "https://results.elections.ab.ca/";
 
         self::setSource($url);

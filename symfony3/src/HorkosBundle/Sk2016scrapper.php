@@ -3,6 +3,7 @@
 namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
+use Psr\Log\LoggerInterface;
 
 
 class Sk2016scrapper extends ScrapingEngine {
@@ -70,7 +71,7 @@ class Sk2016scrapper extends ScrapingEngine {
 	}
 
 
-    public static function initialize($container, $language = 'en', $electionDate = '2016-04-04') {
+    public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '2016-04-04') {
 		$url = "http://results.elections.sk.ca/Home/LiveResults";
 
 		self::setSource($url);

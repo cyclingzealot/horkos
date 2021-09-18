@@ -4,6 +4,8 @@ namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
 use App\HorkosBundle\Scrapper;
+use Psr\Log\LoggerInterface;
+
 
 /**
  *
@@ -33,6 +35,7 @@ abstract class ScrapingEngine implements Scrapper {
 	protected static $initialized;
 
 	protected static $container;
+	protected static $logger;
 
 	protected static $error;
 
@@ -52,12 +55,13 @@ abstract class ScrapingEngine implements Scrapper {
 	protected function __construct() {}
 
 
-	public static function initialize($container, $language = 'en', $electionDate = '1970-01-01') {
+	public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '1970-01-01') {
 		if (self::$initialized)  return;
 
 		self::setLanguage($language);
 
 		self::setContainer($container);
+		self::setLogger($logger);
 
 		self::$initialized = TRUE;
 
@@ -172,6 +176,10 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$container = $container;
 	}
 
+    public static function setLogger(LoggerInterface $logger) {
+        self::$logger = $logger;
+    }
+
 
 	public static function addRiding(Riding $riding) {
 		$riding->updateTallies();
@@ -238,13 +246,14 @@ abstract class ScrapingEngine implements Scrapper {
 	 * @return  LoggerInterface
 	 */
 	protected static function getLogger($message = null) {
-		$logger = self::$container->get('logger');
+		#$logger = self::$container->get('logger');
+
+        $logger = self::$logger;
 
 		if($message)  $logger->info($message);
 
 		return $logger;
 	}
-
 
 
 	protected static function addLog($message) {

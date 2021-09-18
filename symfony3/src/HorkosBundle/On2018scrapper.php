@@ -3,6 +3,7 @@
 namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
+use Psr\Log\LoggerInterface;
 
 
 class On2018scrapper extends ScrapingEngine {
@@ -104,7 +105,7 @@ EOT;
 	}
 
 
-    public static function initialize($container, $language = 'en', $electionDate = '2018-06-07') {
+    public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '2018-06-07') {
 		self::setSource(self::ROOT_SOURCE_URL);
 
         parent::initialize($container);

@@ -3,6 +3,7 @@
 namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
+use Psr\Log\LoggerInterface;
 
 
 class Qc2016scrapper extends ScrapingEngine {
@@ -71,7 +72,7 @@ class Qc2016scrapper extends ScrapingEngine {
 	}
 
 
-    public static function initialize($container, $language = 'en', $electionDate = '20168-10-01') {
+    public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '20168-10-01') {
 		$url = "http://dgeq.org/resultats.json";
 
 		self::setSource($url);

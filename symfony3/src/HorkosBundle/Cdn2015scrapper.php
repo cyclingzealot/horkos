@@ -3,6 +3,7 @@
 namespace App\HorkosBundle;
 
 use App\HorkosBundle\Entity\Riding;
+use Psr\Log\LoggerInterface;
 
 
 class Cdn2015scrapper extends ScrapingEngine {
@@ -72,14 +73,14 @@ class Cdn2015scrapper extends ScrapingEngine {
 
 			self::addLog("Found $tablesLength items in \$tables");
 
-			if (is_null($tables)) { 
+			if (is_null($tables)) {
 				self::addLog("ERROR: Skipping riding $i, \$tables is null (file $path)");
 				continue;
 			}
 
-				
+
 			$tablePosition = 1;
-				
+
 			if (is_null($tables->item($tablePosition))) {
 				$tablePosition = 0;
 				if (is_null($tables->item($tablePosition))) {

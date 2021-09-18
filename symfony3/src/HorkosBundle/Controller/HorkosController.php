@@ -16,8 +16,15 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-class HorkosController
+# https://stackoverflow.com/questions/42182245/access-container-in-symfony-controllers
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+
+
+class HorkosController implements ContainerAwareInterface
 {
+
+    use ContainerAwareTrait;
 
 	const BASE_DIR_SCRAPPERS	= 'App\HorkosBundle\\';
 	const DEFAULT_ELECTION		= 'cdn2019';
@@ -83,7 +90,7 @@ class HorkosController
     	Riding::setLogger($logger);
 
 		#If not, slurp data
-		$engineClassName::initialize($this->container);
+		$engineClassName::initialize($this->getContainer(), $logger);
 		$engineClassName::scrape();
 		$engineClassName::validate();
 
@@ -202,4 +209,7 @@ class HorkosController
 
     	return self::BASE_DIR_SCRAPPERS . $engineClassName;
     }
+
+    public function getContainer() { return $this->container; }
+    public function setConatiner($value) { $this->container = $value; }
 }
