@@ -12,12 +12,12 @@ class Ab2015scrapper extends ScrapingEngine {
 
     const ELECTION_DATE = "2019-04-16";
 
-   public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = self::ELECTION_DATE) {
+   public static function initialize($containerHash, $language = 'en', $electionDate = self::ELECTION_DATE) {
         $url = "https://results.elections.ab.ca/";
 
         self::setSource($url);
 
-        parent::initialize($container, $language, $electionDate);
+        parent::initialize($containerHash, $language, $electionDate);
 
     }
 

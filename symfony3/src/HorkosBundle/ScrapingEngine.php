@@ -5,6 +5,7 @@ namespace App\HorkosBundle;
 use App\HorkosBundle\Entity\Riding;
 use App\HorkosBundle\Scrapper;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 
 /**
@@ -36,6 +37,7 @@ abstract class ScrapingEngine implements Scrapper {
 
 	protected static $container;
 	protected static $logger;
+	protected static $kernel;
 
 	protected static $error;
 
@@ -55,13 +57,14 @@ abstract class ScrapingEngine implements Scrapper {
 	protected function __construct() {}
 
 
-	public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '1970-01-01') {
+	public static function initialize(Array $containerHash, $language = 'en', $electionDate = '1970-01-01') {
 		if (self::$initialized)  return;
 
 		self::setLanguage($language);
 
-		self::setContainer($container);
-		self::setLogger($logger);
+		self::setContainer($containerHash['container']);
+		self::setLogger($containerHash['logger']);
+		self::setKernel($containerHash['kernel']);
 
 		self::$initialized = TRUE;
 
@@ -180,6 +183,9 @@ abstract class ScrapingEngine implements Scrapper {
         self::$logger = $logger;
     }
 
+    public static function setKernel(Kernel $kernel) {
+        self::$kernel = $kernel;
+    }
 
 	public static function addRiding(Riding $riding) {
 		$riding->updateTallies();
@@ -202,9 +208,11 @@ abstract class ScrapingEngine implements Scrapper {
 
     // Returns associative array
 	protected static function getRidingPaths($jurisdiction, $lang) {
-		$kernelRootDir = self::$container->getParameter('kernel.root_dir');
+		#$kernelRootDir = self::$container->getParameter('kernel.root_dir');
 
-		$dataDir = $kernelRootDir . "/../../eshu/data/$jurisdiction/$lang/ready/";
+        $kernelRootDir = self::$kernel->getProjectDir();
+
+		$dataDir = $kernelRootDir . "/../eshu/data/$jurisdiction/$lang/ready/";
 
 		self::addLog("Opening data dir $dataDir");
 
@@ -328,7 +336,7 @@ abstract class ScrapingEngine implements Scrapper {
 				$logger = self::getLogger();
 
 
-				$logger->warn($message);
+				$logger->warning($message);
 
 				return true;//Returning false will mean that PHP's error handling mechanism will not be bypassed.
 			});

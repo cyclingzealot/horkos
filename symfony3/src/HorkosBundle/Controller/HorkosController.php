@@ -90,7 +90,12 @@ class HorkosController implements ContainerAwareInterface
     	Riding::setLogger($logger);
 
 		#If not, slurp data
-		$engineClassName::initialize($this->getContainer(), $logger);
+    $containerHash = [
+        'container' => $this->getContainer(),
+        'logger'    => $logger,
+        'kernel'    => $kernel,
+    ];
+		$engineClassName::initialize($containerHash);
 		$engineClassName::scrape();
 		$engineClassName::validate();
 

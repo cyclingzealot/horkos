@@ -72,12 +72,12 @@ class Qc2016scrapper extends ScrapingEngine {
 	}
 
 
-    public static function initialize($container, LoggerInterface $logger, $language = 'en', $electionDate = '20168-10-01') {
+    public static function initialize($containerHash, $language = 'en', $electionDate = '20168-10-01') {
 		$url = "http://dgeq.org/resultats.json";
 
 		self::setSource($url);
 
-        parent::initialize($container, $language, ELECTION_DATE);
+        parent::initialize($containerHash, $language, ELECTION_DATE);
 
     }
 
