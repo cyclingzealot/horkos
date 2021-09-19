@@ -169,7 +169,7 @@ class Riding
     	$totalVotes = $this->allRidingVotes;
 
     	if($voters == 0) {
-    		self::$logger->warn("0 eligible voters for " . $this->name);
+    		self::$logger->warning("0 eligible voters for " . $this->name);
     		return 0;
     	}
 
