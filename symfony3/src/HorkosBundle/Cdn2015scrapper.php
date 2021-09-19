@@ -253,9 +253,9 @@ class Cdn2015scrapper extends ScrapingEngine {
 	public static function getSummary() {
 		return array(
 				'jurisdictionName'	=> 'Canada',
-				'electionName'		=> 'Canada 2019',
+				'electionName'		=> 'Canada 2021',
 				'source'			=> 'http://enr.elections.ca/ElectoralDistricts.aspx',
-				'tweetHandle'		=> '#elxn43',
+				'tweetHandle'		=> '#elxn44',
 				'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
 		);
 	}
