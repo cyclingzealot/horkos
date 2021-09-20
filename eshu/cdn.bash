@@ -125,14 +125,15 @@ set +x
 			grep "$string" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $string in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
+			waitCurl=$(echo "$diffCurl*2" | bc)
 
 			echo; echo
 			echo Data for riding $identifier in language $lang done!
 			echo; echo
 
-			echo `date`   Sleeping for $diffCurl + 1 seconds
-			sleep $diffCurl
-			sleep 5
+			echo `date`   Sleeping for $waitCurl + 4 seconds
+			sleep $waitCurl
+			sleep 4
 		done
 
 	done
