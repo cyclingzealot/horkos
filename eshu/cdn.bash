@@ -7,6 +7,11 @@ arg1=${1:-''}
 if [[ $arg1 == '--help' || $arg1 == '-h' || -z "$arg1" ]]; then
     echo "You must now specify the minimum date & time counting starts (when polls close)"
     echo "This reduces the chances for the script to get results for ridings where polls haven't closed"
+    echo
+    echo "Usage: $0 {\$dateTime}"
+    echo
+    echo "The dateTime can be anything parsable by bash's date tool"
+    echo
     exit 0
 fi
 
