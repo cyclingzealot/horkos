@@ -1,0 +1,37 @@
+<?php
+
+$votesPerParty = Riding::$partyTally['valid'];  # <--- this should have a hash of votes per party
+
+$seatsPerParty = Riding::$partyTally['leading']; # <--- this should have seats count per party
+
+$totalSeatsLeading  = array_sum($seatsPerParty);
+$totalVotes         = array_sum($votesPerParty);
+
+$percentVotesPerParty = [];
+$percentSeatsPerParty = [];
+
+foreach($totalVotes as $party => $value) {
+    $percentVotesPerParty[$party] = $value / $totalVotes;
+    $percentSeatsPerParty[$party] = $value / $totalSeatsLeading;
+}
+
+
+?>
+
+
+
+
+<html>
+<body>
+
+<!--
+Actually just use https://nvd3.org/examples/pie.html
+
+Maybe use this bundle that combines nvd3 with symfony : https://github.com/angonyfox/nvd3-bundle
+
+According to https://nvd3.org/examples/pie.html, I just have to supply a javascript array of numbers, doesn't have to be percents.
+
+The challenge is picking the right colours and having them in sync between the two graphs.
+-->
+</body>
+</html>
