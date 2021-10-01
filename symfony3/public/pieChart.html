@@ -1,0 +1,58 @@
+
+
+<html>
+<script>
+//Regular pie chart example
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(true);
+
+    d3.select("#chart svg")
+        .datum(exampleData())
+        .transition().duration(350)
+        .call(chart);
+
+  return chart;
+});
+
+//Donut chart example
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(true)     //Display pie labels
+      .labelThreshold(.05)  //Configure the minimum slice size for labels to show up
+      .labelType("percent") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+      .donut(true)          //Turn on Donut mode. Makes pie chart look tasty!
+      .donutRatio(0.35)     //Configure how big you want the donut hole size to be.
+      ;
+
+    d3.select("#chart2 svg")
+        .datum(exampleData())
+        .transition().duration(350)
+        .call(chart);
+
+  return chart;
+});
+</script>
+<body>
+
+Actually just use https://nvd3.org/examples/pie.html
+
+Maybe use this bundle that combines nvd3 with symfony : https://github.com/angonyfox/nvd3-bundle
+--- Not maintained
+
+
+
+
+<svg height="200" width="200" viewBox="0 0 200 200">
+  <circle r="100" cx="100" cy="100" fill="white" />
+  <circle r="50" cx="100" cy="100" fill="bisque"
+          stroke="tomato"
+          stroke-width="100"
+          stroke-dasharray="31.42 100" />
+</svg>
+</body>
+</html>
