@@ -176,12 +176,27 @@ class HorkosController extends AbstractController
 
 
     private function getLanguage() {
-    	#Fist let's see if the language is set in the string
-    	$requestedLang = $this->request->get('language');
+    	#Fist let's see if the language is set in the URL
 
-    	if($requestedLang) {
-    		return $requestedLang;
-    	}
+        foreach (array('language', 'lang', 'l') as $param) {
+
+    	    $requestedLang = explode('-', $this->request->get($param));
+
+            // CAREFUL: $requestedLang is an array now
+
+    	    if($requestedLang)  {
+
+                $requestedLang = strtolower($requestedLang[0]);
+
+                if (count(array_intersect([$requestedLang], ['fr', 'en']))> 0) {
+    		        return $requestedLang;
+                }
+
+                if($requestedLang == 'l') { return 'fr'; }
+
+                if($requestedLang == 'e') { return 'en'; }
+    	    }
+        }
 
     	#If not, check host being requested
     	if(strpos($this->request->getHttpHost(), 'monvotedoitcompter') !== FALSE)
@@ -199,7 +214,12 @@ class HorkosController extends AbstractController
 				}
 			}
 		}
+
+        return 'en';
     }
+
+
+
     public static function getScrappingEngineClassName($electionShorthand = null) {
         $engineClassNames = array(
             'cdn2019'   => 'Cdn2015scrapper',

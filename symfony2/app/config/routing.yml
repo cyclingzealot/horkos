@@ -1,7 +1,0 @@
-jlam_cdn2015:
-    resource: "@JlamHorkosBundle/Resources/config/routing.yml"
-    prefix:   /
-
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation

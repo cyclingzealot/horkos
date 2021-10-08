@@ -2,6 +2,19 @@
 
 START=$(date +%s.%N)
 
+arg1=${1:-''}
+
+if [[ $arg1 == '--help' || $arg1 == '-h' || -z "$arg1" ]]; then
+    echo "You must now specify the minimum date & time counting starts (when polls close)"
+    echo "This reduces the chances for the script to get results for ridings where polls haven't closed"
+    echo
+    echo "Usage: $0 {\$dateTime}"
+    echo
+    echo "The dateTime can be anything parsable by bash's date tool"
+    echo
+    exit 0
+fi
+
 #exit when command fails (use || true when a command can fail)
 set -o errexit
 
@@ -70,6 +83,8 @@ restSecs=60
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
 maxRuns=100
+electionCountStart=$1
+
 
 touch $continueFlag
 
@@ -101,11 +116,129 @@ set +x
 		#echo; echo Done. ; echo
 
 		ridingList="$dataDir/ridingIDsList.txt"
-		#grep '<li><a href="ElectoralDistricts.aspx?ed=' $sourceFile | cut -d '=' -f 3 | cut -d '&' -f 1 > $ridingList
+        echo > $ridingList;
+
 
 		# For federal election, riding list was manually determined
-		# Alberta       # British Columbia # Manitoba # New Brunsw   # NFLD          # NWT       #Nova Scotia    # Nunavut  # Ontario      # PEI	   # Quebec       # Saskatchewan  # Yukon
-		(seq 1605 1639; seq 1674 1715; seq 1592 1605; seq 1582 1591; seq 1560 1566 ; echo 1641 ; seq 1571 1581 ; echo 1642; seq 2148 2268; seq 1567 1570 ; seq 2070 2147; seq 1660 1673 ; echo 1640 ) | sort -R > $ridingList
+
+        now=$(date +'%s')
+
+
+        # Montain (Alberta, NWT)
+        timezone='Canada/Mountain'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+
+            # Alberta
+		    (seq 1605 1639) >> $ridingList;
+
+            # NWT
+            echo 1641 >> $ridingList;
+        fi
+
+
+        # Pacific (British Columbia)
+        timezone='Canada/Pacific'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+
+            # British Columbia
+            (seq 1674 1715) >> $ridingList;
+        fi
+
+
+        # Central (Manitoba , Western Ontario)
+        timezone='Canada/Central'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+
+            # Manitoba
+            (seq 1592 1605) >> $ridingList;
+        fi
+
+
+
+        # Atlantic Canada (NB, NS, NFLD)
+        timezone='Canada/Atlantic'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+
+	        # New Brunswick
+	        (seq 1582 1591) >> $ridingList;
+
+	        # Nova Scotia
+	        seq 1571 1581 >> $ridingList;
+
+            # PEI
+            seq 1567 1570 >> $ridingList ;
+
+        fi
+
+
+        # Newfoundland
+        timezone='Canada/Newfoundland'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge  "$startThisTz" ]; then
+            echo "Including $timezone"
+	        # NFLD
+	        seq 1560 1566 >> $ridingList;
+        fi
+
+
+        # Eastern (Ontario, Quebec, Nunavut)
+        timezone='Canada/Eastern'
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+
+            # Québec
+            seq 2070 2147 >> $ridingList;
+
+            # Ontario
+            seq 2148 2268 >> $ridingList ;
+
+            # Nunavut
+            echo 1642 >> $ridingList;
+        fi
+
+
+        # Saskatchewan
+        timezone=Canada/Saskatchewan
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ]; then
+            echo "Including $timezone"
+            # Saskatchewan
+            seq 1660 1673 >> $ridingList;
+        fi
+
+        # Yukon
+        timezone=Canada/Yukon
+        startThisTz=$(TZ="$timezone" date --date "$electionCountStart" +'%s')
+
+        if [ "$now" -ge "$startThisTz" ] ; then
+            echo "Including $timezone"
+            # Yukon
+            echo 1640 >> $ridingList
+        fi
+
+        cat $ridingList | sort -n | uniq | sort -R > $ridingList.2
+        mv -fv $ridingList.2 $ridingList
+
+        echo
+        wc -l $ridingList
+        echo
+        sleep 3
 
 		for identifier in `cat $ridingList`; do
 			ridingUrl="https://enr.elections.ca/ElectoralDistricts.aspx?ed=$identifier&lang=$lang"
@@ -125,14 +258,15 @@ set +x
 			grep "$string" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $string in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
+			waitCurl=$(echo "$diffCurl*2" | bc)
 
 			echo; echo
 			echo Data for riding $identifier in language $lang done!
 			echo; echo
 
-			echo `date`   Sleeping for $diffCurl + 1 seconds
-			sleep $diffCurl
-			sleep 5
+			echo `date`   Sleeping for $waitCurl + 4 seconds
+			sleep $waitCurl
+			sleep 4
 		done
 
 	done
