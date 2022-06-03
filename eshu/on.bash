@@ -2,6 +2,17 @@
 
 START=$(date +%s.%N)
 
+arg1=${1:-''}
+
+if [[ $arg1 == '--help' || $arg1 == '-h' || -z "$arg1" ]]; then
+    echo "Script author should have provided help"
+fi
+
+echo "This script was made to scrape live ON results.  However, despite mimicking the POST request and capturing the cookie, I have been unable to get results back, yet.  I think the next step is to get a GUI browser to send NO cookies at all and proove that the lack of cookies is at fault."
+echo
+echo "Elections ON in 2022 did post some unofficial but not live results the day after at https://www.elections.on.ca/en/election-results.html and that's what we are going to scrape, with ./on_day_after.bash"
+exit 1
+
 #exit when command fails (use || true when a command can fail)
 set -o errexit
 
@@ -96,13 +107,30 @@ set +x
 		mkdir -p $workDir $readyDir
 
 		for identifier in `seq 1 124`; do
-            dataSource="https://www4.elections.on.ca/RealTimeResults/api/EDResults/GetEDResults/504/$identifier/en"
+            cookieJarFile=$workDir/on_cookier_jar.txt
+            getCookieUrl="https://rtr.elections.on.ca/RealTimeResults/api/refdata/geteds/513/en"
+            curl --cookie-jar $cookieJarFile --max-time $curlTimeout --verbose $getCookieUrl > /dev/null
+
+            echo "Cookie file"
+            cat $cookieJarFile
+            sleep 5
+
+
+            dataSource="https://rtr.elections.on.ca/RealTimeResults/api/edresults/getedresults"
 			ridingFile=$workDir/$identifier.json
 			readyFile=$readyDir/$identifier.json
 
 			startCurl=$(date +%s.%N)
-			curl -m $curlTimeout -s $dataSource > $ridingFile || true
-            dos2unix $ridingFile
+            postData="{\"languageCode\":\"en\",\"electoralDistricts\":[{\"eventId\":513,\"electoralDistrictId\":${identifier}}]}"
+            set -x
+			curl --cookie $cookieJarFile --max-time $curlTimeout --verbose --data "${postData}" $dataSource  > $ridingFile || true
+            set +x
+            ls -lh $ridingFile
+            wc -l $ridingFile
+            cat $ridingFile
+            #dos2unix $ridingFile
+            echo
+            sleep 5
 			grep "$completeStr" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $completeStr in $ridingFile"
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
