@@ -5,7 +5,7 @@ START=$(date +%s.%N)
 arg1=${1:-''}
 
 if [[ $arg1 == '--help' || $arg1 == '-h' || -z "$arg1" ]]; then
-    echo "Script scrape unofficial results the day after"
+    echo "Script get unofficial results the day after"
 fi
 
 #exit when command fails (use || true when a command can fail)
@@ -77,7 +77,7 @@ restSecs=10
 continueFlag=/tmp/$__base.continue
 stopFlag=/tmp/$__base.stop
 maxRuns=100
-completeStr='"cs":[{"n":"'
+completeStr='data-variable="PercentageOfVotes"'
 dataFormat='json'
 
 touch $continueFlag
@@ -94,44 +94,38 @@ while [[ -f $continueFlag && $runs -lt $maxRuns && ! -f $stopFlag  ]]; do
 set +x
 	echo Run $runs of $maxRuns...
 
-	for lang in e ; do
+	for lang in en ; do
 		dataDir="$__dir/data/$electionID/$lang/"
 		workDir="$dataDir/work/"
 		readyDir="$dataDir/ready"
+        listOfRidingPages=$workDir/list_of_riding_pages.txt
+        hostAddress=www.elections.on.ca
+        indexUrl=https://${hostAddress}/en/election-results.html
 
 		mkdir -p $workDir $readyDir
 
-		for identifier in `seq 1 124`; do
-            cookieJarFile=$workDir/on_cookier_jar.txt
-            getCookieUrl="https://rtr.elections.on.ca/RealTimeResults/api/refdata/geteds/513/en"
-            curl --cookie-jar $cookieJarFile --max-time $curlTimeout --verbose $getCookieUrl > /dev/null
+        curl --silent "$indexUrl"  | grep option | grep value | cut -d\" -f 2  | grep election-results | tee $listOfRidingPages
 
-            echo "Cookie file"
-            cat $cookieJarFile
-            sleep 5
-
-
-            dataSource="https://rtr.elections.on.ca/RealTimeResults/api/edresults/getedresults"
-			ridingFile=$workDir/$identifier.json
-			readyFile=$readyDir/$identifier.json
-
+		for url in `cat $listOfRidingPages`; do
 			startCurl=$(date +%s.%N)
-            postData="{\"languageCode\":\"en\",\"electoralDistricts\":[{\"eventId\":513,\"electoralDistrictId\":${identifier}}]}"
-            set -x
-			curl --cookie $cookieJarFile --max-time $curlTimeout --verbose --data "${postData}" $dataSource  > $ridingFile || true
-            set +x
+
+            sourceUrl=https://${hostAddress}/${url}
+            fileName=$(echo $url | cut -d/ -f 6)
+            ridingFile=$workDir/$fileName
+            readyFile=$readyDir/$fileName
+
+            curl --silent --max-time $curlTimeout $sourceUrl > $ridingFile
+
             ls -lh $ridingFile
             wc -l $ridingFile
-            cat $ridingFile
-            #dos2unix $ridingFile
-            echo
-            sleep 5
+
 			grep "$completeStr" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $completeStr in $ridingFile"
+
 			endCurl=$(date +%s.%N)
 			diffCurl=$(echo "$endCurl - $startCurl" | bc)
 
 			echo; echo
-			echo Data for riding $identifier in language $lang done!
+			echo Data for riding $fileName in language $lang done!
 			echo; echo
 
 			echo `date`   Sleeping for $diffCurl + 1 seconds
