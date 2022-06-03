@@ -5,13 +5,8 @@ START=$(date +%s.%N)
 arg1=${1:-''}
 
 if [[ $arg1 == '--help' || $arg1 == '-h' || -z "$arg1" ]]; then
-    echo "Script author should have provided help"
+    echo "Script scrape unofficial results the day after"
 fi
-
-echo "This script was made to scrape live ON results.  However, despite mimicking the POST request and capturing the cookie, I have been unable to get results back, yet.  I think the next step is to get a GUI browser to send NO cookies at all and proove that the lack of cookies is at fault."
-echo
-echo "Elections ON in 2022 did post some unofficial but not live results the day after at https://www.elections.on.ca/en/election-results.html and that's what we are going to scrape, with ./on_day_after.bash"
-exit 1
 
 #exit when command fails (use || true when a command can fail)
 set -o errexit
