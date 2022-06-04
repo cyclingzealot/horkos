@@ -88,11 +88,23 @@ class OnScrapper extends ScrapingEngine {
        
             $cellsWithPartyVotes = $xpath->query("//td[@data-variable='NumberOfVotes']");
             
-            echo '';
+            foreach($cellsWithPartyNames as $i => $item) {
+                $partyName = $item->textContent;
+                
+                if($partyName == '') {
+                    continue;
+                }
+                
+                $votes = $cellsWithPartyVotes->item($i)->textContent;
+                $votes = str_replace([',', ' '], '', $votes);
+                $votes = (int)$votes;
+                $riding->setVotes($partyName, $votes);
+            }
+            
+            $riding->updateTallies();
             
         }
         
-        die("We don't have data beyond this yet");
         return 
         
         
