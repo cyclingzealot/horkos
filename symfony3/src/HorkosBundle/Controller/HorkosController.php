@@ -29,7 +29,7 @@ class HorkosController extends AbstractController
 {
 
 	const BASE_DIR_SCRAPPERS	= 'App\HorkosBundle\\';
-	const DEFAULT_ELECTION		= 'cdn2019';
+	const DEFAULT_ELECTION		= 'on';
 	const CACHE_TTL_SECS		= 30;
 
     protected $request;
@@ -225,7 +225,7 @@ class HorkosController extends AbstractController
             'cdn2019'   => 'Cdn2015scrapper',
             'ab2019'    => 'Ab2015scrapper',
             'sk2016'    => 'Sk2016scrapper',
-            'on2018'    => 'On2018scrapper',
+            'on'    => 'OnScrapper',
     		'qc2016'	=> 'Qc2016scrapper',
         );
 

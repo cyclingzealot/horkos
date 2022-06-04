@@ -119,6 +119,8 @@ set +x
             ls -lh $ridingFile
             wc -l $ridingFile
 
+            chmod a+r $ridingFile;
+
 			grep "$completeStr" $ridingFile > /dev/null && mv -v "$ridingFile" "$readyFile" || echo "Could not find $completeStr in $ridingFile"
 
 			endCurl=$(date +%s.%N)

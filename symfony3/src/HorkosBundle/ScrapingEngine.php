@@ -207,6 +207,8 @@ abstract class ScrapingEngine implements Scrapper {
 	}
 
     // Returns associative array
+    // $ridingId => $filePath    OR
+    // $fileName => $filePath if the riding files don't have numbers
 	protected static function getRidingPaths($jurisdiction, $lang) {
 		#$kernelRootDir = self::$container->getParameter('kernel.root_dir');
 
@@ -238,7 +240,13 @@ abstract class ScrapingEngine implements Scrapper {
 
 			self::addLog("Adding $path for $ridingNumber");
 
-			$returnArray[intval($ridingNumber)] = $path;
+			$index = $ridingNumber;
+			
+			if (preg_match("/^\d+$/", $index)) {
+			    $index = $ridingNumber;
+			}
+			
+			$returnArray[$index] = $path;
 		}
 
 		return $returnArray;

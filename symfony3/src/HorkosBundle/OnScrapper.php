@@ -6,13 +6,17 @@ use App\HorkosBundle\Entity\Riding;
 use Psr\Log\LoggerInterface;
 
 
-class On2018scrapper extends ScrapingEngine {
+class OnScrapper extends ScrapingEngine {
 
     const JURISDICTION_SHORTHAND = 'on';
 
-    const ELECTION_DATE = "2018-06-07";
+    const ELECTION_DATE = "2022-06-02";
 
-    const ROOT_SOURCE_URL = "https://www4.elections.on.ca/RealTimeResults";
+    const ROOT_SOURCE_URL = "https://www.elections.on.ca/en/election-results.html";
+
+    const DATA_DIR = 'on_day_after';
+
+    const EXPECTED_RIDING_COUNT = 124;
 
 
 
@@ -35,15 +39,67 @@ class On2018scrapper extends ScrapingEngine {
 
         $langPathPart = self::langPathPartLookup('en');
 
-        $ridingPaths = parent::getRidingPaths(self::JURISDICTION_SHORTHAND, $langPathPart);
+        $ridingPaths = parent::getRidingPaths(self::DATA_DIR, $langPathPart);
 
         $ridingCount = count($ridingPaths);
 
         self::addLog("$ridingCount file found");
 
-        if($ridingCount != 124)  {
-            self::addLog("WARNING:  Not 124 ridings found. $ridingCount found in $ridingPaths!");
+        if($ridingCount != self::EXPECTED_RIDING_COUNT)  {
+            self::addLog("WARNING:  found $ridingCount files while I was expecting " . self::EXPECTED_RIDING_COUNT);
         }
+        
+        foreach($ridingPaths as $filePath) {
+            $doc = new \DOMDocument ();
+            self::setErrorHandler();
+            $html = file_get_contents($filePath);
+            
+            if ($html == false) {
+                self::addLog("Unable to read $filePath");
+                continue;
+            }
+            
+            $doc->loadHTML ( $html );
+            self::setErrorHandler(TRUE);
+            $xpath = new \DOMXPath ( $doc );
+            
+            $xpathToTable = "/html/body/div/div[1]/section/div/div[2]/main/div[2]/div[1]/div[2]/div[1]/table";
+            
+            
+            $titleItem = $xpath->query('//title')->item(0);
+            $ridingName = $titleItem->textContent;
+            
+            self::addLog("Got ridingName: $ridingName");
+            $riding = new Riding();
+            $riding->setName($ridingName);
+            
+            $tableHeaders = $xpath->query("$xpathToTable/thead/tr/th");
+            
+            $headersCount = $tableHeaders->length;
+            self::addLog("$headersCount headers obtained");
+            
+            //Xpath of Ajax for first result row:
+            // /html/body/div/div[1]/section/div/div[2]/main/div[2]/div[1]/div[2]/div[1]/table/tbody/tr[2]/td[1]
+            
+            $allTheRows = $xpath->query("$xpathToTable/tbody/tr");
+            $cellsWithPartyNames = $xpath->query("//td[@data-variable='Party']");
+            $cellCount = $cellsWithPartyNames->length;
+            
+       
+            $cellsWithPartyVotes = $xpath->query("//td[@data-variable='NumberOfVotes']");
+            
+            echo '';
+            
+        }
+        
+        die("We don't have data beyond this yet");
+        return 
+        
+        
+        
+        
+        ### Below is no longer needed, from the old Elections ON applicaiton
+        
 
         $ridingNameData = json_decode(file_get_contents("https://www4.elections.on.ca/RealTimeResults/api/refdata/geteds/504/en"), TRUE);
         $ridingIdToName = [];
@@ -114,7 +170,7 @@ EOT;
 
 
     static function langPathPartLookup($lang = 'en') {
-        $langReturn = 'e';
+        $langReturn = 'en';
 
         return $langReturn;
     }
@@ -211,7 +267,7 @@ EOT;
 	public static function getSummary() {
 		return array(
 				'jurisdictionName'	=> 'Ontario',
-				'electionName'		=> 'Ontario 2018',
+				'electionName'		=> 'Ontario 2022',
 				'source'			=> self::getSource(),
 				'tweetHandle'		=> '#OnElxn',
 				'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
