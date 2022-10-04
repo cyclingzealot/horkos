@@ -6,17 +6,17 @@ use App\HorkosBundle\Entity\Riding;
 use Psr\Log\LoggerInterface;
 
 
-class Qc2016scrapper extends ScrapingEngine {
+class QcScrapper extends ScrapingEngine {
 
     const JURISDICTION_SHORTHAND = 'qc';
 
 
-    const ELECTION_DATE = "2018-10-01";
+    const ELECTION_DATE = "2022-10-03";
 
     public static function getSummary() {
     	return array(
     			'jurisdictionName'	=> 'Québec',
-    			'electionName'		=> 'Québec 2018',
+    			'electionName'		=> 'Québec 2022',
     			'source'			=> self::getSource(),
     			'tweetHandle'		=> '#qcpoli',
     			'gitHubSource'		=> 'https://github.com/cyclingzealot/horkos',
@@ -30,6 +30,7 @@ class Qc2016scrapper extends ScrapingEngine {
 
         $langPathPart = self::langPathPartLookup('fr');
 
+
         $ridingPaths = parent::getRidingPaths(self::JURISDICTION_SHORTHAND, $langPathPart);
 
         $ridingCount = count($ridingPaths);
@@ -40,7 +41,7 @@ class Qc2016scrapper extends ScrapingEngine {
             self::addLog("WARNING: more than one file found in \$ridingPaths!");
         }
 
-        $dataSourcePath = $ridingPaths[0];
+        $dataSourcePath = $ridingPaths['resultats'];
 
         $json = json_decode(file_get_contents($dataSourcePath, 'r'), TRUE);
 
@@ -77,7 +78,7 @@ class Qc2016scrapper extends ScrapingEngine {
 
 		self::setSource($url);
 
-        parent::initialize($containerHash, $language, ELECTION_DATE);
+        parent::initialize($containerHash, $language, self::ELECTION_DATE);
 
     }
 

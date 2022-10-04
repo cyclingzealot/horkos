@@ -206,6 +206,7 @@ abstract class ScrapingEngine implements Scrapper {
 		self::$source = $source;
 	}
 
+
     // Returns associative array
     // $ridingId => $filePath    OR
     // $fileName => $filePath if the riding files don't have numbers
@@ -238,14 +239,14 @@ abstract class ScrapingEngine implements Scrapper {
 
 			$path = "$dataDir/$fileName";
 
-			self::addLog("Adding $path for $ridingNumber");
-
 			$index = $ridingNumber;
-			
+
 			if (preg_match("/^\d+$/", $index)) {
 			    $index = $ridingNumber;
 			}
-			
+
+			self::addLog("Adding $path for $index");
+
 			$returnArray[$index] = $path;
 		}
 
